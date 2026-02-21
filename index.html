@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brad Hobbs | Web Designer | Lexington KY</title>
+  <meta name="description" content="Brad Hobbs builds clean, responsive websites with clear calls to action, strong structure, and practical SEO foundations." />
+  <style>
+    :root{
+      --bg:#071427;
+      --card:#0b213a;
+      --text:#eef5ff;
+      --muted:#b9c8dd;
+      --accent:#2fb3ff;
+      --accent2:#7dd3ff;
+      --border:rgba(255,255,255,.12);
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1100px 700px at 15% 10%, rgba(47,179,255,.25), transparent 60%),
+                  radial-gradient(900px 500px at 90% 30%, rgba(125,211,255,.18), transparent 55%),
+                  linear-gradient(180deg, #06101f, #071427 45%, #06101f);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:var(--accent2); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1040px; margin:0 auto; padding:24px}
+    header{
+      border:1px solid var(--border);
+      background: rgba(11,33,58,.72);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      padding:28px;
+      align-items:center;
+    }
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr; padding:22px}
+    }
+    .badge{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:8px 12px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      color:var(--muted);
+      width:max-content;
+      background:rgba(255,255,255,.04);
+    }
+    .badge span{
+      display:inline-block;
+      width:10px; height:10px;
+      border-radius:50%;
+      background:var(--accent);
+      box-shadow: 0 0 18px rgba(47,179,255,.55);
+    }
+    h1{margin:14px 0 10px; font-size:42px; line-height:1.12}
+    @media (max-width: 520px){ h1{font-size:34px} }
+    .sub{color:var(--muted); margin:0 0 18px; font-size:18px}
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 16px;
+      border-radius: 12px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:650;
+      letter-spacing:.2px;
+      min-width: 180px;
+    }
+    .btnPrimary{
+      background: linear-gradient(90deg, rgba(47,179,255,.9), rgba(125,211,255,.75));
+      color:#02101e;
+      border-color: transparent;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn:active{transform: translateY(0px)}
+    .card{
+      border:1px solid var(--border);
+      background: rgba(11,33,58,.55);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:16px;
+    }
+    @media (max-width: 860px){ .grid3{grid-template-columns:1fr} }
+    h2{margin:0 0 10px; font-size:22px}
+    .kicker{color:var(--accent2); font-weight:700; text-transform:uppercase; letter-spacing:.12em; font-size:12px}
+    .list{margin:10px 0 0; padding:0; list-style:none}
+    .list li{
+      padding:10px 0;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+    }
+    .list li:first-child{border-top:none; padding-top:0}
+    .price{font-size:24px; font-weight:800; margin:8px 0 0}
+    .fine{color:var(--muted); font-size:13px; margin:10px 0 0}
+    main{margin-top:18px}
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width: 860px){ .split{grid-template-columns:1fr} }
+    footer{
+      margin:22px 0 8px;
+      color:var(--muted);
+      text-align:center;
+      font-size:13px;
+    }
+    .contactLine{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-top:10px;
+    }
+    .pill{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      padding:12px 14px;
+      border:1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(255,255,255,.04);
+    }
+    .pill strong{min-width:72px}
+    .note{
+      color:var(--muted);
+      margin:10px 0 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="hero">
+        <div>
+          <div class="badge"><span></span> Lexington KY • Web Designer</div>
+          <h1>Brad Hobbs</h1>
+          <p class="sub">Responsive websites with clean layout, clear calls to action, and strong SEO structure.</p>
+
+          <div class="ctaRow">
+            <a class="btn btnPrimary" href="tel:8595511146">Call 859.551.1146</a>
+            <a class="btn" href="mailto:brad.hobbs13@icloud.com">Email brad.hobbs13@icloud.com</a>
+          </div>
+
+          <p class="note">Hosting note: Client-owned hosting works great. Setup support stays available, plus ongoing updates when requested.</p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Core services</div>
+          <ul class="list">
+            <li>Responsive and modern design</li>
+            <li>SEO-ready structure and performance basics</li>
+            <li>Clear content sections and conversion flow</li>
+            <li>Launch support and revisions</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="grid3" id="packages">
+        <div class="card">
+          <div class="kicker">Starter</div>
+          <h2>Starter Website</h2>
+          <div class="price">$650 to $950</div>
+          <ul class="list">
+            <li>One page or small site</li>
+            <li>Mobile-friendly layout</li>
+            <li>Contact section and call button</li>
+            <li>Basic SEO setup</li>
+          </ul>
+          <p class="fine">Pricing ranges vary by content, images, and page count.</p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Business</div>
+          <h2>Business Growth</h2>
+          <div class="price">$1,100 typical KY range</div>
+          <ul class="list">
+            <li>Up to 10 pages</li>
+            <li>Improved SEO structure</li>
+            <li>Service or product sections</li>
+            <li>Launch assistance and revisions</li>
+          </ul>
+          <p class="fine">Solid professional quality built for small business growth.</p>
+        </div>
+
+        <div class="card">
+          <div class="kicker">Premium</div>
+          <h2>Premium Custom</h2>
+          <div class="price">$2,300 typical KY range</div>
+          <ul class="list">
+            <li>Custom page layouts</li>
+            <li>Advanced analytics setup</li>
+            <li>Lead systems or integrations</li>
+            <li>Strategy planning and testing</li>
+          </ul>
+          <p class="fine">Best fit for established organizations and custom strategy.</p>
+        </div>
+      </section>
+
+      <section class="split">
+        <div class="card">
+          <div class="kicker">Add ons</div>
+          <h2>Extra services</h2>
+          <ul class="list">
+            <li>Ongoing updates and maintenance: $100 per month</li>
+            <li>Content writing: $90 per page</li>
+            <li>Logo design: $200 per design</li>
+            <li>SEO audit: $280</li>
+            <li>Ecommerce setup: $750</li>
+          </ul>
+        </div>
+
+        <div class="card" id="contact">
+          <div class="kicker">Contact</div>
+          <h2>Reach Brad</h2>
+          <div class="contactLine">
+            <div class="pill"><strong>Phone</strong> <a href="tel:8595511146">859.551.1146</a></div>
+            <div class="pill"><strong>Email</strong> <a href="mailto:brad.hobbs13@icloud.com">brad.hobbs13@icloud.com</a></div>
+          </div>
+          <p class="note">A quick message with business type, goals, and preferred timeline helps speed up a quote.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Brad Hobbs • Web Designer
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
