@@ -6,11 +6,20 @@
 <title>Website Packages | Brad Hobbs</title>
 
 <style>
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#0a1628;
+  color:white;
+}
 
-  <style>
-/* existing styles stay */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
 
-/* top nav */
+/* nav */
 .topbar{
   display:flex;
   align-items:center;
@@ -60,24 +69,10 @@
   background:rgba(255,255,255,.06);
 }
 
-</style>
-  
-body{
-  margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background:#0a1628;
-  color:white;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-
+/* page */
 h1{
   text-align:center;
-  margin:20px 0 40px;
+  margin:18px 0 34px;
   font-size:42px;
 }
 
@@ -93,6 +88,7 @@ h1{
   width:100%;
   border-radius:12px;
   margin-bottom:20px;
+  display:block;
 }
 
 .package-title{
@@ -139,73 +135,70 @@ ul{
 </head>
 
 <body>
-
 <div class="container">
+
   <div class="topbar">
-  <div class="brand">
-    <strong>Brad Hobbs</strong>
-    <span>Web Designer • Kentucky</span>
+    <div class="brand">
+      <strong>Brad Hobbs</strong>
+      <span>Web Designer • Kentucky</span>
+    </div>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/packages.html">Packages</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </nav>
   </div>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="packages.html">Packages</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
-</div>
   <div style="height:18px;"></div>
 
-<h1>Website Packages</h1>
+  <h1>Website Packages</h1>
 
-<!-- Starter -->
-<div class="section">
-  <img src="starterpack.png" alt="Starter Website Package">
-  <div class="package-title">Starter Package</div>
-  <div class="price">Typical Kentucky Range: $600</div>
-  <ul>
-    <li>Up to 5 Pages</li>
-    <li>Mobile Responsive Design</li>
-    <li>Basic Contact Form</li>
-    <li>Standard SEO Setup</li>
-    <li>Launch Support</li>
-  </ul>
-  <a href="tel:8595511146" class="button">Start Your Website</a>
-</div>
+  <div class="section">
+    <img src="starterpack.png" alt="Starter Website Package">
+    <div class="package-title">Starter Package</div>
+    <div class="price">Typical Kentucky Range: $600</div>
+    <ul>
+      <li>Up to 5 Pages</li>
+      <li>Mobile Responsive Design</li>
+      <li>Basic Contact Form</li>
+      <li>Standard SEO Setup</li>
+      <li>Launch Support</li>
+    </ul>
+    <a href="tel:8595511146" class="button">Start Your Website</a>
+  </div>
 
-<!-- Business Growth -->
-<div class="section">
-  <img src="businesspack.png" alt="Business Growth Website Package">
-  <div class="package-title">Business Growth Package</div>
-  <div class="price">Typical Kentucky Range: $1,100</div>
-  <ul>
-    <li>Up to 10 Pages</li>
-    <li>Improved SEO Structure</li>
-    <li>Clear Calls to Action</li>
-    <li>Service or Product Sections</li>
-    <li>Launch Assistance & Revisions</li>
-  </ul>
-  <a href="tel:8595511146" class="button">Grow Your Business</a>
-</div>
+  <div class="section">
+    <img src="businesspack.png" alt="Business Growth Website Package">
+    <div class="package-title">Business Growth Package</div>
+    <div class="price">Typical Kentucky Range: $1,100</div>
+    <ul>
+      <li>Up to 10 Pages</li>
+      <li>Improved SEO Structure</li>
+      <li>Clear Calls to Action</li>
+      <li>Service or Product Sections</li>
+      <li>Launch Assistance and Revisions</li>
+    </ul>
+    <a href="tel:8595511146" class="button">Grow Your Business</a>
+  </div>
 
-<!-- Premium -->
-<div class="section">
-  <img src="premiumpack.png" alt="Premium Custom Website Package">
-  <div class="package-title">Premium / Custom Package</div>
-  <div class="price">Typical Kentucky Range: $2,300</div>
-  <ul>
-    <li>Custom Page Layouts</li>
-    <li>Advanced SEO & Analytics Setup</li>
-    <li>Lead Systems or Integrations</li>
-    <li>Enhanced Branding & Custom Visuals</li>
-    <li>Strategy Planning & Full Launch Support</li>
-  </ul>
-  <a href="tel:8595511146" class="button">Build Custom Strategy</a>
-</div>
+  <div class="section">
+    <img src="premiumpack.png" alt="Premium Custom Website Package">
+    <div class="package-title">Premium Custom Package</div>
+    <div class="price">Typical Kentucky Range: $2,300</div>
+    <ul>
+      <li>Custom Page Layouts</li>
+      <li>Advanced SEO and Analytics Setup</li>
+      <li>Lead Systems or Integrations</li>
+      <li>Enhanced Branding and Custom Visuals</li>
+      <li>Strategy Planning and Full Launch Support</li>
+    </ul>
+    <a href="tel:8595511146" class="button">Build Custom Strategy</a>
+  </div>
 
-<a href="index.html" class="back">← Back to Home</a>
+  <a href="/" class="back">← Back to Home</a>
 
 </div>
-
 </body>
 </html>
