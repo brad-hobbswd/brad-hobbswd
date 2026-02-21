@@ -76,20 +76,21 @@
   background:rgba(255,255,255,.08);
   color:var(--text);
 }
-    .banner{
-      margin-top:14px;
-      border:1px solid var(--line);
-      border-radius:calc(var(--radius) + 8px);
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      background:var(--panel2);
-    }
-    .banner img{
-      width:100%;
-      height: clamp(200px, 28vw, 380px);
-      object-fit:cover;
-      display:block;
-    }
+    .bannerSingle{
+  margin-top:14px;
+  border:1px solid var(--line);
+  border-radius:calc(var(--radius) + 8px);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.bannerSingle img{
+  width:100%;
+  height:clamp(240px, 28vw, 420px);
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
 
     .hero{
       margin-top:14px;
@@ -226,9 +227,9 @@
 </nav>
     </div>
 
-    <div class="banner">
-      <img src="banner.jpg" alt="Brad Hobbs banner" />
-    </div>
+    <div class="bannerSingle">
+  <img src="banner.jpg" alt="Brad Hobbs Professional Web Designer Banner">
+</div>
 
     <div class="hero">
       <div class="card">
