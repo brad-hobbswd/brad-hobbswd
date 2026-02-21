@@ -1,451 +1,113 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brad Hobbs | Web Designer | Kentucky</title>
-  <meta name="description" content="Brad Hobbs builds responsive websites with clear calls to action, strong structure, and practical SEO foundations." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brad Hobbs | Web Designer</title>
 
-  <style>
-    :root{
-      --bg0:#050b16;
-      --bg1:#071a33;
-      --card: rgba(255,255,255,.06);
-      --stroke: rgba(255,255,255,.14);
-      --text:#f2f7ff;
-      --muted: rgba(242,247,255,.78);
-      --muted2: rgba(242,247,255,.62);
-      --accent:#2fb3ff;
-      --accent2:#7dd3ff;
-      --shadow: 0 18px 40px rgba(0,0,0,.45);
-      --radius: 18px;
-      --radius2: 26px;
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(900px 600px at 18% 12%, rgba(47,179,255,.22), transparent 60%),
-        radial-gradient(900px 600px at 88% 24%, rgba(125,211,255,.14), transparent 60%),
-        linear-gradient(180deg, var(--bg0), var(--bg1) 55%, var(--bg0));
-      line-height:1.55;
-    }
-
-    a{color: var(--accent2); text-decoration:none}
-    a:hover{text-decoration:underline}
-
-    .wrap{max-width:1100px; margin:0 auto; padding:22px}
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      padding:12px 14px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.04);
-      border-radius: 999px;
-      backdrop-filter: blur(10px);
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      min-width: 220px;
-    }
-    .brandMark{
-      width:34px;
-      height:34px;
-      border-radius: 12px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.06);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-    }
-    .brandMark img{width:100%; height:100%; object-fit:cover}
-    .brandText{display:flex; flex-direction:column; line-height:1.1}
-    .brandText strong{font-size:14px; letter-spacing:.2px}
-    .brandText span{font-size:12px; color: var(--muted2)}
-
-    .nav{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .chip{
-      padding:9px 12px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.03);
-      border-radius: 999px;
-      color: var(--muted);
-      font-size:13px;
-      font-weight:650;
-    }
-    .chip:hover{background: rgba(255,255,255,.06); text-decoration:none}
-
-    .hero{
-      margin-top:16px;
-      border:1px solid var(--stroke);
-      border-radius: var(--radius2);
-      overflow:hidden;
-      box-shadow: var(--shadow);
-      background: rgba(255,255,255,.03);
-    }
-    .heroBanner{
-      position:relative;
-      min-height: 240px;
-      background: #061424;
-    }
-    .heroBanner img{
-      width:100%;
-      height: 280px;
-      object-fit: cover;
-      display:block;
-      filter: saturate(1.05) contrast(1.02);
-    }
-    .overlay{
-  position:absolute;
-  inset:0;
-  background: linear-gradient(
-    90deg,
-    rgba(5,11,22,.35),
-    rgba(5,11,22,.15) 55%,
-    rgba(5,11,22,.05)
-  );
+<style>
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#0a1628;
+  color:white;
 }
-    .heroInner{
-      position:absolute;
-      inset:0;
-      display:flex;
-      align-items:flex-end;
-      padding:22px;
-    }
 
-    .heroCard{
-      width: min(640px, 100%);
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.06);
-      border-radius: var(--radius2);
-      backdrop-filter: blur(14px);
-      padding:18px;
-    }
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
 
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:8px 12px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.04);
-      border-radius: 999px;
-      color: var(--muted);
-      font-size:12px;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      font-weight:750;
-      width:max-content;
-    }
-    .dot{
-      width:10px;
-      height:10px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 18px rgba(47,179,255,.55);
-    }
+.banner{
+  width:100%;
+  border-radius:12px;
+  display:block;
+}
 
-    h1{margin:12px 0 8px; font-size:40px; line-height:1.1}
-    .lead{margin:0; color: var(--muted); font-size:16px}
+h1{
+  margin:20px 0 10px;
+  font-size:38px;
+}
 
-    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:12px 14px;
-      border-radius: 14px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      font-weight:800;
-      letter-spacing:.2px;
-      min-width: 180px;
-    }
-    .btn:hover{transform: translateY(-1px); text-decoration:none}
-    .btn:active{transform: translateY(0px)}
-    .btnPrimary{
-      background: linear-gradient(90deg, rgba(47,179,255,.95), rgba(125,211,255,.72));
-      border-color: transparent;
-      color:#031427;
-    }
+p{
+  color:#c7d5ea;
+  line-height:1.6;
+}
 
-    .section{margin-top:18px}
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-    }
-    @media (max-width: 900px){
-      .grid3{grid-template-columns:1fr}
-      h1{font-size:34px}
-    }
+.section{
+  margin-top:40px;
+}
 
-    .card{
-      border:1px solid var(--stroke);
-      background: var(--card);
-      border-radius: var(--radius);
-      padding:16px;
-      box-shadow: 0 10px 24px rgba(0,0,0,.25);
-    }
-    .card h2{margin:0 0 8px; font-size:18px}
-    .card p{margin:0; color: var(--muted2); font-size:14px}
+.card{
+  background:#13233f;
+  padding:20px;
+  border-radius:12px;
+  margin-top:15px;
+}
 
-    .divider{
-      margin-top:18px;
-      border:1px solid rgba(255,255,255,.08);
-      border-left:none;
-      border-right:none;
-      border-bottom:none;
-    }
+.button{
+  display:inline-block;
+  padding:12px 18px;
+  background:#2fb3ff;
+  color:#00121f;
+  font-weight:bold;
+  border-radius:8px;
+  text-decoration:none;
+  margin-top:15px;
+}
 
-    .twoCol{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:14px;
-    }
-    @media (max-width: 900px){
-      .twoCol{grid-template-columns:1fr}
-    }
-
-    .list{
-      margin:10px 0 0;
-      padding:0;
-      list-style:none;
-    }
-    .list li{
-      padding:10px 0;
-      border-top:1px solid rgba(255,255,255,.10);
-      color: var(--muted);
-      font-size:14px;
-    }
-    .list li:first-child{border-top:none; padding-top:0}
-
-    .price{
-      font-size:22px;
-      font-weight:900;
-      margin:8px 0 0;
-      letter-spacing:.2px;
-    }
-    .fine{
-      margin:10px 0 0;
-      color: var(--muted2);
-      font-size:13px;
-    }
-
-    .contactRow{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:10px;
-      margin-top:12px;
-    }
-    @media (max-width: 700px){
-      .contactRow{grid-template-columns:1fr}
-    }
-
-    .pill{
-      padding:12px 14px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.04);
-      border-radius: 16px;
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-    }
-    .pill span{color: var(--muted2); font-size:12px; letter-spacing:.12em; text-transform:uppercase; font-weight:800}
-    .pill strong{font-size:16px}
-
-    footer{
-      margin:22px 0 8px;
-      text-align:center;
-      color: var(--muted2);
-      font-size:13px;
-    }
-  </style>
+.button:hover{
+  background:#57c4ff;
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
 
-    <div class="topbar">
-      <div class="brand">
-        <div class="brandMark">
-          <img src="logo.jpeg" alt="Brad Hobbs logo" />
-        </div>
-        <div class="brandText">
-          <strong>Brad Hobbs</strong>
-          <span>Web Designer • Kentucky</span>
-        </div>
-      </div>
+<div class="container">
 
-      <nav class="nav">
-        <a class="chip" href="#services">Services</a>
-        <a class="chip" href="#packages">Packages</a>
-        <a class="chip" href="#process">Process</a>
-        <a class="chip" href="#contact">Contact</a>
-      </nav>
-    </div>
+<img src="banner.jpeg" class="banner" alt="Brad Hobbs Banner">
 
-    <section class="hero">
-      <div class="heroBanner">
-        <img src="banner.jpeg" alt="Brad Hobbs Web Designer banner" />
-    
-        <div class="heroInner">
-          <div class="heroCard">
-            <div class="kicker"><span class="dot"></span> Responsive websites built for real clients</div>
-            <h1>Web design that looks modern and drives action</h1>
-            <p class="lead">Clean layout, clear messaging, and practical SEO structure for local services, nonprofits, and growing businesses.</p>
+<h1>Brad Hobbs</h1>
+<p>Web Designer creating responsive, modern websites with clear structure and strong calls to action.</p>
 
-            <div class="ctaRow">
-              <a class="btn btnPrimary" href="tel:8595511146">Call 859.551.1146</a>
-              <a class="btn" href="mailto:brad.hobbs13@icloud.com">Email brad.hobbs13@icloud.com</a>
-            </div>
+<a href="tel:8595511146" class="button">Call 859.551.1146</a>
+<a href="mailto:brad.hobbs13@icloud.com" class="button">Email Me</a>
 
-            <p class="fine">Hosting support available for client owned hosting, plus updates when requested.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="section">
+  <h2>Services</h2>
 
-    <section class="section" id="services">
-      <div class="grid3">
-        <div class="card">
-          <h2>Responsive and modern design</h2>
-          <p>Mobile first layout with clear navigation, clean sections, and polished visuals.</p>
-        </div>
-        <div class="card">
-          <h2>SEO ready structure</h2>
-          <p>Solid page titles, headings, performance basics, and search friendly content flow.</p>
-        </div>
-        <div class="card">
-          <h2>Affordable, clear scope</h2>
-          <p>Packages built for Kentucky budgets with straight answers and practical deliverables.</p>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <section class="section twoCol" id="packages">
-      <div class="card">
-        <div class="kicker"><span class="dot"></span> Packages</div>
-        <h2>Website options</h2>
-        <ul class="list">
-          <li><strong>Starter</strong> for single page sites and simple launches</li>
-          <li><strong>Business Growth</strong> for service pages and strong calls to action</li>
-          <li><strong>Premium Custom</strong> for strategy, custom layouts, and integrations</li>
-        </ul>
-        <p class="fine">A quick message with business type, goals, and timeline helps speed up pricing.</p>
-      </div>
-
-      <div class="grid3" style="grid-template-columns:1fr; gap:14px;">
-        <div class="card">
-          <div class="kicker"><span class="dot"></span> Starter</div>
-          <div class="price">$650 to $950</div>
-          <ul class="list">
-            <li>One page or small site</li>
-            <li>Mobile friendly layout</li>
-            <li>Contact section with call button</li>
-            <li>Basic SEO setup</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="kicker"><span class="dot"></span> Business Growth</div>
-          <div class="price">$1,100 typical KY range</div>
-          <ul class="list">
-            <li>Up to 10 pages</li>
-            <li>Improved SEO structure</li>
-            <li>Service or product sections</li>
-            <li>Launch assistance and revisions</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="kicker"><span class="dot"></span> Premium Custom</div>
-          <div class="price">$2,300 typical KY range</div>
-          <ul class="list">
-            <li>Custom page layouts</li>
-            <li>Advanced analytics setup</li>
-            <li>Lead systems or integrations</li>
-            <li>Strategy planning and testing</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="process">
-      <div class="grid3">
-        <div class="card">
-          <h2>1. Quick discovery</h2>
-          <p>Goals, audience, services, and content plan.</p>
-        </div>
-        <div class="card">
-          <h2>2. Build and review</h2>
-          <p>Layout, sections, and revisions with clear checkpoints.</p>
-        </div>
-        <div class="card">
-          <h2>3. Launch support</h2>
-          <p>Domain, hosting setup support, and post launch updates as needed.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section twoCol" id="contact">
-      <div class="card">
-        <div class="kicker"><span class="dot"></span> Contact</div>
-        <h2>Reach Brad</h2>
-
-        <div class="contactRow">
-          <div class="pill">
-            <span>Phone</span>
-            <strong><a href="tel:8595511146">859.551.1146</a></strong>
-          </div>
-          <div class="pill">
-            <span>Email</span>
-            <strong><a href="mailto:brad.hobbs13@icloud.com">brad.hobbs13@icloud.com</a></strong>
-          </div>
-        </div>
-
-        <p class="fine">Message topic ideas: new build, redesign, SEO cleanup, or maintenance.</p>
-      </div>
-
-      <div class="card">
-        <div class="kicker"><span class="dot"></span> Add ons</div>
-        <h2>Extra services</h2>
-        <ul class="list">
-          <li>Ongoing updates and maintenance: $100 per month</li>
-          <li>Content writing: $90 per page</li>
-          <li>Logo design: $200 per design</li>
-          <li>SEO audit: $280</li>
-          <li>Ecommerce setup: $750</li>
-        </ul>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="y"></span> Brad Hobbs • Web Designer
-    </footer>
-
+  <div class="card">
+    Responsive Website Design  
   </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <div class="card">
+    SEO Optimization  
+  </div>
+
+  <div class="card">
+    Affordable Packages for Kentucky Businesses  
+  </div>
+</div>
+
+<div class="section">
+  <h2>Packages</h2>
+
+  <div class="card">
+    Starter Website — $650 to $950
+  </div>
+
+  <div class="card">
+    Business Growth — $1,100 typical KY range
+  </div>
+
+  <div class="card">
+    Premium Custom — $2,300 typical KY range
+  </div>
+</div>
+
+</div>
+
 </body>
 </html>
