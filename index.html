@@ -76,7 +76,7 @@
   background:rgba(255,255,255,.08);
   color:var(--text);
 }
-    .bannerSingle{
+   .bannerStack{
   margin-top:14px;
   border:1px solid rgba(255,255,255,.12);
   border-radius:24px;
@@ -84,10 +84,14 @@
   box-shadow:0 18px 45px rgba(0,0,0,.45);
 }
 
-.bannerSingle img{
+.bannerStack img{
   width:100%;
   height:auto;
   display:block;
+}
+
+.bannerStack img + img{
+  border-top:1px solid rgba(255,255,255,.08);
 }
 
     .hero{
@@ -229,30 +233,13 @@
   <img src="banner.jpeg" alt="Brad Hobbs Professional Web Designer Banner">
 </div>
 
-    <div class="hero">
-      <div class="card">
-        <div class="kicker"><span class="dot"></span> Clean design built for real growth</div>
-        <h1>Modern websites with clear structure and strong calls to action</h1>
-        <p class="lead">Fast, mobile friendly builds for local services, nonprofits, and growing businesses across Kentucky.</p>
-
-        <div class="cta">
-          <a class="btn btnPrimary" href="tel:8595511146">Call 859.551.1146</a>
-          <a class="btn" href="mailto:brad.hobbs13@icloud.com">Email brad.hobbs13@icloud.com</a>
-        </div>
-
-        <p class="fine">Hosting guidance available for client owned hosting, plus updates when requested.</p>
-      </div>
-
-      <div class="card">
-        <div class="kicker"><span class="dot"></span> Quick wins</div>
-        <ul class="list">
-          <li>Responsive layout and clean sections</li>
-          <li>SEO friendly headings and page structure</li>
-          <li>Clear service breakdown with pricing tiers</li>
-          <li>Launch support and revision rounds</li>
-        </ul>
-      </div>
-    </div>
+   <div class="bannerSingle">
+  <img src="banner.jpeg" alt="Brad Hobbs Professional Web Designer Banner">
+</div>
+    <div class="bannerStack">
+  <img src="banner.jpeg" alt="Brad Hobbs Professional Web Designer Banner">
+  <img src="growth-banner.jpeg" alt="Modern Websites With Clear Structure Banner">
+</div>
 
     <div class="section" id="services">
       <h2 class="sectionTitle">Services</h2>
