@@ -6,6 +6,62 @@
 <title>Website Packages | Brad Hobbs</title>
 
 <style>
+
+  <style>
+/* existing styles stay */
+
+/* top nav */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 14px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.04);
+  border-radius:999px;
+}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  line-height:1.15;
+}
+
+.brand strong{
+  font-size:14px;
+  letter-spacing:.2px;
+}
+
+.brand span{
+  font-size:12px;
+  color:#9fb6d9;
+}
+
+.nav{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.nav a{
+  padding:9px 12px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;
+  background:rgba(255,255,255,.03);
+  color:#c7d5ea;
+  font-weight:bold;
+  font-size:13px;
+  text-decoration:none;
+}
+
+.nav a:hover{
+  background:rgba(255,255,255,.06);
+}
+
+</style>
+  
 body{
   margin:0;
   font-family: Arial, Helvetica, sans-serif;
@@ -85,6 +141,20 @@ ul{
 <body>
 
 <div class="container">
+  <div class="topbar">
+  <div class="brand">
+    <strong>Brad Hobbs</strong>
+    <span>Web Designer • Kentucky</span>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="packages.html">Packages</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</div>
+  <div style="height:18px;"></div>
 
 <h1>Website Packages</h1>
 
