@@ -110,10 +110,15 @@
       filter: saturate(1.05) contrast(1.02);
     }
     .overlay{
-      position:absolute;
-      inset:0;
-      background: linear-gradient(90deg, rgba(5,11,22,.92), rgba(5,11,22,.55) 55%, rgba(5,11,22,.25));
-    }
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    90deg,
+    rgba(5,11,22,.35),
+    rgba(5,11,22,.15) 55%,
+    rgba(5,11,22,.05)
+  );
+}
     .heroInner{
       position:absolute;
       inset:0;
@@ -299,8 +304,7 @@
     <section class="hero">
       <div class="heroBanner">
         <img src="banner.jpeg" alt="Brad Hobbs Web Designer banner" />
-        <div class="overlay"></div>
-
+    
         <div class="heroInner">
           <div class="heroCard">
             <div class="kicker"><span class="dot"></span> Responsive websites built for real clients</div>
