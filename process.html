@@ -1,1 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | Brad Hobbs</title>
 
+<style>
+:root{
+  --bg:#070f1f;
+  --panel:#0f1d38;
+  --text:#f3f7ff;
+  --muted:#b8c7e6;
+  --line:rgba(255,255,255,.12);
+  --accent:#2fb3ff;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:linear-gradient(180deg,#050a14,var(--bg));
+  color:var(--text);
+}
+
+.wrap{
+  max-width:1100px;
+  margin:auto;
+  padding:18px;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.04);
+  border-radius:999px;
+}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  line-height:1.15;
+}
+
+.brand strong{font-size:14px}
+.brand span{font-size:12px;color:var(--muted)}
+
+.nav{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.nav a{
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,255,255,.03);
+  color:var(--muted);
+  font-weight:700;
+  font-size:13px;
+  text-decoration:none;
+}
+
+.nav a.active{
+  background:rgba(255,255,255,.08);
+  color:var(--text);
+}
+
+.section{
+  margin-top:28px;
+}
+
+.sectionTitle{
+  font-size:28px;
+  margin-bottom:16px;
+}
+
+/* SERVICES GRID */
+.servicesImages{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+@media(max-width:900px){
+  .servicesImages{
+    grid-template-columns:1fr;
+  }
+}
+
+.serviceCard{
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+  background:rgba(255,255,255,.05);
+  box-shadow:0 18px 40px rgba(0,0,0,.35);
+  transition:all .25s ease;
+}
+
+.serviceCard img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.serviceCard:hover{
+  transform:translateY(-4px);
+  background:rgba(255,255,255,.07);
+}
+
+footer{
+  margin:40px 0 10px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <div class="brand">
+    <strong>Brad Hobbs</strong>
+    <span>Web Designer • Kentucky</span>
+  </div>
+
+  <nav class="nav">
+    <a class="active" href="index.html">Home</a>
+    <a class="active" href="service.html">Services</a>
+    <a class="active" href="packages.html">Packages</a>
+    <a class="active" href="index.html#contact">Contact</a>
+  </nav>
+</div>
