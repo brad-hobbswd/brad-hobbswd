@@ -9,8 +9,6 @@
   <style>
     :root{
       --bg:#070f1f;
-      --panel:#0f1d38;
-      --panel2:#0c1730;
       --text:#f3f7ff;
       --muted:#b8c7e6;
       --line:rgba(255,255,255,.12);
@@ -76,34 +74,6 @@
   background:rgba(255,255,255,.08);
   color:var(--text);
 }
-   .bannerStack{
-  margin-top:14px;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:0 18px 45px rgba(0,0,0,.45);
-}
-
-.bannerStack img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-.bannerStack img + img{
-  border-top:1px solid rgba(255,255,255,.08);
-}
-
-    .hero{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr}
-    }
 
     .card{
       border:1px solid var(--line);
@@ -136,36 +106,14 @@
       box-shadow:0 0 18px rgba(47,179,255,.55);
     }
 
-    h1{margin:12px 0 8px; font-size:38px; line-height:1.12}
-    @media (max-width: 520px){ h1{font-size:32px} }
-
     .lead{margin:0; color:var(--muted); font-size:16px}
-
-    .cta{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      font-weight:900;
-      min-width:190px;
+  
     }
     .btnPrimary{
       background:linear-gradient(90deg, rgba(47,179,255,.96), rgba(125,211,255,.72));
       border-color:transparent;
       color:#031427;
-    }
-    .btn:hover{transform: translateY(-1px); text-decoration:none}
-    .btn:active{transform: translateY(0px)}
+    
 
     .list{margin:12px 0 0; padding:0; list-style:none}
     .list li{
@@ -228,6 +176,20 @@
 .bannerSecondary{
   margin-top:22px;
 }
+      @media (max-width: 520px){
+  .wrap{padding:14px}
+  .bannerPrimary,.bannerSecondary{border-radius:18px}
+  .bannerSecondary{margin-top:14px}
+  .topbar{border-radius:18px}
+}
+
+      .nav a:focus-visible{
+  outline:2px solid rgba(125,211,255,.9);
+  outline-offset:3px;
+}
+@media (max-width: 520px){
+  .nav a{padding:11px 14px}
+}
     
   </style>
 </head>
@@ -243,8 +205,8 @@
 
     <nav class="nav">
   <a class="active" href="/brad-hobbswd/service.html">Services</a>
-  <a class="active" href="/brad-hobbswd/packages.html">Packages</a>
-  <a class="active" href="/brad-hobbswd/process.html">Process</a>
+  <a href="/brad-hobbswd/packages.html">Packages</a>
+  <a href="/brad-hobbswd/process.html">Process</a>
   <a href="#contact">Contact</a>
 </nav>
     </div>
@@ -293,7 +255,7 @@
 
   </div>
 
-  <script>
+  <script defer>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
