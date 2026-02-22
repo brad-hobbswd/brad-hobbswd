@@ -257,6 +257,42 @@
       <div id="formStatus" style="color:#c7d5ea; font-size:14px;"></div>
     </div>
   </form>
+         <script>
+  (function () {
+    const form = document.getElementById("quoteForm");
+    const status = document.getElementById("formStatus");
+    const btn = document.getElementById("sendBtn");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      status.textContent = "Sending...";
+      btn.disabled = true;
+
+      const formData = new FormData(form);
+
+      try {
+        const res = await fetch("https://formspree.io/f/xojnkerz", {
+          method: "POST",
+          headers: { "Accept": "application/json" },
+          body: formData
+        });
+
+        if (res.ok) {
+          window.location.href = "/brad-hobbswd/thanks.html";
+          return;
+        }
+
+        const data = await res.json().catch(() => ({}));
+        status.textContent = data.error || "Submission failed. Please try again.";
+      } catch (err) {
+        status.textContent = "Network error. Please try again.";
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  })();
+</script>
 
         <div class="card">
           <div class="kicker"><span class="dot"></span> Add ons</div>
