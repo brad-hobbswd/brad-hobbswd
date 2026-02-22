@@ -107,13 +107,32 @@
     }
 
     .lead{margin:0; color:var(--muted); font-size:16px}
+
+.button{
+  width:100%;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  font-weight:900;
+}
+
+.button:hover{transform: translateY(-1px)}
+.button:active{transform: translateY(0px)}
+
+.btnPrimary{
+  background:linear-gradient(90deg, rgba(47,179,255,.96), rgba(125,211,255,.72));
+  border-color:transparent;
+  color:#031427;
+}
   
-    }
+  
     .btnPrimary{
       background:linear-gradient(90deg, rgba(47,179,255,.96), rgba(125,211,255,.72));
       border-color:transparent;
       color:#031427;
-    
+    }
 
     .list{margin:12px 0 0; padding:0; list-style:none}
     .list li{
@@ -218,26 +237,37 @@
     <div class="bannerSecondary">
   <img src="/brad-hobbswd/banner2.png" alt="Modern Websites With Clear Structure Banner">
 </div>
-       <div class="section" id="contact">
-  <h2 style="margin-top:0;">Contact</h2>
+      <div class="section" id="contact">
+  <h2 class="sectionTitle">Contact</h2>
 
   <form id="quoteForm" class="card" style="max-width:760px;">
-    <div style="font-size:18px; font-weight:bold; margin-bottom:14px;">Request for more information</div>
+    <div style="font-size:18px; font-weight:900; margin-bottom:14px;">
+      Request for more information
+    </div>
 
     <div style="display:grid; gap:12px;">
       <label>
-        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Name</div>
-        <input name="name" required style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;" />
+        <div style="color:#c7d5ea; font-size:13px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;">
+          Name
+        </div>
+        <input name="name" required
+          style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;" />
       </label>
 
       <label>
-        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Email</div>
-        <input name="email" type="email" required style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;" />
+        <div style="color:#c7d5ea; font-size:13px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;">
+          Email
+        </div>
+        <input name="email" type="email" required
+          style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;" />
       </label>
 
       <label>
-        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Package</div>
-        <select name="package" style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;">
+        <div style="color:#c7d5ea; font-size:13px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;">
+          Package
+        </div>
+        <select name="package"
+          style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;">
           <option value="Starter">Starter</option>
           <option value="Business Growth">Business Growth</option>
           <option value="Premium Custom">Premium Custom</option>
@@ -246,13 +276,18 @@
       </label>
 
       <label>
-        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Message</div>
-        <textarea name="message" rows="5" required style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;"></textarea>
+        <div style="color:#c7d5ea; font-size:13px; font-weight:900; letter-spacing:.12em; text-transform:uppercase;">
+          Message
+        </div>
+        <textarea name="message" rows="5" required
+          style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;"></textarea>
       </label>
 
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-      <button id="sendBtn" type="submit" class="button" style="border:none; cursor:pointer;">Send request</button>
+      <button id="sendBtn" type="submit" class="button btnPrimary" style="border:none; cursor:pointer;">
+        Send request
+      </button>
 
       <div id="formStatus" style="color:#c7d5ea; font-size:14px;"></div>
     </div>
@@ -303,8 +338,6 @@
             <li>SEO audit: $280</li>
             <li>Ecommerce setup: $750</li>
           </ul>
-        </div>
-      </div>
     </div>
 
     <footer>
@@ -316,5 +349,41 @@
   <script defer>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+    <script>
+  (function () {
+    const form = document.getElementById("quoteForm");
+    const status = document.getElementById("formStatus");
+    const btn = document.getElementById("sendBtn");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      status.textContent = "Sending...";
+      btn.disabled = true;
+
+      const formData = new FormData(form);
+
+      try {
+        const res = await fetch("https://formspree.io/f/mzdajjkb", {
+          method: "POST",
+          headers: { "Accept": "application/json" },
+          body: formData
+        });
+
+        if (res.ok) {
+          window.location.href = "/brad-hobbswd/thanks.html";
+          return;
+        }
+
+        const data = await res.json().catch(() => ({}));
+        status.textContent = data.error || "Submission failed. Please try again.";
+      } catch (err) {
+        status.textContent = "Network error. Please try again.";
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  })();
+</script>
 </body>
 </html>
