@@ -274,8 +274,14 @@ ul{
   })();
 </script>
 
-  <a href="index.html" class="back">← Back to Home</a>
+  <footer>
+      © <span id="y"></span> Brad Hobbs • Web Designer
+    </footer>
 
-</div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
