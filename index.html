@@ -219,37 +219,44 @@
   <img src="/brad-hobbswd/banner2.png" alt="Modern Websites With Clear Structure Banner">
 </div>
        <div class="section" id="contact">
-  <h2 class="sectionTitle">Contact</h2>
+  <h2 style="margin-top:0;">Contact</h2>
 
-  <div class="grid3">
-    <div class="card">
-      <div class="kicker"><span class="dot"></span> Phone</div>
-      <div style="font-size:18px; font-weight:900; margin-top:10px;">
-        <a href="tel:8595511146">859.551.1146</a>
-      </div>
-      <p class="fine">Calls and texts welcomed.</p>
-    </div>
+  <form id="quoteForm" class="card" style="max-width:760px;">
+    <div style="font-size:18px; font-weight:bold; margin-bottom:14px;">Request for more information</div>
 
-    <div class="card">
-      <div class="kicker"><span class="dot"></span> Email</div>
-      <div style="font-size:18px; font-weight:900; margin-top:10px;">
-        <a href="mailto:brad.hobbs13@icloud.com">brad.hobbs13@icloud.com</a>
-      </div>
-      <p class="fine">A quick summary of goals helps speed up a quote.</p>
-    </div>
+    <div style="display:grid; gap:12px;">
+      <label>
+        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Name</div>
+        <input name="name" required style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;" />
+      </label>
 
-    <div class="card">
-      <div class="kicker"><span class="dot"></span> Add ons</div>
-      <ul class="list">
-        <li>Updates and maintenance: $100 per month</li>
-        <li>Content writing: $90 per page</li>
-        <li>Logo design: $200 per design</li>
-        <li>SEO audit: $280</li>
-        <li>Ecommerce setup: $750</li>
-      </ul>
+      <label>
+        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Email</div>
+        <input name="email" type="email" required style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;" />
+      </label>
+
+      <label>
+        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Package</div>
+        <select name="package" style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;">
+          <option value="Starter">Starter</option>
+          <option value="Business Growth">Business Growth</option>
+          <option value="Premium Custom">Premium Custom</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+      </label>
+
+      <label>
+        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Message</div>
+        <textarea name="message" rows="5" required style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;"></textarea>
+      </label>
+
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <button id="sendBtn" type="submit" class="button" style="border:none; cursor:pointer;">Send request</button>
+
+      <div id="formStatus" style="color:#c7d5ea; font-size:14px;"></div>
     </div>
-  </div>
-</div>
+  </form>
 
         <div class="card">
           <div class="kicker"><span class="dot"></span> Add ons</div>
