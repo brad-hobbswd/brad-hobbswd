@@ -164,6 +164,70 @@ ul{
   width:100%;
   max-width:640px; /* tighter than your 700px section */
 }
+  /* tighter form layout */
+#quoteForm{
+  width:100%;
+  max-width:640px;
+}
+
+.formGrid{
+  display:grid;
+  gap:10px;
+}
+
+/* tighter label block */
+.formLabel{
+  display:block;
+}
+
+/* tighter label text */
+.formLabelTitle{
+  color:#c7d5ea;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin:0 0 6px 0;
+}
+
+/* unified tighter inputs */
+.formControl{
+  width:100%;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.04);
+  color:white;
+  font-size:14px;
+  line-height:1.2;
+}
+
+.formControl:focus{
+  outline:2px solid rgba(47,179,255,.45);
+  outline-offset:2px;
+}
+
+/* tighter textarea */
+textarea.formControl{
+  padding:10px 12px;
+  resize:vertical;
+}
+
+/* tighter button */
+#sendBtn{
+  margin-top:6px;
+  padding:11px 14px;
+  border-radius:10px;
+}
+
+/* tighten card padding */
+.card{
+  padding:16px;
+}
+  .contactWrap{
+  display:flex;
+  justify-content:center;
+}
   
 </style>
 </head>
@@ -230,29 +294,26 @@ ul{
     </ul>
    
   </div>
-<div class="section" id="contact">
-  <h2 style="margin-top:0;">Contact</h2>
+<div class="contactWrap">
+  <form id="quoteForm" class="card">
+    <div style="font-size:18px; font-weight:900; margin:0 0 12px 0;">
+      Request for more information
+    </div>
 
-  <div class="contactWrap">
-    <form id="quoteForm" class="card">
-
-  <form id="quoteForm" class="card" style="max-width:760px;">
-    <div style="font-size:18px; font-weight:bold; margin-bottom:14px;">Request for more information</div>
-
-    <div style="display:grid; gap:12px;">
-      <label>
-        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Name</div>
-        <input name="name" required style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;" />
+    <div class="formGrid">
+      <label class="formLabel">
+        <div class="formLabelTitle">Name</div>
+        <input name="name" required class="formControl">
       </label>
 
-      <label>
-        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Email</div>
-        <input name="email" type="email" required style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;" />
+      <label class="formLabel">
+        <div class="formLabelTitle">Email</div>
+        <input name="email" type="email" required class="formControl">
       </label>
 
-      <label>
-        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Package</div>
-        <select name="package" style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;">
+      <label class="formLabel">
+        <div class="formLabelTitle">Package</div>
+        <select name="package" class="formControl">
           <option value="Starter">Starter</option>
           <option value="Business Growth">Business Growth</option>
           <option value="Premium Custom">Premium Custom</option>
@@ -260,20 +321,21 @@ ul{
         </select>
       </label>
 
-      <label>
-        <div style="color:#c7d5ea; font-size:13px; font-weight:bold; letter-spacing:.12em; text-transform:uppercase;">Message</div>
-        <textarea name="message" rows="5" required style="width:100%; padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:white;"></textarea>
+      <label class="formLabel">
+        <div class="formLabelTitle">Message</div>
+        <textarea name="message" rows="4" required class="formControl"></textarea>
       </label>
 
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-      <button id="sendBtn" type="submit" class="button" style="border:none; cursor:pointer;">Send request</button>
+      <button id="sendBtn" type="submit" class="button" style="border:none; cursor:pointer;">
+        Send request
+      </button>
 
       <div id="formStatus" style="color:#c7d5ea; font-size:14px;"></div>
     </div>
   </form>
 </div>
-  </div>
 
 <script>
   (function () {
