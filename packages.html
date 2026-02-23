@@ -142,6 +142,28 @@ ul{
   border-radius:16px;
   box-shadow:0 20px 50px rgba(0,0,0,.4);
 }
+  .siteFooter{
+  text-align:center;
+  color:#9fb6d9;
+  font-size:13px;
+  margin:22px 0 10px;
+}
+  .card{
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.04);
+  border-radius:14px;
+  padding:18px;
+}
+
+.contactWrap{
+  display:flex;
+  justify-content:center;
+}
+
+#quoteForm{
+  width:100%;
+  max-width:640px; /* tighter than your 700px section */
+}
   
 </style>
 </head>
@@ -211,6 +233,9 @@ ul{
 <div class="section" id="contact">
   <h2 style="margin-top:0;">Contact</h2>
 
+  <div class="contactWrap">
+    <form id="quoteForm" class="card">
+
   <form id="quoteForm" class="card" style="max-width:760px;">
     <div style="font-size:18px; font-weight:bold; margin-bottom:14px;">Request for more information</div>
 
@@ -248,6 +273,7 @@ ul{
     </div>
   </form>
 </div>
+  </div>
 
 <script>
   (function () {
@@ -287,15 +313,14 @@ ul{
 </script>
 </div>
   </div>
-<footer>
-© <span id="y"></span> Brad Hobbs • Web Designer
-</footer>
+  <footer class="siteFooter">
+    © <span id="y"></span> Brad Hobbs • Web Designer
+  </footer>
 
-</div>
+</div> <!-- end .container -->
 
 <script>
-document.getElementById("y").textContent = new Date().getFullYear();
+  document.getElementById("y").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
