@@ -521,3 +521,27 @@ footer{
 .honeypot{
   display:none;
 }
+.pageBanner,
+.processSection{
+  padding: 8px 0;
+  display:flex;
+  justify-content:center;
+}
+
+.pageBanner img,
+.processSection img{
+  width: min(1200px, 95%);
+  border-radius: 24px;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(140, 170, 255, 0.18);
+  display:block;
+}
+
+.processSection img{
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.processSection img:hover{
+  transform: scale(1.01);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
+}
