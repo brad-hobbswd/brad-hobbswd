@@ -365,11 +365,13 @@ textarea.formControl{
     </form>
   </div>
 </section>
-         <script>
+        <script>
   (function () {
     const form = document.getElementById("quoteForm");
     const status = document.getElementById("formStatus");
     const btn = document.getElementById("sendBtn");
+
+    if (!form) return;
 
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
@@ -405,50 +407,6 @@ textarea.formControl{
     <footer>
       © <span id="y"></span> Brad Hobbs • Web Designer
     </footer>
-
-  </div>
-
-  <script defer>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-    <script>
-  (function () {
-    const form = document.getElementById("quoteForm");
-    const status = document.getElementById("formStatus");
-    const btn = document.getElementById("sendBtn");
-
-    if (!form) return;
-
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault();
-
-      status.textContent = "Sending...";
-      btn.disabled = true;
-
-      const formData = new FormData(form);
-
-      try {
-        const res = await fetch("https://formspree.io/f/xojnkerz", {
-          method: "POST",
-          headers: { "Accept": "application/json" },
-          body: formData
-        });
-
-        if (res.ok) {
-          window.location.href = "/brad-hobbswd/thanks.html";
-          return;
-        }
-
-        const data = await res.json().catch(() => ({}));
-        status.textContent = data.error || "Submission failed. Please try again.";
-      } catch (err) {
-        status.textContent = "Network error. Please try again.";
-      } finally {
-        btn.disabled = false;
-      }
-    });
-  })();
-</script>
   
 </body>
 </html>
