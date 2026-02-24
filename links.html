@@ -254,6 +254,24 @@
       outline:2px solid rgba(125,211,255,.9);
       outline-offset:3px;
     }
+    .glassBannerCard{
+  margin-top:18px;
+  border:1px solid var(--line);
+  background:var(--glass);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 12px 28px rgba(0,0,0,.28);
+  padding:0;
+  width:100%;
+}
+
+.glassBannerCardImg{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  margin:0;
+}
   </style>
 </head>
 
@@ -277,10 +295,9 @@
     </div>
 
     <!-- REPLACE your current <header> ... </header> block with this -->
-<header class="glassHeader">
-  <img class="glassBannerImg" src="myworkbanner.png" alt="Portfolio Links | My Work" draggable="false">
-</header>
-<section class="grid">
+<div class="glassBannerCard">
+  <img class="glassBannerCardImg" src="myworkbanner.png" alt="Portfolio Links | My Work" draggable="false">
+</div>
 
       <!-- Project: BAPBI -->
       <article class="card">
