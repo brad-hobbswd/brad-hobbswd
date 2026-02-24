@@ -242,7 +242,25 @@ textarea.formControl{
   #quoteForm{
   max-width:580px;
 }
-  
+  .bannerSection {
+  padding: 30px 0 10px 0;
+}
+
+.bannerCard {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(140, 170, 255, 0.18);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.bannerImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
   
 </style>
 </head>
@@ -266,7 +284,17 @@ textarea.formControl{
 
   <div style="height:18px;"></div>
 
-  <h1>Website Packages</h1>
+  <!-- Website Packages Intro Banner -->
+<section class="bannerSection">
+  <div class="bannerCard">
+    <img
+      class="bannerImg"
+      src="websitepackagesbanner.JPEG"
+      alt="Website Packages"
+      draggable="false"
+    />
+  </div>
+</section>
 
   <div class="section">
     <img src="IMG_1358.jpeg" alt="Starter Website Package">
