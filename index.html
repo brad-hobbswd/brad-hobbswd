@@ -323,46 +323,48 @@ textarea.formControl{
 </div>
      <section id="contact">
   <div class="contactWrap">
-    <div style="font-size:18px; font-weight:900; margin:0 0 12px 0;">
-      Request for more information
-    </div>
+    <form id="quoteForm" class="card">
+      <div style="font-size:18px; font-weight:900; margin:0 0 12px 0;">
+        Request for more information
+      </div>
 
-    <div class="formGrid">
-      <label class="formLabel">
-        <div class="formLabelTitle">Name</div>
-        <input name="name" required class="formControl">
-      </label>
+      <div class="formGrid">
+        <label class="formLabel">
+          <div class="formLabelTitle">Name</div>
+          <input name="name" required class="formControl">
+        </label>
 
-      <label class="formLabel">
-        <div class="formLabelTitle">Email</div>
-        <input name="email" type="email" required class="formControl">
-      </label>
+        <label class="formLabel">
+          <div class="formLabelTitle">Email</div>
+          <input name="email" type="email" required class="formControl">
+        </label>
 
-      <label class="formLabel">
-        <div class="formLabelTitle">Package</div>
-        <select name="package" class="formControl">
-          <option value="Starter">Starter</option>
-          <option value="Business Growth">Business Growth</option>
-          <option value="Premium Custom">Premium Custom</option>
-          <option value="Not sure yet">Not sure yet</option>
-        </select>
-      </label>
+        <label class="formLabel">
+          <div class="formLabelTitle">Package</div>
+          <select name="package" class="formControl">
+            <option value="Starter">Starter</option>
+            <option value="Business Growth">Business Growth</option>
+            <option value="Premium Custom">Premium Custom</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </label>
 
-      <label class="formLabel">
-        <div class="formLabelTitle">Message</div>
-        <textarea name="message" rows="3" required class="formControl"></textarea>
-      </label>
+        <label class="formLabel">
+          <div class="formLabelTitle">Message</div>
+          <textarea name="message" rows="3" required class="formControl"></textarea>
+        </label>
 
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-      <button id="sendBtn" type="submit" class="button" style="border:none; cursor:pointer;">
-        Send request
-      </button>
+        <button id="sendBtn" type="submit" class="button" style="border:none; cursor:pointer;">
+          Send request
+        </button>
 
-      <div id="formStatus" style="color:#c7d5ea; font-size:14px;"></div>
-    </div>
-  </form>
-</div>
+        <div id="formStatus" style="color:#c7d5ea; font-size:14px;"></div>
+      </div>
+    </form>
+  </div>
+</section>
          <script>
   (function () {
     const form = document.getElementById("quoteForm");
