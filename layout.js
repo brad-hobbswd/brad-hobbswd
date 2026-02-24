@@ -1,8 +1,12 @@
 async function loadPartial(selector, file) {
   const target = document.querySelector(selector);
   if (!target) return;
+
   const res = await fetch(file, { cache: "no-store" });
-  if (!res.ok) return;
+  if (!res.ok) {
+    target.innerHTML = "";
+    return;
+  }
   target.innerHTML = await res.text();
 }
 
@@ -13,7 +17,6 @@ function setActiveNav(key) {
 
 (async function () {
   await loadPartial("#siteHeader", "/brad-hobbswd/header.html");
-  const pageKey = document.body.dataset.page || "";
-  setActiveNav(pageKey);
+  setActiveNav(document.body.dataset.page || "");
   await loadPartial("#siteFooter", "/brad-hobbswd/footer.html");
 })();
