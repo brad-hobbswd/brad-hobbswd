@@ -1,1 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Work | Brad Hobbs</title>
+  <meta name="description" content="Portfolio links to live websites and client work by Brad Hobbs." />
 
+  <style>
+    :root{
+      --bg:#070f1f;
+      --text:#f3f7ff;
+      --muted:#b8c7e6;
+      --line:rgba(255,255,255,.12);
+      --glass:rgba(255,255,255,.05);
+      --accent:#2fb3ff;
+      --accent2:#7dd3ff;
+      --radius:20px;
+      --shadow:0 18px 45px rgba(0,0,0,.45);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 520px at 18% 12%, rgba(47,179,255,.22), transparent 62%),
+        radial-gradient(900px 520px at 88% 22%, rgba(125,211,255,.14), transparent 62%),
+        linear-gradient(180deg, #050a14, var(--bg) 40%, #050a14);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{color:var(--accent2); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:1100px; margin:0 auto; padding:18px}
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:12px 14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      border-radius:999px;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      line-height:1.15;
+    }
+    .brand strong{font-size:14px; letter-spacing:.2px}
+    .brand span{font-size:12px; color:var(--muted)}
+
+    .nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav a{
+      padding:9px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-weight:800;
+      font-size:13px;
+    }
+    .nav a:hover{background:rgba(255,255,255,.06); text-decoration:none}
+    .nav a.active{background:rgba(255,255,255,.08); color:var(--text)}
+
+    header{
+      margin-top:18px;
+      border:1px solid var(--line);
+      background:var(--glass);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 12px 28px rgba(0,0,0,.28);
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-weight:900;
+      width:max-content;
+    }
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 18px rgba(47,179,255,.55);
+    }
+
+    h1{
+      margin:12px 0 6px;
+      font-size:34px;
+      letter-spacing:.2px;
+    }
+
+    .lead{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      max-width:78ch;
+    }
+
+    .grid{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    .card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .cardInner{
+      padding:18px;
+      display:grid;
+      grid-template-columns:170px 1fr;
+      gap:16px;
+      align-items:center;
+    }
+
+    @media (max-width: 700px){
+      .cardInner{grid-template-columns:1fr}
+    }
+
+    .logoLink{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.18);
+      border-radius:18px;
+      padding:16px;
+      min-height:160px;
+      transition:transform .18s ease, background .18s ease;
+    }
+    .logoLink:hover{
+      transform: translateY(-2px);
+      background:rgba(255,255,255,.06);
+      text-decoration:none;
+    }
+
+    .logoImg{
+      width:130px;
+      height:auto;
+      display:block;
+      filter: drop-shadow(0 10px 26px rgba(0,0,0,.45));
+    }
+
+    .cardTitle{
+      margin:0;
+      font-size:22px;
+      font-weight:950;
+      letter-spacing:.2px;
+    }
+
+    .meta{
+      margin:6px 0 10px;
+      color:rgba(184,199,230,.88);
+      font-size:13px;
+    }
+
+    .desc{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0 0 14px;
+      padding:0;
+      list-style:none;
+    }
+    .tags li{
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      color:rgba(243,247,255,.88);
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:950;
+      text-decoration:none;
+      transition:transform .18s ease, background .18s ease;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      background:rgba(255,255,255,.09);
+      text-decoration:none;
+    }
+
+    .btnPrimary{
+      background:linear-gradient(90deg, rgba(47,179,255,.96), rgba(125,211,255,.72));
+      border-color:transparent;
+      color:#031427;
+    }
+
+    footer{
+      margin:22px 0 10px;
+      text-align:center;
+      color:rgba(184,199,230,.72);
+      font-size:13px;
+    }
+
+    .nav a:focus-visible{
+      outline:2px solid rgba(125,211,255,.9);
+      outline-offset:3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="brand">
+        <strong>Brad Hobbs</strong>
+        <span>Web Designer • Kentucky</span>
+      </div>
+
+      <nav class="nav">
+        <a href="/brad-hobbswd/index.html">Home</a>
+        <a href="/brad-hobbswd/service.html">Services</a>
+        <a href="/brad-hobbswd/packages.html">Packages</a>
+        <a class="active" href="/brad-hobbswd/links.html">My Work</a>
+        <a href="/brad-hobbswd/index.html#contact">Contact</a>
+      </nav>
+    </div>
+
+    <header>
+      <div class="kicker"><span class="dot"></span>Portfolio Links</div>
+      <h1>My Work</h1>
+      <p class="lead">
+        Live projects with full design builds, branding, and graphics created from the ground up.
+      </p>
+    </header>
+
+    <section class="grid">
+
+      <!-- Project: BAPBI -->
+      <article class="card">
+        <div class="cardInner">
+
+          <a class="logoLink" href="https://www.bapbi.online" target="_blank" rel="noopener">
+            <img class="logoImg" src="bapbi-logo.png" alt="BAPBI logo" draggable="false" />
+          </a>
+
+          <div>
+            <h2 class="cardTitle">Bethesda Apostolic Pentecostal Bible Institute</h2>
+            <div class="meta">BAPBI • https://www.bapbi.online</div>
+
+            <p class="desc">
+              Complete brand and website build, including logo, graphics, banners, buttons, and visual assets. Client-owned hosting used for deployment.
+            </p>
+
+            <ul class="tags">
+              <li>Branding</li>
+              <li>Logo Design</li>
+              <li>Graphics</li>
+              <li>Buttons</li>
+              <li>Site Build</li>
+              <li>Client Hosting</li>
+            </ul>
+
+            <div class="actions">
+              <a class="btn btnPrimary" href="https://www.bapbi.online" target="_blank" rel="noopener">
+                Visit Website
+              </a>
+              <a class="btn" href="/brad-hobbswd/index.html#contact">
+                Request Similar Work
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- Copy this block to add more projects -->
+      <article class="card">
+        <div class="cardInner">
+          <div class="logoLink" aria-hidden="true">
+            <div style="text-align:center; color: rgba(184,199,230,.85); font-weight:900;">
+              Next Project
+              <div style="font-size:12px; font-weight:800; margin-top:6px; color: rgba(184,199,230,.75);">
+                Add logo or screenshot
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="cardTitle">Project Name</h2>
+            <div class="meta">Short label • https://example.com</div>
+            <p class="desc">
+              Add a short description of work scope, deliverables, and hosting details.
+            </p>
+
+            <ul class="tags">
+              <li>Web Design</li>
+              <li>Graphics</li>
+              <li>SEO</li>
+            </ul>
+
+            <div class="actions">
+              <a class="btn" href="#" aria-disabled="true">Website Link</a>
+              <a class="btn" href="/brad-hobbswd/index.html#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <footer>
+      © <span id="y"></span> Brad Hobbs • Web Designer
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
