@@ -564,17 +564,6 @@ footer{
   box-shadow: 0 14px 45px rgba(0, 0, 0, 0.45);
   background: rgba(0, 0, 0, 0.18);
 }
-/* Banner container */
-.glassHeader{
-  margin-top:18px;
-  border:1px solid var(--line);
-  background:var(--glass);
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:0 12px 28px rgba(0,0,0,.28);
-  padding:0;
-  width:100%;
-}
 
 /* Banner image */
 .glassBannerImg{
@@ -589,6 +578,24 @@ footer{
 
 /* Safety reset for images inside the header */
 .glassHeader img{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+}
+/* banner header frame */
+header.glassHeader{
+  margin-top:18px;
+  border:1px solid var(--line);
+  background:var(--glass);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 12px 28px rgba(0,0,0,.28);
+  padding:0;
+}
+
+/* banner image fill */
+header.glassHeader img.glassBannerImg{
   display:block;
   width:100%;
   max-width:100%;
