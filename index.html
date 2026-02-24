@@ -7,6 +7,81 @@
   <meta name="description" content="Brad Hobbs builds responsive, modern websites with clear structure and strong calls to action." />
 
   <style>
+    /* contact form shared styles */
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+#quoteForm input,
+#quoteForm select,
+#quoteForm textarea{
+  box-sizing:border-box;
+  max-width:100%;
+}
+
+.card{
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.04);
+  border-radius:14px;
+  padding:14px 16px;
+}
+
+.contactWrap{
+  display:flex;
+  justify-content:center;
+}
+
+#quoteForm{
+  width:100%;
+  max-width:580px;
+}
+
+.formGrid{
+  display:grid;
+  gap:8px;
+}
+
+.formLabel{
+  display:block;
+}
+
+.formLabelTitle{
+  color:#c7d5ea;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin:0 0 6px 0;
+}
+
+.formControl{
+  width:100%;
+  padding:8px 12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.04);
+  color:white;
+  font-size:14px;
+  line-height:1.2;
+}
+
+.formControl:focus{
+  outline:2px solid rgba(47,179,255,.45);
+  outline-offset:2px;
+}
+
+textarea.formControl{
+  padding:10px 12px;
+  resize:vertical;
+}
+
+#sendBtn{
+  margin-top:6px;
+  padding:10px 14px;
+  border-radius:10px;
+}
     :root{
       --bg:#070f1f;
       --text:#f3f7ff;
@@ -209,7 +284,7 @@
 @media (max-width: 520px){
   .nav a{padding:11px 14px}
 }
-    
+    <link rel="stylesheet" href="style.css">
   </style>
 </head>
 
