@@ -208,3 +208,78 @@ textarea.formControl{
 .processSection {
   margin-bottom: 12px !important;
 }
+:root{
+  --bg:#070f1f;
+  --text:#f3f7ff;
+  --muted:#b8c7e6;
+  --line:rgba(255,255,255,.12);
+  --glass:rgba(255,255,255,.05);
+  --accent:#2fb3ff;
+  --accent2:#7dd3ff;
+  --radius:20px;
+  --shadow:0 18px 45px rgba(0,0,0,.45);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(900px 520px at 18% 12%, rgba(47,179,255,.22), transparent 62%),
+    radial-gradient(900px 520px at 88% 22%, rgba(125,211,255,.14), transparent 62%),
+    linear-gradient(180deg, #050a14, var(--bg) 40%, #050a14);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{color:var(--accent2); text-decoration:none}
+a:hover{text-decoration:underline}
+
+.wrap{max-width:1100px; margin:0 auto; padding:18px}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.04);
+  border-radius:999px;
+  backdrop-filter: blur(10px);
+}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  line-height:1.15;
+}
+.brand strong{font-size:14px; letter-spacing:.2px}
+.brand span{font-size:12px; color:var(--muted)}
+
+.nav{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+.nav a{
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,255,255,.03);
+  color:var(--muted);
+  font-weight:900;
+  font-size:13px;
+}
+.nav a:hover{background:rgba(255,255,255,.06); text-decoration:none}
+.nav a.active{background:rgba(255,255,255,.08); color:var(--text)}
+.nav a:focus-visible{outline:2px solid rgba(125,211,255,.9); outline-offset:3px}
+
+footer{
+  margin:22px 0 10px;
+  text-align:center;
+  color:rgba(184,199,230,.72);
+  font-size:13px;
+}
