@@ -4,443 +4,160 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="/brad-hobbswd/style.css" />
-  <title>Page Title | Brad Hobbs</title>
+  <title>Website Packages | Brad Hobbs</title>
+  <meta name="description" content="Website package options: Starter, Business Growth, and Premium Custom." />
 </head>
 
-<body data-page="work">
+<body data-page="packages">
   <div class="wrap">
 
     <header id="siteHeader"></header>
 
     <main>
-     <!doctype html>
-<html lang="en">
-<head>
- <link rel="stylesheet" href="style.css">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Website Packages | Brad Hobbs</title>
 
-<style>
-  *,
-*::before,
-*::after{
-  box-sizing:border-box;
-}
-  #quoteForm input,
-#quoteForm select,
-#quoteForm textarea{
-  box-sizing:border-box;
-  max-width:100%;
-}
-body{
-  margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background:#0a1628;
-  color:white;
-}
+      <!-- Packages Intro Banner -->
+      <section class="bannerSection">
+        <div class="bannerCard">
+          <img class="bannerImg" src="websitepackagesbanner.JPEG" alt="Website Packages" draggable="false">
+        </div>
+      </section>
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
+      <!-- Starter -->
+      <section class="packageSection">
+        <div class="packageCard">
+          <img class="packageImg" src="IMG_1358.jpeg" alt="Starter Website Package" draggable="false">
+          <h1 class="packageTitle">Starter Package</h1>
+          <div class="packagePrice">$600 Flat Rate</div>
+          <ul class="packageList">
+            <li>Up to 5 Pages</li>
+            <li>Mobile Responsive Design</li>
+            <li>Basic Contact Form</li>
+            <li>Standard SEO Setup</li>
+            <li>Launch Support</li>
+          </ul>
+        </div>
+      </section>
 
-/* nav */
-.topbar{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  padding:12px 14px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.04);
-  border-radius:999px;
-}
+      <!-- Business Growth -->
+      <section class="packageSection">
+        <div class="packageCard">
+          <img class="packageImg" src="IMG_1359.jpeg" alt="Business Growth Website Package" draggable="false">
+          <h2 class="packageTitle">Business Growth Package</h2>
+          <div class="packagePrice">$1,100 Flat Rate</div>
+          <ul class="packageList">
+            <li>Up to 10 Pages</li>
+            <li>Improved SEO Structure</li>
+            <li>Clear Calls to Action</li>
+            <li>Service or Product Sections</li>
+            <li>Launch Assistance and Revisions</li>
+          </ul>
+        </div>
+      </section>
 
-.brand{
-  display:flex;
-  flex-direction:column;
-  line-height:1.15;
-}
+      <!-- Premium Custom -->
+      <section class="packageSection">
+        <div class="packageCard">
+          <img class="packageImg" src="IMG_1360.jpeg" alt="Premium Custom Website Package" draggable="false">
+          <h2 class="packageTitle">Premium Custom Package</h2>
+          <div class="packagePrice">$2,300 Flat Rate</div>
+          <ul class="packageList">
+            <li>Custom Page Layouts</li>
+            <li>Advanced SEO and Analytics Setup</li>
+            <li>Lead Systems or Integrations</li>
+            <li>Enhanced Branding and Custom Visuals</li>
+            <li>Strategy Planning and Full Launch Support</li>
+          </ul>
+        </div>
+      </section>
 
-.brand strong{
-  font-size:14px;
-  letter-spacing:.2px;
-}
+      <!-- Contact Form -->
+      <section class="section" id="packageContact">
+        <div class="contactWrap">
+          <form id="quoteForm" class="card">
+            <div class="formTitle">Request for more information</div>
 
-.brand span{
-  font-size:12px;
-  color:#9fb6d9;
-}
+            <div class="formGrid">
+              <label class="formLabel">
+                <div class="formLabelTitle">Name</div>
+                <input name="name" required class="formControl">
+              </label>
 
-.nav{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
+              <label class="formLabel">
+                <div class="formLabelTitle">Email</div>
+                <input name="email" type="email" required class="formControl">
+              </label>
 
-.nav a{
-  padding:9px 12px;
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:999px;
-  background:rgba(255,255,255,.03);
-  color:#c7d5ea;
-  font-weight:bold;
-  font-size:13px;
-  text-decoration:none;
-}
+              <label class="formLabel">
+                <div class="formLabelTitle">Package</div>
+                <select name="package" class="formControl">
+                  <option value="Starter">Starter</option>
+                  <option value="Business Growth">Business Growth</option>
+                  <option value="Premium Custom">Premium Custom</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </label>
 
-.nav a:hover{
-  background:rgba(255,255,255,.06);
-}
+              <label class="formLabel">
+                <div class="formLabelTitle">Message</div>
+                <textarea name="message" rows="3" required class="formControl"></textarea>
+              </label>
 
-/* page */
-h1{
-  text-align:center;
-  margin:18px 0 34px;
-  font-size:42px;
-}
+              <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
 
-.section{
-  margin-bottom:60px;
-  background:#13233f;
-  padding:25px;
-  border-radius:16px;
-  box-shadow:0 20px 50px rgba(0,0,0,.4);
-}
+              <button id="sendBtn" type="submit" class="button btnPrimary">
+                Send request
+              </button>
 
-.section img{
-  width:100%;
-  max-width:520px;   /* controls size */
-  height:auto;
-  border-radius:12px;
-  margin:0 auto 20px auto;  /* centers image */
-  display:block;
-}
+              <div id="formStatus" class="formStatus"></div>
+            </div>
+          </form>
+        </div>
+      </section>
 
-.package-title{
-  font-size:28px;
-  margin-bottom:10px;
-}
-
-.price{
-  font-size:24px;
-  font-weight:bold;
-  color:#2fb3ff;
-  margin-bottom:15px;
-}
-
-ul{
-  padding-left:20px;
-  line-height:1.8;
-  color:#c7d5ea;
-}
-
-.button{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 18px;
-  background:#2fb3ff;
-  color:#00121f;
-  font-weight:bold;
-  border-radius:8px;
-  text-decoration:none;
-}
-
-.button:hover{
-  background:#57c4ff;
-}
-
-.back{
-  display:block;
-  text-align:center;
-  margin-top:40px;
-  color:#9fb6d9;
-  text-decoration:none;
-}
-
-  .section{
-  margin:40px auto;
-  max-width:700px;     /* controls overall card width */
-  background:#13233f;
-  padding:25px;
-  border-radius:16px;
-  box-shadow:0 20px 50px rgba(0,0,0,.4);
-}
-  .siteFooter{
-  text-align:center;
-  color:#9fb6d9;
-  font-size:13px;
-  margin:22px 0 10px;
-}
-  .card{
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.04);
-  border-radius:14px;
-  padding:18px;
-}
-
-.contactWrap{
-  display:flex;
-  justify-content:center;
-}
-
-#quoteForm{
-  width:100%;
-  max-width:640px; /* tighter than your 700px section */
-}
-  /* tighter form layout */
-#quoteForm{
-  width:100%;
-  max-width:640px;
-}
-
-.formGrid{
-  display:grid;
-  gap:8px;
-}
-
-/* tighter label block */
-.formLabel{
-  display:block;
-}
-
-/* tighter label text */
-.formLabelTitle{
-  color:#c7d5ea;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  margin:0 0 6px 0;
-}
-
-/* unified tighter inputs */
-.formControl{
-  width:100%;
-  padding:8px 12px;
-  border-radius:10px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.04);
-  color:white;
-  font-size:14px;
-  line-height:1.2;
-}
-
-.formControl:focus{
-  outline:2px solid rgba(47,179,255,.45);
-  outline-offset:2px;
-}
-
-/* tighter textarea */
-textarea.formControl{
-  padding:10px 12px;
-  resize:vertical;
-}
-
-/* tighter button */
-  #sendBtn{
-  margin-top:6px;
-  padding:10px 14px;
-  border-radius:10px;
-}
-
-/* tighten card padding */
-.card{
-  padding:14px 16px;
-}
-  .contactWrap{
-  display:flex;
-  justify-content:center;
-}
-  #quoteForm{
-  max-width:580px;
-}
-  .bannerSection {
-  padding: 30px 0 10px 0;
-}
-
-.bannerCard {
-  width: min(1100px, 92%);
-  margin: 0 auto;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(140, 170, 255, 0.18);
-  background: rgba(0, 0, 0, 0.25);
-}
-
-.bannerImg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-  
-</style>
- <link rel="stylesheet" href="/brad-hobbswd/style.css">
-</head>
-
-<body>
-<div class="container">
-
-  <div class="topbar">
-    <div class="brand">
-      <strong>Brad Hobbs</strong>
-      <span>Web Designer • Kentucky</span>
-    </div>
-
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="process.html">Process</a>
-      <a href="service.html">Services</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-  </div>
-
-  <div style="height:18px;"></div>
-
-  <!-- Website Packages Intro Banner -->
-<section class="bannerSection">
-  <div class="bannerCard">
-    <img
-      class="bannerImg"
-      src="websitepackagesbanner.JPEG"
-      alt="Website Packages"
-      draggable="false"
-    />
-  </div>
-</section>
-
-  <div class="section">
-    <img src="IMG_1358.jpeg" alt="Starter Website Package">
-    <div class="package-title">Starter Package</div>
-    <div class="price">$600 Flat Rate</div>
-    <ul>
-      <li>Up to 5 Pages</li>
-      <li>Mobile Responsive Design</li>
-      <li>Basic Contact Form</li>
-      <li>Standard SEO Setup</li>
-      <li>Launch Support</li>
-    </ul>
-  
-  </div>
-
-  <div class="section">
-    <img src="IMG_1359.jpeg" alt="Business Growth Website Package">
-    <div class="package-title">Business Growth Package</div>
-    <div class="price">$1,100 Flat Rate</div>
-    <ul>
-      <li>Up to 10 Pages</li>
-      <li>Improved SEO Structure</li>
-      <li>Clear Calls to Action</li>
-      <li>Service or Product Sections</li>
-      <li>Launch Assistance and Revisions</li>
-    </ul>
-    
-  </div>
-
-  <div class="section">
-    <img src="IMG_1360.jpeg" alt="Premium Custom Website Package">
-    <div class="package-title">Premium Custom Package</div>
-    <div class="price">$2,300 Flat Rate</div>
-    <ul>
-      <li>Custom Page Layouts</li>
-      <li>Advanced SEO and Analytics Setup</li>
-      <li>Lead Systems or Integrations</li>
-      <li>Enhanced Branding and Custom Visuals</li>
-      <li>Strategy Planning and Full Launch Support</li>
-    </ul>
-   
-  </div>
-<div class="contactWrap">
-  <form id="quoteForm" class="card">
-    <div style="font-size:18px; font-weight:900; margin:0 0 12px 0;">
-      Request for more information
-    </div>
-
-    <div class="formGrid">
-      <label class="formLabel">
-        <div class="formLabelTitle">Name</div>
-        <input name="name" required class="formControl">
-      </label>
-
-      <label class="formLabel">
-        <div class="formLabelTitle">Email</div>
-        <input name="email" type="email" required class="formControl">
-      </label>
-
-      <label class="formLabel">
-        <div class="formLabelTitle">Package</div>
-        <select name="package" class="formControl">
-          <option value="Starter">Starter</option>
-          <option value="Business Growth">Business Growth</option>
-          <option value="Premium Custom">Premium Custom</option>
-          <option value="Not sure yet">Not sure yet</option>
-        </select>
-      </label>
-
-      <label class="formLabel">
-        <div class="formLabelTitle">Message</div>
-        <textarea name="message" rows="3" required class="formControl"></textarea>
-      </label>
-
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-      <button id="sendBtn" type="submit" class="button" style="border:none; cursor:pointer;">
-        Send request
-      </button>
-
-      <div id="formStatus" style="color:#c7d5ea; font-size:14px;"></div>
-    </div>
-  </form>
-</div>
-
-<script>
-  (function () {
-    const form = document.getElementById("quoteForm");
-    const status = document.getElementById("formStatus");
-    const btn = document.getElementById("sendBtn");
-
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault();
-
-      status.textContent = "Sending...";
-      btn.disabled = true;
-
-      const formData = new FormData(form);
-
-      try {
-        const res = await fetch("https://formspree.io/f/xojnkerz", {
-          method: "POST",
-          headers: { "Accept": "application/json" },
-          body: formData
-        });
-
-        if (res.ok) {
-          window.location.href = "/brad-hobbswd/thanks.html";
-          return;
-        }
-
-        const data = await res.json().catch(() => ({}));
-        status.textContent = data.error || "Submission failed. Please try again.";
-      } catch (err) {
-        status.textContent = "Network error. Please try again.";
-      } finally {
-        btn.disabled = false;
-      }
-    });
-  })();
-</script>
-</div>
-  </div>
-  </main>
+    </main>
 
     <div id="siteFooter"></div>
-
   </div>
 
   <script src="/brad-hobbswd/layout.js"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("quoteForm");
+      const status = document.getElementById("formStatus");
+      const btn = document.getElementById("sendBtn");
+
+      if (!form) return;
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        status.textContent = "Sending...";
+        btn.disabled = true;
+
+        const formData = new FormData(form);
+
+        try {
+          const res = await fetch("https://formspree.io/f/xojnkerz", {
+            method: "POST",
+            headers: { "Accept": "application/json" },
+            body: formData
+          });
+
+          if (res.ok) {
+            window.location.href = "/brad-hobbswd/thanks.html";
+            return;
+          }
+
+          const data = await res.json().catch(() => ({}));
+          status.textContent = data.error || "Submission failed. Please try again.";
+        } catch (err) {
+          status.textContent = "Network error. Please try again.";
+        } finally {
+          btn.disabled = false;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
