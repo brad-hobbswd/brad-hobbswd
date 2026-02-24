@@ -4,253 +4,42 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="/brad-hobbswd/style.css" />
-  <title>Page Title | Brad Hobbs</title>
+  <title>Process | Brad Hobbs</title>
+  <meta name="description" content="Discovery, build, and launch process for website projects." />
 </head>
 
-<body data-page="work">
+<body data-page="process">
   <div class="wrap">
 
     <header id="siteHeader"></header>
 
     <main>
-      <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Services | Brad Hobbs</title>
 
-<style>
-:root{
-  --bg:#070f1f;
-  --panel:#0f1d38;
-  --text:#f3f7ff;
-  --muted:#b8c7e6;
-  --line:rgba(255,255,255,.12);
-  --accent:#2fb3ff;
-}
+      <!-- Process Intro Banner -->
+      <section class="pageBanner">
+        <img src="theprocessbanner.JPEG" alt="The Process" draggable="false">
+      </section>
 
-*{box-sizing:border-box}
+      <!-- Discovery -->
+      <section class="processSection">
+        <img src="discoverybanner.JPEG" alt="Discovery Phase" draggable="false">
+      </section>
 
-body{
-  margin:0;
-  font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:linear-gradient(180deg,#050a14,var(--bg));
-  color:var(--text);
-}
+      <!-- Build -->
+      <section class="processSection">
+        <img src="buildbanner.JPEG" alt="Build Phase" draggable="false">
+      </section>
 
-.wrap{
-  max-width:1100px;
-  margin:auto;
-  padding:18px;
-}
+      <!-- Launch -->
+      <section class="processSection">
+        <img src="launchbanner.JPEG" alt="Launch Phase" draggable="false">
+      </section>
 
-.topbar{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  padding:12px 14px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.04);
-  border-radius:999px;
-}
-
-.brand{
-  display:flex;
-  flex-direction:column;
-  line-height:1.15;
-}
-
-.brand strong{font-size:14px}
-.brand span{font-size:12px;color:var(--muted)}
-
-.nav{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-.nav a{
-  padding:9px 12px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:rgba(255,255,255,.03);
-  color:var(--muted);
-  font-weight:700;
-  font-size:13px;
-  text-decoration:none;
-}
-
-.nav a.active{
-  background:rgba(255,255,255,.08);
-  color:var(--text);
-}
-
-.section{
-  margin-top:28px;
-}
-
-.sectionTitle{
-  font-size:28px;
-  margin-bottom:16px;
-}
-
-/* SERVICES GRID */
-.servicesImages{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-@media(max-width:900px){
-  .servicesImages{
-    grid-template-columns:1fr;
-  }
-}
-
-.serviceCard{
-  border:1px solid var(--line);
-  border-radius:20px;
-  overflow:hidden;
-  background:rgba(255,255,255,.05);
-  box-shadow:0 18px 40px rgba(0,0,0,.35);
-  transition:all .25s ease;
-}
-
-.serviceCard img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-.serviceCard:hover{
-  transform:translateY(-4px);
-  background:rgba(255,255,255,.07);
-}
-
-footer{
-  margin:40px 0 10px;
-  text-align:center;
-  color:var(--muted);
-  font-size:13px;
-}
-  .imageGrid{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:18px;
-  margin-top:12px;
-}
-
-@media (max-width: 900px){
-  .imageGrid{
-    grid-template-columns:1fr;
-  }
-}
-
-.imageCard{
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:20px;
-  overflow:hidden;
-  background:rgba(255,255,255,.05);
-  box-shadow:0 18px 40px rgba(0,0,0,.35);
-  transition:transform .25s ease, background .25s ease;
-}
-
-.imageCard img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-.imageCard:hover{
-  transform:translateY(-4px);
-  background:rgba(255,255,255,.07);
-}
-.pageBanner {
-  width: 100%;
-  padding: 12px 0; /* same as processSection */
-  display: flex;
-  justify-content: center;
-}
-.pageBanner,
-.processSection {
-  padding: 8px 0;
-}
-.pageBanner img {
-  width: min(1200px, 95%);
-  border-radius: 24px;
-  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(140, 170, 255, 0.18);
-}
-
-.processSection {
-  width: 100%;
-  padding: 12px 0; /* much tighter */
-  display: flex;
-  justify-content: center;
-}
-
-.processSection img {
-  width: min(1200px, 95%);
-  border-radius: 24px;
-  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(140, 170, 255, 0.18);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.processSection img:hover {
-  transform: scale(1.01);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
-}
-</style>
-  <link rel="stylesheet" href="/brad-hobbswd/style.css">
-</head>
-
-<body>
-<div class="wrap">
-
-<div class="topbar">
-  <div class="brand">
-    <strong>Brad Hobbs</strong>
-    <span>Web Designer • Kentucky</span>
-  </div>
-
-  <nav class="nav">
-    <a class="active" href="index.html">Home</a>
-    <a class="active" href="service.html">Services</a>
-    <a class="active" href="packages.html">Packages</a>
-    <a class="active" href="index.html#contact">Contact</a>
-  </nav>
-</div>
-
-<!-- Process Intro Banner -->
-<section class="pageBanner">
-  <img src="theprocessbanner.JPEG" alt="The Process" draggable="false">
-</section>
-
- <!-- Discovery Section -->
-<section class="processSection">
-  <img src="discoverybanner.JPEG" alt="Discovery Phase" draggable="false">
-</section>
-
-<!-- Build Section -->
-<section class="processSection">
-  <img src="buildbanner.JPEG" alt="Build Phase" draggable="false">
-</section>
-
-<!-- Launch Section -->
-<section class="processSection">
-  <img src="launchbanner.JPEG" alt="Launch Phase" draggable="false">
-</section>
-</main>
+    </main>
 
     <div id="siteFooter"></div>
-
   </div>
 
   <script src="/brad-hobbswd/layout.js"></script>
-</body>
-</html>
 </body>
 </html>
