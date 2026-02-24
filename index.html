@@ -406,6 +406,8 @@ textarea.formControl{
     const status = document.getElementById("formStatus");
     const btn = document.getElementById("sendBtn");
 
+    if (!form) return;
+
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
 
@@ -415,7 +417,7 @@ textarea.formControl{
       const formData = new FormData(form);
 
       try {
-        const res = await fetch("https://formspree.io/f/mzdajjkb", {
+        const res = await fetch("https://formspree.io/f/xojnkerz", {
           method: "POST",
           headers: { "Accept": "application/json" },
           body: formData
@@ -436,5 +438,6 @@ textarea.formControl{
     });
   })();
 </script>
+  
 </body>
 </html>
