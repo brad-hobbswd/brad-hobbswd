@@ -120,6 +120,35 @@ footer{
   color:var(--muted);
   font-size:13px;
 }
+  .introBanner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url("mediaservicesbanner.JPEG") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.introOverlay {
+  background: rgba(0, 0, 40, 0.65); /* dark overlay for readability */
+  padding: 40px 60px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+}
+
+.introTitle {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.introSubtitle {
+  font-size: 20px;
+  color: #cbd5ff;
+}
  
 </style>
 </head>
@@ -140,6 +169,12 @@ footer{
     <a class="active" href="index.html#contact">Contact</a>
   </nav>
 </div>
+  <section class="introBanner">
+  <div class="introOverlay">
+    <h1 class="introTitle">Our Services</h1>
+    <p class="introSubtitle">Strategic design. Structured development. Purpose driven results.</p>
+  </div>
+</section>
 
 <section class="section">
   
