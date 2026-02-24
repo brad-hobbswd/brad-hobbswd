@@ -545,3 +545,22 @@ footer{
   transform: scale(1.01);
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
 }
+/* FORCE FRAMED PROCESS BANNERS */
+.pageBanner,
+.processSection{
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pageBanner img,
+.processSection img{
+  width: min(1200px, 95%);
+  height: auto;
+  display: block;
+
+  border-radius: 24px;
+  border: 1px solid rgba(140, 170, 255, 0.18);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.18);
+}
