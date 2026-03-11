@@ -230,6 +230,15 @@ a:hover{
   box-shadow:0 12px 28px rgba(0,0,0,.28);
 }
 
+.honeypot{
+  display:none;
+}
+
+.honeypot{
+  position:absolute;
+  left:-9999px;
+}
+
 /* CONTACT FORM */
 
 .contactWrap{
