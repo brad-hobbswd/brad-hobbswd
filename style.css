@@ -46,6 +46,12 @@ a:hover{
 
 /* HEADER */
 
+/* space below navigation */
+
+header{
+  margin-bottom:18px;
+}
+
 .topbar{
   display:flex;
   align-items:center;
