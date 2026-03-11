@@ -129,6 +129,23 @@ a:hover{
   margin:0;
 }
 
+.bannerPrimary,
+.bannerSecondary{
+  width:100%;
+  max-width:1100px;
+  margin:18px auto;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 12px 40px rgba(0,0,0,.45);
+}
+
+.bannerPrimary img,
+.bannerSecondary img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
 /* SERVICES */
 
 .serviceSection{
