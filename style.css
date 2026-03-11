@@ -184,13 +184,15 @@ header{
 /* PACKAGES */
 
 .packageSection{
-  padding:12px 0;
-  display:flex;
-  justify-content:center;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+  max-width:1100px;
+  margin:20px auto;
 }
 
 .packageCard{
-  width:min(700px,92%);
+  width:100%;
   border:1px solid rgba(255,255,255,.12);
   border-radius:18px;
   background:rgba(255,255,255,.05);
@@ -325,4 +327,9 @@ footer{
     border-radius:18px;
   }
 
+}
+@media (max-width:900px){
+  .packageSection{
+    grid-template-columns:1fr;
+  }
 }
