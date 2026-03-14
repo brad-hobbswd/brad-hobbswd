@@ -465,7 +465,7 @@ height:100%;
 
 /* logo sizing for hosting cards */
 
-.logoLink{
+:not(.links-page) .logoLink{
 display:flex;
 align-items:center;
 justify-content:center;
@@ -473,7 +473,7 @@ height:70px;
 margin-bottom:12px;
 }
 
-.logoImg{
+:not(.links-page) .logoImg{
 max-width:130px;
 max-height:50px;
 width:auto;
