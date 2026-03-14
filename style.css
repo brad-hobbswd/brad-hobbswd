@@ -10,8 +10,7 @@
   --shadow:0 18px 45px rgba(0,0,0,.45);
 }
 
-
-/* GLOBAL RESET */
+/* ================= GLOBAL ================= */
 
 *,
 *::before,
@@ -44,16 +43,16 @@ a:hover{
   margin:0 auto;
   padding:18px;
 }
-/* GLOBAL GRID */
+
+/* ================= GRID ================= */
 
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:20px;
 }
-/* HEADER */
 
-/* space below navigation */
+/* ================= HEADER ================= */
 
 header{
   margin-bottom:18px;
@@ -92,7 +91,6 @@ header{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
-  justify-content:flex-end;
 }
 
 .nav a{
@@ -105,89 +103,51 @@ header{
   font-size:13px;
 }
 
-.nav a:hover{
-  background:rgba(255,255,255,.06);
-  text-decoration:none;
-}
-
 .nav a.active{
   background:rgba(255,255,255,.08);
   color:var(--text);
 }
 
-.nav a:focus-visible{
-  outline:2px solid rgba(125,211,255,.9);
-  outline-offset:3px;
-}
-
-/* BANNERS */
+/* ================= BANNERS ================= */
 
 .bannerSection{
-  padding:0;
-  margin:0 0 25px 0;
+  margin-bottom:25px;
 }
 
 .bannerCard{
   width:min(1100px,92%);
-  margin:0 auto;
+  margin:auto;
   border-radius:22px;
   overflow:hidden;
-  box-shadow:0 12px 40px rgba(0,0,0,.45);
   border:1px solid rgba(140,170,255,.18);
   background:rgba(0,0,0,.25);
+  box-shadow:0 12px 40px rgba(0,0,0,.45);
 }
 
 .bannerImg{
   width:100%;
-  height:auto;
-  display:block;
-  margin:0;
-}
-
-.bannerPrimary,
-.bannerSecondary{
-  width:100%;
-  max-width:1100px;
-  margin:18px auto;
-  border-radius:22px;
-  overflow:hidden;
-  box-shadow:0 12px 40px rgba(0,0,0,.45);
-}
-
-.bannerPrimary img,
-.bannerSecondary img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-.packages-page .bannerSection{
-  margin-bottom:10px;
-}
-
-/* PROCESS PAGE BANNERS */
-
-.pageBanner,
-.processSection{
-  display:flex;
-  justify-content:center;
-  margin:18px 0;
-}
-
-.pageBanner img,
-.processSection img{
-  width:100%;
-  max-width:1100px;
-  height:auto;
-  border-radius:22px;
-  box-shadow:0 14px 45px rgba(0,0,0,.45);
-  border:1px solid rgba(140,170,255,.18);
   display:block;
 }
 
-/* SERVICES */
+/* ================= GENERIC CARDS ================= */
+
+.card{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:0 12px 28px rgba(0,0,0,.28);
+  transition:.25s ease;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+/* ================= SERVICE CARDS ================= */
 
 .serviceSection{
-  padding:16px 0;
   display:flex;
   justify-content:center;
 }
@@ -198,138 +158,94 @@ header{
   border-radius:22px;
   overflow:hidden;
   background:rgba(255,255,255,.05);
-  box-shadow:0 18px 40px rgba(0,0,0,.35);
-  transition:transform .25s ease, background .25s ease;
+  box-shadow:var(--shadow);
 }
 
 .serviceCard img{
   width:100%;
-  height:auto;
   display:block;
 }
 
-.serviceCard:hover{
-  transform:translateY(-3px);
-  background:rgba(255,255,255,.07);
+/* ================= PACKAGE PAGE ================= */
+
+.packages-page .packageSection{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  margin:25px auto;
 }
 
-/* PACKAGES */
-
 .packageCard{
-  width:100%;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:18px;
-  background:rgba(255,255,255,.05);
-  box-shadow:0 18px 40px rgba(0,0,0,.35);
-  padding:18px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--glass);
+  padding:20px;
 }
 
 .packageImg{
   width:100%;
-  height:auto;
-  border-radius:14px;
-  margin:0 0 14px 0;
-  display:block;
+  border-radius:8px;
+  margin-bottom:15px;
 }
 
 .packageTitle{
-  margin:0 0 6px 0;
-  font-size:22px;
+  font-size:18px;
   font-weight:950;
 }
 
 .packagePrice{
-  margin:0 0 12px 0;
-  font-size:18px;
-  font-weight:950;
+  font-size:16px;
   color:var(--accent);
 }
 
 .packageList{
-  margin:0;
-  padding-left:18px;
-  color:rgba(184,199,230,.92);
-  line-height:1.8;
+  font-size:14px;
+  line-height:1.6;
 }
 
-/* CARD CONTAINER */
+/* ================= LINKS PAGE ================= */
 
-.card{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
-  border-radius:var(--radius);
-  padding:18px;
-  box-shadow:0 12px 28px rgba(0,0,0,.28);
+.links-page .grid{
+  max-width:760px;
+  margin:24px auto;
 }
-
-.honeypot{
-  position:absolute;
-  left:-9999px;
-}
-
-.card{
-transition:transform .25s ease, box-shadow .25s ease;
-}
-
-.card:hover{
-transform:translateY(-4px);
-box-shadow:0 20px 40px rgba(0,0,0,.35);
-}
-
-/* LINKS PAGE CARD LAYOUT */
-
-/* card structure */
 
 .links-page .cardInner{
-  padding:14px;
   display:grid;
-  grid-template-columns:200px 1fr;
-  gap:16px;
+  grid-template-columns:140px 1fr;
+  gap:14px;
   align-items:center;
 }
-
-/* logo container */
 
 .links-page .logoLink{
   display:flex;
-  align-items:center;
   justify-content:center;
-  border:1px solid rgba(255,255,255,.14);
+  align-items:center;
+  padding:8px;
+  border-radius:16px;
   background:rgba(0,0,0,.18);
-  border-radius:18px;
-  padding:12px;
-  min-height:140px;
 }
-
-/* logo size */
 
 .links-page .logoImg{
-  width:170px;
-  height:auto;
-  display:block;
+  width:120px;
 }
-
-/* title slightly larger */
 
 .links-page .cardTitle{
-  font-size:24px;
+  font-size:20px;
 }
 
-/* responsive */
+/* ================= RESOURCES PAGE ================= */
 
-@media (max-width:900px){
-  .links-page .grid{
-    grid-template-columns:1fr;
-  }
+.resourcesPage .grid{
+  grid-template-columns:repeat(3,1fr);
 }
 
-@media (max-width:700px){
-  .links-page .cardInner{
-    grid-template-columns:1fr;
-  }
+.resourcesPage .card{
+  display:flex;
+  flex-direction:column;
 }
 
-/* CONTACT FORM */
+/* ================= FORM ================= */
 
 .contactWrap{
   display:flex;
@@ -337,8 +253,8 @@ box-shadow:0 20px 40px rgba(0,0,0,.35);
 }
 
 #quoteForm{
-  width:100%;
   max-width:580px;
+  width:100%;
 }
 
 .formGrid{
@@ -346,41 +262,19 @@ box-shadow:0 20px 40px rgba(0,0,0,.35);
   gap:8px;
 }
 
-.formLabelTitle{
-  color:#c7d5ea;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  margin:0 0 6px 0;
-}
-
 .formControl{
-  width:100%;
   padding:8px 12px;
   border-radius:10px;
   border:1px solid rgba(255,255,255,.14);
   background:rgba(255,255,255,.04);
   color:white;
-  font-size:14px;
-}
-
-.formControl:focus{
-  outline:2px solid rgba(47,179,255,.45);
-  outline-offset:2px;
 }
 
 textarea.formControl{
   resize:vertical;
 }
 
-#sendBtn{
-  margin-top:6px;
-  padding:10px 14px;
-  border-radius:10px;
-}
-
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
   margin:22px 0 10px;
@@ -389,38 +283,55 @@ footer{
   font-size:13px;
 }
 
-/* RESOURCES PAGE GRID */
+/* ================= BANNER CARD ================= */
 
-.resourcesPage .grid{
-  margin-top:24px;
-  display:grid;
-  gap:24px;
-  grid-template-columns:repeat(3,1fr);
+.glassBannerCard{
+  margin:24px 0 36px 0;
+  border:1px solid var(--line);
+  background:var(--glass);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 12px 28px rgba(0,0,0,.28);
 }
 
-.resourcesPage .card{
-display:flex;
-flex-direction:column;
-height:100%;
+.glassBannerCardImg{
+  width:100%;
+  display:block;
 }
 
-/* tablet */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width:1000px){
+
   .resourcesPage .grid{
     grid-template-columns:repeat(2,1fr);
   }
+
+  .packages-page .packageSection{
+    grid-template-columns:repeat(2,1fr);
+  }
+
 }
 
-/* mobile */
+@media (max-width:900px){
 
-@media (max-width:640px){
-  .resourcesPage .grid{
+  .grid{
     grid-template-columns:1fr;
   }
+
 }
 
-/* RESPONSIVE */
+@media (max-width:700px){
+
+  .links-page .cardInner{
+    grid-template-columns:1fr;
+  }
+
+  .packages-page .packageSection{
+    grid-template-columns:1fr;
+  }
+
+}
 
 @media (max-width:520px){
 
@@ -440,196 +351,4 @@ height:100%;
     border-radius:18px;
   }
 
-}
-
-.packages-page .packageSection{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-  margin:25px auto;
-}
-
-@media (max-width:900px){
-  .packages-page .packageSection{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media (max-width:700px){
-  .packages-page .packageSection{
-    grid-template-columns:1fr;
-  }
-}
-
-/* logo sizing for hosting cards */
-
-:not(.links-page) .logoLink{
-display:flex;
-align-items:center;
-justify-content:center;
-height:70px;
-margin-bottom:12px;
-}
-
-:not(.links-page) .logoImg{
-max-width:130px;
-max-height:50px;
-width:auto;
-height:auto;
-object-fit:contain;
-}
-
-.resourcesPage .resourcesBanner{
-width:100%;
-margin-bottom:25px;
-}
-
-.resourcesPage .resourcesBanner img{
-width:100%;
-max-width:1100px;
-height:auto;
-display:block;
-margin:auto;
-border-radius:22px;
-box-shadow:0 14px 45px rgba(0,0,0,.45);
-border:1px solid rgba(140,170,255,.18);
-}
-
-.resourcesPage .resourcesBanner img{
-width:100%;
-max-height:180px;
-object-fit:cover;
-display:block;
-border-radius:22px;
-box-shadow:0 14px 45px rgba(0,0,0,.45);
-border:1px solid rgba(140,170,255,.18);
-}
-
-.packages-page .packageCard{
-  background:var(--glass);
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:20px;
-}
-
-.packages-page .packageImg{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:8px;
-  margin-bottom:15px;
-}
-
-.packages-page .packageCard{
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-
-.packages-page .packageCard:hover{
-  transform:translateY(-4px);
-  box-shadow:0 22px 45px rgba(0,0,0,.45);
-}
-
-.packages-page .packageTitle{
-  font-size:18px;
-}
-
-.packages-page .packagePrice{
-  font-size:16px;
-}
-
-.packages-page .packageList{
-  font-size:14px;
-  line-height:1.6;
-}
-
-.hostingIntro{
-  max-width:800px;
-  margin:40px auto;
-  text-align:center;
-}
-
-.hostingIntro h2{
-  font-size:28px;
-  margin-bottom:12px;
-}
-
-.hostingIntro p{
-  color:var(--muted);
-  line-height:1.7;
-  margin-bottom:12px;
-}
-
-
-@media (max-width:900px){
-  .links-page .grid{
-    grid-template-columns:1fr;
-  }
-}
-
-.glassBannerCard{
-  margin:24px 0 36px 0;
-  border:1px solid var(--line);
-  background:var(--glass);
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:0 12px 28px rgba(0,0,0,.28);
-}
-
-.glassBannerCardImg{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-/* LINKS PAGE LAYOUT */
-
-.links-page .grid{
-  max-width:760px;
-  margin:24px auto;
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-
-.links-page .card{
-  padding:14px;
-}
-
-.links-page .cardInner{
-  display:grid;
-  grid-template-columns:140px 1fr;
-  gap:14px;
-  align-items:center;
-}
-
-.links-page .logoLink{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(0,0,0,.18);
-  border-radius:16px;
-  padding:8px;
-  min-height:100px;
-}
-
-.links-page .logoImg{
-  width:120px;
-  height:auto;
-}
-
-.links-page .cardTitle{
-  font-size:20px;
-}
-
-@media (max-width:900px){
-  .links-page .grid{
-    grid-template-columns:1fr;
-  }
-}
-
-@media (max-width:700px){
-  .links-page .cardInner{
-    grid-template-columns:1fr;
-  }
 }
