@@ -269,6 +269,53 @@ transform:translateY(-4px);
 box-shadow:0 20px 40px rgba(0,0,0,.35);
 }
 
+/* LINKS PAGE PROJECT CARDS */
+
+.links-page .grid{
+  margin-top:24px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+@media (max-width:900px){
+  .links-page .grid{
+    grid-template-columns:1fr;
+  }
+}
+
+.links-page .cardInner{
+  padding:18px;
+  display:grid;
+  grid-template-columns:170px 1fr;
+  gap:16px;
+  align-items:center;
+}
+
+@media (max-width:700px){
+  .links-page .cardInner{
+    grid-template-columns:1fr;
+  }
+}
+
+.links-page .logoLink{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(0,0,0,.18);
+  border-radius:18px;
+  padding:16px;
+  min-height:160px;
+}
+
+.links-page .logoImg{
+  width:150px;
+  height:auto;
+  display:block;
+  filter:drop-shadow(0 10px 26px rgba(0,0,0,.45));
+}
+
 /* CONTACT FORM */
 
 .contactWrap{
