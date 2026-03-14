@@ -203,14 +203,6 @@ header{
 
 /* PACKAGES */
 
-.packageSection{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:26px;
-  max-width:1100px;
-  margin:20px auto;
-}
-
 .packageCard{
   width:100%;
   border:1px solid rgba(255,255,255,.12);
@@ -384,8 +376,15 @@ height:100%;
   }
 
 }
+
 @media (max-width:900px){
-  .packageSection{
+  .packages-page .packageSection{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media (max-width:520px){
+  .packages-page .packageSection{
     grid-template-columns:1fr;
   }
 }
@@ -458,4 +457,13 @@ border:1px solid rgba(140,170,255,.18);
   object-fit:cover;
   border-radius:8px;
   margin-bottom:15px;
+}
+
+.packages-page .packageCard{
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.packages-page .packageCard:hover{
+  transform:translateY(-4px);
+  box-shadow:0 22px 45px rgba(0,0,0,.45);
 }
