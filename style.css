@@ -526,3 +526,11 @@ border:1px solid rgba(140,170,255,.18);
   height:auto;
   display:block;
 }
+
+.links-page .grid{
+  max-width:900px;
+  margin:24px auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
