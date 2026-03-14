@@ -327,6 +327,31 @@ footer{
   font-size:13px;
 }
 
+/* RESOURCES PAGE GRID */
+
+.resourcesPage .grid{
+  margin-top:24px;
+  display:grid;
+  gap:24px;
+  grid-template-columns:repeat(3,1fr);
+}
+
+/* tablet */
+
+@media (max-width:1000px){
+  .resourcesPage .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+/* mobile */
+
+@media (max-width:640px){
+  .resourcesPage .grid{
+    grid-template-columns:1fr;
+  }
+}
+
 /* RESPONSIVE */
 
 @media (max-width:520px){
