@@ -270,34 +270,27 @@ transform:translateY(-4px);
 box-shadow:0 20px 40px rgba(0,0,0,.35);
 }
 
-/* LINKS PAGE PROJECT CARDS */
+/* LINKS PAGE CARD LAYOUT */
 
 .links-page .grid{
-  margin-top:24px;
+  max-width:900px;
+  margin:24px auto;
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:24px;
+  gap:20px;
 }
 
-@media (max-width:900px){
-  .links-page .grid{
-    grid-template-columns:1fr;
-  }
-}
+/* card structure */
 
 .links-page .cardInner{
-  padding:18px;
+  padding:14px;
   display:grid;
-  grid-template-columns:170px 1fr;
+  grid-template-columns:200px 1fr;
   gap:16px;
   align-items:center;
 }
 
-@media (max-width:700px){
-  .links-page .cardInner{
-    grid-template-columns:1fr;
-  }
-}
+/* logo container */
 
 .links-page .logoLink{
   display:flex;
@@ -306,15 +299,36 @@ box-shadow:0 20px 40px rgba(0,0,0,.35);
   border:1px solid rgba(255,255,255,.14);
   background:rgba(0,0,0,.18);
   border-radius:18px;
-  padding:16px;
-  min-height:160px;
+  padding:12px;
+  min-height:140px;
 }
 
+/* logo size */
+
 .links-page .logoImg{
-  width:150px;
+  width:170px;
   height:auto;
   display:block;
-  filter:drop-shadow(0 10px 26px rgba(0,0,0,.45));
+}
+
+/* title slightly larger */
+
+.links-page .cardTitle{
+  font-size:24px;
+}
+
+/* responsive */
+
+@media (max-width:900px){
+  .links-page .grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:700px){
+  .links-page .cardInner{
+    grid-template-columns:1fr;
+  }
 }
 
 /* CONTACT FORM */
