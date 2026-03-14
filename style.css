@@ -53,6 +53,8 @@ header{
 }
 
 .topbar{
+  width:min(1100px,92%);
+  margin:0 auto;
   display:flex;
   align-items:center;
   justify-content:space-between;
