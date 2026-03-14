@@ -498,3 +498,31 @@ border:1px solid rgba(140,170,255,.18);
   line-height:1.7;
   margin-bottom:12px;
 }
+
+.links-page .grid{
+  margin-top:24px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+@media (max-width:900px){
+  .links-page .grid{
+    grid-template-columns:1fr;
+  }
+}
+
+.glassBannerCard{
+  margin:24px 0 36px 0;
+  border:1px solid var(--line);
+  background:var(--glass);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 12px 28px rgba(0,0,0,.28);
+}
+
+.glassBannerCardImg{
+  width:100%;
+  height:auto;
+  display:block;
+}
