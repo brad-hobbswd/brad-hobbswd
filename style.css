@@ -574,3 +574,63 @@ border:1px solid rgba(140,170,255,.18);
   height:auto;
   display:block;
 }
+
+/* LINKS PAGE GRID */
+
+.links-page .grid{
+  max-width:900px;
+  margin:24px auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+/* card structure */
+
+.links-page .cardInner{
+  padding:14px;
+  display:grid;
+  grid-template-columns:200px 1fr;
+  gap:18px;
+  align-items:center;
+}
+
+/* logo container */
+
+.links-page .logoLink{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(0,0,0,.18);
+  border-radius:18px;
+  padding:14px;
+  min-height:150px;
+}
+
+/* larger logo */
+
+.links-page .logoImg{
+  width:190px;
+  height:auto;
+}
+
+/* slightly larger title */
+
+.links-page .cardTitle{
+  font-size:24px;
+}
+
+/* responsive */
+
+@media (max-width:900px){
+  .links-page .grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:700px){
+  .links-page .cardInner{
+    grid-template-columns:1fr;
+  }
+}
