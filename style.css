@@ -434,22 +434,28 @@ box-shadow:0 14px 45px rgba(0,0,0,.45);
 border:1px solid rgba(140,170,255,.18);
 }
 
-.packages-page .packages{
+.packages-page .packageSection{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(3,1fr);
   gap:30px;
   max-width:1200px;
-  margin:auto;
+  margin:60px auto;
+  padding:0 20px;
 }
 
-.packages-page .package-card{
+.packages-page .packageCard{
+  background:var(--glass);
+  border:1px solid var(--line);
   border-radius:12px;
-  overflow:hidden;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
 }
 
-.packages-page .package-card img{
+.packages-page .packageImg{
   width:100%;
-  height:100%;
+  height:200px;
   object-fit:cover;
-  display:block;
+  border-radius:8px;
+  margin-bottom:15px;
 }
