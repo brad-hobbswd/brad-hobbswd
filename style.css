@@ -378,3 +378,21 @@ footer{
     grid-template-columns:1fr;
   }
 }
+
+/* logo sizing for hosting cards */
+
+.logoLink{
+display:flex;
+align-items:center;
+justify-content:center;
+height:70px;
+margin-bottom:12px;
+}
+
+.logoImg{
+max-width:130px;
+max-height:50px;
+width:auto;
+height:auto;
+object-fit:contain;
+}
