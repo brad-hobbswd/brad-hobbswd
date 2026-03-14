@@ -447,8 +447,6 @@ border:1px solid rgba(140,170,255,.18);
   border:1px solid var(--line);
   border-radius:12px;
   padding:20px;
-  display:flex;
-  flex-direction:column;
 }
 
 .packages-page .packageImg{
