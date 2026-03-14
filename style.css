@@ -465,3 +465,16 @@ border:1px solid rgba(140,170,255,.18);
   transform:translateY(-4px);
   box-shadow:0 22px 45px rgba(0,0,0,.45);
 }
+
+.packages-page .packageTitle{
+  font-size:18px;
+}
+
+.packages-page .packagePrice{
+  font-size:16px;
+}
+
+.packages-page .packageList{
+  font-size:14px;
+  line-height:1.6;
+}
