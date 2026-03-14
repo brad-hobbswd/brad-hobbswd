@@ -272,14 +272,6 @@ box-shadow:0 20px 40px rgba(0,0,0,.35);
 
 /* LINKS PAGE CARD LAYOUT */
 
-.links-page .grid{
-  max-width:900px;
-  margin:24px auto;
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-}
-
 /* card structure */
 
 .links-page .cardInner{
@@ -561,12 +553,6 @@ border:1px solid rgba(140,170,255,.18);
   margin-bottom:12px;
 }
 
-.links-page .grid{
-  margin-top:24px;
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:24px;
-}
 
 @media (max-width:900px){
   .links-page .grid{
@@ -587,12 +573,4 @@ border:1px solid rgba(140,170,255,.18);
   width:100%;
   height:auto;
   display:block;
-}
-
-.links-page .grid{
-  max-width:900px;
-  margin:24px auto;
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:24px;
 }
