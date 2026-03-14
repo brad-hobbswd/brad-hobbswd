@@ -259,12 +259,17 @@ header{
 }
 
 .honeypot{
-  display:none;
-}
-
-.honeypot{
   position:absolute;
   left:-9999px;
+}
+
+.card{
+transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 20px 40px rgba(0,0,0,.35);
 }
 
 /* CONTACT FORM */
@@ -334,6 +339,12 @@ footer{
   display:grid;
   gap:24px;
   grid-template-columns:repeat(3,1fr);
+}
+
+.resourcesPage .card{
+display:flex;
+flex-direction:column;
+height:100%;
 }
 
 /* tablet */
@@ -406,22 +417,6 @@ background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:8px;
+border-radius:22px;
 margin-bottom:25px;
-}
-
-.resourcesPage .resourcesBannerText{
-text-align:center;
-font-size:38px;
-font-weight:700;
-color:#47e3da;
-text-transform:uppercase;
-letter-spacing:2px;
-}
-
-.resourcesPage .resourcesBannerText span{
-font-size:26px;
-color:white;
-display:block;
-margin:6px 0;
 }
