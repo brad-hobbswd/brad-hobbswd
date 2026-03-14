@@ -377,6 +377,13 @@ height:100%;
 
 }
 
+.packages-page .packageSection{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  margin:60px auto;
+}
+
 @media (max-width:900px){
   .packages-page .packageSection{
     grid-template-columns:repeat(2,1fr);
@@ -431,13 +438,6 @@ display:block;
 border-radius:22px;
 box-shadow:0 14px 45px rgba(0,0,0,.45);
 border:1px solid rgba(140,170,255,.18);
-}
-
-.packages-page .packageSection{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-  margin:60px auto;
 }
 
 .packages-page .packageCard{
