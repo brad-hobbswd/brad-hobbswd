@@ -286,14 +286,14 @@ header{
   width:320px;
 }
 
-/* center the last row when only two cards exist */
+/* center last two cards */
 
 .resourcesPage .grid article:nth-last-child(2){
-  grid-column:2;
+  grid-column:1;
 }
 
 .resourcesPage .grid article:last-child{
-  grid-column:3;
+  grid-column:2;
 }
 
 .resourcesPage .card{
