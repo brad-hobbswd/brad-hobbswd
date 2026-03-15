@@ -350,6 +350,25 @@ header{
   color:#031427;
   font-weight:900;
 }
+
+/* center last two cards in resources grid */
+
+.resourcesPage .grid{
+  justify-content:center;
+}
+
+.resourcesPage .grid article{
+  max-width:320px;
+  width:100%;
+}
+
+/* specifically center the last two cards */
+
+.resourcesPage .grid article:nth-last-child(2),
+.resourcesPage .grid article:last-child{
+  justify-self:center;
+}
+
 /* ================= FORM ================= */
 
 .contactWrap{
