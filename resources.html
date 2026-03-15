@@ -287,21 +287,14 @@ Professional website design, hosting setup, and deployment services are availabl
 
 </div>
 
+<footer>
+© <span id="y"></span> Brad Hobbs • Web Designer
+</footer>
+
 <script>
-
-document.getElementById("domainSearchForm").addEventListener("submit", function(e){
-
-e.preventDefault();
-
-var domain=document.getElementById("domainInput").value.trim();
-
-if(domain){
-window.open("https://www.namecheap.com/domains/registration/results/?domain="+domain,"_blank");
-}
-
-});
-
+document.getElementById("y").textContent = new Date().getFullYear();
 </script>
+
 <script>
 fetch("/brad-hobbswd/header.html")
 .then(response => response.text())
@@ -309,5 +302,3 @@ fetch("/brad-hobbswd/header.html")
 document.getElementById("siteHeader").innerHTML = data;
 });
 </script>
-</body>
-</html>
