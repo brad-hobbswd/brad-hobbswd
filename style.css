@@ -356,10 +356,6 @@ header{
 
 /* center last two cards in resources grid */
 
-.resourcesPage .grid{
-  justify-content:center;
-}
-
 .resourcesPage .grid article{
   max-width:320px;
   width:100%;
@@ -430,9 +426,6 @@ footer{
 
 @media (max-width:1000px){
 
-  .resourcesPage .grid{
-    grid-template-columns:repeat(2,1fr);
-  }
 
   .packages-page .packageSection{
     grid-template-columns:repeat(2,1fr);
