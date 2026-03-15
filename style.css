@@ -618,3 +618,8 @@ footer{
   transform:translateY(-2px);
   box-shadow:0 16px 36px rgba(0,0,0,.45);
 }
+
+.resource-center{
+  text-align:center;
+  margin:20px 0;
+}
