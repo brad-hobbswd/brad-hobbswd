@@ -384,6 +384,33 @@ header{
   cursor:pointer;
 }
 
+/* fixed logo area inside cards */
+
+.logoLink{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:120px;
+  height:80px;
+  border-radius:12px;
+  background:rgba(0,0,0,.18);
+}
+
+.logoImg{
+  max-width:70px;
+  max-height:50px;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+}
+
+.cardInner{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:14px;
+  align-items:center;
+}
+
 /* ================= FORM ================= */
 
 .contactWrap{
