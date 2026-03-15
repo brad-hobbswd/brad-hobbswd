@@ -129,6 +129,16 @@ header{
   display:block;
 }
 
+/* services page banner spacing */
+
+.bannerSection{
+  margin:12px 0 24px 0;
+}
+
+.serviceSection{
+  margin-bottom:24px;
+}
+
 /* ================= GENERIC CARDS ================= */
 
 .card{
