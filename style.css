@@ -359,6 +359,31 @@ header{
   font-weight:900;
 }
 
+.dns-check{
+  max-width:520px;
+  margin:28px auto;
+  text-align:center;
+}
+
+.dns-check input{
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  margin-right:6px;
+}
+
+.dns-check button{
+  padding:10px 16px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#031427;
+  font-weight:900;
+  cursor:pointer;
+}
+
 /* ================= FORM ================= */
 
 .contactWrap{
