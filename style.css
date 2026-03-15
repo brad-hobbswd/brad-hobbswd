@@ -404,13 +404,6 @@ header{
   object-fit:contain;
 }
 
-.cardInner{
-  display:grid;
-  grid-template-columns:120px 1fr;
-  gap:14px;
-  align-items:center;
-}
-
 /* ================= FORM ================= */
 
 .contactWrap{
