@@ -274,12 +274,15 @@ header{
 /* ================= RESOURCES PAGE ================= */
 
 .resourcesPage .grid{
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(auto-fit,320px);
+  justify-content:center;
+  gap:20px;
 }
 
 .resourcesPage .card{
   display:flex;
   flex-direction:column;
+  width:320px;
 }
 
 .resourcesBanner{
