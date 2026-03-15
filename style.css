@@ -150,17 +150,7 @@ header{
 .serviceSection{
   display:flex;
   justify-content:center;
-}
-
-.serviceSection{
-padding:20px 0;
-display:flex;
-justify-content:center;
-}
-
-.serviceSection{
-  display:flex;
-  justify-content:center;
+  padding:20px 0;
   margin-bottom:24px;
 }
 
@@ -175,13 +165,8 @@ justify-content:center;
 
 .serviceCard img{
   width:100%;
+  height:auto;
   display:block;
-}
-
-.serviceCard img{
-width:100%;
-height:auto;
-display:block;
 }
 
 /* ================= PACKAGE PAGE ================= */
@@ -389,6 +374,14 @@ footer{
   width:100%;
   height:auto;
   display:block;
+}
+
+.processSection{
+  transition:transform .25s ease;
+}
+
+.processSection:hover{
+  transform:translateY(-4px);
 }
 
 /* ================= HOME BANNERS ================= */
