@@ -152,6 +152,18 @@ header{
   justify-content:center;
 }
 
+.serviceSection{
+padding:20px 0;
+display:flex;
+justify-content:center;
+}
+
+.serviceSection{
+  display:flex;
+  justify-content:center;
+  margin-bottom:24px;
+}
+
 .serviceCard{
   width:min(1100px,92%);
   border:1px solid rgba(255,255,255,.12);
@@ -164,6 +176,12 @@ header{
 .serviceCard img{
   width:100%;
   display:block;
+}
+
+.serviceCard img{
+width:100%;
+height:auto;
+display:block;
 }
 
 /* ================= PACKAGE PAGE ================= */
@@ -351,4 +369,70 @@ footer{
     border-radius:18px;
   }
 
+}
+/* ================= HOME BANNERS ================= */
+
+.bannerPrimary,
+.bannerSecondary{
+  width:100%;
+  max-width:1100px;
+  margin:18px auto;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 12px 40px rgba(0,0,0,.45);
+}
+
+.bannerPrimary img,
+.bannerSecondary img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* ================= FORM EXTRAS ================= */
+
+.formTitle{
+  font-size:20px;
+  font-weight:900;
+  margin-bottom:16px;
+}
+
+.formLabel{
+  display:block;
+}
+
+.formLabelTitle{
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin-bottom:4px;
+  color:var(--muted);
+}
+
+.formStatus{
+  font-size:14px;
+  margin-top:8px;
+  color:var(--muted);
+}
+
+.honeypot{
+  position:absolute;
+  left:-9999px;
+}
+
+/* ================= BUTTONS ================= */
+
+.button{
+  padding:10px 16px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  font-weight:900;
+  cursor:pointer;
+}
+
+.btnPrimary{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#031427;
+  border:none;
 }
