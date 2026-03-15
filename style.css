@@ -279,10 +279,14 @@ header{
   gap:20px;
 }
 
+.resourcesPage .grid{
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:20px;
+}
+
 .resourcesPage .card{
   display:flex;
   flex-direction:column;
-  width:320px;
 }
 
 .resourcesBanner{
@@ -352,20 +356,6 @@ header{
   background:linear-gradient(90deg,var(--accent),var(--accent2));
   color:#031427;
   font-weight:900;
-}
-
-/* center last two cards in resources grid */
-
-.resourcesPage .grid article{
-  max-width:320px;
-  width:100%;
-}
-
-/* specifically center the last two cards */
-
-.resourcesPage .grid article:nth-last-child(2),
-.resourcesPage .grid article:last-child{
-  justify-self:center;
 }
 
 /* ================= FORM ================= */
