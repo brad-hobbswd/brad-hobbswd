@@ -273,6 +273,11 @@ header{
 
 /* ================= RESOURCES PAGE ================= */
 
+.gridSpacer{
+  width:320px;
+  visibility:hidden;
+}
+
 .resourcesPage .grid{
   display:grid;
   grid-template-columns:repeat(3,320px);
