@@ -309,7 +309,7 @@ Visit Website
 </div>
 </div>
 </article>
-<div class="gridSpacer"></div>
+
 </section>
 
 <div class="cta">
@@ -337,5 +337,33 @@ fetch("/brad-hobbswd/header.html")
 .then(response => response.text())
 .then(data => {
 document.getElementById("siteHeader").innerHTML = data;
+});
+</script>
+
+<script>
+document.getElementById("domainSearchForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+var domain = document.getElementById("domainInput").value.trim();
+
+if(domain){
+window.open("https://www.namecheap.com/domains/registration/results/?domain="+domain,"_blank");
+}
+
+});
+</script>
+
+<script>
+document.getElementById("dnsCheckForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+var domain = document.getElementById("dnsInput").value.trim();
+
+if(domain){
+window.open("https://dnschecker.org/#A/"+domain,"_blank");
+}
+
 });
 </script>
