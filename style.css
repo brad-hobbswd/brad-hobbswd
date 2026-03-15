@@ -110,10 +110,6 @@ header{
 
 /* ================= BANNERS ================= */
 
-.bannerSection{
-  margin-bottom:25px;
-}
-
 .bannerCard{
   width:min(1100px,92%);
   margin:auto;
@@ -160,7 +156,6 @@ header{
 .serviceSection{
   display:flex;
   justify-content:center;
-  padding:20px 0;
   margin-bottom:24px;
 }
 
