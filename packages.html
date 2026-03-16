@@ -229,5 +229,26 @@ document.getElementById(id).style.display="block";
   </div>
 
 </div>
+    <script>
+
+function openPackage(id){
+
+const modal = document.getElementById("packageModal");
+const body = document.getElementById("modalBody");
+const content = document.getElementById(id).innerHTML;
+
+body.innerHTML = content;
+
+modal.classList.add("active");
+
+}
+
+function closePackage(){
+
+document.getElementById("packageModal").classList.remove("active");
+
+}
+
+</script>
 </body>
 </html>
