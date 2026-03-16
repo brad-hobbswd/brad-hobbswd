@@ -586,7 +586,9 @@ footer{
   color:#031427;
   border:none;
 }
-
+.package-detail button{
+margin-top:20px;
+}
 /* ================= RESOURCE BUTTON ================= */
 
 .resource-button{
