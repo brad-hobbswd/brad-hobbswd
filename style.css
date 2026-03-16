@@ -177,13 +177,6 @@ margin-left:auto;
 
 /* ================= PACKAGE PAGE ================= */
 
-.packages-page .packageSection{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-  margin:25px auto;
-}
-
 .packageCard{
   border:1px solid var(--line);
   border-radius:12px;
@@ -472,20 +465,11 @@ footer{
 
 /* ================= RESPONSIVE ================= */
 
-
-
-
 @media (max-width:700px){
 
   .links-page .cardInner{
     grid-template-columns:1fr;
   }
-
-  .packages-page .packageSection{
-    grid-template-columns:1fr;
-  }
-
-}
 
 @media (max-width:520px){
 
@@ -659,14 +643,6 @@ transform:translateY(-8px);
 box-shadow:0 28px 60px rgba(47,179,255,.35);
 }
 
-.packages-page .packageSection{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-max-width:1200px;
-margin:20px auto;
-justify-items:center;
-}
 
 /* ================= PACKAGE IMAGES FIX ================= */
 
@@ -830,10 +806,22 @@ display:flex !important;
 
 }
 
+  /* ===== PACKAGE GRID ===== */
+
+.packages-page .packageSection{
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap:18px;
+max-width:1300px;
+margin:20px auto;
+align-items:start;
+justify-items:center;
+}
+  
 /* ===== FINAL PACKAGE IMAGE SIZE ===== */
 
 .packages-page .package-card{
-max-width:360px;
+max-width:390px;
 width:100%;
 }
 
