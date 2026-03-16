@@ -20,3 +20,9 @@ function setActiveNav(key) {
   setActiveNav(document.body.dataset.page || "");
   await loadPartial("#siteFooter", "/brad-hobbswd/footer.html");
 })();
+
+(async function () {
+  await loadPartial("#siteHeader", "/brad-hobbswd/header.html");
+  setActiveNav(document.body.dataset.page || "");
+  await loadPartial("#siteFooter", "/brad-hobbswd/footer.html");
+})();
