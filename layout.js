@@ -23,7 +23,13 @@ function setActiveNav(key) {
 
 function toggleMenu(){
   const menu = document.getElementById("mobileMenu");
+  const toggle = document.querySelector(".menuToggle");
+
   if(menu){
     menu.classList.toggle("open");
+  }
+
+  if(toggle){
+    toggle.classList.toggle("active");
   }
 }
