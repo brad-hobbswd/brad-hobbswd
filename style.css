@@ -661,10 +661,11 @@ box-shadow:0 28px 60px rgba(47,179,255,.35);
 
 .packages-page .packageSection{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:50px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:60px;
 max-width:1200px;
-margin:40px auto;
+margin:50px auto;
+justify-items:center;
 }
 
 /* ================= PACKAGE IMAGES FIX ================= */
@@ -827,4 +828,20 @@ padding:12px 16px;
 display:flex !important;
 }
 
+}
+
+/* ===== FINAL PACKAGE IMAGE SIZE ===== */
+
+.packages-page .package-card{
+max-width:480px;
+width:100%;
+}
+
+.packages-page .package-card img{
+width:100%;
+max-width:480px;
+height:auto;
+display:block;
+border-radius:18px;
+box-shadow:0 18px 40px rgba(0,0,0,.45);
 }
