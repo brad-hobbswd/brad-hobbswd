@@ -833,13 +833,13 @@ display:flex !important;
 /* ===== FINAL PACKAGE IMAGE SIZE ===== */
 
 .packages-page .package-card{
-max-width:480px;
+max-width:360px;
 width:100%;
 }
 
 .packages-page .package-card img{
 width:100%;
-max-width:480px;
+max-width:360px;
 height:auto;
 display:block;
 border-radius:18px;
