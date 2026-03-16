@@ -229,7 +229,7 @@ document.getElementById(id).style.display="block";
   </div>
 
 </div>
-    <script>
+   <script>
 
 function openPackage(id){
 
@@ -244,10 +244,20 @@ modal.classList.add("active");
 }
 
 function closePackage(){
-
 document.getElementById("packageModal").classList.remove("active");
-
 }
+
+/* close when clicking outside modal */
+
+window.addEventListener("click", function(e){
+
+const modal = document.getElementById("packageModal");
+
+if(e.target === modal){
+closePackage();
+}
+
+});
 
 </script>
 </body>
