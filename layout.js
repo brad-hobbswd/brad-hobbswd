@@ -33,3 +33,18 @@ function toggleMenu(){
     toggle.classList.toggle("active");
   }
 }
+
+document.addEventListener("click", function(e){
+
+const menu = document.getElementById("mobileMenu");
+
+if(!menu) return;
+
+if(e.target.closest("#mobileMenu a")){
+menu.classList.remove("open");
+
+const toggle = document.querySelector(".menuToggle");
+if(toggle) toggle.classList.remove("active");
+}
+
+});
