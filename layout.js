@@ -21,8 +21,9 @@ function setActiveNav(key) {
   await loadPartial("#siteFooter", "/brad-hobbswd/footer.html");
 })();
 
-(async function () {
-  await loadPartial("#siteHeader", "/brad-hobbswd/header.html");
-  setActiveNav(document.body.dataset.page || "");
-  await loadPartial("#siteFooter", "/brad-hobbswd/footer.html");
-})();
+function toggleMenu(){
+  const menu = document.getElementById("mobileMenu");
+  if(menu){
+    menu.classList.toggle("open");
+  }
+}
