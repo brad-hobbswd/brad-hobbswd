@@ -713,3 +713,19 @@ transform:translateY(0);
 transform:translateY(6px);
 }
 }
+
+/* ===== MOBILE NAV FIX ===== */
+
+@media (max-width:700px){
+
+  /* hide desktop nav */
+  .nav{
+    display:none !important;
+  }
+
+  /* show hamburger */
+  .menuToggle{
+    display:flex !important;
+  }
+
+}
