@@ -828,3 +828,12 @@ display:flex !important;
 }
 
 }
+/* ===== PACKAGE IMAGE SIZE FIX ===== */
+
+.packages-page .package-card img{
+width:100%;
+max-width:420px;
+height:auto;
+display:block;
+margin:auto;
+}
