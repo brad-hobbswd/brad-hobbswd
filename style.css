@@ -623,3 +623,13 @@ footer{
   text-align:center;
   margin:20px 0;
 }
+
+.package-detail{
+display:none;
+max-width:700px;
+margin:40px auto;
+padding:24px;
+border-radius:18px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.12);
+}
