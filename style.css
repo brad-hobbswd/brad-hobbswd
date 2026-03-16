@@ -695,3 +695,21 @@ margin-bottom:8px;
 color:var(--muted);
 font-size:15px;
 }
+
+/* ================= CLICK INDICATOR ================= */
+
+.clickIcon{
+display:inline-block;
+margin-left:6px;
+font-size:18px;
+animation:bounce 1.4s infinite;
+}
+
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(6px);
+}
+}
