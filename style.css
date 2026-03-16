@@ -643,7 +643,7 @@ border:1px solid rgba(255,255,255,.12);
 .package-card{
 cursor:pointer;
 width:100%;
-max-width:380px;
+max-width:440px;
 }
 
 .package-card img{
@@ -675,7 +675,7 @@ justify-items:center;
 
 .package-card img{
 width:100%;
-max-width:320px;
+max-width:420px;
 height:auto;
 display:block;
 border-radius:18px;
