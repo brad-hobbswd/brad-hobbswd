@@ -122,49 +122,29 @@ Goal for the client: create a powerful online platform tailored to the organizat
 Start This Package
 </button>
 </div>
-      <!-- Contact Form -->
-      <section class="section" id="packageContact">
-        <div class="contactWrap">
-          <form id="quoteForm" class="card">
-            <div class="formTitle">Request for more information</div>
+     <section id="packageContact" class="formSection">
 
-            <div class="formGrid">
-              <label class="formLabel">
-                <div class="formLabelTitle">Name</div>
-                <input name="name" required class="formControl">
-              </label>
+<h2 class="formTitleMain">Start Your Project</h2>
 
-              <label class="formLabel">
-                <div class="formLabelTitle">Email</div>
-                <input name="email" type="email" required class="formControl">
-              </label>
+<p class="formSubtitle">
+Complete the form below to begin your website request.
+</p>
 
-              <label class="formLabel">
-                <div class="formLabelTitle">Package</div>
-                <select name="package" class="formControl">
-                  <option value="Starter">Starter</option>
-                  <option value="Business Growth">Business Growth</option>
-                  <option value="Premium Custom">Premium Custom</option>
-                  <option value="Not sure yet">Not sure yet</option>
-                </select>
-              </label>
+<div class="formEmbed">
 
-              <label class="formLabel">
-                <div class="formLabelTitle">Message</div>
-                <textarea name="message" rows="3" required class="formControl"></textarea>
-              </label>
+<iframe 
+src="https://docs.google.com/forms/d/e/1FAIpQLSfmeW2hfpYLFM9PzfKvhVFQLB5MkKnf88Z36SW7MF082nbg_A/viewform?embedded=true" 
+width="100%" 
+height="1000" 
+frameborder="0" 
+marginheight="0" 
+marginwidth="0">
+Loading…
+</iframe>
 
-              <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
+</div>
 
-              <button id="sendBtn" type="submit" class="button btnPrimary">
-                Send request
-              </button>
-
-              <div id="formStatus" class="formStatus"></div>
-            </div>
-          </form>
-        </div>
-      </section>
+</section>
 
     </main>
 
@@ -173,57 +153,6 @@ Start This Package
 
   <script src="/brad-hobbswd/layout.js"></script>
 
-  <script>
-    (function () {
-      const form = document.getElementById("quoteForm");
-      const status = document.getElementById("formStatus");
-      const btn = document.getElementById("sendBtn");
-
-      if (!form) return;
-
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        status.textContent = "Sending...";
-        btn.disabled = true;
-
-        const formData = new FormData(form);
-
-        try {
-          const res = await fetch("https://formspree.io/f/xojnkerz", {
-            method: "POST",
-            headers: { "Accept": "application/json" },
-            body: formData
-          });
-
-          if (res.ok) {
-            window.location.href = "/brad-hobbswd/thanks.html";
-            return;
-          }
-
-          const data = await res.json().catch(() => ({}));
-          status.textContent = data.error || "Submission failed. Please try again.";
-        } catch (err) {
-          status.textContent = "Network error. Please try again.";
-        } finally {
-          btn.disabled = false;
-        }
-      });
-    })();
-  </script>
-  <script>
-
-function openPackage(id){
-
-document.querySelectorAll(".package-detail").forEach(function(el){
-el.style.display="none";
-});
-
-document.getElementById(id).style.display="block";
-
-}
-
-</script>
     <div id="packageModal" class="packageModal">
 
   <div class="modalContent">
