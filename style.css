@@ -655,7 +655,8 @@ transition:transform .25s ease, box-shadow .25s ease;
 }
 
 .package-card img:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
+box-shadow:0 28px 60px rgba(47,179,255,.35);
 }
 
 .packages-page .packageSection{
