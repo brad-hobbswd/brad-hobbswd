@@ -240,14 +240,18 @@ const content = document.getElementById(id).innerHTML;
 body.innerHTML = content;
 
 modal.classList.add("active");
+document.body.style.overflow = "hidden"; // 🔥 lock scroll
 
 }
 
 function closePackage(){
+
 document.getElementById("packageModal").classList.remove("active");
+document.body.style.overflow = "auto"; // 🔥 unlock scroll
+
 }
 
-/* close when clicking outside modal */
+/* click outside closes */
 
 window.addEventListener("click", function(e){
 
@@ -260,5 +264,6 @@ closePackage();
 });
 
 </script>
+    
 </body>
 </html>
