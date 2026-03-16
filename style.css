@@ -729,3 +729,85 @@ transform:translateY(6px);
   }
 
 }
+
+/* ================= MOBILE MENU ================= */
+
+.menuToggle{
+display:none;
+flex-direction:column;
+justify-content:center;
+gap:5px;
+background:none;
+border:none;
+cursor:pointer;
+padding:6px;
+}
+
+/* hamburger bars */
+
+.menuToggle span{
+display:block;
+width:26px;
+height:3px;
+background:white;
+border-radius:3px;
+transition:.3s ease;
+}
+
+/* animate into X */
+
+.menuToggle.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+
+.menuToggle.active span:nth-child(2){
+opacity:0;
+}
+
+.menuToggle.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
+}
+
+/* slide menu */
+
+.mobileMenu{
+position:fixed;
+top:0;
+left:-260px;
+width:260px;
+height:100%;
+background:#050a14;
+padding:40px 20px;
+display:flex;
+flex-direction:column;
+gap:20px;
+transition:left .3s ease;
+z-index:999;
+box-shadow:20px 0 40px rgba(0,0,0,.5);
+}
+
+.mobileMenu a{
+color:white;
+font-size:18px;
+text-decoration:none;
+}
+
+/* open state */
+
+.mobileMenu.open{
+left:0;
+}
+
+/* mobile behavior */
+
+@media (max-width:700px){
+
+.nav{
+display:none !important;
+}
+
+.menuToggle{
+display:flex !important;
+}
+
+}
