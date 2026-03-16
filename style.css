@@ -641,19 +641,17 @@ border:1px solid rgba(255,255,255,.12);
 /* PACKAGE IMAGE CARDS */
 
 .package-card{
-display:flex;
-justify-content:center;
-align-items:center;
 cursor:pointer;
+width:100%;
+max-width:380px;
 }
 
 .package-card img{
 width:100%;
-max-width:320px;
 height:auto;
 border-radius:18px;
 box-shadow:0 18px 40px rgba(0,0,0,.45);
-transition:transform .25s ease;
+transition:transform .25s ease, box-shadow .25s ease;
 }
 
 .package-card img:hover{
@@ -662,8 +660,10 @@ transform:translateY(-6px);
 
 .packages-page .packageSection{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
+grid-template-columns:repeat(3,minmax(260px,1fr));
+gap:40px;
+max-width:1000px;
+margin:40px auto;
 }
 
 /* ================= PACKAGE IMAGES FIX ================= */
