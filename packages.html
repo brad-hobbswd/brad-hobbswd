@@ -23,44 +23,85 @@
 
      <section class="packageSection">
 
-  <div class="packageCard">
-    <img class="packageImg" src="/brad-hobbswd/IMG_1358.jpeg" alt="Starter Website Package">
-    <h2 class="packageTitle">Starter Package</h2>
-    <div class="packagePrice">$600 Flat Rate</div>
-    <ul class="packageList">
-      <li>Up to 5 Pages</li>
-      <li>Mobile Responsive Design</li>
-      <li>Basic Contact Form</li>
-      <li>Standard SEO Setup</li>
-      <li>Launch Support</li>
-    </ul>
-  </div>
+  <div class="package-card" onclick="openPackage('starter')">
+<img src="starter-package.png" alt="Starter Website Package">
+</div>
 
-  <div class="packageCard">
-    <img class="packageImg" src="/brad-hobbswd/IMG_1359.jpeg" alt="Business Growth Website Package">
-    <h2 class="packageTitle">Business Growth Package</h2>
-    <div class="packagePrice">$1,100 Flat Rate</div>
-    <ul class="packageList">
-      <li>Up to 10 Pages</li>
-      <li>Improved SEO Structure</li>
-      <li>Clear Calls to Action</li>
-      <li>Service or Product Sections</li>
-      <li>Launch Assistance and Revisions</li>
-    </ul>
-  </div>
+<div class="package-card" onclick="openPackage('business')">
+<img src="business-package.png" alt="Business Website Package">
+</div>
 
-  <div class="packageCard">
-    <img class="packageImg" src="/brad-hobbswd/IMG_1360.jpeg" alt="Premium Custom Website Package">
-    <h2 class="packageTitle">Premium Custom Package</h2>
-    <div class="packagePrice">$2,300 Flat Rate</div>
-    <ul class="packageList">
-      <li>Custom Page Layouts</li>
-      <li>Advanced SEO and Analytics Setup</li>
-      <li>Lead Systems or Integrations</li>
-      <li>Enhanced Branding and Custom Visuals</li>
-      <li>Strategy Planning and Full Launch Support</li>
-    </ul>
-  </div>
+<div class="package-card" onclick="openPackage('premium')">
+<img src="premium-package.png" alt="Premium Custom Website Package">
+</div>
+
+<div id="starter" class="package-detail">
+
+<h2>Starter Website Package</h2>
+
+<p>
+Designed for small businesses, ministries, and startups beginning their online presence.
+</p>
+
+<ul>
+<li>Professional website with up to five pages</li>
+<li>Mobile responsive layout for phones and tablets</li>
+<li>Basic search engine optimization structure</li>
+<li>Contact form so visitors can reach the business</li>
+<li>Launch support to ensure the site goes live properly</li>
+</ul>
+
+<p>
+Goal for the client: create a professional and trustworthy online presence that allows customers to find the business and make contact.
+</p>
+
+</div>
+
+
+<div id="business" class="package-detail">
+
+<h2>Business Website Package</h2>
+
+<p>
+Built for organizations ready to grow and convert visitors into customers.
+</p>
+
+<ul>
+<li>Professional website with up to ten pages</li>
+<li>Conversion focused layout designed to generate leads</li>
+<li>Enhanced SEO structure for improved visibility</li>
+<li>Lead capture forms and contact integration</li>
+<li>Analytics setup to measure visitor activity</li>
+</ul>
+
+<p>
+Goal for the client: transform a website into a marketing tool that generates inquiries and supports business growth.
+</p>
+
+</div>
+
+
+<div id="premium" class="package-detail">
+
+<h2>Premium Custom Website Package</h2>
+
+<p>
+Designed for businesses that need advanced functionality and a fully custom online presence.
+</p>
+
+<ul>
+<li>Fully custom website layouts</li>
+<li>Advanced search engine optimization architecture</li>
+<li>Analytics and workflow system integration</li>
+<li>Strategic design focused on customer engagement</li>
+<li>Performance optimization for long term growth</li>
+</ul>
+
+<p>
+Goal for the client: create a powerful online platform tailored to the organization that supports long term growth and scalability.
+</p>
+
+</div>
 
 </section>
 
@@ -153,5 +194,18 @@
       });
     })();
   </script>
+  <script>
+
+function openPackage(id){
+
+document.querySelectorAll(".package-detail").forEach(function(el){
+el.style.display="none";
+});
+
+document.getElementById(id).style.display="block";
+
+}
+
+</script>
 </body>
 </html>
