@@ -72,6 +72,10 @@ header{
   backdrop-filter:blur(10px);
 }
 
+.topbar .menuToggle{
+margin-left:auto;
+}
+
 .brand{
   display:flex;
   flex-direction:column;
