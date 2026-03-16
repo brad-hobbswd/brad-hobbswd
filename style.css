@@ -662,9 +662,9 @@ box-shadow:0 28px 60px rgba(47,179,255,.35);
 .packages-page .packageSection{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:60px;
-max-width:1200px;
-margin:50px auto;
+gap:30px;
+max-width:1100px;
+margin:30px auto;
 justify-items:center;
 }
 
