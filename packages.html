@@ -68,7 +68,9 @@ Designed for small businesses, ministries, and startups beginning their online p
 <p>
 Goal for the client: create a professional and trustworthy online presence that allows customers to find the business and make contact.
 </p>
-
+<button class="btn btnPrimary" onclick="goToForm()">
+Start This Package
+</button>
 </div>
 
 
@@ -91,7 +93,9 @@ Built for organizations ready to grow and convert visitors into customers.
 <p>
 Goal for the client: transform a website into a marketing tool that generates inquiries and supports business growth.
 </p>
-
+<button class="btn btnPrimary" onclick="goToForm()">
+Start This Package
+</button>
 </div>
 
 
@@ -114,7 +118,9 @@ Designed for businesses that need advanced functionality and a fully custom onli
 <p>
 Goal for the client: create a powerful online platform tailored to the organization that supports long term growth and scalability.
 </p>
-
+<button class="btn btnPrimary" onclick="goToForm()">
+Start This Package
+</button>
 </div>
       <!-- Contact Form -->
       <section class="section" id="packageContact">
@@ -262,6 +268,17 @@ closePackage();
 }
 
 });
+
+</script>
+
+    <script>
+
+function goToForm(){
+closePackage();
+document.getElementById("packageContact").scrollIntoView({
+behavior: "smooth"
+});
+}
 
 </script>
     
