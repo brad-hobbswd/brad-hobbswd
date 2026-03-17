@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Brad Hobbs Web Design</title>
+  <meta name="description" content="Contact Brad Hobbs for professional website design services." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="contact">
+  <div class="wrap">
+
+    <header id="siteHeader"></header>
+
+    <main>
+
+      <!-- CONTACT BANNER -->
+      <div class="bannerPrimary">
+        <img src="contact-banner.png" alt="Contact Brad Hobbs Web Design">
+      </div>
+
+      <!-- CONTACT INTRO -->
+      <div class="homeIntro">
+
+        <p>
+        Email is the most reliable way to connect and guarantees a response within 24 hours.
+        </p>
+
+        <p>
+        Phone calls are welcome, however responses may be delayed due to screening of unknown numbers. For fastest communication, email is strongly recommended.
+        </p>
+
+        <p class="highlightEmail">
+        brad.hobbs13@icloud.com
+        </p>
+
+      </div>
+
+      <!-- CONTACT FORM -->
+      <section id="contact" class="section">
+        <div class="contactWrap">
+
+          <form id="quoteForm" class="card">
+
+            <div class="formTitle">Send a message</div>
+
+            <div class="formGrid">
+
+              <label class="formLabel">
+                <div class="formLabelTitle">Name</div>
+                <input name="name" required class="formControl">
+              </label>
+
+              <label class="formLabel">
+                <div class="formLabelTitle">Email</div>
+                <input name="email" type="email" required class="formControl">
+              </label>
+
+              <label class="formLabel">
+                <div class="formLabelTitle">Project Type</div>
+                <select name="package" class="formControl">
+                  <option>Starter Website</option>
+                  <option>Business Website</option>
+                  <option>Custom Project</option>
+                  <option>General Question</option>
+                </select>
+              </label>
+
+              <label class="formLabel">
+                <div class="formLabelTitle">Message</div>
+                <textarea name="message" rows="4" required class="formControl"></textarea>
+              </label>
+
+              <button id="sendBtn" type="submit" class="btn btnPrimary">
+                Send Message
+              </button>
+
+              <div id="formStatus" class="formStatus"></div>
+
+            </div>
+
+          </form>
+
+        </div>
+      </section>
+
+    </main>
+
+    <div id="siteFooter"></div>
+
+  </div>
+
+  <script src="layout.js"></script>
+
+  <script>
+  (function () {
+
+    const form = document.getElementById("quoteForm");
+    const status = document.getElementById("formStatus");
+    const btn = document.getElementById("sendBtn");
+
+    form.addEventListener("submit", async function (e) {
+
+      e.preventDefault();
+
+      status.textContent = "Sending...";
+      btn.disabled = true;
+
+      const formData = new FormData(form);
+
+      try {
+
+        const res = await fetch("https://formspree.io/f/mzdajjkb", {
+          method: "POST",
+          headers: { "Accept": "application/json" },
+          body: formData
+        });
+
+        if (res.ok) {
+          window.location.href = "thanks.html";
+          return;
+        }
+
+        const data = await res.json().catch(() => ({}));
+        status.textContent = data.error || "Submission failed. Please try again.";
+
+      } catch (err) {
+
+        status.textContent = "Network error. Please try again.";
+
+      } finally {
+
+        btn.disabled = false;
+
+      }
+
+    });
+
+  })();
+  </script>
+
+</body>
+</html>
