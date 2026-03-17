@@ -139,6 +139,37 @@ brad.hobbs13@icloud.com
 
   })();
   </script>
+  
+  <script>
+const menu = document.querySelector(".mobileMenu");
+const toggle = document.querySelector(".menuToggle");
+const overlay = document.getElementById("menuOverlay");
+
+if(toggle){
+
+toggle.addEventListener("click", function(){
+menu.classList.toggle("open");
+toggle.classList.toggle("active");
+overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", function(){
+menu.classList.remove("open");
+toggle.classList.remove("active");
+overlay.classList.remove("active");
+});
+
+document.querySelectorAll(".mobileMenu a").forEach(link=>{
+link.addEventListener("click", ()=>{
+menu.classList.remove("open");
+toggle.classList.remove("active");
+overlay.classList.remove("active");
+});
+});
+
+}
+</script>
+  
 <div id="menuOverlay" class="menuOverlay"></div>
 </body>
 </html>
