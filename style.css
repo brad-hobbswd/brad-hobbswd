@@ -922,3 +922,60 @@ font-size:15px;
 line-height:1.6;
 margin-bottom:12px;
 }
+
+/* ================= CONTACT PAGE POLISH ================= */
+
+.highlightEmail{
+font-weight:900;
+font-size:17px;
+color:var(--accent2);
+margin-top:6px;
+letter-spacing:.5px;
+}
+
+/* glow over contact banner */
+.bannerPrimary{
+position:relative;
+}
+
+.bannerPrimary::after{
+content:"";
+position:absolute;
+inset:0;
+border-radius:22px;
+pointer-events:none;
+box-shadow:0 0 60px rgba(47,179,255,.25);
+}
+
+/* tighten spacing between intro + form */
+.homeIntro{
+margin-bottom:20px;
+}
+
+/* form upgrade to match premium look */
+#quoteForm{
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.15);
+box-shadow:0 25px 60px rgba(0,0,0,.55);
+}
+
+/* stronger button presence */
+#sendBtn{
+margin-top:10px;
+font-size:15px;
+letter-spacing:.5px;
+}
+
+/* mobile spacing improvement */
+@media (max-width:600px){
+
+.homeIntro{
+padding:0 10px;
+}
+
+.highlightEmail{
+font-size:16px;
+}
+
+}
