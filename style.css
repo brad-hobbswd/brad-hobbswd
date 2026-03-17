@@ -1023,3 +1023,46 @@ z-index:9998;
 opacity:1;
 pointer-events:auto;
 }
+
+/* ===== FORM FULL WIDTH FIX ===== */
+
+.formGrid{
+width:100%;
+}
+
+.formLabel{
+width:100%;
+}
+
+.formControl{
+width:100%;
+display:block;
+}
+
+/* make textarea match perfectly */
+textarea.formControl{
+width:100%;
+}
+
+/* button full width for stronger CTA */
+#sendBtn{
+width:100%;
+}
+
+.formControl{
+padding:12px 14px;
+font-size:15px;
+border-radius:12px;
+}
+
+/* stronger input focus glow */
+.formControl:focus{
+outline:none;
+border:1px solid var(--accent);
+box-shadow:0 0 12px rgba(47,179,255,.25);
+}
+
+/* spacing between fields */
+.formGrid{
+gap:12px;
+}
