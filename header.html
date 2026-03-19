@@ -8,14 +8,14 @@
   <nav class="nav">
     <a data-nav="home" href="/brad-hobbswd/index.html">Home</a>
     <a data-nav="services" href="/brad-hobbswd/service.html">Services</a>
-    <a data-nav="packages" href="/brad-hobbswd/process.html">The Process</a>
-    <a data-nav="process" href="/brad-hobbswd/packages.html">Packages</a>
+  <a data-nav="process" href="/brad-hobbswd/process.html">The Process</a>
+<a data-nav="packages" href="/brad-hobbswd/packages.html">Packages</a>
     <a data-nav="work" href="/brad-hobbswd/links.html">My Work</a>
     <a data-nav="resources" href="/brad-hobbswd/resources.html">Resources</a>
     <a data-nav="contact" href="/brad-hobbswd/contact.html">Contact</a>
   </nav>
 
-  <button class="menuToggle" onclick="toggleMenu()">
+ <button class="menuToggle" onclick="toggleMenu()" aria-label="Toggle navigation menu">
     <span></span>
     <span></span>
     <span></span>
@@ -24,6 +24,7 @@
 </div>
 
 <div id="mobileMenu" class="mobileMenu">
+  <div id="menuOverlay" class="menuOverlay" onclick="toggleMenu()"></div>
 
 <a href="/brad-hobbswd/index.html">Home</a>
 <a href="/brad-hobbswd/service.html">Services</a>
