@@ -72,6 +72,10 @@ header{
   backdrop-filter:blur(10px);
 }
 
+.topbar{
+  margin-top:14px;
+}
+
 .topbar .menuToggle{
 margin-left:auto;
 }
