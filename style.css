@@ -54,7 +54,7 @@ a:hover{
 /* ================= HEADER ================= */
 
 header{
-  margin-bottom:18px;
+  margin:18px 0 12px 0;
 }
 
 .topbar{
@@ -288,7 +288,7 @@ margin-left:auto;
 
 .resourcesBanner{
   width:min(1100px,92%);
-  margin:24px auto;
+  margin:12px auto 24px auto;
   border-radius:22px;
   overflow:hidden;
   border:1px solid var(--line);
