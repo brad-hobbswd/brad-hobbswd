@@ -24,6 +24,7 @@ function setActiveNav(key) {
 function toggleMenu(){
   const menu = document.getElementById("mobileMenu");
   const toggle = document.querySelector(".menuToggle");
+  const overlay = document.getElementById("menuOverlay");
 
   if(menu){
     menu.classList.toggle("open");
@@ -32,19 +33,29 @@ function toggleMenu(){
   if(toggle){
     toggle.classList.toggle("active");
   }
+
+  if(overlay){
+    overlay.classList.toggle("active");
+  }
 }
 
 document.addEventListener("click", function(e){
 
-const menu = document.getElementById("mobileMenu");
+  const menu = document.getElementById("mobileMenu");
+  const toggle = document.querySelector(".menuToggle");
+  const overlay = document.getElementById("menuOverlay");
 
-if(!menu) return;
+  if(!menu) return;
 
-if(e.target.closest("#mobileMenu a")){
-menu.classList.remove("open");
+  // close when clicking a link OR overlay
+  if(
+    e.target.closest("#mobileMenu a") ||
+    e.target.id === "menuOverlay"
+  ){
+    menu.classList.remove("open");
 
-const toggle = document.querySelector(".menuToggle");
-if(toggle) toggle.classList.remove("active");
-}
+    if(toggle) toggle.classList.remove("active");
+    if(overlay) overlay.classList.remove("active");
+  }
 
 });
