@@ -148,27 +148,25 @@ margin-left:auto;
     0 0 10px rgba(47,179,255,.9),
     0 0 22px rgba(47,179,255,.7);
 }
-/* ================= BANNERS ================= */
 
-.bannerCard{
-  width:min(1100px,92%);
-  margin:auto;
+/* ================= HOME BANNERS ================= */
+
+.bannerPrimary,
+.bannerSecondary{
+  display:block;
+  width:100%;
+  margin:18px 0;
   border-radius:22px;
   overflow:hidden;
-  border:1px solid rgba(140,170,255,.18);
-  background:rgba(0,0,0,.25);
   box-shadow:0 12px 40px rgba(0,0,0,.45);
 }
 
-.bannerImg{
+.bannerPrimary img,
+.bannerSecondary img{
   width:100%;
+  height:auto;
   display:block;
-}
-
-/* services page banner spacing */
-
-.bannerSection{
-  margin:12px 0 24px 0;
+  border-radius:22px;
 }
 
 
