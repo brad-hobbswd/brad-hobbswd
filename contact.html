@@ -86,54 +86,70 @@
 
   <!-- FORM SCRIPT -->
   <script>
-  (function () {
+(function () {
 
-    const form = document.getElementById("quoteForm");
-    const status = document.getElementById("formStatus");
-    const btn = document.getElementById("sendBtn");
+  const form = document.getElementById("quoteForm");
+  const status = document.getElementById("formStatus");
+  const btn = document.getElementById("sendBtn");
 
-    form.addEventListener("submit", async function (e) {
+  if (!form) return;
 
-      e.preventDefault();
+  form.addEventListener("submit", async function (e) {
 
-      status.textContent = "Sending...";
-      btn.textContent = "Sending...";
-      btn.disabled = true;
+    e.preventDefault();
 
-      const formData = new FormData(form);
+    if (btn.disabled) return;
 
-      try {
+    const formData = new FormData(form);
 
-        const res = await fetch("https://formspree.io/f/mzdajjkb", {
-          method: "POST",
-          headers: { "Accept": "application/json" },
-          body: formData
-        });
+    // spam protection
+    if (formData.get("_gotcha")) return;
 
-        if (res.ok) {
-          status.textContent = "Message sent successfully!";
-          window.location.href = "thanks.html";
-          return;
-        }
+    status.textContent = "Sending...";
+    status.style.color = "#b8c7e6";
 
-        const data = await res.json().catch(() => ({}));
-        status.textContent = data.error || "Submission failed. Please try again.";
+    btn.textContent = "Sending...";
+    btn.disabled = true;
 
-      } catch (err) {
+    try {
 
-        status.textContent = "Network error. Please try again.";
+      const res = await fetch("https://formspree.io/f/mzdajjkb", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: formData
+      });
 
-      } finally {
+      if (res.ok) {
+        form.reset();
+        status.textContent = "Message sent successfully!";
+        status.style.color = "#7dd3ff";
 
-        btn.disabled = false;
-        btn.textContent = "Send Message";
-
+        window.location.href = "thanks.html";
+        return;
       }
 
-    });
+      const data = await res.json().catch(() => ({}));
+      status.textContent = data.error || "Submission failed. Please try again.";
+      status.style.color = "#ff6b6b";
+      status.scrollIntoView({ behavior: "smooth", block: "center" });
 
-  })();
-  </script>
+    } catch (err) {
+
+      status.textContent = "Network error. Please try again.";
+      status.style.color = "#ff6b6b";
+      status.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    } finally {
+
+      btn.disabled = false;
+      btn.textContent = "Send Message";
+
+    }
+
+  });
+
+})();
+</script>
 
   <!-- MOBILE MENU SCRIPT -->
   <script>
