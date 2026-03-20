@@ -113,6 +113,41 @@ margin-left:auto;
   flex-wrap:wrap;
 }
 
+.nav{
+  display:flex;
+  gap:22px;
+  align-items:center;
+}
+
+.nav a{
+  position:relative;
+  padding:6px 4px;
+
+  background:none;
+  border:none;
+
+  color:var(--muted);
+  font-weight:700;
+  font-size:14px;
+
+  transition:.25s ease;
+}
+
+.nav a:hover{
+  color:white;
+  text-shadow:
+    0 0 8px rgba(255,255,255,.6),
+    0 0 18px rgba(47,179,255,.7);
+}
+
+.nav a.active{
+  color:white;
+  font-weight:900;
+
+  text-shadow:
+    0 0 10px rgba(47,179,255,.9),
+    0 0 22px rgba(47,179,255,.7);
+}
 /* ================= BANNERS ================= */
 
 .bannerCard{
