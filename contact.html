@@ -53,12 +53,13 @@
 
               <label class="formLabel">
                 <div class="formLabelTitle">Project Type</div>
-                <select name="package" class="formControl">
-                  <option>Starter Website</option>
-                  <option>Business Website</option>
-                  <option>Custom Project</option>
-                  <option>General Question</option>
-                </select>
+                <select name="package" class="formControl" required>
+  <option value="" selected disabled hidden>Select a project type</option>
+  <option value="Starter Website">Starter Website</option>
+  <option value="Business Website">Business Website</option>
+  <option value="Custom Project">Custom Project</option>
+  <option value="General Question">General Question</option>
+</select>
               </label>
 
               <label class="formLabel">
