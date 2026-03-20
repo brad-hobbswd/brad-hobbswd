@@ -3,44 +3,85 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/brad-hobbswd/style.css" />
-  <title>Thank You | Brad Hobbs Web Design</title>
-  <meta name="description" content="Thank you for reaching out. Your message has been received." />
+  <title>Thank You | Brad Hobbs</title>
+
+  <!-- Auto redirect -->
+  <meta http-equiv="refresh" content="5;url=/brad-hobbswd/" />
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: radial-gradient(circle at top, #0b1a3a, #020611);
+      font-family: system-ui, sans-serif;
+    }
+
+    .card {
+      width: min(92%, 900px);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.7);
+
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 35px 90px rgba(0,0,0,0.9);
+    }
+
+    .card a {
+      display: block;
+      line-height: 0; /* removes small image gap */
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 20px;
+    }
+
+    /* subtle glow edge */
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      pointer-events: none;
+      box-shadow: 0 0 40px rgba(80,150,255,0.15);
+    }
+  </style>
 </head>
 
-<body data-page="">
+<body>
 
-  <div class="wrap">
-
-    <!-- HEADER (loaded by layout.js) -->
-    <header id="siteHeader"></header>
-
-    <main>
-
-      <!-- THANK YOU CARD -->
-      <div class="card" style="max-width:600px;margin:80px auto;text-align:center;">
-
-        <h1>Thank You</h1>
-
-        <p>
-          Your message has been received successfully. Brad will respond as soon as possible.
-        </p>
-
-        <a href="/brad-hobbswd/index.html" class="btn btnPrimary" style="margin-top:20px;">
-          Return Home
-        </a>
-
-      </div>
-
-    </main>
-
-    <!-- FOOTER -->
-    <div id="siteFooter"></div>
-
+  <div class="card">
+    <a href="/brad-hobbswd/">
+      <img src="./images/thank-you-bg.png" alt="Thank You">
+    </a>
   </div>
 
-  <!-- LAYOUT SYSTEM -->
-  <script src="/brad-hobbswd/layout.js"></script>
+  <!-- Smooth redirect (optional upgrade) -->
+  <script>
+    setTimeout(() => {
+      document.body.style.opacity = "0";
+      document.body.style.transition = "opacity 0.6s ease";
+
+      setTimeout(() => {
+        window.location.href = "/brad-hobbswd/";
+      }, 600);
+    }, 4000);
+  </script>
 
 </body>
 </html>
