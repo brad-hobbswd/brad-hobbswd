@@ -13,21 +13,13 @@ async function loadPartial(selector, file) {
 function setActiveNav(key) {
 
   // desktop nav
-  const desktopLinks = document.querySelectorAll('.nav a[data-nav]');
-  desktopLinks.forEach(a => {
+  document.querySelectorAll('.nav a[data-nav]').forEach(a => {
     a.classList.toggle('active', a.dataset.nav === key);
   });
 
-  // mobile nav
-  const mobileLinks = document.querySelectorAll('#mobileMenu a');
-  mobileLinks.forEach(a => {
-    const href = a.getAttribute('href') || "";
-
-    if(key && href.includes(key)){
-      a.classList.add('active');
-    } else {
-      a.classList.remove('active');
-    }
+  // mobile nav (FIXED)
+  document.querySelectorAll('#mobileMenu a[data-nav]').forEach(a => {
+    a.classList.toggle('active', a.dataset.nav === key);
   });
 
 }
