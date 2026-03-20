@@ -445,34 +445,7 @@ margin-left:auto;
 
 }
 
-/* ================= FORM ================= */
 
-.contactWrap{
-  display:flex;
-  justify-content:center;
-}
-
-#quoteForm{
-  max-width:580px;
-  width:100%;
-}
-
-.formGrid{
-  display:grid;
-  gap:8px;
-}
-
-.formControl{
-  padding:8px 12px;
-  border-radius:10px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.04);
-  color:white;
-}
-
-textarea.formControl{
-  resize:vertical;
-}
 
 /* ================= FOOTER ================= */
 
@@ -561,8 +534,7 @@ footer{
 .bannerPrimary,
 .bannerSecondary{
   width:100%;
-  max-width:1100px;
-  margin:18px auto;
+  margin:18px 0;
   border-radius:22px;
   overflow:hidden;
   box-shadow:0 12px 40px rgba(0,0,0,.45);
@@ -575,37 +547,7 @@ footer{
   display:block;
 }
 
-/* ================= FORM EXTRAS ================= */
 
-.formTitle{
-  font-size:20px;
-  font-weight:900;
-  margin-bottom:16px;
-}
-
-.formLabel{
-  display:block;
-}
-
-.formLabelTitle{
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  margin-bottom:4px;
-  color:var(--muted);
-}
-
-.formStatus{
-  font-size:14px;
-  margin-top:8px;
-  color:var(--muted);
-}
-
-.honeypot{
-  position:absolute;
-  left:-9999px;
-}
 
 /* ================= BUTTONS ================= */
 
@@ -996,20 +938,9 @@ box-shadow:0 0 60px rgba(47,179,255,.25);
 margin-bottom:20px;
 }
 
-/* form upgrade to match premium look */
-#quoteForm{
-background:rgba(255,255,255,.06);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,.15);
-box-shadow:0 25px 60px rgba(0,0,0,.55);
-}
 
-/* stronger button presence */
-#sendBtn{
-margin-top:10px;
-font-size:15px;
-letter-spacing:.5px;
-}
+
+
 
 /* mobile spacing improvement */
 @media (max-width:600px){
@@ -1068,52 +999,66 @@ opacity:1;
 pointer-events:auto;
 }
 
-/* ===== FORM FULL WIDTH FIX ===== */
+/* ================= CONTACT FORM (FINAL CLEAN) ================= */
+
+.contactWrap{
+  display:flex;
+  justify-content:center;
+  margin-top:30px;
+}
+
+#quoteForm{
+  width:100%;
+  max-width:700px;
+}
+
+#quoteForm.card{
+  padding:28px;
+  border-radius:20px;
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 25px 60px rgba(0,0,0,.55);
+}
 
 .formGrid{
-width:100%;
+  display:grid;
+  gap:14px;
 }
 
 .formLabel{
-width:100%;
-}
-
-.formControl{
-width:100%;
-display:block;
-}
-
-/* make textarea match perfectly */
-textarea.formControl{
-width:100%;
-}
-
-/* button full width for stronger CTA */
-#sendBtn{
-width:100%;
-}
-
-.formControl{
-padding:12px 14px;
-font-size:15px;
-border-radius:12px;
-}
-
-/* stronger input focus glow */
-.formControl:focus{
-outline:none;
-border:1px solid var(--accent);
-box-shadow:0 0 12px rgba(47,179,255,.25);
-}
-
-/* spacing between fields */
-.formGrid{
-gap:12px;
-}
-
-.wrap{
- max-width:1100px;
-  margin:0 auto;
-  padding:18px;
   display:block;
+  width:100%;
+}
+
+.formLabelTitle{
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:6px;
+  color:var(--muted);
+}
+
+.formControl{
+  width:100%;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.05);
+  color:white;
+  font-size:15px;
+}
+
+.formControl:focus{
+  outline:none;
+  border:1px solid var(--accent);
+  box-shadow:0 0 12px rgba(47,179,255,.25);
+}
+
+#sendBtn{
+  width:100%;
+  margin-top:12px;
+  padding:12px;
+  font-size:15px;
 }
