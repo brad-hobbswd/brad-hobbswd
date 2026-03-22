@@ -1079,3 +1079,8 @@ select.formControl{
   color: white;
   padding-right: 40px;
 }
+
+.bannerSection{
+  margin-top:50px;   /* increase for more breathing room */
+  margin-bottom:24px;
+}
