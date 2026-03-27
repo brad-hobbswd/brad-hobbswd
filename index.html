@@ -4,6 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Brad Hobbs Web Design</title>
+  <link rel="icon" href="./favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16.png">
+<link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
   <meta name="description" content="Brad Hobbs builds responsive, modern websites with clear structure and strong calls to action." />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -45,52 +49,6 @@
 
   <script src="layout.js"></script>
 
-  <script>
-  (function () {
-
-    const form = document.getElementById("quoteForm");
-    const status = document.getElementById("formStatus");
-    const btn = document.getElementById("sendBtn");
-
-    form.addEventListener("submit", async function (e) {
-
-      e.preventDefault();
-
-      status.textContent = "Sending...";
-      btn.disabled = true;
-
-      const formData = new FormData(form);
-
-      try {
-
-        const res = await fetch("https://formspree.io/f/mzdajjkb", {
-          method: "POST",
-          headers: { "Accept": "application/json" },
-          body: formData
-        });
-
-        if (res.ok) {
-          window.location.href = "thanks.html";
-          return;
-        }
-
-        const data = await res.json().catch(() => ({}));
-        status.textContent = data.error || "Submission failed. Please try again.";
-
-      } catch (err) {
-
-        status.textContent = "Network error. Please try again.";
-
-      } finally {
-
-        btn.disabled = false;
-
-      }
-
-    });
-
-  })();
-  </script>
 
 </body>
 </html>
