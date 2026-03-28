@@ -455,6 +455,14 @@ body[data-page="contact"] .bannerSecondary img{
   cursor:pointer;
 }
 
+.resourcesPage .card img{
+  width:100%;
+  height:auto;
+  max-height:140px;
+  object-fit:contain;
+  display:block;
+}
+
 /* fixed logo area inside cards */
 
 /* global (default smaller) */
