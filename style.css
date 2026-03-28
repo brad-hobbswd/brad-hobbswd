@@ -329,7 +329,11 @@ body[data-page="contact"] .bannerSecondary img{
   box-shadow:0 0 18px rgba(47,179,255,.25);
 }
 
-
+.links-page .cardTitle{
+  line-height:1.2;
+  max-height:2.4em;
+  overflow:hidden;
+}
 
 /* ================= RESOURCES PAGE ================= */
 
