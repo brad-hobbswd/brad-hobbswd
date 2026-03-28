@@ -259,7 +259,7 @@ body[data-page="contact"] .bannerSecondary img{
   display:grid;
   grid-template-columns:160px 1fr;
   gap:18px;
-  align-items:center;
+  align-items:start;
 }
 
 .links-page .logoLink{
@@ -319,9 +319,6 @@ body[data-page="contact"] .bannerSecondary img{
 .links-page .desc{
   font-size:15px;
   color:var(--muted);
-}
-.links-page .desc{
-  min-height:90px;
 }
 
 .links-page .card{
