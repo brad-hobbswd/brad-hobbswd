@@ -251,8 +251,21 @@ body[data-page="contact"] .bannerSecondary img{
 /* ================= LINKS PAGE ================= */
 
 .links-page .grid{
-  max-width:760px;
+  max-width:1100px;
   margin:24px auto;
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:20px;
+}
+
+.links-page .grid{
+  grid-template-columns:repeat(2, 1fr);
+}
+
+@media (max-width:768px){
+  .links-page .grid{
+    grid-template-columns:1fr;
+  }
 }
 
 .links-page .cardInner{
