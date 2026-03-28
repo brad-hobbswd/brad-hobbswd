@@ -184,6 +184,17 @@ body[data-page="contact"] .bannerSecondary img{
   box-shadow:0 20px 40px rgba(0,0,0,.35), 0 0 20px rgba(47,179,255,.15);
 }
 
+/* NEW: clickable card wrapper */
+.cardLink{
+  text-decoration:none;
+  display:block;
+  color:inherit;
+}
+
+.cardLink .btn{
+  pointer-events:auto;
+}
+
 /* ================= SERVICE CARDS ================= */
 
 .serviceSection{
