@@ -320,6 +320,9 @@ body[data-page="contact"] .bannerSecondary img{
   font-size:15px;
   color:var(--muted);
 }
+.links-page .desc{
+  min-height:90px;
+}
 
 .links-page .card{
   cursor:pointer;
