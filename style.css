@@ -1124,3 +1124,143 @@ select.formControl{
   margin-top:50px;   /* increase for more breathing room */
   margin-bottom:24px;
 }
+
+
+/* ================= FINAL GLOBAL VISUAL SYSTEM ================= */
+
+/* Add gold tone */
+:root{
+  --gold:#f5b841;
+}
+
+/* Enhanced background (adds gold depth to your existing look) */
+body{
+  background:
+    radial-gradient(900px 520px at 18% 12%, rgba(47,179,255,.22), transparent 62%),
+    radial-gradient(900px 520px at 88% 22%, rgba(125,211,255,.14), transparent 62%),
+    radial-gradient(700px 400px at 50% 90%, rgba(245,184,65,.18), transparent 65%),
+    linear-gradient(180deg,#050a14,var(--bg) 40%,#050a14);
+}
+
+/* Ambient lighting layer */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 10% 50%, rgba(245,184,65,.12), transparent 60%),
+    radial-gradient(circle at 90% 50%, rgba(47,179,255,.10), transparent 60%);
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* Subtle faith-inspired glow */
+body::after{
+  content:"";
+  position:fixed;
+  left:8%;
+  top:18%;
+  width:120px;
+  height:120px;
+  background:radial-gradient(circle, rgba(245,184,65,.18), transparent 70%);
+  opacity:.25;
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* ===== GLOBAL BANNER GLOW (ALL PAGES) ===== */
+
+.bannerPrimary,
+.bannerSecondary,
+.pageBanner,
+.processSection,
+.bannerCard{
+  position:relative;
+}
+
+.bannerPrimary img,
+.bannerSecondary img,
+.pageBanner img,
+.processSection img,
+.bannerCard img{
+  box-shadow:
+    0 0 40px rgba(245,184,65,.25),
+    0 0 60px rgba(47,179,255,.18);
+}
+
+/* ===== CARD SYSTEM UPGRADE ===== */
+
+.card{
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.28),
+    0 0 25px rgba(47,179,255,.08),
+    0 0 18px rgba(245,184,65,.06);
+}
+
+.card:hover{
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.35),
+    0 0 30px rgba(47,179,255,.18),
+    0 0 20px rgba(245,184,65,.12);
+}
+
+/* ===== BUTTON ENHANCEMENT ===== */
+
+.btnPrimary{
+  background:linear-gradient(90deg,var(--gold),#ffdf8a);
+  color:#031427;
+  border:none;
+  box-shadow:0 0 18px rgba(245,184,65,.6);
+}
+
+.btnPrimary:hover{
+  box-shadow:0 0 28px rgba(245,184,65,.9);
+}
+
+/* Resource button upgrade */
+.resource-button{
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.35),
+    0 0 18px rgba(245,184,65,.25);
+}
+
+.resource-button:hover{
+  box-shadow:
+    0 16px 36px rgba(0,0,0,.45),
+    0 0 28px rgba(245,184,65,.45);
+}
+
+/* ===== PACKAGE + IMAGE GLOW ===== */
+
+.package-card img{
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.45),
+    0 0 25px rgba(47,179,255,.18),
+    0 0 20px rgba(245,184,65,.15);
+}
+
+.package-card img:hover{
+  box-shadow:
+    0 28px 60px rgba(47,179,255,.35),
+    0 0 30px rgba(245,184,65,.25);
+}
+
+/* ===== BANNER CARD ENHANCEMENT ===== */
+
+.bannerCard{
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.45),
+    0 0 30px rgba(47,179,255,.15),
+    0 0 20px rgba(245,184,65,.12);
+}
+
+/* ===== OPTIONAL FAITH GLOW ELEMENT ===== */
+
+.crossGlow{
+  position:absolute;
+  width:140px;
+  height:140px;
+  background:radial-gradient(circle, rgba(245,184,65,.25), transparent 70%);
+  opacity:.2;
+  pointer-events:none;
+}
