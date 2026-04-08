@@ -1264,3 +1264,37 @@ body::after{
   opacity:.2;
   pointer-events:none;
 }
+
+/* ================= FINAL SAFE ENHANCEMENT ================= */
+
+/* Ensure glow appears on ALL pages consistently */
+.bannerPrimary img,
+.bannerSecondary img,
+.pageBanner img,
+.processSection img,
+.bannerCard img{
+  box-shadow:
+    0 0 40px rgba(245,184,65,.25),
+    0 0 60px rgba(47,179,255,.18);
+}
+
+/* Slight spacing balance for cleaner layout */
+.homeIntro,
+.resourcesBanner,
+.formSection{
+  margin-top:50px;
+  margin-bottom:30px;
+}
+
+/* Center CTA button under banners */
+.heroBlock{
+  text-align:center;
+  margin:20px auto 10px auto;
+}
+
+/* Optional small supporting text (only if used) */
+.heroMicro{
+  margin-top:10px;
+  font-size:13px;
+  color:var(--muted);
+}
