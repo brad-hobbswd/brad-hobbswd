@@ -94,8 +94,13 @@ margin-left:auto;
 
 .brand{
   display:flex;
-  flex-direction:column;
-  line-height:1.15;
+  align-items:center;
+}
+
+.brand img{
+  height:50px;
+  width:auto;
+  display:block;
 }
 
 .brand strong{
