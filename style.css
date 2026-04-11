@@ -1403,3 +1403,33 @@ body::after{
   }
 
 }
+
+/* ===== BRAND TEXT ADDITION ===== */
+
+.brand{
+  gap:10px;
+}
+
+.brandText{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  line-height:1.1;
+}
+
+.brandText strong{
+  font-size:14px;
+  font-weight:900;
+  color:white;
+}
+
+.brandText span{
+  font-size:11px;
+  color:var(--muted);
+}
+
+@media (max-width:600px){
+  .brandText{
+    display:none;
+  }
+}
