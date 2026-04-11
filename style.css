@@ -90,13 +90,6 @@ header{
   padding:10px 16px;
 }
 
-.menuToggle{
-  flex-shrink:0;
-}
-
-.menuToggle{
-  margin-left:10px;
-}
 
 /* ===== NAVBAR LOGO CLEAN SETUP ===== */
 .brand{
@@ -833,23 +826,7 @@ left:0;
 }
 /* mobile behavior */
 
-@media (max-width:1024px){
 
-  .topbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-  }
-
-  .brand{
-    flex:1;
-  }
-
-  .menuToggle{
-    margin-left:auto;
-  }
-
-}
 
   /* ===== PACKAGE GRID ===== */
 
