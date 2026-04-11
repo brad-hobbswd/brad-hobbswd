@@ -1511,3 +1511,63 @@ body::after{
 .serviceSection{
   margin-bottom:40px;
 }
+
+/* ===== FINAL LOCKED LAYOUT (DO NOT OVERRIDE ABOVE) ===== */
+
+.serviceSection{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-bottom:50px;
+}
+
+/* MATCHES BANNER WIDTH PERFECTLY */
+.serviceCard{
+  width:min(1000px,92%);
+  margin:0 auto;
+  border-radius:22px;
+  overflow:hidden;
+}
+
+.serviceCard img{
+  width:100%;
+  display:block;
+}
+
+/* TEXT PERFECTLY ALIGNED UNDER BANNER */
+.serviceText{
+  width:min(1000px,92%);
+  margin:14px auto 32px auto;
+
+  text-align:center;
+  padding:0 6px;
+}
+
+/* FIX TEXT RUNNING OUTSIDE */
+.serviceText p,
+.serviceText ul{
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* BUTTON SPACING FIX */
+.serviceText .btn{
+  display:inline-block;
+  margin-top:20px;
+}
+
+/* CLEAN DIVIDER */
+.sectionDivider{
+  width:min(900px,92%);
+  height:2px;
+  margin:50px auto;
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(47,179,255,1),
+    rgba(245,184,65,1),
+    transparent
+  );
+}
