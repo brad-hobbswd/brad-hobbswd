@@ -221,17 +221,13 @@ body[data-page="contact"] .bannerSecondary img{
 
 .serviceSection{
   display:flex;
-  justify-content:center;
-  margin-bottom:24px;
+  flex-direction:column;   /* THIS is the fix */
+  align-items:center;
+  margin-bottom:50px;
 }
 
 .serviceCard{
-  width:min(1100px,92%);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:22px;
-  overflow:hidden;
-  background:rgba(255,255,255,.05);
-  box-shadow:var(--shadow);
+  width:min(1000px,92%);
 }
 
 .serviceCard img{
