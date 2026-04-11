@@ -27,6 +27,23 @@
   max-width:900px;
 }
 
+.demoVideo{
+  width:100%;
+  max-width:420px; /* keeps it from being too big */
+  margin:0 auto;
+  display:block;
+  border-radius:14px;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.4),
+    0 0 20px rgba(47,179,255,.2);
+}
+
+.demoVideoWrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:20px;
+}
+
 </style>
   
   <title>The Process | Brad Hobbs Web Design </title>
@@ -73,21 +90,20 @@
   <!-- DEMO PREVIEW -->
 <section class="demoPreview">
 
-  <div class="processSection">
-    <img src="images/YOUR-DEMO-IMAGE.png" alt="Website preview before launch" loading="lazy">
+  <h4>Website preview before launch</h4>
+
+  <div class="demoVideoWrap">
+    <video controls playsinline preload="metadata" class="demoVideo">
+      <source src="videos/demo.mp4" type="video/mp4">
+    </video>
   </div>
 
   <div class="serviceText">
     <h3>Preview Before Launch</h3>
     <p>
-      Before your website goes live, you will see a fully working version.
-      This gives you the opportunity to experience the design, flow, and functionality in real time.
+      Before your website goes live, you will experience a working version on mobile and desktop. 
+      This allows you to see how everything flows, feels, and functions in real time.
     </p>
-    <p>
-      Adjustments are made with clarity so your final launch reflects your vision with confidence.
-    </p>
-
-    <a href="#" class="btn btnPrimary">View Example</a>
   </div>
 
 </section>
