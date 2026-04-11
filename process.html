@@ -4,6 +4,31 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+
+<style>
+
+/* DEMO PREVIEW SECTION */
+
+.demoPreview{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:20px;
+  padding:20px;
+  margin:30px auto;
+
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.4),
+    0 0 20px rgba(47,179,255,.1);
+}
+
+.demoPreview{
+  max-width:900px;
+}
+
+</style>
+  
   <title>The Process | Brad Hobbs Web Design </title>
   <meta name="description" content="Discovery, build, and launch process for website projects." />
 </head>
@@ -46,19 +71,25 @@
   </section>
   
   <!-- DEMO PREVIEW -->
-<section class="processSection">
-  <img src="images/YOUR-DEMO-IMAGE.png" alt="Website preview before launch" loading="lazy" draggable="false">
-</section>
+<section class="demoPreview">
 
-<section class="serviceText">
-  <h3>Preview Before Launch</h3>
-  <p>
-    Before your website goes live, you will see a full working preview.
-    This allows you to experience how everything looks, flows, and functions in real time.
-  </p>
-  <p>
-    Adjustments can be made with confidence so your final launch reflects your vision clearly and accurately.
-  </p>
+  <div class="processSection">
+    <img src="images/YOUR-DEMO-IMAGE.png" alt="Website preview before launch" loading="lazy">
+  </div>
+
+  <div class="serviceText">
+    <h3>Preview Before Launch</h3>
+    <p>
+      Before your website goes live, you will see a fully working version.
+      This gives you the opportunity to experience the design, flow, and functionality in real time.
+    </p>
+    <p>
+      Adjustments are made with clarity so your final launch reflects your vision with confidence.
+    </p>
+
+    <a href="#" class="btn btnPrimary">View Example</a>
+  </div>
+
 </section>
 
   <!-- BUILD -->
