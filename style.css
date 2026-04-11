@@ -78,6 +78,7 @@ header{
   position:sticky;
   top:14px;
   z-index:1000;
+  overflow:hidden;
 }
 
 #siteHeader{
@@ -119,13 +120,6 @@ header{
     drop-shadow(0 0 12px rgba(47,179,255,.25));
 }
 
-  /* subtle glow to match your site */
-  filter:
-    drop-shadow(0 0 6px rgba(245,184,65,.5))
-    drop-shadow(0 0 12px rgba(47,179,255,.25));
-}
-
-/* HOVER EFFECT (optional but clean) */
 .brand img:hover{
   filter:
     drop-shadow(0 0 10px rgba(245,184,65,.8))
