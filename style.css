@@ -1368,3 +1368,38 @@ body::after{
   }
 
 }
+
+/* ===== FINAL NAVBAR FIX ===== */
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+}
+
+/* keeps hamburger inside and right aligned */
+.menuToggle{
+  margin-left:auto;
+}
+
+/* mobile positioning */
+@media (max-width:1024px){
+
+  .topbar{
+    position:relative;
+  }
+
+  .menuToggle{
+    position:absolute;
+    right:16px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex !important;
+  }
+
+}
