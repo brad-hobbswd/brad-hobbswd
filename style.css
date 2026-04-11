@@ -94,17 +94,26 @@ margin-left:auto;
 }
 
 /* ===== NAVBAR LOGO CLEAN SETUP ===== */
-
 .brand{
   display:flex;
   align-items:center;
+  overflow:hidden;
 }
 
-/* LOGO IMAGE */
 .brand img{
   height:42px;
   width:auto;
   display:block;
+
+  object-fit:cover;
+  object-position:center;
+
+  transform:scale(1.15);
+
+  filter:
+    drop-shadow(0 0 6px rgba(245,184,65,.5))
+    drop-shadow(0 0 12px rgba(47,179,255,.25));
+}
 
   /* subtle glow to match your site */
   filter:
