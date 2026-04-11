@@ -74,6 +74,46 @@
 
 }
 
+/* ===== MOBILE TIGHTENING FIX ===== */
+
+@media (max-width:768px){
+
+  .serviceSection{
+    flex-direction:column;
+    gap:14px;              /* tighter spacing */
+    margin-bottom:30px;    /* reduce big gaps */
+  }
+
+  .serviceCard{
+    max-width:100%;
+  }
+
+  .serviceText{
+    margin:10px auto 20px auto;
+    padding:0 10px;        /* slight side padding */
+  }
+
+  .serviceText h2{
+    font-size:20px;        /* slightly smaller title */
+  }
+
+  .serviceText p{
+    font-size:14px;
+  }
+
+  .serviceText li{
+    font-size:14px;
+    margin:4px 0;
+  }
+
+}
+
+.serviceText ul{
+  text-align:left;
+  max-width:300px;
+  margin:10px auto;
+}
+
 </style>
 <title>Services | Brad Hobbs Web Design</title>
 <meta name="description" content="Media services including web design, SEO structure, and business support." />
