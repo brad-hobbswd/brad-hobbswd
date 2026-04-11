@@ -10,21 +10,15 @@
 /* SERVICE TEXT BLOCK */
 
 .serviceText{
-  width:min(700px,90%);
-  margin:-25px auto 40px auto;
+  width:min(1000px,92%);   /* matches banner width */
+  margin:18px auto 40px auto;
 
   text-align:center;
 
-  background:rgba(0,0,0,.35);
-  padding:20px;
-  border-radius:18px;
-  backdrop-filter:blur(10px);
-
-  border:1px solid rgba(255,255,255,.08);
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.4),
-    0 0 20px rgba(47,179,255,.1);
+  padding:0;               /* remove box feel */
+  background:none;
+  border:none;
+  box-shadow:none;
 }
 
 .serviceText h2{
@@ -35,14 +29,15 @@
 
 .serviceText p{
   color:var(--muted);
-  margin-bottom:14px;
+  margin-bottom:12px;
   line-height:1.6;
 }
 
 .serviceText ul{
   list-style:none;
   padding:0;
-  margin:0;
+  margin:10px auto 0 auto;
+  max-width:500px;   /* keeps bullets from stretching too wide */
 }
 
 .serviceText li{
@@ -109,6 +104,7 @@
   display:flex;
   flex-direction:column;
   align-items:center;
+  gap:6px;              /* was missing or too large */
   margin-bottom:50px;
 }
 
@@ -140,6 +136,15 @@
   );
 
   opacity:.6;
+}
+
+.serviceSection:last-of-type .serviceText{
+  max-width:700px;   /* keeps CTA tighter but aligned */
+}
+
+.bannerCard{
+  width:min(1000px,92%);
+  margin:0 auto;
 }
 
 </style>
@@ -243,7 +248,7 @@
 <div class="sectionDivider"></div>
 <!-- CTA -->
 <section class="serviceSection">
-  <div class="serviceText" style="text-align:center; max-width:700px; margin:auto;">
+  <div class="serviceText">
     <h2>Ready to Build Something That Works</h2>
     <p>
       Your business deserves clarity, structure, and a presence that reflects excellence.
