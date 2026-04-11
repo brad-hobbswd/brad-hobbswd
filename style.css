@@ -54,6 +54,7 @@ header{
 }
 
 .topbar{
+  overflow:hidden;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -78,7 +79,6 @@ header{
   position:sticky;
   top:14px;
   z-index:1000;
-  overflow:hidden;
 }
 
 #siteHeader{
@@ -835,16 +835,18 @@ left:0;
 
 @media (max-width:1024px){
 
-  .nav{
-    display:none !important;
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .brand{
+    flex:1;
   }
 
   .menuToggle{
-    display:flex !important;
-  }
-
-  .topbar{
-    padding:12px 16px;
+    margin-left:auto;
   }
 
 }
