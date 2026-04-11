@@ -38,6 +38,42 @@
   font-size:14px;
 }
 
+/* ===== SERVICE LAYOUT FIX ===== */
+
+.serviceSection{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  margin-bottom:50px;
+}
+
+/* IMAGE SIDE */
+.serviceCard{
+  flex:1;
+  max-width:350px;
+}
+
+/* TEXT SIDE */
+.serviceText{
+  flex:1;
+  text-align:left;
+  max-width:600px;
+}
+
+/* MOBILE STACK */
+@media (max-width:768px){
+
+  .serviceSection{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .serviceText{
+    text-align:center;
+  }
+
+}
+
 </style>
 <title>Services | Brad Hobbs Web Design</title>
 <meta name="description" content="Media services including web design, SEO structure, and business support." />
