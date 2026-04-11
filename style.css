@@ -1487,3 +1487,27 @@ body::after{
 
   opacity:.9;
 }
+
+/* ===== PERFECT ALIGNMENT FIX ===== */
+
+.serviceText{
+  width:min(1000px,92%);
+  margin:12px auto 28px auto;
+
+  padding:0 2px;
+  text-align:center;
+}
+
+.serviceText,
+.serviceText *{
+  max-width:none;
+}
+
+.serviceText .btn{
+  display:inline-block;
+  margin-top:18px;
+}
+
+.serviceSection{
+  margin-bottom:40px;
+}
