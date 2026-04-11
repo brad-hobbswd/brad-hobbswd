@@ -86,25 +86,37 @@ header{
 
 .topbar{
   margin-top:14px;
+  padding:10px 16px;
 }
 
 .topbar .menuToggle{
 margin-left:auto;
 }
 
+/* ===== NAVBAR LOGO CLEAN SETUP ===== */
+
 .brand{
   display:flex;
   align-items:center;
 }
 
+/* LOGO IMAGE */
 .brand img{
-  height:50px;
+  height:42px;
   width:auto;
   display:block;
+
+  /* subtle glow to match your site */
+  filter:
+    drop-shadow(0 0 6px rgba(245,184,65,.5))
+    drop-shadow(0 0 12px rgba(47,179,255,.25));
 }
 
+/* HOVER EFFECT (optional but clean) */
 .brand img:hover{
-  filter: drop-shadow(0 0 8px rgba(245,184,65,.6));
+  filter:
+    drop-shadow(0 0 10px rgba(245,184,65,.8))
+    drop-shadow(0 0 18px rgba(47,179,255,.4));
 }
 
 
