@@ -44,6 +44,21 @@
   margin-bottom:20px;
 }
 
+.demoVideo:hover{
+  transform:scale(1.02);
+  transition:.3s ease;
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.5),
+    0 0 30px rgba(47,179,255,.4);
+}
+
+@media (max-width:600px){
+  .demoPreview{
+    margin:20px 12px;
+    padding:16px;
+  }
+}
+
 </style>
   
   <title>The Process | Brad Hobbs Web Design </title>
@@ -90,19 +105,24 @@
   <!-- DEMO PREVIEW -->
 <section class="demoPreview">
 
-  <h4>Website preview before launch</h4>
+  <h4 style="text-align:center; margin-bottom:12px; color:var(--muted);">
+    Real Mobile Preview
+  </h4>
 
   <div class="demoVideoWrap">
     <video controls playsinline preload="metadata" class="demoVideo">
-      <source src="ScreenRecording_04-11-2026 05-10-47_1 2.mp4" type="video/mp4">
+      <source src="videos/demo-preview.mp4" type="video/mp4">
     </video>
   </div>
 
   <div class="serviceText">
     <h3>Preview Before Launch</h3>
     <p>
-      Before your website goes live, you will experience a working version on mobile and desktop. 
-      This allows you to see how everything flows, feels, and functions in real time.
+      Before your website goes live, you will experience a fully working version.
+      This allows you to see the design, flow, and functionality in real time before anything is finalized.
+    </p>
+    <p>
+      Adjustments are made with clarity so your final launch reflects your vision with confidence.
     </p>
   </div>
 
