@@ -1429,3 +1429,61 @@ body::after{
     display:none;
   }
 }
+
+/* ===== FINAL SERVICES FIX ===== */
+
+/* restore proper card look */
+.serviceCard{
+  width:min(1000px,92%);
+  margin:0 auto;
+
+  border-radius:22px;
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.05);
+
+  box-shadow:0 12px 40px rgba(0,0,0,.45);
+}
+
+/* ensure image respects rounding */
+.serviceCard img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+/* tighten spacing under text */
+.serviceText h2{
+  margin-bottom:6px;
+}
+
+.serviceText p{
+  margin-bottom:8px;
+}
+
+.serviceText ul{
+  margin-top:6px;
+}
+
+/* remove hidden gap between sections */
+.serviceSection{
+  margin-bottom:36px;
+}
+
+/* stronger divider */
+.sectionDivider{
+  width:min(800px,90%);
+  height:2px;
+  margin:50px auto;
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(47,179,255,1),
+    rgba(245,184,65,1),
+    transparent
+  );
+
+  opacity:.9;
+}
