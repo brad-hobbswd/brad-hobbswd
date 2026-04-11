@@ -6,99 +6,18 @@
 <link rel="stylesheet" href="/brad-hobbswd/style.css" />
 
 <style>
-  
-/* SERVICE TEXT BLOCK */
 
-.serviceText{
-  width:min(1000px,92%);
-  margin:14px auto 30px auto;   /* slightly tighter */
-
-  text-align:center;
-
-  padding:0;
-  background:none;
-  border:none;
-  box-shadow:none;
-}
-
-.serviceText h2{
-  margin-bottom:6px;
-}
-
-.serviceText p{
-  margin-bottom:8px;   /* was too big */
-}
-
-.serviceText ul{
-  margin:6px auto 0 auto;  /* tighter to paragraph */
-}
-
-.serviceText li{
-  margin:4px 0;  /* tighter list spacing */
-}
-
-
-/* MOBILE STACK */
-@media (max-width:768px){
-
-  .serviceSection{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .serviceText{
-    text-align:center;
-  }
-
-}
-
-/* ===== MOBILE TIGHTENING FIX ===== */
-
-@media (max-width:768px){
-
-  .serviceSection{
-    flex-direction:column;
-    gap:14px;              /* tighter spacing */
-    margin-bottom:30px;    /* reduce big gaps */
-  }
-
-  .serviceCard{
-    max-width:100%;
-  }
-
-  .serviceText{
-    margin:10px auto 20px auto;
-    padding:0 10px;        /* slight side padding */
-  }
-
-  .serviceText h2{
-    font-size:20px;        /* slightly smaller title */
-  }
-
-  .serviceText p{
-    font-size:14px;
-  }
-
-  .serviceText li{
-    font-size:14px;
-    margin:4px 0;
-  }
-
-}
-
-.serviceText ul{
-  text-align:left;
-  max-width:300px;
-  margin:10px auto;
-}
+/* ===== SECTION LAYOUT ===== /
 
 .serviceSection{
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:6px;              /* was missing or too large */
-  margin-bottom:50px;
+  gap:6px;
+  margin-bottom:40px;
 }
+
+/ ===== IMAGE / BANNER ===== /
 
 .serviceCard{
   width:min(1000px,92%);
@@ -114,25 +33,70 @@
   display:block;
 }
 
+/ ===== TEXT ===== /
+
+.serviceText{
+  width:min(1000px,92%);
+  margin:12px auto 30px auto;
+  text-align:center;
+  overflow:hidden;
+}
+
+/ RESET DEFAULT SPACING /
+
+.serviceText h2,
+.serviceText p,
+.serviceText ul{
+  margin:0;
+  padding:0;
+}
+
+/ CONTROLLED SPACING /
+
+.serviceText h2{
+  margin-bottom:6px;
+  font-size:22px;
+  font-weight:900;
+}
+
+.serviceText p{
+  margin-bottom:6px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.serviceText ul{
+  margin-top:6px;
+  list-style:none;
+  max-width:500px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.serviceText li{
+  margin:4px 0;
+  font-size:14px;
+}
+
+/ ===== DIVIDER ===== /
+
 .sectionDivider{
   width:min(800px,90%);
   height:1px;
-  margin:40px auto;
+  margin:50px auto;
 
   background:linear-gradient(
     90deg,
     transparent,
-    rgba(47,179,255,.6),
-    rgba(245,184,65,.6),
+    rgba(47,179,255,.5),
+    rgba(245,184,65,.5),
     transparent
   );
 
   opacity:.6;
 }
 
-.serviceSection:last-of-type .serviceText{
-  max-width:700px;   /* keeps CTA tighter but aligned */
-}
+/ ===== TOP BANNER ALIGNMENT ===== */
 
 .bannerCard{
   width:min(1000px,92%);
@@ -140,10 +104,11 @@
 }
 
 </style>
+
 <title>Services | Brad Hobbs Web Design</title>
 <meta name="description" content="Media services including web design, SEO structure, and business support." />
 </head>
-  
+
 <body data-page="services">
 
 <div class="wrap">
@@ -152,7 +117,7 @@
 
 <main>
 
-<!-- Services Intro Banner -->
+<!-- INTRO BANNER -->
 <section class="bannerSection">
   <div class="bannerCard">
     <img class="bannerImg"
@@ -162,14 +127,11 @@
   </div>
 </section>
 
-
 <!-- BUSINESS SUPPORT -->
 <section class="serviceSection">
   <div class="serviceCard">
-    <img
-    src="images/E6E98EAA-C3F2-475C-884E-2CDF132E321D.png"
-    alt="Business support and website guidance"
-    draggable="false">
+    <img src="images/E6E98EAA-C3F2-475C-884E-2CDF132E321D.png"
+    alt="Business support and website guidance">
   </div>
 
   <div class="serviceText">
@@ -187,14 +149,11 @@
   </div>
 </section>
 
-
 <!-- WEB DESIGN -->
 <section class="serviceSection">
   <div class="serviceCard">
-    <img
-    src="images/45A124B9-1AFC-448F-AEE9-861E774E3F23.png"
-    alt="Professional website design service"
-    draggable="false">
+    <img src="images/45A124B9-1AFC-448F-AEE9-861E774E3F23.png"
+    alt="Professional website design service">
   </div>
 
   <div class="serviceText">
@@ -212,14 +171,11 @@
   </div>
 </section>
 
-
 <!-- SEO STRUCTURE -->
 <section class="serviceSection">
   <div class="serviceCard">
-    <img
-    src="images/AC31881C-E476-4DA1-B64F-5D446DCE18F0.png"
-    alt="SEO structure and search visibility services"
-    draggable="false">
+    <img src="images/AC31881C-E476-4DA1-B64F-5D446DCE18F0.png"
+    alt="SEO structure and search visibility services">
   </div>
 
   <div class="serviceText">
@@ -238,6 +194,7 @@
 </section>
 
 <div class="sectionDivider"></div>
+
 <!-- CTA -->
 <section class="serviceSection">
   <div class="serviceText">
@@ -246,7 +203,7 @@
       Your business deserves clarity, structure, and a presence that reflects excellence.
       Let’s create something that truly represents you well.
     </p>
-    <a href="https://brad-hobbswd.github.io/brad-hobbswd/packages.html" class="btn btnPrimary">Get Started</a>
+    <a href="/brad-hobbswd/packages.html" class="btn btnPrimary">Get Started</a>
   </div>
 </section>
 
