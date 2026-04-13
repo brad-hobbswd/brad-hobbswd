@@ -3,113 +3,112 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=2" />
+
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=3" />
 
 <style>
 
-/* ===== FORCE OVERRIDES (fix for not updating) ===== */
+/* ===== SERVICES CLEAN OVERRIDES ===== */
 
 .serviceSection{
-  display:flex !important;
-  flex-direction:column !important;
-  align-items:center !important;
-  gap:6px !important;
-  margin-bottom:40px !important;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  margin-bottom:40px;
 }
 
-/* ===== BANNERS (ROUNDED FIX) ===== */
+/* CARD */
 
 .serviceCard{
-  width:min(1000px,92%) !important;
-  border-radius:22px !important;
-  overflow:hidden !important;
-  border:1px solid rgba(255,255,255,.12) !important;
-  background:rgba(255,255,255,.05) !important;
-  box-shadow:0 12px 40px rgba(0,0,0,.45) !important;
+  width:min(1000px,92%);
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.05);
+  box-shadow:0 12px 40px rgba(0,0,0,.45);
 }
 
 .serviceCard img{
-  width:100% !important;
-  height:auto !important;
-  display:block !important;
+  width:100%;
+  display:block;
 }
 
-/* ===== TEXT CLEAN ===== */
+/* TEXT */
 
 .serviceText{
-  width:min(900px,92%) !important;
-  margin:12px auto 30px auto !important;
-  text-align:center !important;
-  overflow:hidden !important;
+  width:min(900px,92%);
+  margin:12px auto 30px auto;
+  text-align:center;
 }
 
-/* RESET DEFAULT SPACING */
+/* RESET */
 
 .serviceText h2,
 .serviceText p,
 .serviceText ul{
-  margin:0 !important;
-  padding:0 !important;
+  margin:0;
+  padding:0;
 }
 
-/* CONTROLLED SPACING */
+/* TYPOGRAPHY */
 
 .serviceText h2{
-  margin-bottom:6px !important;
-  font-size:22px !important;
-  font-weight:900 !important;
+  margin-bottom:6px;
+  font-size:22px;
+  font-weight:900;
 }
 
 .serviceText p{
-  margin-bottom:6px !important;
-  color:var(--muted) !important;
-  line-height:1.6 !important;
+  margin-bottom:8px;
+  color:var(--muted);
+  line-height:1.6;
 }
 
+/* LIST CLEAN (NO BULLETS) */
+
 .serviceText ul{
-  margin-top:8px !important;
-  list-style:none !important;
-  padding-left:0 !important;
-  max-width:420px !important;
-  margin-left:auto !important;
-  margin-right:auto !important;
-  text-align:left !important;
+  list-style:none;
+  padding-left:0;
+  margin-top:10px;
+  max-width:420px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
 }
 
 .serviceText li{
-  margin:4px 0 !important;
-  font-size:14px !important;
+  margin:6px 0;
+  font-size:14px;
 }
 
-/* ===== DIVIDER FIX ===== */
+/* DIVIDER */
 
 .sectionDivider{
-  width:min(900px,92%) !important;
-  height:1px !important;
-  margin:50px auto !important;
-
+  width:min(900px,92%);
+  height:1px;
+  margin:50px auto;
   background:linear-gradient(
     90deg,
     transparent,
     rgba(47,179,255,1),
     rgba(245,184,65,1),
     transparent
-  ) !important;
-
-  opacity:1 !important;
+  );
 }
 
-/* ===== TOP BANNER ALIGN ===== */
+/* BANNER ALIGN */
 
 .bannerCard{
-  width:min(1000px,92%) !important;
-  margin:0 auto !important;
+  width:min(1000px,92%);
+  margin:0 auto;
 }
 
 </style>
 
 <title>Services | Brad Hobbs Web Design</title>
 <meta name="description" content="Media services including web design, SEO structure, and business support." />
+
 </head>
 
 <body data-page="services">
