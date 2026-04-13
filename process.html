@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="style.css?v=4" />
+<link rel="stylesheet" href="style.css?v=6" />
 
 <style>
 
@@ -53,12 +53,24 @@
     0 12px 30px rgba(0,0,0,.4),
     0 0 20px rgba(47,179,255,.1);
 
-  max-width:900px;
+  max-width:1000px;
 }
 
+/* GRID */
+.demoGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  margin-bottom:20px;
+}
+
+.demoItem{
+  text-align:center;
+}
+
+/* VIDEO */
 .demoVideo{
   width:100%;
-  max-width:420px;
   margin:0 auto;
   display:block;
   border-radius:14px;
@@ -68,22 +80,20 @@
     0 0 20px rgba(47,179,255,.2);
 }
 
-.demoVideoWrap{
-  display:flex;
-  justify-content:center;
-  margin-bottom:20px;
-}
-
-.demoVideo:hover{
-  transform:scale(1.02);
-  transition:.3s ease;
-}
-
 /* MOBILE */
-@media (max-width:600px){
-  .demoPreview{
-    margin:20px 12px;
-    padding:16px;
+.demoVideo.mobile{
+  max-width:260px;
+}
+
+/* DESKTOP */
+.demoVideo.desktop{
+  max-width:100%;
+}
+
+/* STACK */
+@media (max-width:768px){
+  .demoGrid{
+    grid-template-columns:1fr;
   }
 }
 
@@ -139,21 +149,35 @@
 <!-- PREVIEW -->
 <section class="demoPreview">
 
-  <h4 style="text-align:center; margin-bottom:12px; color:var(--muted);">
-    Real Mobile Preview
+  <h4 style="text-align:center; margin-bottom:16px; color:var(--muted);">
+    Real Site Preview
   </h4>
 
-  <div class="demoVideoWrap">
-    <video controls playsinline class="demoVideo">
-      <source src="ScreenRecording_04-11-2026 05-10-47_1 2.mp4" type="video/mp4">
-    </video>
+  <div class="demoGrid">
+
+    <!-- MOBILE -->
+    <div class="demoItem">
+      <h5 style="margin-bottom:10px; color:var(--muted);">Mobile View</h5>
+      <video autoplay muted loop playsinline class="demoVideo mobile">
+        <source src="mobile-preview.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- DESKTOP -->
+    <div class="demoItem">
+      <h5 style="margin-bottom:10px; color:var(--muted);">Desktop View</h5>
+      <video autoplay muted loop playsinline class="demoVideo desktop">
+        <source src="desktop-preview.mp4" type="video/mp4">
+      </video>
+    </div>
+
   </div>
 
   <div class="serviceText">
     <h3>Preview Before Launch</h3>
     <p>
-      Before your website goes live, you experience a fully working version.
-      This allows you to see the design, flow, and functionality in real time before anything is finalized.
+      Before your website goes live, you experience a fully working version across both mobile and desktop.
+      This ensures your design, layout, and functionality feel strong on every screen.
     </p>
     <p>
       Adjustments are made with clarity so your final launch reflects your vision with confidence.
