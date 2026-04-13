@@ -8,99 +8,39 @@
 
 <style>
 
-/* ===== SERVICES CLEAN OVERRIDES ===== */
+/* ===== SERVICES (MATCH PROCESS STYLE) ===== */
 
 .serviceSection{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:10px;
-  margin-bottom:40px;
+  margin-bottom:50px;
 }
 
-/* CARD */
-
-.serviceCard{
-  width:min(1000px,92%);
-  border-radius:22px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.05);
-  box-shadow:0 12px 40px rgba(0,0,0,.45);
-}
-
-.serviceCard img{
-  width:100%;
-  display:block;
-}
-
-/* TEXT */
-
+/* TEXT BLOCK (same feel as process page) */
 .serviceText{
-  width:min(900px,92%);
-  margin:12px auto 30px auto;
+  max-width:700px;
+  margin:18px auto 0 auto;
   text-align:center;
 }
 
-/* RESET */
-
-.serviceText h2,
-.serviceText p,
-.serviceText ul{
-  margin:0;
-  padding:0;
-}
-
-/* TYPOGRAPHY */
-
-.serviceText h2{
-  margin-bottom:6px;
-  font-size:22px;
-  font-weight:900;
-}
-
 .serviceText p{
-  margin-bottom:8px;
   color:var(--muted);
   line-height:1.6;
+  margin-bottom:10px;
 }
 
-/* LIST CLEAN (NO BULLETS) */
-
-.serviceText ul{
-  list-style:none;
-  padding-left:0;
+/* POINTS (replaces bullet lists) */
+.servicePoints{
   margin-top:10px;
-  max-width:420px;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:left;
 }
 
-.serviceText li{
+.servicePoints p{
   margin:6px 0;
   font-size:14px;
-}
-
-/* DIVIDER */
-
-.sectionDivider{
-  width:min(900px,92%);
-  height:1px;
-  margin:50px auto;
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(47,179,255,1),
-    rgba(245,184,65,1),
-    transparent
-  );
+  color:var(--muted);
 }
 
 /* BANNER ALIGN */
-
 .bannerCard{
-  width:min(1000px,92%);
+  width:min(1100px,92%);
   margin:0 auto;
 }
 
@@ -128,84 +68,92 @@
   </div>
 </section>
 
+<!-- INTRO TEXT -->
+<section class="serviceText">
+  <h2>Services Built with Clarity and Purpose</h2>
+  <p>
+    Every service is designed to bring structure, direction, and confidence to your business.
+    You are not left guessing what comes next. Each step is intentional and built to support real growth.
+  </p>
+</section>
+
 <!-- BUSINESS SUPPORT -->
 <section class="serviceSection">
-  <div class="serviceCard">
+  <section class="pageBanner">
     <img src="images/E6E98EAA-C3F2-475C-884E-2CDF132E321D.png"
     alt="Business support and website guidance">
-  </div>
+  </section>
 
-  <div class="serviceText">
-    <h2>Business Support That Brings Clarity</h2>
+  <section class="serviceText">
+    <h3>Business Support That Brings Clarity</h3>
     <p>
       Every strong business needs structure. You do not have to figure everything out alone.
       Guidance and direction help you move forward with confidence and purpose.
     </p>
-    <ul>
-      <li>Clear direction for your business goals</li>
-      <li>Support in organizing your services and offers</li>
-      <li>Help simplifying ideas into a workable plan</li>
-      <li>Focused growth that builds something sustainable</li>
-    </ul>
-  </div>
+
+    <div class="servicePoints">
+      <p>Clear direction for your business goals</p>
+      <p>Support in organizing your services and offers</p>
+      <p>Help simplifying ideas into a workable plan</p>
+      <p>Focused growth that builds something sustainable</p>
+    </div>
+  </section>
 </section>
 
 <!-- WEB DESIGN -->
 <section class="serviceSection">
-  <div class="serviceCard">
+  <section class="pageBanner">
     <img src="images/45A124B9-1AFC-448F-AEE9-861E774E3F23.png"
     alt="Professional website design service">
-  </div>
+  </section>
 
-  <div class="serviceText">
-    <h2>Website Design That Represents You Well</h2>
+  <section class="serviceText">
+    <h3>Website Design That Represents You Well</h3>
     <p>
       Your website is often the first impression people receive.
       That experience should feel clear, professional, and aligned with who you are.
     </p>
-    <ul>
-      <li>Custom design built around your vision</li>
-      <li>Clean layout that builds trust immediately</li>
-      <li>Mobile-friendly design for every device</li>
-      <li>Structured to guide visitors toward action</li>
-    </ul>
-  </div>
+
+    <div class="servicePoints">
+      <p>Custom design built around your vision</p>
+      <p>Clean layout that builds trust immediately</p>
+      <p>Mobile-friendly design for every device</p>
+      <p>Structured to guide visitors toward action</p>
+    </div>
+  </section>
 </section>
 
 <!-- SEO STRUCTURE -->
 <section class="serviceSection">
-  <div class="serviceCard">
+  <section class="pageBanner">
     <img src="images/AC31881C-E476-4DA1-B64F-5D446DCE18F0.png"
     alt="SEO structure and search visibility services">
-  </div>
+  </section>
 
-  <div class="serviceText">
-    <h2>SEO Structure That Helps You Get Found</h2>
+  <section class="serviceText">
+    <h3>SEO Structure That Helps You Get Found</h3>
     <p>
       A strong website must also be visible.
       Proper structure helps your site reach the people who are already searching for what you offer.
     </p>
-    <ul>
-      <li>Clean page structure built for search engines</li>
-      <li>Keyword-focused layout that feels natural</li>
-      <li>Optimized performance and organization</li>
-      <li>Built for long-term growth and visibility</li>
-    </ul>
-  </div>
+
+    <div class="servicePoints">
+      <p>Clean page structure built for search engines</p>
+      <p>Keyword-focused layout that feels natural</p>
+      <p>Optimized performance and organization</p>
+      <p>Built for long-term growth and visibility</p>
+    </div>
+  </section>
 </section>
 
-<div class="sectionDivider"></div>
-
 <!-- CTA -->
-<section class="serviceSection">
-  <div class="serviceText">
-    <h2>Ready to Build Something That Works</h2>
-    <p>
-      Your business deserves clarity, structure, and a presence that reflects excellence.
-      Let’s create something that truly represents you well.
-    </p>
-    <a href="/brad-hobbswd/packages.html" class="btn btnPrimary">Get Started</a>
-  </div>
+<section class="serviceText" style="margin-top:50px;">
+  <h2>Ready to Build Something That Works</h2>
+  <p>
+    Your business deserves clarity, structure, and a presence that reflects excellence.
+    Let’s create something that truly represents you well.
+  </p>
+  <a href="/brad-hobbswd/packages.html" class="btn btnPrimary">Get Started</a>
 </section>
 
 </main>
