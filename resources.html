@@ -50,19 +50,18 @@ These recommendations guide individuals, ministries, and businesses toward depen
 
 <div class="sectionDivider"></div>
 
-<!-- DOMAIN SEARCH -->
+<!-- DOMAIN SEARCH (WHOIS ONLY) -->
 <section class="domain-search">
 
-<h2>Search Domain Availability</h2>
+<h2>Search Domain Ownership</h2>
+
+<p style="text-align:center; color:var(--muted); margin-bottom:10px;">
+Check who owns a domain and view registration details instantly.
+</p>
 
 <form id="domainSearchForm">
 
 <input type="text" id="domainInput" placeholder="example.com" required>
-
-<select id="searchType" class="formControl" style="margin-top:10px;">
-  <option value="namecheap">Check Availability (Register)</option>
-  <option value="whois">WHOIS Lookup (Ownership)</option>
-</select>
 
 <button type="submit">Search Domain</button>
 
@@ -142,7 +141,107 @@ These recommendations guide individuals, ministries, and businesses toward depen
 </div>
 </article>
 
-<!-- (keep your remaining cards exactly as they are) -->
+<!-- IONOS -->
+<article class="card">
+<div class="cardInner">
+<a class="logoLink" href="https://www.ionos.com" target="_blank">
+<img class="logoImg" src="https://cdn.simpleicons.org/ionos/003d8f" alt="IONOS logo">
+</a>
+<div>
+<h2 class="cardTitle">IONOS</h2>
+<div class="meta">Low Cost Hosting</div>
+<p class="desc">Budget-friendly hosting with domain bundles.</p>
+<div class="actions">
+<a class="btn btnPrimary" href="https://www.ionos.com" target="_blank">Visit Website</a>
+</div>
+</div>
+</div>
+</article>
+
+<!-- BLUEHOST -->
+<article class="card">
+<div class="cardInner">
+<a class="logoLink" href="https://www.bluehost.com" target="_blank">
+<img class="logoImg" src="/brad-hobbswd/images/bluehost-logo.png" alt="Bluehost logo">
+</a>
+<div>
+<h2 class="cardTitle">Bluehost</h2>
+<div class="meta">Website Hosting</div>
+<p class="desc">Beginner-friendly hosting with WordPress tools.</p>
+<div class="actions">
+<a class="btn btnPrimary" href="https://www.bluehost.com" target="_blank">Visit Website</a>
+</div>
+</div>
+</div>
+</article>
+
+<!-- NETLIFY -->
+<article class="card">
+<div class="cardInner">
+<a class="logoLink" href="https://www.netlify.com" target="_blank">
+<img class="logoImg" src="https://cdn.simpleicons.org/netlify/00c7b7" alt="Netlify logo">
+</a>
+<div>
+<h2 class="cardTitle">Netlify</h2>
+<div class="meta">Free Hosting</div>
+<p class="desc">Fast static hosting with global CDN delivery.</p>
+<div class="actions">
+<a class="btn btnPrimary" href="https://www.netlify.com" target="_blank">Visit Website</a>
+</div>
+</div>
+</div>
+</article>
+
+<!-- GITHUB -->
+<article class="card">
+<div class="cardInner">
+<a class="logoLink" href="https://github.com" target="_blank">
+<img class="logoImg" src="https://cdn.simpleicons.org/github/000000" alt="GitHub logo">
+</a>
+<div>
+<h2 class="cardTitle">GitHub Pages</h2>
+<div class="meta">Free Hosting</div>
+<p class="desc">Simple hosting for static websites.</p>
+<div class="actions">
+<a class="btn btnPrimary" href="https://github.com" target="_blank">Visit Website</a>
+</div>
+</div>
+</div>
+</article>
+
+<!-- VERCEL -->
+<article class="card">
+<div class="cardInner">
+<a class="logoLink" href="https://vercel.com" target="_blank">
+<img class="logoImg" src="https://cdn.simpleicons.org/vercel/000000" alt="Vercel logo">
+</a>
+<div>
+<h2 class="cardTitle">Vercel</h2>
+<div class="meta">Free Hosting</div>
+<p class="desc">High-performance hosting platform.</p>
+<div class="actions">
+<a class="btn btnPrimary" href="https://vercel.com" target="_blank">Visit Website</a>
+</div>
+</div>
+</div>
+</article>
+
+<!-- CLOUDFLARE -->
+<article class="card">
+<div class="cardInner">
+<a class="logoLink" href="https://cloudflare.com" target="_blank">
+<img class="logoImg" src="https://cdn.simpleicons.org/cloudflare/f38020" alt="Cloudflare logo">
+</a>
+<div>
+<h2 class="cardTitle">Cloudflare Pages</h2>
+<div class="meta">Free Hosting</div>
+<p class="desc">Global CDN-powered hosting.</p>
+<div class="actions">
+<a class="btn btnPrimary" href="https://cloudflare.com" target="_blank">Visit Website</a>
+</div>
+</div>
+</div>
+</article>
 
 </div>
 
@@ -176,25 +275,16 @@ Professional website design, hosting setup, and deployment services are availabl
 document.getElementById("y").textContent = new Date().getFullYear();
 </script>
 
-<!-- DOMAIN SEARCH SCRIPT -->
+<!-- WHOIS SEARCH SCRIPT -->
 <script>
 document.getElementById("domainSearchForm").addEventListener("submit", function(e){
 
 e.preventDefault();
 
 var domain = document.getElementById("domainInput").value.trim();
-var type = document.getElementById("searchType").value;
 
 if(domain){
-
-if(type === "whois"){
 window.open("https://www.whois.com/whois/" + domain, "_blank");
-}
-
-if(type === "namecheap"){
-window.open("https://www.namecheap.com/domains/registration/results/?domain=" + domain, "_blank");
-}
-
 }
 
 });
