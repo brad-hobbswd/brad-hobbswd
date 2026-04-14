@@ -101,6 +101,62 @@ select.formControl option{
   margin-top:10px;
 }
 
+  /* ===== RESTORE FULL FORM POLISH ===== */
+
+.formControl{
+  width:100%;
+  padding:14px 16px;
+  border-radius:14px;
+
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.18);
+
+  color:white;
+  font-size:15px;
+
+  transition:.25s ease;
+}
+
+/* placeholder */
+.formControl::placeholder{
+  color:rgba(255,255,255,.55);
+}
+
+/* hover */
+.formControl:hover{
+  border:1px solid rgba(47,179,255,.5);
+}
+
+/* focus glow */
+.formControl:focus{
+  outline:none;
+  border:1px solid var(--accent);
+  box-shadow:0 0 14px rgba(47,179,255,.35);
+}
+
+/* textarea spacing */
+textarea.formControl{
+  min-height:110px;
+  resize:vertical;
+}
+
+/* dropdown fix */
+select.formControl{
+  appearance:none;
+  cursor:pointer;
+}
+
+/* spacing between fields */
+.formGrid{
+  display:grid;
+  gap:18px;
+}
+
+  .formLabel{
+  display:block;
+  width:100%;
+}
+
 </style>
 
 </head>
