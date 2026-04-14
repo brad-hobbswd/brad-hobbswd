@@ -1,192 +1,218 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Brad Hobbs Web Design</title>
-  <meta name="description" content="Contact Brad Hobbs for professional website design services." />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Contact | Brad Hobbs Web Design</title>
+<meta name="description" content="Contact Brad Hobbs for professional website design services." />
+
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=2" />
 </head>
 
 <body data-page="contact">
-  <div class="wrap">
 
-    <header id="siteHeader"></header>
+<div class="wrap">
 
-    <main>
+<header id="siteHeader"></header>
 
-      <!-- CONTACT BANNER -->
-      <div class="bannerPrimary">
-        <img src="images/27229CBD-3947-480E-AB39-1D9CC6B3202E.png" alt="Contact Brad Hobbs Web Design">
-      </div>
+<main>
 
-      <!-- CONTACT EMAIL BANNER -->
-      <a href="mailto:brad.hobbs13@icloud.com" class="bannerSecondary contactInfoBanner">
-        <img src="images/40411AF9-F914-4D71-AA94-30A89AC34E14.png" alt="Email Brad Hobbs Web Design">
-      </a>
+<!-- PRIMARY BANNER -->
+<div class="bannerPrimary">
+  <img src="images/27229CBD-3947-480E-AB39-1D9CC6B3202E.png" alt="Contact Brad Hobbs Web Design">
+</div>
 
-      <!-- CONTACT FORM -->
-      <section id="contact" class="section">
-        <div class="contactWrap">
+<div class="sectionDivider"></div>
 
-          <form id="quoteForm" class="card">
+<!-- EMAIL BANNER (CLICKABLE WITH PREFILL) -->
+<a 
+href="mailto:brad.hobbs13@icloud.com?subject=Website Inquiry&body=Hello Brad,%0D%0A%0D%0AI would like to connect about a website project.%0D%0A%0D%0AProject Type:%0D%0ATimeline:%0D%0ABudget:%0D%0A%0D%0AThank you." 
+class="bannerSecondary contactInfoBanner">
 
-            <!-- SPAM PROTECTION -->
-            <input type="text" name="_gotcha" style="display:none">
+  <img src="images/40411AF9-F914-4D71-AA94-30A89AC34E14.png" alt="Email Brad Hobbs Web Design">
 
-            <div class="formTitle">Send a message</div>
+</a>
 
-            <!-- hidden subject for Formspree -->
-            <input type="hidden" name="_subject" value="New Contact Form Submission">
+<!-- SUPPORT TEXT -->
+<section class="serviceText" style="text-align:center; max-width:700px; margin:20px auto;">
 
-            <div class="formGrid">
+<h2>Direct Contact with Clarity</h2>
 
-              <label class="formLabel">
-                <div class="formLabelTitle">Name</div>
-                <input name="name" required class="formControl" placeholder="Your name">
-              </label>
+<p>
+Click the banner above to open a ready to send email. This allows you to reach out quickly with structure and clarity so your request can be understood right away.
+</p>
 
-              <label class="formLabel">
-                <div class="formLabelTitle">Email</div>
-                <input name="email" type="email" required class="formControl" placeholder="your@email.com">
-              </label>
+<p>
+Every message is reviewed personally and you can expect a response within 24 hours.
+</p>
 
-              <label class="formLabel">
-                <div class="formLabelTitle">Project Type</div>
-                <select name="package" class="formControl" required>
-  <option value="" selected disabled hidden>Select a project type</option>
-  <option value="Starter Website">Starter Website</option>
-  <option value="Business Website">Business Website</option>
-  <option value="Custom Project">Custom Project</option>
-  <option value="General Question">General Question</option>
+</section>
+
+<div class="sectionDivider"></div>
+
+<!-- CONTACT FORM -->
+<section class="formSection">
+
+<h2 class="formTitleMain">Send a Message</h2>
+
+<p class="formSubtitle">
+This form connects directly and you will receive a response within 24 hours.
+</p>
+
+<div class="contactWrap">
+
+<form id="quoteForm" class="card">
+
+<input type="text" name="_gotcha" style="display:none">
+
+<input type="hidden" name="_subject" value="New Contact Form Submission">
+
+<div class="formGrid">
+
+<label class="formLabel">
+<div class="formLabelTitle">Name</div>
+<input name="name" required class="formControl" placeholder="Your name">
+</label>
+
+<label class="formLabel">
+<div class="formLabelTitle">Email</div>
+<input name="email" type="email" required class="formControl" placeholder="your@email.com">
+</label>
+
+<label class="formLabel">
+<div class="formLabelTitle">Project Type</div>
+<select name="package" class="formControl" required>
+<option value="" selected disabled hidden>Select a project type</option>
+<option value="Starter Website">Starter Website</option>
+<option value="Business Website">Business Website</option>
+<option value="Custom Project">Custom Project</option>
+<option value="General Question">General Question</option>
 </select>
-              </label>
+</label>
 
-              <label class="formLabel">
-                <div class="formLabelTitle">Message</div>
-                <textarea name="message" rows="4" required class="formControl" placeholder="Tell me about your project..."></textarea>
-              </label>
+<label class="formLabel">
+<div class="formLabelTitle">Message</div>
+<textarea name="message" rows="4" required class="formControl" placeholder="Tell me about your project..."></textarea>
+</label>
 
-              <button id="sendBtn" type="submit" class="btn btnPrimary">
-                Send Message
-              </button>
+<button id="sendBtn" type="submit" class="btn btnPrimary">
+Send Message
+</button>
 
-              <div id="formStatus" class="formStatus"></div>
+<div id="formStatus" class="formStatus"></div>
 
-            </div>
+</div>
 
-          </form>
+</form>
 
-        </div>
-      </section>
+</div>
 
-    </main>
+</section>
 
-    <div id="siteFooter"></div>
+</main>
 
-  </div>
+<div id="siteFooter"></div>
 
-  <script src="layout.js"></script>
+</div>
 
-  <!-- FORM SCRIPT -->
-  <script>
+<script src="/brad-hobbswd/layout.js"></script>
+
+<!-- FORM SCRIPT -->
+<script>
 (function () {
 
-  const form = document.getElementById("quoteForm");
-  const status = document.getElementById("formStatus");
-  const btn = document.getElementById("sendBtn");
+const form = document.getElementById("quoteForm");
+const status = document.getElementById("formStatus");
+const btn = document.getElementById("sendBtn");
 
-  if (!form) return;
+if (!form) return;
 
-  form.addEventListener("submit", async function (e) {
+form.addEventListener("submit", async function (e) {
 
-    e.preventDefault();
+e.preventDefault();
 
-    if (btn.disabled) return;
+if (btn.disabled) return;
 
-    const formData = new FormData(form);
+const formData = new FormData(form);
 
-    // spam protection
-    if (formData.get("_gotcha")) return;
+if (formData.get("_gotcha")) return;
 
-    status.textContent = "Sending...";
-    status.style.color = "#b8c7e6";
+status.textContent = "Sending...";
+status.style.color = "#b8c7e6";
 
-    btn.textContent = "Sending...";
-    btn.disabled = true;
+btn.textContent = "Sending...";
+btn.disabled = true;
 
-    try {
+try {
 
-      const res = await fetch("https://formspree.io/f/mzdajjkb", {
-        method: "POST",
-        headers: { "Accept": "application/json" },
-        body: formData
-      });
+const res = await fetch("https://formspree.io/f/mzdajjkb", {
+method: "POST",
+headers: { "Accept": "application/json" },
+body: formData
+});
 
-      if (res.ok) {
-        form.reset();
-        status.textContent = "Message sent successfully!";
-        status.style.color = "#7dd3ff";
+if (res.ok) {
+form.reset();
+status.textContent = "Message sent successfully!";
+status.style.color = "#7dd3ff";
+window.location.href = "thanks.html";
+return;
+}
 
-        window.location.href = "thanks.html";
-        return;
-      }
+const data = await res.json().catch(() => ({}));
+status.textContent = data.error || "Submission failed. Please try again.";
+status.style.color = "#ff6b6b";
 
-      const data = await res.json().catch(() => ({}));
-      status.textContent = data.error || "Submission failed. Please try again.";
-      status.style.color = "#ff6b6b";
-      status.scrollIntoView({ behavior: "smooth", block: "center" });
+} catch (err) {
 
-    } catch (err) {
+status.textContent = "Network error. Please try again.";
+status.style.color = "#ff6b6b";
 
-      status.textContent = "Network error. Please try again.";
-      status.style.color = "#ff6b6b";
-      status.scrollIntoView({ behavior: "smooth", block: "center" });
+} finally {
 
-    } finally {
+btn.disabled = false;
+btn.textContent = "Send Message";
 
-      btn.disabled = false;
-      btn.textContent = "Send Message";
+}
 
-    }
-
-  });
+});
 
 })();
 </script>
 
-  <!-- MOBILE MENU SCRIPT -->
-  <script>
-  const menu = document.querySelector(".mobileMenu");
-  const toggle = document.querySelector(".menuToggle");
-  const overlay = document.getElementById("menuOverlay");
+<!-- MOBILE MENU -->
+<script>
+const menu = document.querySelector(".mobileMenu");
+const toggle = document.querySelector(".menuToggle");
+const overlay = document.getElementById("menuOverlay");
 
-  if(toggle){
+if(toggle){
 
-    toggle.addEventListener("click", function(){
-      menu.classList.toggle("open");
-      toggle.classList.toggle("active");
-      overlay.classList.toggle("active");
-    });
+toggle.addEventListener("click", function(){
+menu.classList.toggle("open");
+toggle.classList.toggle("active");
+overlay.classList.toggle("active");
+});
 
-    overlay.addEventListener("click", function(){
-      menu.classList.remove("open");
-      toggle.classList.remove("active");
-      overlay.classList.remove("active");
-    });
+overlay.addEventListener("click", function(){
+menu.classList.remove("open");
+toggle.classList.remove("active");
+overlay.classList.remove("active");
+});
 
-    document.querySelectorAll(".mobileMenu a").forEach(link=>{
-      link.addEventListener("click", ()=>{
-        menu.classList.remove("open");
-        toggle.classList.remove("active");
-        overlay.classList.remove("active");
-      });
-    });
+document.querySelectorAll(".mobileMenu a").forEach(link=>{
+link.addEventListener("click", ()=>{
+menu.classList.remove("open");
+toggle.classList.remove("active");
+overlay.classList.remove("active");
+});
+});
 
-  }
-  </script>
+}
+</script>
 
-  <div id="menuOverlay" class="menuOverlay"></div>
+<div id="menuOverlay" class="menuOverlay"></div>
 
 </body>
 </html>
