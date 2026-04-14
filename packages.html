@@ -1,215 +1,129 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/brad-hobbswd/style.css?v=2">
-  <title>Packages | Brad Hobbs Web Design</title>
-  <meta name="description" content="Website package options: Starter, Business Growth, and Premium Custom." />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=2">
+
+<title>Packages | Brad Hobbs Web Design</title>
+<meta name="description" content="Website package options: Starter, Business Growth, and Premium Custom." />
 </head>
 
+<body class="packages-page" data-page="packages">
 
-  <body class="packages-page" data-page="packages">
-  <div class="wrap">
+<div class="wrap">
 
-    <header id="siteHeader"></header>
+<header id="siteHeader"></header>
 
-    <main>
-      <section class="bannerSection">
+<main>
+
+<!-- BANNER -->
+<section class="bannerSection">
   <div class="bannerCard">
     <img class="bannerImg" src="images/A061F20E-B72E-45DD-B863-37AEC5BFFF82.jpeg" alt="Website Packages">
   </div>
 </section>
 
+<!-- INTRO -->
 <section class="packagesIntro">
+  <h2 class="packagesTitle">Explore Our Website Packages</h2>
 
-<h2 class="packagesTitle">
-Explore Our Website Packages
-</h2>
-
-<p class="packagesSubtitle">
-Click each package card below to view the full details and care plan options
-<span class="clickIcon">👇</span>
-</p>
-
+  <p class="packagesSubtitle">
+    Click each package card below to view the full details and care plan options
+    <span class="clickIcon">👇</span>
+  </p>
 </section>
 
-     <section class="packageSection">
+<div class="sectionDivider"></div>
+
+<!-- PACKAGE CARDS -->
+<section class="packageSection">
 
   <div class="package-card" onclick="openPackage('starter')">
-<img src="C3857A28-69EA-4491-BFE7-EED2D131AE9B.png" alt="Starter Website Package">
-</div>
-
-<div class="package-card" onclick="openPackage('business')">
-<img src="428002DB-DBEC-48CD-8ED0-851AE686E827.png" alt="Business Website Package">
-</div>
-
-<div class="package-card" onclick="openPackage('premium')">
-<img src="1CED57CD-3692-4A62-9B8C-E377BE84063A.png" alt="Premium Custom Website Package">
-</div>
-
-</section>
-<div id="starter" class="package-detail">
-
-<h2>Starter Website Package</h2>
-
-<p>
-Designed for small businesses, ministries, and startups beginning their online presence.
-</p>
-
-<ul>
-<li>Professional website with up to five pages</li>
-<li>Mobile responsive layout for phones and tablets</li>
-<li>Basic search engine optimization structure</li>
-<li>Contact form so visitors can reach the business</li>
-<li>Launch support to ensure the site goes live properly</li>
-</ul>
-
-<p>
-Goal for the client: create a professional and trustworthy online presence that allows customers to find the business and make contact.
-</p>
-<button class="btn btnPrimary" onclick="goToForm()">
-Start This Package
-</button>
-</div>
-
-
-<div id="business" class="package-detail">
-
-<h2>Business Website Package</h2>
-
-<p>
-Built for organizations ready to grow and convert visitors into customers.
-</p>
-
-<ul>
-<li>Professional website with up to ten pages</li>
-<li>Conversion focused layout designed to generate leads</li>
-<li>Enhanced SEO structure for improved visibility</li>
-<li>Lead capture forms and contact integration</li>
-<li>Analytics setup to measure visitor activity</li>
-</ul>
-
-<p>
-Goal for the client: transform a website into a marketing tool that generates inquiries and supports business growth.
-</p>
-<button class="btn btnPrimary" onclick="goToForm()">
-Start This Package
-</button>
-</div>
-
-
-<div id="premium" class="package-detail">
-
-<h2>Premium Custom Website Package</h2>
-
-<p>
-Designed for businesses that need advanced functionality and a fully custom online presence.
-</p>
-
-<ul>
-<li>Fully custom website layouts</li>
-<li>Advanced search engine optimization architecture</li>
-<li>Analytics and workflow system integration</li>
-<li>Strategic design focused on customer engagement</li>
-<li>Performance optimization for long term growth</li>
-</ul>
-
-<p>
-Goal for the client: create a powerful online platform tailored to the organization that supports long term growth and scalability.
-</p>
-<button class="btn btnPrimary" onclick="goToForm()">
-Start This Package
-</button>
-</div>
-     <section id="packageContact" class="formSection">
-
-<h2 class="formTitleMain">Start Your Project</h2>
-
-<p class="formSubtitle">
-Complete the form below to begin your website request.
-</p>
-
-<div class="formEmbed">
-
-<iframe 
-src="https://docs.google.com/forms/d/e/1FAIpQLSfmeW2hfpYLFM9PzfKvhVFQLB5MkKnf88Z36SW7MF082nbg_A/viewform?embedded=true" 
-width="100%" 
-height="1000" 
-frameborder="0" 
-marginheight="0" 
-marginwidth="0">
-Loading…
-</iframe>
-
-</div>
-
-</section>
-
-    </main>
-
-    <div id="siteFooter"></div>
+    <img src="C3857A28-69EA-4491-BFE7-EED2D131AE9B.png" alt="Starter Website Package">
   </div>
 
-  <script src="/brad-hobbswd/layout.js"></script>
+  <div class="package-card" onclick="openPackage('business')">
+    <img src="428002DB-DBEC-48CD-8ED0-851AE686E827.png" alt="Business Website Package">
+  </div>
 
-    <div id="packageModal" class="packageModal">
+  <div class="package-card" onclick="openPackage('premium')">
+    <img src="1CED57CD-3692-4A62-9B8C-E377BE84063A.png" alt="Premium Custom Website Package">
+  </div>
 
+</section>
+
+<div class="sectionDivider"></div>
+
+<!-- FORM SECTION -->
+<section id="packageContact" class="formSection">
+
+  <h2 class="formTitleMain">Start Your Project</h2>
+
+  <p class="formSubtitle">
+    Complete the form below to begin your website request.
+  </p>
+
+  <div class="formEmbed">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfmeW2hfpYLFM9PzfKvhVFQLB5MkKnf88Z36SW7MF082nbg_A/viewform?embedded=true" 
+      width="100%" 
+      height="1000"
+      frameborder="0">
+      Loading…
+    </iframe>
+  </div>
+
+</section>
+
+</main>
+
+<div id="siteFooter"></div>
+
+</div>
+
+<!-- MODAL -->
+<div id="packageModal" class="packageModal">
   <div class="modalContent">
-
     <span class="modalClose" onclick="closePackage()">✕</span>
-
     <div id="modalBody"></div>
-
   </div>
-
 </div>
-   <script>
+
+<script src="/brad-hobbswd/layout.js"></script>
+
+<script>
 
 function openPackage(id){
+  const modal = document.getElementById("packageModal");
+  const body = document.getElementById("modalBody");
+  const content = document.getElementById(id).innerHTML;
 
-const modal = document.getElementById("packageModal");
-const body = document.getElementById("modalBody");
-const content = document.getElementById(id).innerHTML;
-
-body.innerHTML = content;
-
-modal.classList.add("active");
-document.body.style.overflow = "hidden"; // 🔥 lock scroll
-
+  body.innerHTML = content;
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
 }
 
 function closePackage(){
-
-document.getElementById("packageModal").classList.remove("active");
-document.body.style.overflow = "auto"; // 🔥 unlock scroll
-
+  document.getElementById("packageModal").classList.remove("active");
+  document.body.style.overflow = "auto";
 }
-
-/* click outside closes */
 
 window.addEventListener("click", function(e){
-
-const modal = document.getElementById("packageModal");
-
-if(e.target === modal){
-closePackage();
-}
-
+  const modal = document.getElementById("packageModal");
+  if(e.target === modal){
+    closePackage();
+  }
 });
-
-</script>
-
-    <script>
 
 function goToForm(){
-closePackage();
-document.getElementById("packageContact").scrollIntoView({
-behavior: "smooth"
-});
+  closePackage();
+  document.getElementById("packageContact").scrollIntoView({
+    behavior: "smooth"
+  });
 }
 
 </script>
-    
+
 </body>
 </html>
