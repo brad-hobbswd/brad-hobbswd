@@ -6,18 +6,16 @@
 
 <title>Contact | Brad Hobbs Web Design</title>
 <meta name="description" content="Contact Brad Hobbs for professional website design services." />
+
 <link rel="icon" href="/brad-hobbswd/favicon.ico">
-
 <link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
-
 <link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=2" />
 
-  <style>
+<style>
 
-    /* ===== INPUT VISIBILITY FIX ===== */
+/* ===== INPUT VISIBILITY ===== */
 
 .formControl{
   background:rgba(255,255,255,.06);
@@ -25,35 +23,27 @@
   color:white;
 }
 
-    .formControl:hover{
-  border:1px solid rgba(47,179,255,.5);
-}
-
-/* placeholder text */
 .formControl::placeholder{
   color:rgba(255,255,255,.55);
 }
 
-/* dropdown text fix */
-select.formControl{
-  color:white;
+.formControl:hover{
+  border:1px solid rgba(47,179,255,.5);
 }
 
-/* dropdown options (important) */
+.formControl:focus{
+  outline:none;
+  border:1px solid var(--accent);
+  box-shadow:0 0 12px rgba(47,179,255,.25);
+}
+
+/* dropdown fix */
 select.formControl option{
   color:black;
   background:white;
 }
 
-  body[data-page="contact"] .formSection{
-  text-align:left;
-}
-
-body[data-page="contact"] .formTitleMain,
-body[data-page="contact"] .formSubtitle{
-  text-align:left;
-}
-/* ===== CONTACT FORM LOCAL STYLES ===== */
+/* ===== FORM LAYOUT ===== */
 
 .contactWrap{
   display:flex;
@@ -80,11 +70,6 @@ body[data-page="contact"] .formSubtitle{
   gap:14px;
 }
 
-.formLabel{
-  display:block;
-  width:100%;
-}
-
 .formLabelTitle{
   font-size:12px;
   font-weight:900;
@@ -95,65 +80,29 @@ body[data-page="contact"] .formSubtitle{
   text-align:left;
 }
 
-.formControl{
-  width:100%;
-  padding:12px 14px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.05);
-  color:white;
-  font-size:15px;
-}
+/* ===== PERFECT ALIGNMENT ===== */
 
-.formControl:focus{
-  outline:none;
-  border:1px solid var(--accent);
-  box-shadow:0 0 12px rgba(47,179,255,.25);
-}
-
-#sendBtn{
-  width:100%;
-  margin-top:12px;
-  padding:12px;
-  font-size:15px;
-}
-
-/* 🔥 FIX ALIGNMENT HERE TOO */
-.formSection{
-  text-align:left;
-}
-
-.formTitleMain,
-.formSubtitle{
-  text-align:left;
-}
-
-/* ===== CENTER FORM HEADER + STATUS ===== */
-
-#quoteForm .formTitle{
+/* center header */
+.formSection > .formTitleMain,
+.formSection > .formSubtitle{
   text-align:center;
 }
 
+/* button spacing */
+#sendBtn{
+  width:100%;
+  margin-top:14px;
+  padding:12px;
+}
+
+/* status message */
 #formStatus{
   text-align:center;
   margin-top:10px;
 }
 
-/* ===== FORCE CENTER ONLY FOR TITLE + STATUS ===== */
-
-#quoteForm .formTitle{
-  text-align:center !important;
-  width:100%;
-}
-
-#quoteForm #formStatus{
-  text-align:center !important;
-  width:100%;
-  margin-top:10px;
-}
-
 </style>
-  
+
 </head>
 
 <body data-page="contact">
@@ -171,7 +120,7 @@ body[data-page="contact"] .formSubtitle{
 
 <div class="sectionDivider"></div>
 
-<!-- EMAIL BANNER (CLICKABLE WITH PREFILL) -->
+<!-- EMAIL BANNER -->
 <a 
 href="mailto:brad.hobbs13@icloud.com?subject=Website Inquiry&body=Hello Brad,%0D%0A%0D%0AI would like to connect about a website project.%0D%0A%0D%0AProject Type:%0D%0ATimeline:%0D%0ABudget:%0D%0A%0D%0AThank you." 
 class="bannerSecondary contactInfoBanner">
@@ -211,22 +160,21 @@ This form connects directly and you will receive a response within 24 hours.
 <form id="quoteForm" class="card">
 
 <input type="text" name="_gotcha" style="display:none">
-
 <input type="hidden" name="_subject" value="New Contact Form Submission">
 
 <div class="formGrid">
 
-<label class="formLabel">
+<label>
 <div class="formLabelTitle">Name</div>
 <input name="name" required class="formControl" placeholder="Your name">
 </label>
 
-<label class="formLabel">
+<label>
 <div class="formLabelTitle">Email</div>
 <input name="email" type="email" required class="formControl" placeholder="your@email.com">
 </label>
 
-<label class="formLabel">
+<label>
 <div class="formLabelTitle">Project Type</div>
 <select name="package" class="formControl" required>
 <option value="" selected disabled hidden>Select a project type</option>
@@ -237,7 +185,7 @@ This form connects directly and you will receive a response within 24 hours.
 </select>
 </label>
 
-<label class="formLabel">
+<label>
 <div class="formLabelTitle">Message</div>
 <textarea name="message" rows="4" required class="formControl" placeholder="Tell me about your project..."></textarea>
 </label>
@@ -246,7 +194,7 @@ This form connects directly and you will receive a response within 24 hours.
 Send Message
 </button>
 
-<div id="formStatus" class="formStatus"></div>
+<div id="formStatus"></div>
 
 </div>
 
@@ -306,11 +254,10 @@ window.location.href = "thanks.html";
 return;
 }
 
-const data = await res.json().catch(() => ({}));
-status.textContent = data.error || "Submission failed. Please try again.";
+status.textContent = "Submission failed. Please try again.";
 status.style.color = "#ff6b6b";
 
-} catch (err) {
+} catch {
 
 status.textContent = "Network error. Please try again.";
 status.style.color = "#ff6b6b";
@@ -326,39 +273,6 @@ btn.textContent = "Send Message";
 
 })();
 </script>
-
-<!-- MOBILE MENU -->
-<script>
-const menu = document.querySelector(".mobileMenu");
-const toggle = document.querySelector(".menuToggle");
-const overlay = document.getElementById("menuOverlay");
-
-if(toggle){
-
-toggle.addEventListener("click", function(){
-menu.classList.toggle("open");
-toggle.classList.toggle("active");
-overlay.classList.toggle("active");
-});
-
-overlay.addEventListener("click", function(){
-menu.classList.remove("open");
-toggle.classList.remove("active");
-overlay.classList.remove("active");
-});
-
-document.querySelectorAll(".mobileMenu a").forEach(link=>{
-link.addEventListener("click", ()=>{
-menu.classList.remove("open");
-toggle.classList.remove("active");
-overlay.classList.remove("active");
-});
-});
-
-}
-</script>
-
-<div id="menuOverlay" class="menuOverlay"></div>
 
 </body>
 </html>
