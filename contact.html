@@ -17,6 +17,30 @@
 
   <style>
 
+    /* ===== INPUT VISIBILITY FIX ===== */
+
+.formControl{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.18);
+  color:white;
+}
+
+/* placeholder text */
+.formControl::placeholder{
+  color:rgba(255,255,255,.55);
+}
+
+/* dropdown text fix */
+select.formControl{
+  color:white;
+}
+
+/* dropdown options (important) */
+select.formControl option{
+  color:black;
+  background:white;
+}
+
   body[data-page="contact"] .formSection{
   text-align:left;
 }
