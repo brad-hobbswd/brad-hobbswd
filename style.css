@@ -63,6 +63,7 @@
   text-decoration:none;
 }
 
+
 /* ================= GLOBAL ================= */
 
 *,
@@ -93,12 +94,14 @@ a{
   padding:18px;
 }
 
+
 /* ================= GRID ================= */
 
 .grid{
   display:grid;
   gap:20px;
 }
+
 
 /* ================= HEADER SPACING ONLY ================= */
 
@@ -109,6 +112,7 @@ header{
 #siteHeader{
   margin-bottom:40px;
 }
+
 
 /* ================= NAVBAR LOGO (SAFE TO KEEP) ================= */
 
@@ -148,17 +152,16 @@ header{
   color:var(--muted);
 }
 
-/* ================= EVERYTHING ELSE UNTOUCHED ================= */
 
-/* ===== ONLY HOME + CONTACT BANNERS ===== */
+/* ================= ONLY HOME + CONTACT BANNERS ================= */
 
 body[data-page="home"] .bannerPrimary,
 body[data-page="home"] .bannerSecondary,
 body[data-page="contact"] .bannerPrimary,
 body[data-page="contact"] .bannerSecondary{
   display:block;
-  width:100%;
-  margin:18px 0;
+  width:min(1100px,92%);
+  margin:18px auto;
   border-radius:22px;
   overflow:hidden;
   box-shadow:0 12px 40px rgba(0,0,0,.45);
@@ -172,6 +175,7 @@ body[data-page="contact"] .bannerSecondary img{
   height:auto;
   display:block;
 }
+
 
 /* ================= GENERIC CARDS ================= */
 
@@ -188,5 +192,3 @@ body[data-page="contact"] .bannerSecondary img{
   transform:translateY(-4px);
   box-shadow:0 20px 40px rgba(0,0,0,.35), 0 0 20px rgba(47,179,255,.15);
 }
-
-/* ================= KEEP ALL REMAINING CODE EXACTLY AS YOU HAD ================= */
