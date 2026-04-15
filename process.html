@@ -4,12 +4,16 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="style.css?v=7" />
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=8" />
 
 <style>
 
-/* ===== TEXT ===== */
+/* ===== TOP SPACING FIX (MATCH SERVICES) ===== */
+.bannerSection{
+  margin-top:40px;
+}
 
+/* ===== TEXT ===== */
 .serviceText{
   max-width:700px;
   margin:18px auto 0 auto;
@@ -23,7 +27,6 @@
 }
 
 /* ===== DIVIDER ===== */
-
 .sectionDivider{
   width:min(900px,92%);
   height:1px;
@@ -38,8 +41,32 @@
   );
 }
 
-/* ===== DEMO PREVIEW (UPGRADED) ===== */
+/* ===== UNIFIED BANNERS ===== */
+.bannerCard,
+.pageBanner,
+.processSection{
+  width:min(1100px,92%);
+  margin:20px auto;
+  border-radius:22px;
+  overflow:hidden;
 
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.03);
+
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.45),
+    0 0 20px rgba(47,179,255,.12);
+}
+
+.bannerCard img,
+.pageBanner img,
+.processSection img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* ===== DEMO PREVIEW ===== */
 .demoPreview{
   border:1px solid rgba(255,255,255,.12);
   border-radius:22px;
@@ -68,11 +95,9 @@
   text-align:center;
 }
 
-/* MOBILE DEVICE LOOK */
 .demoVideo.mobile{
   width:100%;
   max-width:300px;
-
   border-radius:28px;
   border:6px solid rgba(255,255,255,.08);
 
@@ -81,7 +106,6 @@
     0 0 30px rgba(47,179,255,.25);
 }
 
-/* DESKTOP */
 .demoVideo.desktop{
   width:100%;
   border-radius:16px;
@@ -91,19 +115,16 @@
     0 0 30px rgba(47,179,255,.25);
 }
 
-/* LABELS */
 .demoItem h5{
   margin-bottom:12px;
   color:var(--muted);
 }
 
-/* HOVER */
 .demoVideo:hover{
   transform:scale(1.02);
   transition:.3s ease;
 }
 
-/* MOBILE STACK */
 @media (max-width:900px){
   .demoGrid{
     grid-template-columns:1fr;
@@ -116,16 +137,31 @@
   }
 }
 
+/* ===== BUTTON FIX ===== */
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  font-weight:900;
+  cursor:pointer;
+}
+
+.btnPrimary{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#031427;
+  border:none;
+}
+
 </style>
 
 <title>The Process | Brad Hobbs Web Design</title>
-  <link rel="icon" href="/brad-hobbswd/favicon.ico">
 
+<link rel="icon" href="/brad-hobbswd/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
-
 <link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
-
 <link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
+
 <meta name="description" content="Discovery, build, and launch process for website projects." />
 
 </head>
@@ -138,19 +174,19 @@
 
 <main>
 
-<!-- INTRO -->
-<section class="pageBanner">
-  <img src="images/71E9F858-20C4-447E-9BD2-9002B435C474.jpeg" alt="The Process">
+<!-- INTRO BANNER -->
+<section class="bannerSection">
+  <div class="bannerCard">
+    <img src="images/71E9F858-20C4-447E-9BD2-9002B435C474.jpeg" alt="The Process">
+  </div>
 </section>
 
+<!-- INTRO TEXT -->
 <section class="serviceText">
   <h2>A Process Built for Clarity and Confidence</h2>
   <p>
     Building a website should not feel confusing or overwhelming.
     A clear process brings direction, removes uncertainty, and ensures every step is handled with purpose.
-  </p>
-  <p>
-    Each stage is designed to guide you forward with confidence so your vision becomes structured, clear, and effective.
   </p>
 </section>
 
@@ -165,7 +201,6 @@
   <h3>Discovery and Direction</h3>
   <p>
     Every project begins with understanding your vision, your goals, and what success looks like.
-    This step creates a strong foundation so nothing feels rushed or unclear.
   </p>
 </section>
 
@@ -180,7 +215,6 @@
 
   <div class="demoGrid">
 
-    <!-- MOBILE -->
     <div class="demoItem">
       <h5>Mobile View</h5>
       <video autoplay muted loop playsinline class="demoVideo mobile">
@@ -188,7 +222,6 @@
       </video>
     </div>
 
-    <!-- DESKTOP -->
     <div class="demoItem">
       <h5>Desktop View</h5>
       <video autoplay muted loop playsinline class="demoVideo desktop">
@@ -196,17 +229,6 @@
       </video>
     </div>
 
-  </div>
-
-  <div class="serviceText">
-    <h3>Preview Before Launch</h3>
-    <p>
-      Before your website goes live, you experience a fully working version across both mobile and desktop.
-      This ensures your design, layout, and functionality feel strong on every screen.
-    </p>
-    <p>
-      Adjustments are made with clarity so your final launch reflects your vision with confidence.
-    </p>
   </div>
 
 </section>
@@ -220,10 +242,6 @@
 
 <section class="serviceText">
   <h3>Structure, Design, and Build</h3>
-  <p>
-    Your website is organized and designed with intention.
-    Every section is built to be clear, professional, and aligned with your goals.
-  </p>
 </section>
 
 <div class="sectionDivider"></div>
@@ -235,10 +253,6 @@
 
 <section class="serviceText">
   <h3>Launch and Ongoing Support</h3>
-  <p>
-    Once everything is complete, your website goes live with confidence.
-    Continued support ensures you are guided even after launch.
-  </p>
 </section>
 
 <div class="sectionDivider"></div>
@@ -246,10 +260,6 @@
 <!-- CTA -->
 <section class="serviceText" style="margin-top:40px;">
   <h2>Ready to Start with a Clear Process</h2>
-  <p>
-    You deserve a process that feels structured, supportive, and focused.
-    Let’s build something that works for you from start to finish.
-  </p>
   <a href="/brad-hobbswd/packages.html" class="btn btnPrimary">
     Start Your Project
   </a>
@@ -261,7 +271,7 @@
 
 </div>
 
-<script src="layout.js"></script>
+<script src="/brad-hobbswd/layout.js"></script>
 
 </body>
 </html>
