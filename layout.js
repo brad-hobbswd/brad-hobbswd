@@ -60,29 +60,41 @@ function setActiveNav() {
   const currentPage = document.body.getAttribute("data-page");
   console.log("Current page:", currentPage);
 
-  if (!currentPage) {
-    console.warn("No data-page found on body");
-    return;
-  }
-
   const links = document.querySelectorAll(".nav a");
+
+  let matchFound = false;
 
   links.forEach(link => {
     const nav = link.getAttribute("data-nav");
 
     console.log("Checking:", nav);
 
-    // always reset first
     link.classList.remove("active");
 
     if (nav === currentPage) {
       console.log("MATCH FOUND:", nav);
       link.classList.add("active");
+      matchFound = true;
     }
   });
 
-}
+  // ✅ FALLBACK (ONLY runs if no match)
+  if (!matchFound) {
+    console.log("No data-page match, using URL fallback");
 
+    const path = window.location.pathname;
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+
+      if (href && path.includes(href)) {
+        console.log("URL MATCH:", href);
+        link.classList.add("active");
+      }
+    });
+  }
+
+}
 
 // =========================
 // MOBILE MENU
