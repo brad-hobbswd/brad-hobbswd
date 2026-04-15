@@ -8,66 +8,24 @@
 
   <link rel="stylesheet" href="/brad-hobbswd/style.css">
 
-  <style>
-  /* ===== LOCAL FORM FIXES ===== */
+ <style>
 
-  .formTitle{
-    text-align:left;
-    font-size:24px;
-    font-weight:900;
-    margin-bottom:6px;
-  }
-
-  .formSubtitle{
-    text-align:left;
-    color:var(--muted);
-    margin-bottom:18px;
-  }
-
-  .formLabel{
-    text-align:left;
-  }
-
-  .formControl{
-    background:rgba(255,255,255,.08);
-    color:white;
-  }
-
-  .formControl::placeholder{
-    color:rgba(255,255,255,.6);
-  }
-
-  .formControl:focus{
-    box-shadow:0 0 12px rgba(47,179,255,.35);
-  }
-
-  /* shimmer animation */
-  .shimmer{
-    animation: shimmerEffect .8s ease;
-  }
-
-  @keyframes shimmerEffect{
-    0%{ box-shadow:0 0 0 rgba(245,184,65,0); }
-    50%{ box-shadow:0 0 25px rgba(245,184,65,.9); }
-    100%{ box-shadow:0 0 0 rgba(245,184,65,0); }
-  }
-
-    <style>
-
-/* ===== FORM LAYOUT RESTORE ===== */
-
+/* ===== FORM CENTERING ===== */
 .contactWrap{
   display:flex;
   justify-content:center;
+  width:100%;
   margin:40px auto;
 }
 
+/* ===== FORM SIZE ===== */
 #quoteForm{
   width:100%;
   max-width:700px;
+  margin:0 auto;
 }
 
-/* CARD LOOK */
+/* ===== CARD LOOK ===== */
 #quoteForm.card{
   padding:28px;
   border-radius:20px;
@@ -77,16 +35,28 @@
   box-shadow:0 25px 60px rgba(0,0,0,.55);
 }
 
-/* GRID */
+/* ===== GRID ===== */
 .formGrid{
   display:grid;
   gap:14px;
 }
 
-/* LABELS */
+/* ===== TEXT ===== */
+.formTitle{
+  text-align:left;
+  font-size:24px;
+  font-weight:900;
+}
+
+.formSubtitle{
+  text-align:left;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+/* ===== LABELS ===== */
 .formLabel{
   display:block;
-  width:100%;
   text-align:left;
 }
 
@@ -99,7 +69,7 @@
   color:var(--muted);
 }
 
-/* INPUTS */
+/* ===== INPUTS ===== */
 .formControl{
   width:100%;
   padding:12px 14px;
@@ -120,29 +90,14 @@
   box-shadow:0 0 12px rgba(47,179,255,.25);
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 #sendBtn{
   width:100%;
   margin-top:12px;
   padding:14px;
-  font-size:15px;
 }
 
-/* TITLE FIX */
-.formTitle{
-  text-align:left;
-  font-size:24px;
-  font-weight:900;
-  margin-bottom:6px;
-}
-
-.formSubtitle{
-  text-align:left;
-  color:var(--muted);
-  margin-bottom:18px;
-}
-
-/* SHIMMER */
+/* ===== SHIMMER ===== */
 .shimmer{
   animation: shimmerEffect .8s ease;
 }
@@ -154,7 +109,6 @@
 }
 
 </style>
-  </style>
 
 </head>
 
@@ -314,7 +268,6 @@ btn.textContent = "Send Message";
 
 });
 </script>
-<div id="siteFooter"></div>
 
 </body>
 </html>
