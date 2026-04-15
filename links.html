@@ -1,19 +1,91 @@
 <!doctype html>
 <html lang="en">
 <head>
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=2">
 
+<style>
+
+/* ===== CORE LAYOUT ===== */
+
+.bannerSection{
+  margin-top:40px;
+}
+
+.bannerCard{
+  width:min(1100px,92%);
+  margin:20px auto;
+  border-radius:22px;
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.03);
+
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.45),
+    0 0 20px rgba(47,179,255,.12);
+}
+
+.bannerImg{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* ===== GRID ===== */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap:22px;
+}
+
+/* ===== DIVIDER ===== */
+
+.sectionDivider{
+  width:min(900px,92%);
+  height:1px;
+  margin:50px auto;
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(47,179,255,.9),
+    rgba(245,184,65,.9),
+    transparent
+  );
+}
+
+/* ===== FOOTER ===== */
+
+#siteFooter{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+#siteFooter footer{
+  width:min(1100px,92%);
+  text-align:center;
+  margin:22px auto 10px auto;
+  color:rgba(184,199,230,.72);
+  font-size:13px;
+}
+
+</style>
+
 <title>My Work & Links | Brad Hobbs</title>
-  <link rel="icon" href="/brad-hobbswd/favicon.ico">
 
+<link rel="icon" href="/brad-hobbswd/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
-
 <link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
-
 <link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
+
 <meta name="description" content="Projects, writing, and resources by Brad Hobbs." />
+
 </head>
 
 <body class="links-page" data-page="work">
@@ -25,12 +97,14 @@
 <main>
 
 <!-- BANNER -->
-<div class="glassBannerCard">
-  <img class="glassBannerCardImg"
-    src="images/6F4B68BD-6974-45E5-BDFE-321BFD0674AF.jpeg"
-    alt="Links | Brad Hobbs"
-    draggable="false">
-</div>
+<section class="bannerSection">
+  <div class="bannerCard">
+    <img class="bannerImg"
+      src="images/6F4B68BD-6974-45E5-BDFE-321BFD0674AF.jpeg"
+      alt="Links | Brad Hobbs"
+      draggable="false">
+  </div>
+</section>
 
 <div class="sectionDivider"></div>
 
@@ -39,107 +113,8 @@
 
 <section class="grid">
 
-<!-- WHISPERS -->
-<article class="card">
-  <div class="cardInner">
-    <a class="logoLink" href="https://brad-hobbswd.github.io/whispers-in-the-pew/" target="_blank">
-      <img class="logoImg" src="logo-seal.png" alt="Whispers in the Pew">
-    </a>
-    <div>
-      <h2 class="cardTitle">Whispers in the Pew</h2>
-      <div class="meta">Devotionals</div>
-      <p class="desc">Devotionals centered on healing, faith, and the power in the name of Jesus.</p>
-      <div class="actions">
-        <a class="btn btnPrimary" href="https://brad-hobbswd.github.io/whispers-in-the-pew/" target="_blank">Visit</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-<!-- LOVE THAT COVERS -->
-<article class="card">
-  <div class="cardInner">
-    <a class="logoLink" href="https://brad-hobbswd.github.io/love-that-covers/" target="_blank">
-      <img class="logoImg" src="/brad-hobbswd/images/love-that-covers-logo.png" alt="Love That Covers">
-    </a>
-    <div>
-      <h2 class="cardTitle">Love That Covers</h2>
-      <div class="meta">Book</div>
-      <p class="desc">A work focused on healing, identity, and the covering love found in Jesus.</p>
-      <div class="actions">
-        <a class="btn btnPrimary" href="https://brad-hobbswd.github.io/love-that-covers/" target="_blank">Visit</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-<!-- LGBTQIA+ -->
-<article class="card">
-  <div class="cardInner">
-    <a class="logoLink" href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/" target="_blank">
-      <img class="logoImg" src="/brad-hobbswd/images/love-that-covers-lgbtqia-logo.png" alt="LGBTQIA+ Edition">
-    </a>
-    <div>
-      <h2 class="cardTitle">Love That Covers LGBTQIA+ Edition</h2>
-      <div class="meta">Book</div>
-      <p class="desc">An affirming edition centered on identity and worth.</p>
-      <div class="actions">
-        <a class="btn btnPrimary" href="https://brad-hobbswd.github.io/love-that-covers-lgbtqia/" target="_blank">Visit</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-<!-- MEMOIR -->
-<article class="card">
-  <div class="cardInner">
-    <a class="logoLink" href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/" target="_blank">
-      <img class="logoImg" src="/brad-hobbswd/images/jason-memoir-logo.png" alt="Jason Memoir">
-    </a>
-    <div>
-      <h2 class="cardTitle">Jason’s Awakening Memoir</h2>
-      <div class="meta">Memoir</div>
-      <p class="desc">A journey through overwhelm, silence, and awakening.</p>
-      <div class="actions">
-        <a class="btn btnPrimary" href="https://brad-hobbswd.github.io/ignore-overwhelmed-jason-memoir/" target="_blank">Visit</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-<!-- ABOUT -->
-<article class="card">
-  <div class="cardInner">
-    <a class="logoLink" href="https://brad-hobbswd.github.io/about-me/" target="_blank">
-      <img class="logoImg" src="/brad-hobbswd/images/about-me-logo.png" alt="About Me">
-    </a>
-    <div>
-      <h2 class="cardTitle">About Me</h2>
-      <div class="meta">Personal Writing</div>
-      <p class="desc">Personal reflections and story behind the work.</p>
-      <div class="actions">
-        <a class="btn btnPrimary" href="https://brad-hobbswd.github.io/about-me/" target="_blank">Visit</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-<!-- WEB DESIGN -->
-<article class="card">
-  <div class="cardInner">
-    <a class="logoLink" href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">
-      <img class="logoImg" src="/brad-hobbswd/images/web-design-logo.jpeg" alt="Web Design">
-    </a>
-    <div>
-      <h2 class="cardTitle">Brad Hobbs Web Design</h2>
-      <div class="meta">Web Design</div>
-      <p class="desc">Creative websites built with clarity and purpose.</p>
-      <div class="actions">
-        <a class="btn btnPrimary" href="https://brad-hobbswd.github.io/brad-hobbswd/" target="_blank">Visit</a>
-      </div>
-    </div>
-  </div>
-</article>
+<!-- KEEP ALL YOUR EXISTING CARDS EXACTLY AS THEY ARE -->
+<!-- (no changes needed to your card HTML) -->
 
 </section>
 
@@ -150,53 +125,15 @@
 
 <section class="grid">
 
-<!-- BAPBI -->
-<article class="card">
-  <div class="cardInner">
-    <a class="logoLink" href="https://www.bapbi.net" target="_blank">
-      <img class="logoImg" src="bapbi-logo.png" alt="BAPBI">
-    </a>
-    <div>
-      <h2 class="cardTitle">BAPBI</h2>
-      <div class="meta">Bible Institute</div>
-      <p class="desc">A place of biblical teaching and study. One my web design & work.</p>
-      <div class="actions">
-        <a class="btn btnPrimary" href="https://www.bapbi.net" target="_blank">Visit</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-<!-- BETHESDA -->
-<article class="card">
-  <div class="cardInner">
-    <a class="logoLink" href="https://www.mercyforyou.org" target="_blank">
-      <img class="logoImg" src="/brad-hobbswd/images/bethesda-logo.png" alt="Bethesda Tabernacle">
-    </a>
-    <div>
-      <h2 class="cardTitle">Bethesda Tabernacle</h2>
-      <div class="meta">Place of Worship</div>
-      <p class="desc">Part of my faith journey. Not my web design work.</p>
-      <div class="actions">
-        <a class="btn btnPrimary" href="https://www.mercyforyou.org" target="_blank">Visit</a>
-      </div>
-    </div>
-  </div>
-</article>
+<!-- KEEP YOUR EXISTING MINISTRY CARDS HERE -->
 
 </section>
 
 </main>
 
-<footer>
-© <span id="y"></span> Brad Hobbs • Web Design
-</footer>
+<div id="siteFooter"></div>
 
 </div>
-
-<script>
-document.getElementById("y").textContent = new Date().getFullYear();
-</script>
 
 <script src="/brad-hobbswd/layout.js"></script>
 
