@@ -58,9 +58,10 @@ async function loadFooter() {
 function setActiveNav() {
 
   const currentPage = document.body.getAttribute("data-page");
+  console.log("Current page:", currentPage);
 
   if (!currentPage) {
-    console.warn("No data-page set on body");
+    console.warn("No data-page found on body");
     return;
   }
 
@@ -69,10 +70,13 @@ function setActiveNav() {
   links.forEach(link => {
     const nav = link.getAttribute("data-nav");
 
-    // reset first (important for reloads)
+    console.log("Checking:", nav);
+
+    // always reset first
     link.classList.remove("active");
 
     if (nav === currentPage) {
+      console.log("MATCH FOUND:", nav);
       link.classList.add("active");
     }
   });
