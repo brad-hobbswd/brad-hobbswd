@@ -1,231 +1,57 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Brad Hobbs Web Design</title>
+  <meta name="description" content="Contact Brad Hobbs for professional website design services." />
 
-<title>Contact | Brad Hobbs Web Design</title>
-<meta name="description" content="Contact Brad Hobbs for professional website design services." />
+  <link rel="stylesheet" href="/brad-hobbswd/style.css">
 
-<link rel="icon" href="/brad-hobbswd/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
+  <style>
+  /* ===== LOCAL FORM FIXES ===== */
 
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=2" />
-
-<style>
-
-/* ===== INPUT VISIBILITY ===== */
-
-.formControl{
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.18);
-  color:white;
-}
-
-.formControl::placeholder{
-  color:rgba(255,255,255,.55);
-}
-
-.formControl:hover{
-  border:1px solid rgba(47,179,255,.5);
-}
-
-.formControl:focus{
-  outline:none;
-  border:1px solid var(--accent);
-  box-shadow:0 0 12px rgba(47,179,255,.25);
-}
-
-/* dropdown fix */
-select.formControl option{
-  color:black;
-  background:white;
-}
-
-/* ===== FORM LAYOUT ===== */
-
-.contactWrap{
-  display:flex;
-  justify-content:center;
-  margin-top:30px;
-}
-
-#quoteForm{
-  width:100%;
-  max-width:700px;
-}
-
-#quoteForm.card{
-  padding:28px;
-  border-radius:20px;
-  background:rgba(255,255,255,.06);
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,.15);
-  box-shadow:0 25px 60px rgba(0,0,0,.55);
-}
-
-.formGrid{
-  display:grid;
-  gap:14px;
-}
-
-.formLabelTitle{
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-bottom:6px;
-  color:var(--muted);
-  text-align:left;
-}
-
-/* ===== PERFECT ALIGNMENT ===== */
-
-/* center header */
-.formSection > .formTitleMain,
-.formSection > .formSubtitle{
-  text-align:center;
-}
-
-/* button spacing */
-#sendBtn{
-  width:100%;
-  margin-top:14px;
-  padding:12px;
-}
-
-/* status message */
-#formStatus{
-  text-align:center;
-  margin-top:10px;
-}
-
-  /* ===== RESTORE FULL FORM POLISH ===== */
-
-.formControl{
-  width:100%;
-  padding:14px 16px;
-  border-radius:14px;
-
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.18);
-
-  color:white;
-  font-size:15px;
-
-  transition:.25s ease;
-}
-
-/* placeholder */
-.formControl::placeholder{
-  color:rgba(255,255,255,.55);
-}
-
-/* hover */
-.formControl:hover{
-  border:1px solid rgba(47,179,255,.5);
-}
-
-/* focus glow */
-.formControl:focus{
-  outline:none;
-  border:1px solid var(--accent);
-  box-shadow:0 0 14px rgba(47,179,255,.35);
-}
-
-/* textarea spacing */
-textarea.formControl{
-  min-height:110px;
-  resize:vertical;
-}
-
-/* dropdown fix */
-select.formControl{
-  appearance:none;
-  cursor:pointer;
-}
-
-/* spacing between fields */
-.formGrid{
-  display:grid;
-  gap:18px;
-}
-
-  .formLabel{
-  display:block;
-  width:100%;
-}
-
-  /* ===== INPUT GLOW ANIMATION ===== */
-
-.formControl{
-  transition:
-    border .25s ease,
-    box-shadow .25s ease,
-    transform .15s ease;
-}
-
-/* soft lift + glow on focus */
-.formControl:focus{
-  outline:none;
-  border:1px solid var(--accent);
-  box-shadow:
-    0 0 12px rgba(47,179,255,.35),
-    0 0 25px rgba(47,179,255,.15);
-  transform:scale(1.01);
-}
-
-/* subtle pulse while typing */
-.formControl:focus::placeholder{
-  opacity:.4;
-}
-
-/* ===== BUTTON SHIMMER ===== */
-
-.btnPrimary{
-  position:relative;
-  overflow:hidden;
-}
-
-/* shimmer layer */
-.btnPrimary::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-100%;
-  width:100%;
-  height:100%;
-
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,.4),
-    transparent
-  );
-
-  transition:all .6s ease;
-}
-
-/* trigger shimmer */
-.btnPrimary.shimmer::after{
-  left:100%;
-}
-
-/* ===== MOBILE OPTIMIZATION ===== */
-
-@media (max-width:768px){
-
-  .formControl:focus{
-    transform:none; /* avoids zoom/jump on mobile */
-    box-shadow:
-      0 0 10px rgba(47,179,255,.35),
-      0 0 18px rgba(47,179,255,.12);
+  .formTitle{
+    text-align:left;
+    font-size:24px;
+    font-weight:900;
+    margin-bottom:6px;
   }
 
-}
+  .formSubtitle{
+    text-align:left;
+    color:var(--muted);
+    margin-bottom:18px;
+  }
 
-</style>
+  .formLabel{
+    text-align:left;
+  }
+
+  .formControl{
+    background:rgba(255,255,255,.08);
+    color:white;
+  }
+
+  .formControl::placeholder{
+    color:rgba(255,255,255,.6);
+  }
+
+  .formControl:focus{
+    box-shadow:0 0 12px rgba(47,179,255,.35);
+  }
+
+  /* shimmer animation */
+  .shimmer{
+    animation: shimmerEffect .8s ease;
+  }
+
+  @keyframes shimmerEffect{
+    0%{ box-shadow:0 0 0 rgba(245,184,65,0); }
+    50%{ box-shadow:0 0 25px rgba(245,184,65,.9); }
+    100%{ box-shadow:0 0 0 rgba(245,184,65,0); }
+  }
+  </style>
 
 </head>
 
@@ -237,79 +63,69 @@ select.formControl{
 
 <main>
 
-<!-- PRIMARY BANNER -->
+<!-- BANNER -->
 <div class="bannerPrimary">
-  <img src="images/27229CBD-3947-480E-AB39-1D9CC6B3202E.png" alt="Contact Brad Hobbs Web Design">
+  <img src="images/27229CBD-3947-480E-AB39-1D9CC6B3202E.png" alt="Contact">
 </div>
+
+<!-- EMAIL BANNER -->
+<a href="mailto:brad.hobbs13@icloud.com" class="bannerSecondary">
+  <img src="images/40411AF9-F914-4D71-AA94-30A89AC34E14.png" alt="Email Brad">
+</a>
 
 <div class="sectionDivider"></div>
 
-<!-- EMAIL BANNER -->
-<a 
-href="mailto:brad.hobbs13@icloud.com?subject=Website Inquiry&body=Hello Brad,%0D%0A%0D%0AI would like to connect about a website project.%0D%0A%0D%0AProject Type:%0D%0ATimeline:%0D%0ABudget:%0D%0A%0D%0AThank you." 
-class="bannerSecondary contactInfoBanner">
-
-  <img src="images/40411AF9-F914-4D71-AA94-30A89AC34E14.png" alt="Email Brad Hobbs Web Design">
-
-</a>
-
-<!-- SUPPORT TEXT -->
-<section class="serviceText" style="text-align:center; max-width:700px; margin:20px auto;">
-
-<h2>Direct Contact with Clarity</h2>
-
-<p>
-Click the banner above to open a ready to send email. This allows you to reach out quickly with structure and clarity so your request can be understood right away.
-</p>
-
-<p>
-Every message is reviewed personally and you can expect a response within 24 hours.
-</p>
-
+<!-- INTRO -->
+<section class="serviceText" style="max-width:700px; margin:auto;">
+  <h2>Direct Contact with Clarity</h2>
+  <p>
+    Click the banner above to open a ready to send email. This allows you to reach out quickly with structure and clarity.
+  </p>
+  <p>
+    Every message is reviewed personally and you can expect a response within 24 hours.
+  </p>
 </section>
 
 <div class="sectionDivider"></div>
 
-<!-- CONTACT FORM -->
-<section class="formSection">
+<!-- FORM -->
+<section class="contactWrap">
 
-<h2 class="formTitleMain">Send a Message</h2>
-
-<p class="formSubtitle">
-This form connects directly and you will receive a response within 24 hours.
-</p>
-
-<div class="contactWrap">
-
-<form id="quoteForm" class="card">
+<form id="quoteForm" class="card" method="POST">
 
 <input type="text" name="_gotcha" style="display:none">
-<input type="hidden" name="_subject" value="New Contact Form Submission">
+
+<div class="formTitle">Send a Message</div>
+<div class="formSubtitle">
+This form connects directly and you will receive a response within 24 hours.
+</div>
+
+<input type="hidden" name="_subject" value="New Contact Submission">
 
 <div class="formGrid">
 
-<label>
+<label class="formLabel">
 <div class="formLabelTitle">Name</div>
 <input name="name" required class="formControl" placeholder="Your name">
 </label>
 
-<label>
+<label class="formLabel">
 <div class="formLabelTitle">Email</div>
 <input name="email" type="email" required class="formControl" placeholder="your@email.com">
 </label>
 
-<label>
+<label class="formLabel">
 <div class="formLabelTitle">Project Type</div>
 <select name="package" class="formControl" required>
-<option value="" selected disabled hidden>Select a project type</option>
-<option value="Starter Website">Starter Website</option>
-<option value="Business Website">Business Website</option>
-<option value="Custom Project">Custom Project</option>
-<option value="General Question">General Question</option>
+<option value="" disabled selected>Select a project type</option>
+<option>Starter Website</option>
+<option>Business Website</option>
+<option>Custom Project</option>
+<option>General Question</option>
 </select>
 </label>
 
-<label>
+<label class="formLabel">
 <div class="formLabelTitle">Message</div>
 <textarea name="message" rows="4" required class="formControl" placeholder="Tell me about your project..."></textarea>
 </label>
@@ -324,8 +140,6 @@ Send Message
 
 </form>
 
-</div>
-
 </section>
 
 </main>
@@ -336,57 +150,57 @@ Send Message
 
 <script src="/brad-hobbswd/layout.js"></script>
 
-<!-- FORM SCRIPT -->
+<!-- ===== CLEAN JS ===== -->
 <script>
-(function () {
+
+document.addEventListener("DOMContentLoaded", function(){
 
 const form = document.getElementById("quoteForm");
-const status = document.getElementById("formStatus");
 const btn = document.getElementById("sendBtn");
+const status = document.getElementById("formStatus");
 
-if (!form) return;
+if(!form) return;
 
-form.addEventListener("submit", async function (e) {
+form.addEventListener("submit", async function(e){
 
 e.preventDefault();
 
-if (btn.disabled) return;
+const data = new FormData(form);
 
-const formData = new FormData(form);
+if(data.get("_gotcha")) return;
 
-if (formData.get("_gotcha")) return;
-
-status.textContent = "Sending...";
-status.style.color = "#b8c7e6";
-
-btn.textContent = "Sending...";
 btn.disabled = true;
+btn.textContent = "Sending...";
+status.textContent = "";
 
-try {
+try{
 
-const res = await fetch("https://formspree.io/f/mzdajjkb", {
-method: "POST",
-headers: { "Accept": "application/json" },
-body: formData
+const res = await fetch("https://formspree.io/f/mzdajjkb",{
+method:"POST",
+body:data,
+headers:{ "Accept":"application/json" }
 });
 
-if (res.ok) {
-form.reset();
-status.textContent = "Message sent successfully!";
-status.style.color = "#7dd3ff";
+if(res.ok){
+
+btn.classList.add("shimmer");
+
+setTimeout(()=>{
 window.location.href = "thanks.html";
+},800);
+
 return;
 }
 
-status.textContent = "Submission failed. Please try again.";
+status.textContent = "Something went wrong. Please try again.";
 status.style.color = "#ff6b6b";
 
-} catch {
+}catch(err){
 
 status.textContent = "Network error. Please try again.";
 status.style.color = "#ff6b6b";
 
-} finally {
+}finally{
 
 btn.disabled = false;
 btn.textContent = "Send Message";
@@ -395,7 +209,7 @@ btn.textContent = "Send Message";
 
 });
 
-})();
+});
 </script>
 
 </body>
