@@ -51,6 +51,109 @@
     50%{ box-shadow:0 0 25px rgba(245,184,65,.9); }
     100%{ box-shadow:0 0 0 rgba(245,184,65,0); }
   }
+
+    <style>
+
+/* ===== FORM LAYOUT RESTORE ===== */
+
+.contactWrap{
+  display:flex;
+  justify-content:center;
+  margin:40px auto;
+}
+
+#quoteForm{
+  width:100%;
+  max-width:700px;
+}
+
+/* CARD LOOK */
+#quoteForm.card{
+  padding:28px;
+  border-radius:20px;
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 25px 60px rgba(0,0,0,.55);
+}
+
+/* GRID */
+.formGrid{
+  display:grid;
+  gap:14px;
+}
+
+/* LABELS */
+.formLabel{
+  display:block;
+  width:100%;
+  text-align:left;
+}
+
+.formLabelTitle{
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:6px;
+  color:var(--muted);
+}
+
+/* INPUTS */
+.formControl{
+  width:100%;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.08);
+  color:white;
+  font-size:15px;
+}
+
+.formControl::placeholder{
+  color:rgba(255,255,255,.6);
+}
+
+.formControl:focus{
+  outline:none;
+  border:1px solid var(--accent);
+  box-shadow:0 0 12px rgba(47,179,255,.25);
+}
+
+/* BUTTON */
+#sendBtn{
+  width:100%;
+  margin-top:12px;
+  padding:14px;
+  font-size:15px;
+}
+
+/* TITLE FIX */
+.formTitle{
+  text-align:left;
+  font-size:24px;
+  font-weight:900;
+  margin-bottom:6px;
+}
+
+.formSubtitle{
+  text-align:left;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+/* SHIMMER */
+.shimmer{
+  animation: shimmerEffect .8s ease;
+}
+
+@keyframes shimmerEffect{
+  0%{ box-shadow:0 0 0 rgba(245,184,65,0); }
+  50%{ box-shadow:0 0 25px rgba(245,184,65,.9); }
+  100%{ box-shadow:0 0 0 rgba(245,184,65,0); }
+}
+
+</style>
   </style>
 
 </head>
@@ -211,6 +314,7 @@ btn.textContent = "Send Message";
 
 });
 </script>
+<div id="siteFooter"></div>
 
 </body>
 </html>
