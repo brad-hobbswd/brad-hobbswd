@@ -1,71 +1,67 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", async function () {
 
-  const form = document.getElementById("quoteForm");
-  const btn = document.getElementById("sendBtn");
-  const status = document.getElementById("formStatus");
+  // =========================
+  // LOAD HEADER
+  // =========================
+  try {
+    const res = await fetch("/brad-hobbswd/header.html");
+    if (!res.ok) throw new Error("Header not found");
 
-  if (!form) return;
+    const html = await res.text();
 
-  form.addEventListener("submit", async function(e){
-
-    e.preventDefault();
-
-    if (btn.disabled) return;
-
-    const formData = new FormData(form);
-
-    // spam protection
-    if (formData.get("_gotcha")) return;
-
-    // UI state
-    btn.disabled = true;
-    btn.textContent = "Sending...";
-    status.textContent = "";
-    status.style.color = "#b8c7e6";
-
-    try {
-
-      const res = await fetch("https://formspree.io/f/mzdajjkb", {
-        method: "POST",
-        body: formData,
-        headers: {
-          "Accept": "application/json"
-        }
-      });
-
-      if (res.ok) {
-
-        form.reset();
-
-        status.textContent = "Message sent successfully!";
-        status.style.color = "#7dd3ff";
-
-        // ✨ shimmer animation
-        btn.classList.add("shimmer");
-
-        setTimeout(() => {
-          btn.classList.remove("shimmer");
-          window.location.href = "thanks.html";
-        }, 900);
-
-        return;
-      }
-
-      status.textContent = "Submission failed. Please try again.";
-      status.style.color = "#ff6b6b";
-
-    } catch (error) {
-
-      status.textContent = "Network error. Please try again.";
-      status.style.color = "#ff6b6b";
-
-    } finally {
-
-      btn.disabled = false;
-      btn.textContent = "Send Message";
-
+    const header = document.getElementById("siteHeader");
+    if (header) {
+      header.innerHTML = html;
     }
 
-  });
+  } catch (err) {
+    console.error("Header load error:", err);
+  }
+
+  // =========================
+  // LOAD FOOTER (optional)
+  // =========================
+  try {
+    const res = await fetch("/brad-hobbswd/footer.html");
+    if (res.ok) {
+      const html = await res.text();
+      const footer = document.getElementById("siteFooter");
+      if (footer) footer.innerHTML = html;
+    }
+  } catch (err) {
+    console.error("Footer load error:", err);
+  }
+
+});
+
+
+// =========================
+// MOBILE MENU TOGGLE
+// =========================
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("menuOverlay");
+
+  if (!menu || !overlay) return;
+
+  menu.classList.toggle("open");
+  overlay.classList.toggle("active");
+}
+
+
+// =========================
+// SCROLL EFFECT (WAIT FOR HEADER)
+// =========================
+window.addEventListener("scroll", function () {
+
+  const topbar = document.querySelector(".topbar");
+
+  if (!topbar) return;
+
+  if (window.scrollY > 10) {
+    topbar.classList.add("scrolled");
+  } else {
+    topbar.classList.remove("scrolled");
+  }
 
 });
