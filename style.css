@@ -12,6 +12,57 @@
   --shadow:0 18px 45px rgba(0,0,0,.45);
 }
 
+/* ================= BANNER SIZE RESTORE ================= */
+
+.bannerPrimary,
+.bannerSecondary{
+  width:min(1100px,92%);
+  margin:18px auto;
+  border-radius:22px;
+  overflow:hidden;
+}
+
+.bannerPrimary img,
+.bannerSecondary img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+
+/* ================= BUTTON RESTORE ================= */
+
+.btn{
+  padding:10px 16px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  font-weight:900;
+  cursor:pointer;
+}
+
+.btnPrimary{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#031427;
+  border:none;
+}
+
+.btnPrimary:hover{
+  transform:translateY(-2px);
+}
+
+
+/* ================= RESOURCE BUTTON RESTORE ================= */
+
+.resource-button{
+  display:inline-block;
+  padding:12px 22px;
+  border-radius:14px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#031427;
+  font-weight:900;
+  text-decoration:none;
+}
+
 /* ================= GLOBAL ================= */
 
 *,
