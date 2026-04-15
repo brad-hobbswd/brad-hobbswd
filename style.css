@@ -83,6 +83,10 @@ body{
   line-height:1.6;
 }
 
+body{
+  padding-top:90px;
+}
+
 a{
   color:var(--accent2);
   text-decoration:none;
