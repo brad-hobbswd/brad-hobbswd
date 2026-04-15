@@ -8,10 +8,10 @@
 
 <style>
 
-/* ===== SERVICES (MATCH PROCESS STYLE) ===== */
+/* ===== SERVICES TEXT ===== */
 
 .serviceSection{
-  margin-bottom:30px;
+  margin-bottom:40px;
 }
 
 .serviceText{
@@ -41,7 +41,7 @@
 .sectionDivider{
   width:min(900px,92%);
   height:1px;
-  margin:40px auto;
+  margin:50px auto;
 
   background:linear-gradient(
     90deg,
@@ -52,22 +52,35 @@
   );
 }
 
-/* ===== FIX BANNER SIZE (THIS IS THE KEY FIX) ===== */
 
-.bannerCard{
+/* ===== UNIFIED BANNER SYSTEM (FIXES EVERYTHING) ===== */
+
+/* applies to BOTH banner types */
+.bannerCard,
+.pageBanner{
   width:min(1100px,92%);
-  margin:18px auto;
+  margin:20px auto;
   border-radius:22px;
   overflow:hidden;
+
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.03);
+
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.45),
+    0 0 20px rgba(47,179,255,.12);
 }
 
-.bannerImg{
+/* images inside banners */
+.bannerImg,
+.pageBanner img{
   width:100%;
   height:auto;
   display:block;
 }
 
-/* ===== BUTTON FIX (FOR THIS PAGE ONLY) ===== */
+
+/* ===== BUTTON FIX ===== */
 
 .btn{
   display:inline-block;
