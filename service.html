@@ -26,7 +26,7 @@
   margin-bottom:10px;
 }
 
-/* POINTS (no bullets) */
+/* POINTS */
 .servicePoints{
   margin-top:10px;
 }
@@ -52,10 +52,40 @@
   );
 }
 
-/* BANNER ALIGN */
+/* ===== FIX BANNER SIZE (THIS IS THE KEY FIX) ===== */
+
 .bannerCard{
   width:min(1100px,92%);
-  margin:0 auto;
+  margin:18px auto;
+  border-radius:22px;
+  overflow:hidden;
+}
+
+.bannerImg{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* ===== BUTTON FIX (FOR THIS PAGE ONLY) ===== */
+
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  font-weight:900;
+  cursor:pointer;
+}
+
+.btnPrimary{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#031427;
+  border:none;
+}
+
+.btnPrimary:hover{
+  transform:translateY(-2px);
 }
 
 </style>
