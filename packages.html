@@ -74,9 +74,6 @@
 
 .package-card:hover{
   transform:translateY(-6px);
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.6),
-    0 0 25px rgba(47,179,255,.25);
 }
 
 /* ===== DIVIDER ===== */
@@ -116,23 +113,12 @@
   max-height:90vh;
   overflow:auto;
   position:relative;
-
-  box-shadow:
-    0 20px 60px rgba(0,0,0,.7),
-    0 0 25px rgba(47,179,255,.2);
+  animation:fadeIn .25s ease;
 }
 
-.modalContent h2{
-  margin-bottom:10px;
-}
-
-.modalContent ul{
-  margin:12px 0;
-  padding-left:18px;
-}
-
-.modalContent li{
-  margin-bottom:6px;
+@keyframes fadeIn{
+  from{opacity:0; transform:scale(.95);}
+  to{opacity:1; transform:scale(1);}
 }
 
 .modalClose{
@@ -150,19 +136,62 @@
   margin:40px auto;
 }
 
-.formTitleMain{
-  font-size:24px;
-  font-weight:900;
+.formCard{
+  margin-top:20px;
+  padding:24px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
 }
 
-.formSubtitle{
+.formNote{
   color:var(--muted);
-  margin:10px 0 20px;
+  margin-bottom:16px;
+}
+
+/* ===== CUSTOM FORM ===== */
+.customForm{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.formGroup{
+  text-align:left;
+}
+
+.formGroup label{
+  font-weight:700;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.formGroup input,
+.formGroup textarea{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
+  color:var(--text);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 2px rgba(47,179,255,.2);
+}
+
+/* SUCCESS */
+#formSuccess{
+  display:none;
+  color:var(--accent2);
+  font-weight:700;
+  margin-top:20px;
 }
 
 /* ===== FOOTER ===== */
 #siteFooter{
-  width:100%;
   display:flex;
   justify-content:center;
 }
@@ -170,63 +199,6 @@
 #siteFooter footer{
   width:min(1100px,92%);
   text-align:center;
-  margin:22px auto 10px auto;
-  color:rgba(184,199,230,.72);
-  font-size:13px;
-}
-
-  .modalContent{
-  animation:fadeIn .25s ease;
-}
-
-@keyframes fadeIn{
-  from{
-    opacity:0;
-    transform:scale(.95);
-  }
-  to{
-    opacity:1;
-    transform:scale(1);
-  }
-}
-
-  /* ===== FORM CARD ===== */
-/* ===== FORM CARD (ENHANCED) ===== */
-.formCard{
-  margin-top:20px;
-  padding:24px;
-  border-radius:22px;
-
-  border:1px solid rgba(255,255,255,.12);
-
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-
-  backdrop-filter:blur(10px);
-
-  box-shadow:
-    0 25px 60px rgba(0,0,0,.6),
-    0 0 30px rgba(47,179,255,.18);
-}
-  
-/* NOTE ABOVE FORM */
-.formNote{
-  text-align:center;
-  color:var(--muted);
-  font-size:14px;
-  margin-bottom:16px;
-}
-
-/* ===== FORM EMBED FRAME ===== */
-.formEmbed{
-  width:100%;
-  height:1000px;
-  border:none;
-  border-radius:16px;
-
-  box-shadow:
-    inset 0 0 0 1px rgba(255,255,255,.08),
-    0 10px 30px rgba(0,0,0,.5);
 }
 
 </style>
@@ -254,27 +226,17 @@
 <section class="packagesIntro">
   <h2 class="packagesTitle">Explore Our Website Packages</h2>
   <p class="packagesSubtitle">
-    Click each package card below to view the full details and care plan options 👇
+    Click each package card below to view the full details 👇
   </p>
 </section>
 
 <div class="sectionDivider"></div>
 
-<!-- PACKAGE CARDS -->
+<!-- CARDS -->
 <section class="packageSection">
-
-  <div class="package-card" onclick="openPackage('starter')">
-    <img src="C3857A28-69EA-4491-BFE7-EED2D131AE9B.png">
-  </div>
-
-  <div class="package-card" onclick="openPackage('business')">
-    <img src="428002DB-DBEC-48CD-8ED0-851AE686E827.png">
-  </div>
-
-  <div class="package-card" onclick="openPackage('premium')">
-    <img src="1CED57CD-3692-4A62-9B8C-E377BE84063A.png">
-  </div>
-
+  <div class="package-card" onclick="openPackage('starter')"><img src="C3857A28-69EA-4491-BFE7-EED2D131AE9B.png"></div>
+  <div class="package-card" onclick="openPackage('business')"><img src="428002DB-DBEC-48CD-8ED0-851AE686E827.png"></div>
+  <div class="package-card" onclick="openPackage('premium')"><img src="1CED57CD-3692-4A62-9B8C-E377BE84063A.png"></div>
 </section>
 
 <div class="sectionDivider"></div>
@@ -282,24 +244,65 @@
 <!-- FORM -->
 <section id="packageContact" class="formSection">
 
-  <h2 class="formTitleMain">Start Your Project</h2>
+<h2>Start Your Project</h2>
 
-  <p class="formSubtitle">
-    Share a few details about your vision and goals. This helps guide the process and ensures your website is built with clarity from the start.
-  </p>
+<div class="formCard">
 
-  <div class="formCard">
+<p class="formNote">
+This application helps create a clear direction for your website.
+</p>
 
-    <div class="formNote">
-      This application takes just a few minutes and helps create a clear direction for your project.
-    </div>
+<form 
+action="https://docs.google.com/forms/d/e/1FAIpQLSfmeW2hfpYLFM9PzfKvhVFQLB5MkKnf88Z36SW7MF082nbg_A/formResponse"
+method="POST"
+target="hidden_iframe"
+class="customForm"
+>
 
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfmeW2hfpYLFM9PzfKvhVFQLB5MkKnf88Z36SW7MF082nbg_A/viewform?embedded=true" 
-      class="formEmbed">
-    </iframe>
+<div class="formGroup">
+<label>Full Name</label>
+<input type="text" name="entry.1478334189" required>
+</div>
 
-  </div>
+<div class="formGroup">
+<label>Email</label>
+<input type="email" name="entry.1799374150" required>
+</div>
+
+<div class="formGroup">
+<label>Phone</label>
+<input type="text" name="entry.1506499068">
+</div>
+
+<div class="formGroup">
+<label>Business Name</label>
+<input type="text" name="entry.1039866069">
+</div>
+
+<div class="formGroup">
+<label>Website Type</label>
+<input type="text" name="entry.592094893">
+</div>
+
+<div class="formGroup">
+<label>Project Details</label>
+<textarea name="entry.272301432"></textarea>
+</div>
+
+<div class="formGroup">
+<label>Additional Notes</label>
+<textarea name="entry.1913681571"></textarea>
+</div>
+
+<button class="btn btnPrimary">Submit Application</button>
+
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<div id="formSuccess">Your request has been submitted successfully.</div>
+
+</div>
 
 </section>
 
@@ -317,104 +320,30 @@
   </div>
 </div>
 
-<!-- PACKAGE CONTENT -->
-<!-- PACKAGE CONTENT (SUMMARY STYLE) -->
-<div style="display:none;">
-
-  <!-- STARTER -->
-  <div id="starter">
-    <h2>Starter Website Package</h2>
-
-    <p>
-      A simple, guided build designed to get you online quickly with a clear and professional presence. 
-      This package focuses on structure, clarity, and making sure your message is easy to understand.
-    </p>
-
-    <p>
-      You’ll receive a small, well-organized website that works smoothly on mobile and desktop, 
-      with the essentials in place to begin building visibility.
-    </p>
-
-    <p>
-      Ongoing care is available to keep your site updated and backed up as you grow.
-    </p>
-
-    <button class="btn btnPrimary" onclick="goToForm()">Get Started</button>
-  </div>
-
-
-  <!-- BUSINESS -->
-  <div id="business">
-    <h2>Business Website Package</h2>
-
-    <p>
-      A structured website built to support growth, attract attention, and guide visitors toward action. 
-      This package focuses on stronger layout, better flow, and tools that help turn visits into real inquiries.
-    </p>
-
-    <p>
-      Your site will include expanded content, improved organization, and systems that help you understand 
-      and track performance as your business develops.
-    </p>
-
-    <p>
-      Ongoing support includes security, updates, and protection to keep your site running reliably.
-    </p>
-
-    <button class="btn btnPrimary" onclick="goToForm()">Start Growing</button>
-  </div>
-
-
-  <!-- PREMIUM -->
-  <div id="premium">
-    <h2>Premium Custom Website Package</h2>
-
-    <p>
-      A fully customized website experience designed around your vision, goals, and long-term strategy. 
-      This package focuses on performance, flexibility, and creating a strong digital presence that stands out.
-    </p>
-
-    <p>
-      Every part of the site is built with intention, allowing for advanced functionality, deeper structure, 
-      and a more refined user experience.
-    </p>
-
-    <p>
-      Continued care ensures your site stays secure, optimized, and ready to grow with you over time.
-    </p>
-
-    <button class="btn btnPrimary" onclick="goToForm()">Elevate Your Business</button>
-  </div>
-
-</div>
-
 <script src="/brad-hobbswd/layout.js"></script>
 
 <script>
 function openPackage(id){
-  const modal = document.getElementById("packageModal");
-  const body = document.getElementById("modalBody");
-  body.innerHTML = document.getElementById(id).innerHTML;
-  modal.classList.add("active");
-  document.body.style.overflow = "hidden";
+  document.getElementById("modalBody").innerHTML =
+  document.getElementById(id).innerHTML;
+  document.getElementById("packageModal").classList.add("active");
 }
 
 function closePackage(){
   document.getElementById("packageModal").classList.remove("active");
-  document.body.style.overflow = "auto";
 }
 
-function goToForm(){
-  closePackage();
-  document.getElementById("packageContact").scrollIntoView({behavior:"smooth"});
-}
-
-  window.addEventListener("click", function(e){
-  const modal = document.getElementById("packageModal");
-
-  if (e.target === modal){
+window.addEventListener("click", function(e){
+  if(e.target.id === "packageModal"){
     closePackage();
   }
+});
+
+document.querySelector(".customForm").addEventListener("submit", function(){
+  setTimeout(()=>{
+    document.querySelector(".customForm").style.display="none";
+    document.getElementById("formSuccess").style.display="block";
+  },800);
 });
 </script>
 
