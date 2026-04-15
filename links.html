@@ -167,7 +167,33 @@ body[data-page="work"] main section.grid:last-of-type .card:hover{
   transform:scale(1) translateY(-6px);
 }
 
+/* ===== MINISTRY GRID (SMALLER + CENTERED) ===== */
 
+body[data-page="work"] main section.grid:last-of-type{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+/* ===== MINISTRY CARDS SIZE ===== */
+
+body[data-page="work"] main section.grid:last-of-type .card{
+  width:260px;
+  flex:0 0 auto;
+
+  padding:14px;
+
+  transform:scale(.95);
+  opacity:.95;
+}
+
+/* ===== HOVER (KEEP NICE FEEL) ===== */
+
+body[data-page="work"] main section.grid:last-of-type .card:hover{
+  transform:scale(1) translateY(-6px);
+}
+  
 </style>
 
 <title>My Work & Links | Brad Hobbs</title>
