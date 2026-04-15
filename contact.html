@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Brad Hobbs Web Design</title>
-  <meta name="description" content="Contact Brad Hobbs for professional website design services." />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="/brad-hobbswd/style.css">
+<title>Contact | Brad Hobbs Web Design</title>
+<meta name="description" content="Contact Brad Hobbs for professional website design services." />
 
- <style>
+<link rel="stylesheet" href="/brad-hobbswd/style.css">
+
+<style>
 
 /* ===== FORM CENTERING ===== */
 .contactWrap{
@@ -207,9 +208,7 @@ Send Message
 
 <script src="/brad-hobbswd/layout.js"></script>
 
-<!-- ===== CLEAN JS ===== -->
 <script>
-
 document.addEventListener("DOMContentLoaded", function(){
 
 const form = document.getElementById("quoteForm");
@@ -239,6 +238,8 @@ headers:{ "Accept":"application/json" }
 });
 
 if(res.ok){
+
+form.reset();
 
 btn.classList.add("shimmer");
 
