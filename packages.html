@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=2">
 
-  <style>
+<style>
 
 /* ===== INTRO ===== */
 .packagesIntro{
@@ -23,7 +25,29 @@
   margin-top:10px;
 }
 
-/* ===== PACKAGE GRID ===== */
+/* ===== BANNER ===== */
+.bannerSection{
+  margin-top:40px;
+}
+
+.bannerCard{
+  width:min(1100px,92%);
+  margin:20px auto;
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.03);
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.45),
+    0 0 20px rgba(47,179,255,.12);
+}
+
+.bannerImg{
+  width:100%;
+  display:block;
+}
+
+/* ===== GRID ===== */
 .packageSection{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -32,13 +56,12 @@
   width:min(1100px,92%);
 }
 
-/* ===== PACKAGE CARD ===== */
+/* ===== CARDS ===== */
 .package-card{
   cursor:pointer;
   border-radius:20px;
   overflow:hidden;
   transition:.25s ease;
-
   box-shadow:
     0 12px 35px rgba(0,0,0,.45),
     0 0 20px rgba(47,179,255,.1);
@@ -56,11 +79,25 @@
     0 0 25px rgba(47,179,255,.25);
 }
 
+/* ===== DIVIDER ===== */
+.sectionDivider{
+  width:min(900px,92%);
+  height:1px;
+  margin:50px auto;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(47,179,255,.9),
+    rgba(245,184,65,.9),
+    transparent
+  );
+}
+
 /* ===== MODAL ===== */
 .packageModal{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.7);
+  background:rgba(0,0,0,.75);
   display:none;
   align-items:center;
   justify-content:center;
@@ -79,6 +116,23 @@
   max-height:90vh;
   overflow:auto;
   position:relative;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.7),
+    0 0 25px rgba(47,179,255,.2);
+}
+
+.modalContent h2{
+  margin-bottom:10px;
+}
+
+.modalContent ul{
+  margin:12px 0;
+  padding-left:18px;
+}
+
+.modalContent li{
+  margin-bottom:6px;
 }
 
 .modalClose{
@@ -106,48 +160,7 @@
   margin:10px 0 20px;
 }
 
-    /* ===== BANNER FIX (MATCH OTHER PAGES) ===== */
-
-.bannerSection{
-  margin-top:40px;
-}
-
-.bannerCard{
-  width:min(1100px,92%);
-  margin:20px auto;
-  border-radius:22px;
-  overflow:hidden;
-
-  border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.03);
-
-  box-shadow:
-    0 12px 40px rgba(0,0,0,.45),
-    0 0 20px rgba(47,179,255,.12);
-}
-
-.bannerImg{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-    /* ===== DIVIDER (MATCH OTHER PAGES) ===== */
-.sectionDivider{
-  width:min(900px,92%);
-  height:1px;
-  margin:50px auto;
-
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(47,179,255,.9),
-    rgba(245,184,65,.9),
-    transparent
-  );
-}
-/* ===== FOOTER FIX (MATCH SERVICES PAGE) ===== */
-
+/* ===== FOOTER ===== */
 #siteFooter{
   width:100%;
   display:flex;
@@ -161,20 +174,14 @@
   color:rgba(184,199,230,.72);
   font-size:13px;
 }
+
 </style>
 
 <title>Packages | Brad Hobbs Web Design</title>
-  <link rel="icon" href="/brad-hobbswd/favicon.ico">
 
-<link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
-
-<link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
-<meta name="description" content="Website package options: Starter, Business Growth, and Premium Custom." />
 </head>
 
-<body class="packages-page" data-page="packages">
+<body data-page="packages">
 
 <div class="wrap">
 
@@ -185,17 +192,15 @@
 <!-- BANNER -->
 <section class="bannerSection">
   <div class="bannerCard">
-    <img class="bannerImg" src="images/A061F20E-B72E-45DD-B863-37AEC5BFFF82.jpeg" alt="Website Packages">
+    <img class="bannerImg" src="images/A061F20E-B72E-45DD-B863-37AEC5BFFF82.jpeg">
   </div>
 </section>
 
 <!-- INTRO -->
 <section class="packagesIntro">
   <h2 class="packagesTitle">Explore Our Website Packages</h2>
-
   <p class="packagesSubtitle">
-    Click each package card below to view the full details and care plan options
-    <span class="clickIcon">👇</span>
+    Click each package card below to view the full details and care plan options 👇
   </p>
 </section>
 
@@ -205,40 +210,31 @@
 <section class="packageSection">
 
   <div class="package-card" onclick="openPackage('starter')">
-    <img src="C3857A28-69EA-4491-BFE7-EED2D131AE9B.png" alt="Starter Website Package">
+    <img src="C3857A28-69EA-4491-BFE7-EED2D131AE9B.png">
   </div>
 
   <div class="package-card" onclick="openPackage('business')">
-    <img src="428002DB-DBEC-48CD-8ED0-851AE686E827.png" alt="Business Website Package">
+    <img src="428002DB-DBEC-48CD-8ED0-851AE686E827.png">
   </div>
 
   <div class="package-card" onclick="openPackage('premium')">
-    <img src="1CED57CD-3692-4A62-9B8C-E377BE84063A.png" alt="Premium Custom Website Package">
+    <img src="1CED57CD-3692-4A62-9B8C-E377BE84063A.png">
   </div>
 
 </section>
 
 <div class="sectionDivider"></div>
 
-<!-- FORM SECTION -->
+<!-- FORM -->
 <section id="packageContact" class="formSection">
-
   <h2 class="formTitleMain">Start Your Project</h2>
+  <p class="formSubtitle">Complete the form below to begin your website request.</p>
 
-  <p class="formSubtitle">
-    Complete the form below to begin your website request.
-  </p>
-
-  <div class="formEmbed">
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfmeW2hfpYLFM9PzfKvhVFQLB5MkKnf88Z36SW7MF082nbg_A/viewform?embedded=true" 
-      width="100%" 
-      height="1000"
-      frameborder="0">
-      Loading…
-    </iframe>
-  </div>
-
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfmeW2hfpYLFM9PzfKvhVFQLB5MkKnf88Z36SW7MF082nbg_A/viewform?embedded=true" 
+    width="100%" 
+    height="1000">
+  </iframe>
 </section>
 
 </main>
@@ -247,25 +243,6 @@
 
 </div>
 
-  <!-- HIDDEN PACKAGE CONTENT -->
-
-<div id="starter" style="display:none;">
-  <h2>Starter Package</h2>
-  <p>Perfect for individuals or small businesses starting online.</p>
-  <button class="btn btnPrimary" onclick="goToForm()">Start This Package</button>
-</div>
-
-<div id="business" style="display:none;">
-  <h2>Business Growth Package</h2>
-  <p>Designed for growing businesses ready to scale and convert visitors.</p>
-  <button class="btn btnPrimary" onclick="goToForm()">Start This Package</button>
-</div>
-
-<div id="premium" style="display:none;">
-  <h2>Premium Custom Package</h2>
-  <p>Fully custom experience built for high-impact brands and advanced needs.</p>
-  <button class="btn btnPrimary" onclick="goToForm()">Start This Package</button>
-</div>
 <!-- MODAL -->
 <div id="packageModal" class="packageModal">
   <div class="modalContent">
@@ -274,16 +251,84 @@
   </div>
 </div>
 
+<!-- PACKAGE CONTENT -->
+<!-- PACKAGE CONTENT (SUMMARY STYLE) -->
+<div style="display:none;">
+
+  <!-- STARTER -->
+  <div id="starter">
+    <h2>Starter Website Package</h2>
+
+    <p>
+      A simple, guided build designed to get you online quickly with a clear and professional presence. 
+      This package focuses on structure, clarity, and making sure your message is easy to understand.
+    </p>
+
+    <p>
+      You’ll receive a small, well-organized website that works smoothly on mobile and desktop, 
+      with the essentials in place to begin building visibility.
+    </p>
+
+    <p>
+      Ongoing care is available to keep your site updated and backed up as you grow.
+    </p>
+
+    <button class="btn btnPrimary" onclick="goToForm()">Get Started</button>
+  </div>
+
+
+  <!-- BUSINESS -->
+  <div id="business">
+    <h2>Business Website Package</h2>
+
+    <p>
+      A structured website built to support growth, attract attention, and guide visitors toward action. 
+      This package focuses on stronger layout, better flow, and tools that help turn visits into real inquiries.
+    </p>
+
+    <p>
+      Your site will include expanded content, improved organization, and systems that help you understand 
+      and track performance as your business develops.
+    </p>
+
+    <p>
+      Ongoing support includes security, updates, and protection to keep your site running reliably.
+    </p>
+
+    <button class="btn btnPrimary" onclick="goToForm()">Start Growing</button>
+  </div>
+
+
+  <!-- PREMIUM -->
+  <div id="premium">
+    <h2>Premium Custom Website Package</h2>
+
+    <p>
+      A fully customized website experience designed around your vision, goals, and long-term strategy. 
+      This package focuses on performance, flexibility, and creating a strong digital presence that stands out.
+    </p>
+
+    <p>
+      Every part of the site is built with intention, allowing for advanced functionality, deeper structure, 
+      and a more refined user experience.
+    </p>
+
+    <p>
+      Continued care ensures your site stays secure, optimized, and ready to grow with you over time.
+    </p>
+
+    <button class="btn btnPrimary" onclick="goToForm()">Elevate Your Business</button>
+  </div>
+
+</div>
+
 <script src="/brad-hobbswd/layout.js"></script>
 
 <script>
-
 function openPackage(id){
   const modal = document.getElementById("packageModal");
   const body = document.getElementById("modalBody");
-  const content = document.getElementById(id).innerHTML;
-
-  body.innerHTML = content;
+  body.innerHTML = document.getElementById(id).innerHTML;
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
 }
@@ -293,20 +338,10 @@ function closePackage(){
   document.body.style.overflow = "auto";
 }
 
-window.addEventListener("click", function(e){
-  const modal = document.getElementById("packageModal");
-  if(e.target === modal){
-    closePackage();
-  }
-});
-
 function goToForm(){
   closePackage();
-  document.getElementById("packageContact").scrollIntoView({
-    behavior: "smooth"
-  });
+  document.getElementById("packageContact").scrollIntoView({behavior:"smooth"});
 }
-
 </script>
 
 </body>
