@@ -191,19 +191,24 @@
 }
 
   /* ===== FORM CARD ===== */
+/* ===== FORM CARD (ENHANCED) ===== */
 .formCard{
   margin-top:20px;
-  padding:20px;
-  border-radius:20px;
+  padding:24px;
+  border-radius:22px;
 
   border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.04);
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+
+  backdrop-filter:blur(10px);
 
   box-shadow:
-    0 20px 50px rgba(0,0,0,.5),
-    0 0 25px rgba(47,179,255,.12);
+    0 25px 60px rgba(0,0,0,.6),
+    0 0 30px rgba(47,179,255,.18);
 }
-
+  
 /* NOTE ABOVE FORM */
 .formNote{
   text-align:center;
@@ -212,12 +217,16 @@
   margin-bottom:16px;
 }
 
-/* EMBED */
+/* ===== FORM EMBED FRAME ===== */
 .formEmbed{
   width:100%;
   height:1000px;
   border:none;
-  border-radius:12px;
+  border-radius:16px;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.08),
+    0 10px 30px rgba(0,0,0,.5);
 }
 
 </style>
