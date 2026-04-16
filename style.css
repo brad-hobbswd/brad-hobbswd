@@ -199,15 +199,20 @@ img{
 
 /* ===== GLOBAL FOOTER ===== */
 
+/* ===== GLOBAL FOOTER (ENHANCED) ===== */
+
 #siteFooter{
   width:100%;
   display:flex;
   justify-content:center;
+  margin-top:50px;
 }
 
 #siteFooter footer{
   width:min(1100px,92%);
   text-align:center;
+
+  padding:18px 14px;
 
   margin:25px auto 12px;
 
@@ -215,4 +220,15 @@ img{
   color:rgba(184,199,230,.72);
 
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+
+  /* ✨ NEW VISUALS */
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+
+  background:rgba(255,255,255,.03);
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.35),
+    0 0 15px rgba(47,179,255,.08);
 }
