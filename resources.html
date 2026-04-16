@@ -181,6 +181,25 @@
   margin-top:10px;
 }
 
+.featuredCard{
+  border:1px solid rgba(245,184,65,.6);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.6),
+    0 0 30px rgba(245,184,65,.25);
+}
+
+.badge{
+  display:inline-block;
+  font-size:11px;
+  font-weight:700;
+  padding:4px 8px;
+  border-radius:8px;
+  margin:6px 0;
+
+  background:linear-gradient(90deg,#f5b841,#ffdd88);
+  color:#1a1a1a;
+}
+
 </style>
 
 <title>Resources | Brad Hobbs Web Design</title>
@@ -266,21 +285,29 @@ Check who owns a domain and view registration details instantly.
 
 <h2 style="text-align:center;">Hosting Platforms</h2>
 
-<div class="grid"> <!-- ✅ FIXED (removed duplicate grid) -->
+<p style="text-align:center; color:var(--muted); margin-bottom:20px;">
+Start with Whois.com for the easiest and most reliable domain search and hosting setup.
+</p>
 
-<!-- ALL YOUR CARDS STAY EXACTLY AS IS -->
+<div class="grid">
 
-
-<!-- WHOIS -->
-<article class="card">
+<!-- WHOIS (FEATURED) -->
+<article class="card featuredCard">
 <div class="cardInner">
 <a class="logoLink" href="https://www.whois.com" target="_blank">
 <img class="logoImg" src="/brad-hobbswd/images/whois-com-logo.png" alt="Whois.com logo">
 </a>
 <div>
 <h2 class="cardTitle">Whois.com</h2>
+
 <div class="meta">Domain Tools</div>
-<p class="desc">Domain search and ownership lookup services.</p>
+
+<div class="badge">Most Recommended</div>
+
+<p class="desc">
+Most recommended platform for domain search, ownership lookup, and affordable hosting solutions.
+</p>
+
 <div class="actions">
 <a class="btn btnPrimary" href="https://www.whois.com" target="_blank">Visit Website</a>
 </div>
@@ -423,7 +450,6 @@ Check who owns a domain and view registration details instantly.
 </div>
 </div>
 </article>
-
 
 </div>
 
