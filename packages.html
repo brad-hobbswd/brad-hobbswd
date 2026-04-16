@@ -236,6 +236,24 @@
   accent-color: var(--accent);
 }
 
+.modalContent h2{
+  margin-bottom:10px;
+}
+
+.modalContent p{
+  color:var(--muted);
+  margin-bottom:12px;
+}
+
+.modalContent ul{
+  padding-left:18px;
+  margin-bottom:20px;
+}
+
+.modalContent li{
+  margin-bottom:6px;
+}
+  
 </style>
 
 <title>Packages | Brad Hobbs Web Design</title>
@@ -408,20 +426,6 @@ Your project request has been submitted successfully.
 </p>
 </div>
 
-<iframe name="hidden_iframe" style="display:none;"></iframe>
-
-<div id="formSuccess" style="display:none; text-align:center; margin-top:20px;">
-<p style="color:var(--accent2); font-weight:700;">
-Your project request has been submitted successfully.
-</p>
-</div>
-
-<iframe name="hidden_iframe" style="display:none;"></iframe>
-
-<div id="formSuccess">Your request has been submitted successfully.</div>
-
-</div>
-
 </section>
 
 </main>
@@ -441,29 +445,127 @@ Your project request has been submitted successfully.
 <script src="/brad-hobbswd/layout.js"></script>
 
 <script>
+
+/* =========================
+   OPEN PACKAGE MODAL
+========================= */
 function openPackage(id){
-  document.getElementById("modalBody").innerHTML =
-  document.getElementById(id).innerHTML;
-  document.getElementById("packageModal").classList.add("active");
+  const source = document.getElementById(id);
+  if(!source) return;
+
+  const modal = document.getElementById("packageModal");
+  const body = document.getElementById("modalBody");
+
+  body.innerHTML = source.innerHTML;
+  modal.classList.add("active");
+
+  // lock scroll
+  document.body.style.overflow = "hidden";
 }
 
+
+/* =========================
+   CLOSE MODAL
+========================= */
 function closePackage(){
-  document.getElementById("packageModal").classList.remove("active");
+  const modal = document.getElementById("packageModal");
+  if(!modal) return;
+
+  modal.classList.remove("active");
+
+  // restore scroll
+  document.body.style.overflow = "auto";
 }
 
+
+/* =========================
+   CLICK OUTSIDE TO CLOSE
+========================= */
 window.addEventListener("click", function(e){
-  if(e.target.id === "packageModal"){
+  const modal = document.getElementById("packageModal");
+  if(e.target === modal){
     closePackage();
   }
 });
 
-document.querySelector(".customForm").addEventListener("submit", function(){
-  setTimeout(()=>{
-    document.querySelector(".customForm").style.display="none";
-    document.getElementById("formSuccess").style.display="block";
-  },800);
-});
-</script>
 
+/* =========================
+   FORM SUBMIT HANDLER
+========================= */
+document.addEventListener("DOMContentLoaded", function(){
+
+  const form = document.querySelector(".customForm");
+  const success = document.getElementById("formSuccess");
+
+  if(!form || !success) return;
+
+  form.addEventListener("submit", function(){
+
+    setTimeout(() => {
+      form.style.display = "none";
+      success.style.display = "block";
+    }, 800);
+
+  });
+
+});
+
+
+/* =========================
+   SCROLL TO FORM FROM MODAL
+========================= */
+function goToForm(){
+  closePackage();
+
+  const section = document.getElementById("packageContact");
+  if(!section) return;
+
+  section.scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+</script>
+<!-- ===== PACKAGE CONTENT (REQUIRED FOR MODAL) ===== -->
+
+<div id="starter" style="display:none;">
+  <h2>Starter Website Package</h2>
+  <p>Perfect for getting started online with a strong, clean foundation.</p>
+  <ul>
+    <li>Up to 5 pages</li>
+    <li>Conversion-focused design</li>
+    <li>Foundational SEO structure</li>
+    <li>Contact form integration</li>
+    <li>Launch support included</li>
+  </ul>
+  <button class="btn btnPrimary" onclick="goToForm()">Start This Package</button>
+</div>
+
+<div id="business" style="display:none;">
+  <h2>Business Website Package</h2>
+  <p>Built to grow your business with structure, visibility, and performance.</p>
+  <ul>
+    <li>Up to 10 pages</li>
+    <li>Conversion-focused layout</li>
+    <li>Enhanced SEO structure</li>
+    <li>Lead capture forms</li>
+    <li>Analytics integration</li>
+    <li>Mobile optimized design</li>
+  </ul>
+  <button class="btn btnPrimary" onclick="goToForm()">Start This Package</button>
+</div>
+
+<div id="premium" style="display:none;">
+  <h2>Premium Custom Website Package</h2>
+  <p>Fully customized solution designed for long-term growth and advanced performance.</p>
+  <ul>
+    <li>Fully custom layouts</li>
+    <li>Advanced SEO architecture</li>
+    <li>Workflow and automation systems</li>
+    <li>Strategy and optimization</li>
+  </ul>
+  <button class="btn btnPrimary" onclick="goToForm()">Start This Package</button>
+</div>
+  
 </body>
 </html>
