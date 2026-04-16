@@ -259,44 +259,127 @@ target="hidden_iframe"
 class="customForm"
 >
 
+<h2 class="formTitleMain">Website Project Application</h2>
+
+<p class="formSubtitle">
+Thank you for your interest in a website project.
+Complete this short application so the project details can be reviewed.
+</p>
+
+<p class="formNote">
+Approval is confirmed before any payment is requested.
+</p>
+
+<!-- NAME -->
 <div class="formGroup">
-<label>Full Name</label>
-<input type="text" name="entry.1478334189" required>
+<label>Full Name *</label>
+<input type="text" name="entry.2136352736" required>
 </div>
 
+<!-- EMAIL -->
 <div class="formGroup">
-<label>Email</label>
-<input type="email" name="entry.1799374150" required>
+<label>Email Address *</label>
+<input type="email" name="entry.1275926525" required>
 </div>
 
+<!-- BUSINESS -->
 <div class="formGroup">
-<label>Phone</label>
-<input type="text" name="entry.1506499068">
+<label>Organization or Business Name</label>
+<input type="text" name="entry.378796952">
 </div>
 
+<!-- LOCATION -->
 <div class="formGroup">
-<label>Business Name</label>
-<input type="text" name="entry.1039866069">
+<label>Location (City & State)</label>
+<input type="text" name="entry.1659577324">
 </div>
 
+<!-- WEBSITE TYPE -->
 <div class="formGroup">
-<label>Website Type</label>
-<input type="text" name="entry.592094893">
+<label>What type of website are you creating?</label>
+
+<label><input type="radio" name="entry.1799374150" value="Business"> Business</label>
+<label><input type="radio" name="entry.1799374150" value="Ministry or Church"> Ministry or Church</label>
+<label><input type="radio" name="entry.1799374150" value="Personal Website"> Personal Website</label>
+<label><input type="radio" name="entry.1799374150" value="Online Portfolio"> Online Portfolio</label>
+<label><input type="radio" name="entry.1799374150" value="Other"> Other</label>
+
 </div>
 
+<!-- DOMAIN -->
 <div class="formGroup">
-<label>Project Details</label>
-<textarea name="entry.272301432"></textarea>
+<label>Do you already have a domain name?</label>
+
+<label><input type="radio" name="entry.1506499068" value="Yes"> Yes</label>
+<label><input type="radio" name="entry.1506499068" value="No"> No</label>
+<label><input type="radio" name="entry.1506499068" value="Not sure"> Not sure</label>
+
 </div>
 
+<!-- HOSTING -->
 <div class="formGroup">
-<label>Additional Notes</label>
-<textarea name="entry.1913681571"></textarea>
+<label>Do you already have hosting?</label>
+
+<label><input type="radio" name="entry.1039866069" value="Yes"> Yes</label>
+<label><input type="radio" name="entry.1039866069" value="No"> No</label>
+<label><input type="radio" name="entry.1039866069" value="Not sure"> Not sure</label>
+
+</div>
+
+<!-- PURPOSE -->
+<div class="formGroup">
+<label>Describe the purpose of the website</label>
+<textarea name="entry.1603760099"></textarea>
+</div>
+
+<!-- TIMELINE -->
+<div class="formGroup">
+<label>When would you like the website to be completed?</label>
+
+<label><input type="radio" name="entry.592094893" value="ASAP"> ASAP</label>
+<label><input type="radio" name="entry.592094893" value="Within 30 days"> Within 30 days</label>
+<label><input type="radio" name="entry.592094893" value="Within 60 days"> Within 60 days</label>
+<label><input type="radio" name="entry.592094893" value="Flexible Timeline"> Flexible Timeline</label>
+
+</div>
+
+<!-- READY -->
+<div class="formGroup">
+<label>Are you ready to begin this project within the next 30 days?</label>
+
+<label><input type="radio" name="entry.272301432" value="Yes"> Yes</label>
+<label><input type="radio" name="entry.272301432" value="No"> No</label>
+<label><input type="radio" name="entry.272301432" value="Just exploring options"> Just exploring options</label>
+
+</div>
+
+<!-- AGREEMENT -->
+<div class="formGroup">
+<label>
+<input type="checkbox" name="entry.1913681571" required>
+I understand that this request will be reviewed before the project is approved and payment is requested.
+</label>
 </div>
 
 <button class="btn btnPrimary">Submit Application</button>
 
 </form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<div id="formSuccess" style="display:none; text-align:center; margin-top:20px;">
+<p style="color:var(--accent2); font-weight:700;">
+Your project request has been submitted successfully.
+</p>
+</div>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<div id="formSuccess" style="display:none; text-align:center; margin-top:20px;">
+<p style="color:var(--accent2); font-weight:700;">
+Your project request has been submitted successfully.
+</p>
+</div>
 
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 
