@@ -12,24 +12,6 @@
   --shadow:0 18px 45px rgba(0,0,0,.45);
 }
 
-/* ================= BANNER SIZE RESTORE ================= */
-
-.bannerPrimary,
-.bannerSecondary{
-  width:min(1100px,92%);
-  margin:18px auto;
-  border-radius:22px;
-  overflow:hidden;
-}
-
-.bannerPrimary img,
-.bannerSecondary img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-
 /* ================= BUTTON RESTORE ================= */
 
 .btn{
