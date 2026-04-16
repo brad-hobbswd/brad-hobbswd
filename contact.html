@@ -16,7 +16,7 @@
   display:flex;
   justify-content:center;
   width:100%;
-  margin:40px auto;
+  margin:50px auto;
 }
 
 /* ===== FORM SIZE ===== */
@@ -109,6 +109,29 @@
   100%{ box-shadow:0 0 0 rgba(245,184,65,0); }
 }
 
+.bannerSection{
+  margin-top:40px;
+}
+
+.bannerCard{
+  width:min(1100px,92%);
+  margin:20px auto;
+  border-radius:22px;
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.03);
+
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.45),
+    0 0 20px rgba(47,179,255,.12);
+}
+
+.bannerCard img{
+  width:100%;
+  display:block;
+}
+  
 </style>
 
 </head>
@@ -121,26 +144,29 @@
 
 <main>
 
-<!-- BANNER -->
-<div class="bannerPrimary">
-  <img src="images/27229CBD-3947-480E-AB39-1D9CC6B3202E.png" alt="Contact">
-</div>
+<!-- HERO -->
+<section class="bannerSection">
+  <div class="bannerCard">
+    <img src="images/27229CBD-3947-480E-AB39-1D9CC6B3202E.png" alt="Contact">
+  </div>
+</section>
 
-<!-- EMAIL BANNER -->
-<a href="mailto:brad.hobbs13@icloud.com" class="bannerSecondary">
-  <img src="images/40411AF9-F914-4D71-AA94-30A89AC34E14.png" alt="Email Brad">
-</a>
+<!-- EMAIL CTA -->
+<section class="bannerSection">
+  <a href="mailto:brad.hobbs13@icloud.com" class="bannerCard">
+    <img src="images/40411AF9-F914-4D71-AA94-30A89AC34E14.png" alt="Email Brad">
+  </a>
+</section>
 
 <div class="sectionDivider"></div>
 
-<!-- INTRO -->
-<section class="serviceText" style="max-width:700px; margin:auto;">
+<section class="serviceText">
   <h2>Direct Contact with Clarity</h2>
   <p>
     Click the banner above to open a ready to send email. This allows you to reach out quickly with structure and clarity.
   </p>
   <p>
-    Every message is reviewed personally and you can expect a response within 24 hours.
+    Every message is reviewed personally and a response is provided within 24 hours.
   </p>
 </section>
 
