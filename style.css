@@ -196,3 +196,23 @@ img{
   height:auto;
   display:block;
 }
+
+/* ===== GLOBAL FOOTER ===== */
+
+#siteFooter{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+#siteFooter footer{
+  width:min(1100px,92%);
+  text-align:center;
+
+  margin:25px auto 12px;
+
+  font-size:13px;
+  color:rgba(184,199,230,.72);
+
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
