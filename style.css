@@ -91,12 +91,12 @@ a{
 
 /* ================= HEADER SPACING ONLY ================= */
 
-header{
-  margin:18px 0 12px 0;
+#siteHeader{
+  margin:0;
 }
 
-#siteHeader{
-  margin-bottom:0px;
+header{
+  margin:0;
 }
 
 
@@ -177,18 +177,6 @@ body[data-page="contact"] .bannerSecondary img{
 .card:hover{
   transform:translateY(-4px);
   box-shadow:0 20px 40px rgba(0,0,0,.35), 0 0 20px rgba(47,179,255,.15);
-}
-
-/* ===== HOME BANNER OFFSET FIX ===== */
-
-body[data-page="home"] .bannerPrimary{
-  margin-top:40px;
-}
-
-/* ===== SERVICES PAGE TOP FIX ===== */
-
-body[data-page="services"] .bannerCard{
-  margin-top:40px;
 }
 
 html{
