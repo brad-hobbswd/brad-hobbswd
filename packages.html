@@ -217,6 +217,25 @@
   color:var(--accent2);
 }
 
+  /* CHECKBOX ALIGNMENT */
+.formGroup input[type="checkbox"]{
+  width:auto;
+  margin-top:2px;
+}
+
+/* CHECKBOX LABEL (AGREEMENT) */
+.formGroup label:has(input[type="checkbox"]){
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  line-height:1.4;
+  cursor:pointer;
+}
+
+  .formGroup input[type="checkbox"]{
+  accent-color: var(--accent);
+}
+
 </style>
 
 <title>Packages | Brad Hobbs Web Design</title>
