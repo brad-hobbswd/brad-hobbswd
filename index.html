@@ -8,16 +8,90 @@
 <title>Home | Brad Hobbs Web Design</title>
 
 <link rel="icon" href="/brad-hobbswd/favicon.ico">
-
 <link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
-
 <link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
-
 <link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
 
 <meta name="description" content="Brad Hobbs builds responsive, modern websites with clear structure and strong calls to action." />
 
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=2" />
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=3" />
+
+<style>
+
+/* ===== MATCH SERVICES STRUCTURE ===== */
+
+.bannerSection{
+  margin-top:40px;
+}
+
+/* UNIFIED BANNER STYLE */
+.bannerCard{
+  width:min(1100px,92%);
+  margin:20px auto;
+  border-radius:22px;
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.03);
+
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.45),
+    0 0 20px rgba(47,179,255,.12);
+}
+
+.bannerCard img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* INTRO */
+.homeIntro{
+  max-width:700px;
+  margin:18px auto;
+  text-align:center;
+}
+
+.homeIntro p{
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* BUTTON CENTER */
+.resource-center{
+  margin-top:18px;
+}
+
+/* DIVIDER */
+.sectionDivider{
+  width:min(900px,92%);
+  height:1px;
+  margin:40px auto;
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(47,179,255,.9),
+    rgba(245,184,65,.9),
+    transparent
+  );
+}
+
+/* FOOTER MATCH */
+#siteFooter{
+  display:flex;
+  justify-content:center;
+}
+
+#siteFooter footer{
+  width:min(1100px,92%);
+  text-align:center;
+  margin:22px auto 10px auto;
+  color:rgba(184,199,230,.72);
+  font-size:13px;
+}
+
+</style>
 
 </head>
 
@@ -30,16 +104,20 @@
 <main>
 
 <!-- HERO -->
-<div class="bannerPrimary">
-  <img src="587C175D-DD5A-4090-8BEA-D9BD89C76DF9.png" alt="Brad Hobbs Professional Web Designer Banner" draggable="false">
-</div>
+<section class="bannerSection">
+  <div class="bannerCard">
+    <img src="images/587C175D-DD5A-4090-8BEA-D9BD89C76DF9.png" alt="Brad Hobbs Professional Web Designer Banner">
+  </div>
+</section>
 
 <div class="sectionDivider"></div>
 
 <!-- SUPPORT -->
-<div class="bannerSecondary">
-  <img src="5700AE32-C77D-4B9D-A147-A6A92F66820A.png" alt="Modern Websites With Clear Structure Banner" draggable="false">
-</div>
+<section class="bannerSection">
+  <div class="bannerCard">
+    <img src="images/5700AE32-C77D-4B9D-A147-A6A92F66820A.png" alt="Modern Websites With Clear Structure Banner">
+  </div>
+</section>
 
 <div class="sectionDivider"></div>
 
@@ -51,7 +129,7 @@ Hosting and domain materials for building websites appear on the resources page.
 </p>
 
 <div class="resource-center">
-  <a href="resources.html" class="resource-button">
+  <a href="/brad-hobbswd/resources.html" class="btn btnPrimary">
     Website Hosting and Domain Resources
   </a>
 </div>
