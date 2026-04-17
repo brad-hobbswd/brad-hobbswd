@@ -600,20 +600,16 @@ window.addEventListener("click", function(e){
 /* =========================
    FORM SUBMIT HANDLER
 ========================= */
-document.addEventListener("DOMContentLoaded", function(){
+form.addEventListener("submit", function(){
 
-  const form = document.querySelector(".customForm");
   const success = document.getElementById("formSuccess");
 
-  if(!form || !success) return;
+  form.style.display = "none";
+  success.style.display = "block";
 
-  form.addEventListener("submit", function(){
-
-    // show success instantly
-    form.style.display = "none";
-    success.style.display = "block";
-
-  });
+  setTimeout(() => {
+    window.location.href = "/thank-you.html";
+  }, 1500);
 
 });
 
