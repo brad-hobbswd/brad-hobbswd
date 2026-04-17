@@ -407,22 +407,117 @@ body[data-page="packages"] .bannerSection:first-of-type{
 <form 
 action="https://docs.google.com/forms/d/e/1FAIpQLSfmeW2hfpYLFM9PzfKvhVFQLB5MkKnf88Z36SW7MF082nbg_A/formResponse"
 method="POST"
-target="_blank">
+target="hidden_iframe"
+class="customForm">
 
-<input name="entry.2136352736" placeholder="Name" required>
+<!-- NAME -->
+<div class="formGroup">
+<label>Full Name *</label>
+<input type="text" name="entry.2136352736" required>
+</div>
 
-<input name="entry.1275926525" placeholder="Email" required>
+<!-- EMAIL -->
+<div class="formGroup">
+<label>Email Address *</label>
+<input type="email" name="entry.1275926525" required>
+</div>
 
+<!-- BUSINESS -->
+<div class="formGroup">
+<label>Organization or Business Name</label>
+<input type="text" name="entry.378796952">
+</div>
+
+<!-- LOCATION -->
+<div class="formGroup">
+<label>Location (City & State)</label>
+<input type="text" name="entry.1659577324">
+</div>
+
+<!-- PACKAGE (REQUIRED - DO NOT REMOVE) -->
+<div class="formGroup">
+<label>Which website package are you interested in?</label>
+
+<label><input type="radio" name="entry.1478334189" value="Starter Website Package" required> Starter Website Package</label>
+
+<label><input type="radio" name="entry.1478334189" value="Business Website Package"> Business Website Package</label>
+
+<label><input type="radio" name="entry.1478334189" value="Premium Website Package"> Premium Website Package</label>
+
+<label><input type="radio" name="entry.1478334189" value="Not sure yet, need guidance"> Not sure yet, need guidance</label>
+</div>
+
+<!-- WEBSITE TYPE -->
+<div class="formGroup">
+<label>What type of website are you creating?</label>
+
+<label><input type="radio" name="entry.1799374150" value="Business"> Business</label>
+<label><input type="radio" name="entry.1799374150" value="Ministry or Church"> Ministry or Church</label>
+<label><input type="radio" name="entry.1799374150" value="Personal Website"> Personal Website</label>
+<label><input type="radio" name="entry.1799374150" value="Online Portfolio"> Online Portfolio</label>
+<label><input type="radio" name="entry.1799374150" value="Other"> Other</label>
+</div>
+
+<!-- DOMAIN -->
+<div class="formGroup">
+<label>Do you already have a domain name?</label>
+
+<label><input type="radio" name="entry.1506499068" value="Yes"> Yes</label>
+<label><input type="radio" name="entry.1506499068" value="No"> No</label>
+<label><input type="radio" name="entry.1506499068" value="Not sure"> Not sure</label>
+</div>
+
+<!-- HOSTING -->
+<div class="formGroup">
+<label>Do you already have hosting?</label>
+
+<label><input type="radio" name="entry.1039866069" value="Yes"> Yes</label>
+<label><input type="radio" name="entry.1039866069" value="No"> No</label>
+<label><input type="radio" name="entry.1039866069" value="Not sure"> Not sure</label>
+</div>
+
+<!-- PURPOSE -->
+<div class="formGroup">
+<label>Describe the purpose of the website</label>
+<textarea name="entry.1603760099"></textarea>
+</div>
+
+<!-- TIMELINE -->
+<div class="formGroup">
+<label>When would you like the website to be completed?</label>
+
+<label><input type="radio" name="entry.592094893" value="ASAP"> ASAP</label>
+<label><input type="radio" name="entry.592094893" value="Within 30 days"> Within 30 days</label>
+<label><input type="radio" name="entry.592094893" value="Within 60 days"> Within 60 days</label>
+<label><input type="radio" name="entry.592094893" value="Flexible Timeline"> Flexible Timeline</label>
+</div>
+
+<!-- READY -->
+<div class="formGroup">
+<label>Are you ready to begin this project within the next 30 days?</label>
+
+<label><input type="radio" name="entry.272301432" value="Yes"> Yes</label>
+<label><input type="radio" name="entry.272301432" value="No"> No</label>
+<label><input type="radio" name="entry.272301432" value="Just exploring options"> Just exploring options</label>
+</div>
+
+<!-- AGREEMENT -->
+<div class="formGroup">
+<label>
 <input 
-  type="radio" 
-  name="entry.1478334189" 
-  value="Starter Website Package" 
-  checked>
+  type="checkbox" 
+  name="entry.1913681571" 
+  value="I understand that this request will be reviewed before the project is approved and payment is requested." 
+  required>
+I understand that this request will be reviewed before the project is approved and payment is requested.
+</label>
+</div>
 
-<button type="submit">Submit</button>
+<button class="btn btnPrimary">Submit Application</button>
 
 </form>
 
+<!-- REQUIRED -->
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 
 <div id="formSuccess" style="display:none; text-align:center; margin-top:20px;">
