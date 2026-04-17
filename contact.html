@@ -194,19 +194,24 @@ action="https://docs.google.com/forms/d/e/1FAIpQLSdBbVTznNfzNn8KuLN6IA3fsdxgC4MP
 <label class="formLabel">
 <div class="formLabelTitle">Project Type</div>
 
-<label><input type="radio" name="entry.1065046570" value="Starter Website Package" required> Starter Website Package</label>
-<label><input type="radio" name="entry.1065046570" value="Business Website Package"> Business Website Package</label>
-<label><input type="radio" name="entry.1065046570" value="Premium Website Package"> Premium Website Package</label>
-<label><input type="radio" name="entry.1065046570" value="Not sure yet, need guidance"> Not sure yet, need guidance</label>
+<select name="entry.1065046570" class="formControl" required>
+<option value="" disabled selected>Select a project type</option>
+<option value="Starter Website Package">Starter Website Package</option>
+<option value="Business Website Package">Business Website Package</option>
+<option value="Custom Project">Custom Project</option>
+<option value="General Question">General Question</option>
+</select>
+
 </label>
 
 <label class="formLabel">
-<div class="formLabelTitle">Inquiry Type</div>
-
-<label><input type="radio" name="entry.1166974658" value="Price Inquiry" required> Price Inquiry</label>
-<label><input type="radio" name="entry.1166974658" value="General Question"> General Question</label>
-<label><input type="radio" name="entry.1166974658" value="Project Discussion"> Project Discussion</label>
-<label><input type="radio" name="entry.1166974658" value="Other"> Other</label>
+<div class="formLabelTitle">Message</div>
+<textarea 
+  name="entry.1166974658" 
+  rows="4" 
+  required 
+  class="formControl">
+</textarea>
 </label>
 
 <button id="sendBtn" class="btn btnPrimary">Send Message</button>
