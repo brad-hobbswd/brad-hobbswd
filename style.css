@@ -212,26 +212,40 @@ img{
   width:min(1100px,92%);
   text-align:center;
 
-  padding:18px 14px;
+  padding:12px 12px;              /* 🔥 reduced from 18px */
+  margin:16px auto 8px;           /* 🔥 tighter spacing */
 
-  margin:25px auto 12px;
+  font-size:12px;                 /* slightly smaller */
+  color:rgba(184,199,230,.65);
 
-  font-size:13px;
-  color:rgba(184,199,230,.72);
+  border:1px solid rgba(255,255,255,.06); /* softer */
+  border-radius:16px;
 
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-
-  /* ✨ NEW VISUALS */
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:18px;
-
-  background:rgba(255,255,255,.03);
-  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.025);      /* lighter */
+  backdrop-filter:blur(8px);
 
   box-shadow:
-    0 10px 30px rgba(0,0,0,.35),
-    0 0 15px rgba(47,179,255,.08);
+    0 8px 20px rgba(0,0,0,.3),
+    0 0 10px rgba(47,179,255,.06);
 }
+
+#siteFooter footer::before{
+  content:"";
+  display:block;
+  width:60%;
+  height:1px;
+  margin:0 auto 10px auto;
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(47,179,255,.4),
+    transparent
+  );
+
+  opacity:.5;
+}
+
 #siteFooter footer:hover{
   box-shadow:
     0 15px 40px rgba(0,0,0,.5),
