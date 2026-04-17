@@ -600,16 +600,24 @@ window.addEventListener("click", function(e){
 /* =========================
    FORM SUBMIT HANDLER
 ========================= */
-form.addEventListener("submit", function(){
+document.addEventListener("DOMContentLoaded", function(){
 
-  const success = document.getElementById("formSuccess");
+  const form = document.querySelector(".customForm");
+  const iframe = document.querySelector('iframe[name="hidden_iframe"]');
 
-  form.style.display = "none";
-  success.style.display = "block";
+  if(!form || !iframe) return;
 
-  setTimeout(() => {
-    window.location.href = "/thank-you.html";
-  }, 1500);
+  let submitted = false;
+
+  form.addEventListener("submit", function(){
+    submitted = true;
+  });
+
+  iframe.addEventListener("load", function(){
+    if(submitted){
+      window.location.href = "/thank-you.html";
+    }
+  });
 
 });
 
