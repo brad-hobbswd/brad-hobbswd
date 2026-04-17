@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -98,80 +99,30 @@
   padding:14px;
 }
 
-/* ===== SHIMMER ===== */
-.shimmer{
-  animation: shimmerEffect .8s ease;
-}
-
-@keyframes shimmerEffect{
-  0%{ box-shadow:0 0 0 rgba(245,184,65,0); }
-  50%{ box-shadow:0 0 25px rgba(245,184,65,.9); }
-  100%{ box-shadow:0 0 0 rgba(245,184,65,0); }
-}
-
 /* ===== BANNER SYSTEM ===== */
-
-.bannerSection{
-  margin-top:30px;
-}
+.bannerSection{ margin-top:30px; }
 
 .bannerCard{
-  display:block; /* ← THIS FIXES IT */
-
+  display:block;
   width:min(1100px,92%);
   margin:0 auto;
   border-radius:22px;
   overflow:hidden;
-
   border:1px solid rgba(255,255,255,.12);
   background:rgba(255,255,255,.03);
-
-  box-shadow:
-    0 12px 40px rgba(0,0,0,.45),
-    0 0 20px rgba(47,179,255,.12);
+  box-shadow:0 12px 40px rgba(0,0,0,.45), 0 0 20px rgba(47,179,255,.12);
 }
 
-.bannerCard img{
-  width:100%;
-  display:block;
-}
-
-/* HOVER (keeps premium feel) */
-.bannerCard:hover{
-  transform:translateY(-3px);
-  transition:.3s ease;
-
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.55),
-    0 0 30px rgba(47,179,255,.25);
-}
-
-/* SECOND BANNER TIGHTER */
-.bannerSection + .bannerSection{
-  margin-top:25px;
-}
-
-  /* ===== DIVIDER (MATCH SERVICES) ===== */
+.bannerCard img{ width:100%; display:block; }
 
 .sectionDivider{
   width:min(900px,92%);
   height:1px;
   margin:50px auto;
-
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(47,179,255,.9),
-    rgba(245,184,65,.9),
-    transparent
-  );
+  background:linear-gradient(90deg,transparent,rgba(47,179,255,.9),rgba(245,184,65,.9),transparent);
 }
 
-  /* ===== FOOTER FIX (MATCH SERVICES PAGE) ===== */
-
-
-
-  .serviceText{
+.serviceText{
   max-width:700px;
   margin:18px auto;
   text-align:center;
@@ -183,10 +134,6 @@
   margin-bottom:10px;
 }
 
-  .serviceText h2{
-  margin-bottom:12px;
-}
-  
 </style>
 
 </head>
@@ -199,14 +146,12 @@
 
 <main>
 
-<!-- HERO -->
 <section class="bannerSection">
   <div class="bannerCard">
     <img src="images/27229CBD-3947-480E-AB39-1D9CC6B3202E.png" alt="Contact">
   </div>
 </section>
 
-<!-- EMAIL CTA -->
 <section class="bannerSection">
   <a href="mailto:brad.hobbs13@icloud.com" class="bannerCard">
     <img src="images/40411AF9-F914-4D71-AA94-30A89AC34E14.png" alt="Email First Communication">
@@ -217,67 +162,64 @@
 
 <section class="serviceText">
   <h2>Direct Contact with Clarity</h2>
-  <p>
-    Click the banner above to open a ready to send email. This allows you to reach out quickly with structure and clarity.
-  </p>
-  <p>
-    Every message is reviewed personally and a response is provided within 24 hours.
-  </p>
+  <p>Click the banner above to open a ready to send email.</p>
+  <p>A response is provided within 24 hours.</p>
 </section>
 
 <div class="sectionDivider"></div>
 
-<!-- FORM -->
 <section class="contactWrap">
 
-<form id="quoteForm" class="card" method="POST">
-
-<input type="text" name="_gotcha" style="display:none">
+<form 
+id="quoteForm"
+class="card contactForm"
+method="POST"
+target="hidden_iframe"
+action="https://docs.google.com/forms/d/e/1FAIpQLSdBbVTznNfzNn8KuLN6IA3fsdxgC4MPw9ryoTQK5fJ4K0bFuA/formResponse">
 
 <div class="formTitle">Send a Message</div>
-<div class="formSubtitle">
-This form connects directly and you will receive a response within 24 hours.
-</div>
-
-<input type="hidden" name="_subject" value="New Contact Submission">
 
 <div class="formGrid">
 
 <label class="formLabel">
 <div class="formLabelTitle">Name</div>
-<input name="name" required class="formControl" placeholder="Your name">
+<input name="entry.2005620554" required class="formControl">
 </label>
 
 <label class="formLabel">
 <div class="formLabelTitle">Email</div>
-<input name="email" type="email" required class="formControl" placeholder="your@email.com">
+<input name="entry.1045781291" type="email" required class="formControl">
 </label>
 
 <label class="formLabel">
 <div class="formLabelTitle">Project Type</div>
-<select name="package" class="formControl" required>
-<option value="" disabled selected>Select a project type</option>
-<option>Starter Website</option>
-<option>Business Website</option>
-<option>Custom Project</option>
-<option>General Question</option>
+<select name="entry.1065046570" class="formControl" required>
+<option value="" disabled selected>Select</option>
+<option value="Starter Website Package">Starter Website Package</option>
+<option value="Business Website Package">Business Website Package</option>
+<option value="Premium Website Package">Premium Website Package</option>
+<option value="Not sure yet, need guidance">Not sure yet, need guidance</option>
 </select>
 </label>
 
 <label class="formLabel">
-<div class="formLabelTitle">Message</div>
-<textarea name="message" rows="4" required class="formControl" placeholder="Tell me about your project..."></textarea>
+<div class="formLabelTitle">Inquiry Type</div>
+<select name="entry.1166974658" class="formControl" required>
+<option value="" disabled selected>Select</option>
+<option value="Price Inquiry">Price Inquiry</option>
+<option value="General Question">General Question</option>
+<option value="Project Discussion">Project Discussion</option>
+<option value="Other">Other</option>
+</select>
 </label>
 
-<button id="sendBtn" type="submit" class="btn btnPrimary">
-Send Message
-</button>
-
-<div id="formStatus"></div>
+<button id="sendBtn" class="btn btnPrimary">Send Message</button>
 
 </div>
 
 </form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
 
 </section>
 
@@ -292,61 +234,27 @@ Send Message
 <script>
 document.addEventListener("DOMContentLoaded", function(){
 
-const form = document.getElementById("quoteForm");
-const btn = document.getElementById("sendBtn");
-const status = document.getElementById("formStatus");
+  const form = document.querySelector(".contactForm");
+  const iframe = document.querySelector('iframe[name="hidden_iframe"]');
 
-if(!form) return;
+  if(!form || !iframe) return;
 
-form.addEventListener("submit", async function(e){
+  let submitted = false;
 
-e.preventDefault();
+  form.addEventListener("submit", function(){
+    const btn = document.getElementById("sendBtn");
+    if(btn){
+      btn.disabled = true;
+      btn.textContent = "Sending...";
+    }
+    submitted = true;
+  });
 
-const data = new FormData(form);
-
-if(data.get("_gotcha")) return;
-
-btn.disabled = true;
-btn.textContent = "Sending...";
-status.textContent = "";
-
-try{
-
-const res = await fetch("https://formspree.io/f/mzdajjkb",{
-method:"POST",
-body:data,
-headers:{ "Accept":"application/json" }
-});
-
-if(res.ok){
-
-form.reset();
-
-btn.classList.add("shimmer");
-
-setTimeout(()=>{
-window.location.href = "thanks.html";
-},800);
-
-return;
-}
-
-status.textContent = "Something went wrong. Please try again.";
-status.style.color = "#ff6b6b";
-
-}catch(err){
-
-status.textContent = "Network error. Please try again.";
-status.style.color = "#ff6b6b";
-
-}finally{
-
-btn.disabled = false;
-btn.textContent = "Send Message";
-
-}
-
-});
+  iframe.addEventListener("load", function(){
+    if(submitted){
+      window.location.href = "thanks.html";
+    }
+  });
 
 });
 </script>
