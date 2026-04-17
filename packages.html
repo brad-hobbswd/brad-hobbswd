@@ -56,6 +56,27 @@
   width:min(1100px,92%);
 }
 
+/* ===== FIX LAST CARD CENTER (TABLET) ===== */
+@media (min-width:600px) and (max-width:1024px){
+
+  .packageSection{
+    grid-template-columns:repeat(2, 1fr);
+    justify-items:center;
+  }
+
+  /* center last card */
+  .packageSection .package-card:last-child{
+    grid-column:1 / -1;
+    max-width:400px;
+  }
+
+}
+
+.package-card{
+  width:100%;
+  max-width:420px;
+}
+
 /* ===== CARDS ===== */
 .package-card{
   cursor:pointer;
