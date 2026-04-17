@@ -407,8 +407,10 @@ body[data-page="packages"] .bannerSection:first-of-type{
 <form 
 action="https://docs.google.com/forms/d/e/1FAIpQLSfmeW2hfpYLFM9PzfKvhVFQLB5MkKnf88Z36SW7MF082nbg_A/formResponse"
 method="POST"
-target="_self"
+target="hidden_iframe"
 class="customForm">
+
+<input type="hidden" name="entry.1478334189" id="selectedPackage">
 
 <!-- NAME -->
 <div class="formGroup">
@@ -541,6 +543,15 @@ Your project request has been submitted successfully.
    OPEN PACKAGE MODAL
 ========================= */
 function openPackage(id){
+
+  const hiddenField = document.getElementById("selectedPackage");
+
+  if(hiddenField){
+    if(id === "starter") hiddenField.value = "Starter Website Package";
+    if(id === "business") hiddenField.value = "Business Website Package";
+    if(id === "premium") hiddenField.value = "Premium Custom Website Package";
+  }
+
   const source = document.getElementById(id);
   if(!source) return;
 
@@ -550,7 +561,6 @@ function openPackage(id){
   body.innerHTML = source.innerHTML;
   modal.classList.add("active");
 
-  // lock scroll
   document.body.style.overflow = "hidden";
 }
 
@@ -592,10 +602,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
   form.addEventListener("submit", function(){
 
-    setTimeout(() => {
-      form.style.display = "none";
-      success.style.display = "block";
-    }, 800);
+    // show success instantly
+    form.style.display = "none";
+    success.style.display = "block";
 
   });
 
