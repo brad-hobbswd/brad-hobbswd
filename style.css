@@ -244,3 +244,11 @@ img{
     0 15px 40px rgba(0,0,0,.5),
     0 0 25px rgba(47,179,255,.2);
 }
+
+
+/* ===== FOOTER-SPECIFIC DIVIDER ===== */
+
+.footerDivider{
+  margin:18px auto 4px;  /* 🔥 tighter to footer only */
+}
+
