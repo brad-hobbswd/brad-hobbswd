@@ -11,36 +11,56 @@
 
 <style>
 
-/* ===== PAYMENT HEADER ===== */
+/* ===== PAGE SPACING ===== */
+.paymentSection{
+  margin-top:50px;
+}
+
+/* ===== INTRO ===== */
 .paymentIntro{
   text-align:center;
-  margin-top:20px;
+  padding:20px 0 10px;
 }
 
 .paymentTitle{
-  font-size:30px;
+  font-size:32px;
   font-weight:900;
 }
 
 .paymentSubtitle{
   color:var(--muted);
-  margin-top:10px;
+  margin-top:14px;
   max-width:650px;
   margin-inline:auto;
+  line-height:1.6;
 }
 
-/* ===== PAYMENT GRID ===== */
+/* ===== GRID ===== */
 .paymentGrid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:28px;
   width:min(1100px,92%);
-  margin:30px auto;
+  margin:40px auto;
 }
 
-/* ===== PACKAGE CARD ENHANCEMENT ===== */
+/* ===== CARD ===== */
 .paymentCard{
-  position:relative;
+  padding:30px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.45),
+    0 0 25px rgba(47,179,255,.12);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:260px;
+
   transition:.25s ease;
 }
 
@@ -48,39 +68,88 @@
   transform:translateY(-6px);
 }
 
-/* highlight primary action */
-.paymentPrimary{
-  margin-top:16px;
-}
-
-/* secondary button spacing */
-.paymentSecondary{
-  margin-top:10px;
-  opacity:.85;
-}
-
-/* subtle label */
+/* ===== CARD CONTENT ===== */
 .packageLabel{
-  font-size:13px;
+  font-size:12px;
+  letter-spacing:.6px;
   color:var(--accent2);
   font-weight:700;
   margin-bottom:6px;
-  letter-spacing:.5px;
 }
 
-/* divider inside card */
+.paymentCard h3{
+  margin-bottom:8px;
+}
+
+.priceText{
+  opacity:.8;
+  margin-bottom:18px;
+}
+
 .cardDivider{
   height:1px;
-  margin:14px 0;
   background:rgba(255,255,255,.08);
+  margin:16px 0;
 }
 
-/* reassurance section */
-.paymentNote{
+/* ===== BUTTON STACK ===== */
+.buttonStack{
+  margin-top:auto;
+}
+
+.buttonStack a{
+  display:block;
+  width:100%;
   text-align:center;
-  margin-top:20px;
+}
+
+.primaryBtn{
+  margin-top:10px;
+}
+
+.secondaryBtn{
+  margin-top:12px;
+  opacity:.85;
+}
+
+/* ===== FINAL SECTION ===== */
+.confirmSection{
+  margin-top:60px;
+}
+
+.confirmCard{
+  max-width:650px;
+  margin:0 auto;
+  padding:28px;
+
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.12);
+
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,.4),
+    0 0 20px rgba(47,179,255,.12);
+
+  text-align:center;
+}
+
+.confirmCard p{
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.confirmNote{
+  margin-top:18px;
   font-size:13px;
-  opacity:.8;
+  opacity:.85;
+}
+
+.disclaimer{
+  margin-top:12px;
+  font-size:13px;
+  opacity:.7;
 }
 
 </style>
@@ -101,70 +170,79 @@
   <h2 class="paymentTitle">Secure Your Website Project</h2>
 
   <p class="paymentSubtitle">
-    Your application has been received and reviewed. Select your payment option below to reserve your project or begin your build.
+    Your application has been received. Select your payment option below to reserve your project or begin your build with clarity and purpose.
   </p>
 
 </section>
 
 <div class="sectionDivider"></div>
 
-<!-- PAYMENT OPTIONS -->
-<section class="paymentGrid">
+<!-- PAYMENT GRID -->
+<section class="paymentGrid paymentSection">
 
   <!-- STARTER -->
-  <div class="formCard paymentCard">
+  <div class="paymentCard">
 
-    <div class="packageLabel">STARTER</div>
-    <h3>Starter Website Package</h3>
-    <p style="opacity:.8;">$350 + $50 administration fee</p>
+    <div>
+      <div class="packageLabel">STARTER</div>
+      <h3>Starter Website Package</h3>
+      <p class="priceText">$350 + $50 administration fee</p>
+      <div class="cardDivider"></div>
+    </div>
 
-    <div class="cardDivider"></div>
+    <div class="buttonStack">
+      <a href="https://cash.app/$brad1gabe/51" target="_blank" class="btn btnPrimary primaryBtn">
+        Secure with Deposit ($51)
+      </a>
 
-    <a href="https://cash.app/$brad1gabe/51" target="_blank" class="btn btnPrimary paymentPrimary">
-      Secure with Deposit ($51)
-    </a>
-
-    <a href="https://cash.app/$brad1gabe/400" target="_blank" class="btn paymentSecondary">
-      Pay in Full ($400)
-    </a>
+      <a href="https://cash.app/$brad1gabe/400" target="_blank" class="btn secondaryBtn">
+        Pay in Full ($400)
+      </a>
+    </div>
 
   </div>
 
   <!-- BUSINESS -->
-  <div class="formCard paymentCard">
+  <div class="paymentCard">
 
-    <div class="packageLabel">BUSINESS</div>
-    <h3>Business Website Package</h3>
-    <p style="opacity:.8;">$650 + $50 administration fee</p>
+    <div>
+      <div class="packageLabel">BUSINESS</div>
+      <h3>Business Website Package</h3>
+      <p class="priceText">$650 + $50 administration fee</p>
+      <div class="cardDivider"></div>
+    </div>
 
-    <div class="cardDivider"></div>
+    <div class="buttonStack">
+      <a href="https://cash.app/$brad1gabe/52" target="_blank" class="btn btnPrimary primaryBtn">
+        Secure with Deposit ($52)
+      </a>
 
-    <a href="https://cash.app/$brad1gabe/52" target="_blank" class="btn btnPrimary paymentPrimary">
-      Secure with Deposit ($52)
-    </a>
-
-    <a href="https://cash.app/$brad1gabe/700" target="_blank" class="btn paymentSecondary">
-      Pay in Full ($700)
-    </a>
+      <a href="https://cash.app/$brad1gabe/700" target="_blank" class="btn secondaryBtn">
+        Pay in Full ($700)
+      </a>
+    </div>
 
   </div>
 
   <!-- PREMIUM -->
-  <div class="formCard paymentCard">
+  <div class="paymentCard">
 
-    <div class="packageLabel">PREMIUM</div>
-    <h3>Premium Website Package</h3>
-    <p style="opacity:.8;">$1200 + $50 administration fee</p>
+    <div>
+      <div class="packageLabel">PREMIUM</div>
+      <h3>Premium Website Package</h3>
+      <p class="priceText">$1200 + $50 administration fee</p>
+      <div class="cardDivider"></div>
+    </div>
 
-    <div class="cardDivider"></div>
+    <div class="buttonStack">
+      <a href="https://cash.app/$brad1gabe/53" target="_blank" class="btn btnPrimary primaryBtn">
+        Secure with Deposit ($53)
+      </a>
 
-    <a href="https://cash.app/$brad1gabe/53" target="_blank" class="btn btnPrimary paymentPrimary">
-      Secure with Deposit ($53)
-    </a>
-
-    <a href="https://cash.app/$brad1gabe/1250" target="_blank" class="btn paymentSecondary">
-      Pay in Full ($1250)
-    </a>
+      <a href="https://cash.app/$brad1gabe/1250" target="_blank" class="btn secondaryBtn">
+        Pay in Full ($1250)
+      </a>
+    </div>
 
   </div>
 
@@ -172,26 +250,26 @@
 
 <div class="sectionDivider"></div>
 
-<!-- NEXT STEP -->
-<section class="formSection">
+<!-- CONFIRM -->
+<section class="confirmSection">
 
-  <div class="formIntroCard">
+  <div class="confirmCard">
 
     <h3 class="formSubTitle">Complete Your Payment</h3>
 
     <p>
-      After submitting your payment, confirm it so your project can be matched and scheduled without delay.
+      After your payment is submitted, confirm it so your project can be matched and scheduled without delay.
     </p>
 
-    <a href="/brad-hobbswd/payment-confirmation.html" class="btn btnPrimary" style="margin-top:18px;">
+    <a href="/brad-hobbswd/payment-confirmation.html" class="btn btnPrimary" style="margin-top:20px;">
       Confirm My Payment
     </a>
 
-    <div class="paymentNote">
+    <div class="confirmNote">
       Include your name, email, and selected package in your Cash App note.
     </div>
 
-    <p style="font-size:13px; opacity:.7; margin-top:10px;">
+    <p class="disclaimer">
       Deposits are non-refundable and secure your project position. Full payment begins the active build phase.
     </p>
 
