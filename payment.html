@@ -9,6 +9,82 @@
 
 <title>Secure Your Project | Brad Hobbs Web Design</title>
 
+<style>
+
+/* ===== PAYMENT HEADER ===== */
+.paymentIntro{
+  text-align:center;
+  margin-top:20px;
+}
+
+.paymentTitle{
+  font-size:30px;
+  font-weight:900;
+}
+
+.paymentSubtitle{
+  color:var(--muted);
+  margin-top:10px;
+  max-width:650px;
+  margin-inline:auto;
+}
+
+/* ===== PAYMENT GRID ===== */
+.paymentGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+  width:min(1100px,92%);
+  margin:30px auto;
+}
+
+/* ===== PACKAGE CARD ENHANCEMENT ===== */
+.paymentCard{
+  position:relative;
+  transition:.25s ease;
+}
+
+.paymentCard:hover{
+  transform:translateY(-6px);
+}
+
+/* highlight primary action */
+.paymentPrimary{
+  margin-top:16px;
+}
+
+/* secondary button spacing */
+.paymentSecondary{
+  margin-top:10px;
+  opacity:.85;
+}
+
+/* subtle label */
+.packageLabel{
+  font-size:13px;
+  color:var(--accent2);
+  font-weight:700;
+  margin-bottom:6px;
+  letter-spacing:.5px;
+}
+
+/* divider inside card */
+.cardDivider{
+  height:1px;
+  margin:14px 0;
+  background:rgba(255,255,255,.08);
+}
+
+/* reassurance section */
+.paymentNote{
+  text-align:center;
+  margin-top:20px;
+  font-size:13px;
+  opacity:.8;
+}
+
+</style>
+
 </head>
 
 <body data-page="payment">
@@ -20,16 +96,12 @@
 <main>
 
 <!-- INTRO -->
-<section class="packagesIntro">
+<section class="paymentIntro">
 
-  <h2 class="packagesTitle">Secure Your Website Project</h2>
+  <h2 class="paymentTitle">Secure Your Website Project</h2>
 
-  <p class="packagesSubtitle">
-    Your application has been received. Choose your payment option below to move forward.
-  </p>
-
-  <p class="packagesSubtitle" style="margin-top:12px;">
-    A deposit secures your position. Full payment begins your website build immediately.
+  <p class="paymentSubtitle">
+    Your application has been received and reviewed. Select your payment option below to reserve your project or begin your build.
   </p>
 
 </section>
@@ -37,48 +109,63 @@
 <div class="sectionDivider"></div>
 
 <!-- PAYMENT OPTIONS -->
-<section class="packageSection">
+<section class="paymentGrid">
 
   <!-- STARTER -->
-  <div class="formCard">
+  <div class="formCard paymentCard">
+
+    <div class="packageLabel">STARTER</div>
     <h3>Starter Website Package</h3>
     <p style="opacity:.8;">$350 + $50 administration fee</p>
 
-    <a href="https://cash.app/$brad1gabe/51" target="_blank" class="btn btnPrimary">
-      Pay Deposit ($51)
+    <div class="cardDivider"></div>
+
+    <a href="https://cash.app/$brad1gabe/51" target="_blank" class="btn btnPrimary paymentPrimary">
+      Secure with Deposit ($51)
     </a>
 
-    <a href="https://cash.app/$brad1gabe/400" target="_blank" class="btn" style="margin-top:10px;">
-      Pay Full ($400)
+    <a href="https://cash.app/$brad1gabe/400" target="_blank" class="btn paymentSecondary">
+      Pay in Full ($400)
     </a>
+
   </div>
 
   <!-- BUSINESS -->
-  <div class="formCard">
+  <div class="formCard paymentCard">
+
+    <div class="packageLabel">BUSINESS</div>
     <h3>Business Website Package</h3>
     <p style="opacity:.8;">$650 + $50 administration fee</p>
 
-    <a href="https://cash.app/$brad1gabe/52" target="_blank" class="btn btnPrimary">
-      Pay Deposit ($52)
+    <div class="cardDivider"></div>
+
+    <a href="https://cash.app/$brad1gabe/52" target="_blank" class="btn btnPrimary paymentPrimary">
+      Secure with Deposit ($52)
     </a>
 
-    <a href="https://cash.app/$brad1gabe/700" target="_blank" class="btn" style="margin-top:10px;">
-      Pay Full ($700)
+    <a href="https://cash.app/$brad1gabe/700" target="_blank" class="btn paymentSecondary">
+      Pay in Full ($700)
     </a>
+
   </div>
 
   <!-- PREMIUM -->
-  <div class="formCard">
+  <div class="formCard paymentCard">
+
+    <div class="packageLabel">PREMIUM</div>
     <h3>Premium Website Package</h3>
     <p style="opacity:.8;">$1200 + $50 administration fee</p>
 
-    <a href="https://cash.app/$brad1gabe/53" target="_blank" class="btn btnPrimary">
-      Pay Deposit ($53)
+    <div class="cardDivider"></div>
+
+    <a href="https://cash.app/$brad1gabe/53" target="_blank" class="btn btnPrimary paymentPrimary">
+      Secure with Deposit ($53)
     </a>
 
-    <a href="https://cash.app/$brad1gabe/1250" target="_blank" class="btn" style="margin-top:10px;">
-      Pay Full ($1250)
+    <a href="https://cash.app/$brad1gabe/1250" target="_blank" class="btn paymentSecondary">
+      Pay in Full ($1250)
     </a>
+
   </div>
 
 </section>
@@ -90,21 +177,21 @@
 
   <div class="formIntroCard">
 
-    <h3 class="formSubTitle">After Payment</h3>
+    <h3 class="formSubTitle">Complete Your Payment</h3>
 
     <p>
-      Once your payment is completed, confirm it so your project can be matched and scheduled.
+      After submitting your payment, confirm it so your project can be matched and scheduled without delay.
     </p>
 
-    <a href="/brad-hobbswd/payment-confirmation.html" class="btn btnPrimary" style="margin-top:15px;">
-      I Have Completed My Payment
+    <a href="/brad-hobbswd/payment-confirmation.html" class="btn btnPrimary" style="margin-top:18px;">
+      Confirm My Payment
     </a>
 
-    <p style="margin-top:15px; font-size:13px; opacity:.85;">
-      Include your name, email, and selected package in the Cash App note.
-    </p>
+    <div class="paymentNote">
+      Include your name, email, and selected package in your Cash App note.
+    </div>
 
-    <p style="font-size:13px; opacity:.75;">
+    <p style="font-size:13px; opacity:.7; margin-top:10px;">
       Deposits are non-refundable and secure your project position. Full payment begins the active build phase.
     </p>
 
