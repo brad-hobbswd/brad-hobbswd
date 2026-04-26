@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="/brad-hobbswd/style.css">
+
+<title>Payment Confirmation | Brad Hobbs Web Design</title>
+
+</head>
+
+<body data-page="payment-confirmation">
+
+<div class="wrap">
+
+<header id="siteHeader"></header>
+
+<main>
+
+<!-- INTRO -->
+<section class="packagesIntro">
+
+  <h2 class="packagesTitle">Confirm Your Payment</h2>
+
+  <p class="packagesSubtitle">
+    This step ensures your payment is matched correctly and your project can begin without delay.
+  </p>
+
+</section>
+
+<div class="sectionDivider"></div>
+
+<!-- FORM -->
+<section class="formSection">
+
+  <div class="formCard">
+
+    <form 
+      action="https://docs.google.com/forms/d/e/1FAIpQLSduzEGfRBkUNuZ7QcHD8YQniOLgzBi7KdH1PL-drRS2DvpL6g/formResponse"
+      method="POST"
+      target="hidden_iframe"
+      class="customForm">
+
+      <!-- NAME -->
+      <div class="formGroup">
+        <label>Full Name *</label>
+        <input type="text" name="entry.1547660884" required>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="formGroup">
+        <label>Email Address *</label>
+        <input type="email" name="entry.1180773792" required>
+      </div>
+
+      <!-- PACKAGE -->
+      <div class="formGroup">
+        <label>Package Selected *</label>
+
+        <label><input type="radio" name="entry.50606836" value="Starter Website Package" required> Starter Website Package</label>
+        <label><input type="radio" name="entry.50606836" value="Business Website Package"> Business Website Package</label>
+        <label><input type="radio" name="entry.50606836" value="Premium Website Package"> Premium Website Package</label>
+      </div>
+
+      <!-- PAYMENT TYPE -->
+      <div class="formGroup">
+        <label>Payment Type *</label>
+
+        <label><input type="radio" name="entry.177527919" value="Deposit" required> Deposit</label>
+        <label><input type="radio" name="entry.177527919" value="Full Payment (One Time and Admin Fee)"> Full Payment</label>
+      </div>
+
+      <!-- AMOUNT -->
+      <div class="formGroup">
+        <label>Amount Sent *</label>
+        <input type="text" name="entry.698385734" placeholder="$51, $400, $700, $1250" required>
+      </div>
+
+      <!-- CASH APP -->
+      <div class="formGroup">
+        <label>Cash App Name *</label>
+        <input type="text" name="entry.1513308410" placeholder="$brad1gabe" required>
+      </div>
+
+      <!-- CONFIRMATION -->
+      <div class="formGroup">
+        <label>
+          <input 
+            type="checkbox" 
+            name="entry.1501782927" 
+            value="I included my name and package in the Cash App payment note" 
+            required>
+          I included my name and package in the Cash App payment note
+        </label>
+      </div>
+
+      <button class="btn btnPrimary">Submit Confirmation</button>
+
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  </div>
+
+</section>
+
+</main>
+
+<div class="sectionDivider footerDivider"></div>
+<div id="siteFooter"></div>
+
+</div>
+
+<script src="/brad-hobbswd/layout.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const form = document.querySelector(".customForm");
+  const iframe = document.querySelector('iframe[name="hidden_iframe"]');
+
+  let submitted = false;
+
+  form.addEventListener("submit", function(){
+    submitted = true;
+  });
+
+  iframe.addEventListener("load", function(){
+    if(submitted){
+      window.location.href = "/brad-hobbswd/thanks.html";
+    }
+  });
+
+});
+</script>
+
+</body>
+</html>
