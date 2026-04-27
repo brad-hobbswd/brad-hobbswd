@@ -139,6 +139,16 @@
   text-decoration:none;
 }
 
+/* ===== MOBILE ACTIVE GLOW (ADDED) ===== */
+.mobileMenu a.active{
+  color:white;
+  font-weight:900;
+
+  text-shadow:
+    0 0 10px rgba(47,179,255,.9),
+    0 0 22px rgba(47,179,255,.7);
+}
+
 .mobileMenu.open{
   left:0;
 }
@@ -170,16 +180,6 @@
     display:flex;
   }
 
-}
-
-/* ===== MOBILE GLOW FIX (ADDED) ===== */
-@media (max-width:1024px){
-  .topbar{
-    box-shadow:
-      0 10px 30px rgba(0,0,0,.35),
-      0 0 18px rgba(47,179,255,.25),
-      0 0 10px rgba(245,184,65,.15);
-  }
 }
 
 /* ===== SCROLL EFFECT ===== */
@@ -232,11 +232,11 @@
 
 <!-- MOBILE MENU -->
 <div id="mobileMenu" class="mobileMenu">
-  <a href="/brad-hobbswd/index.html">Home</a>
-  <a href="/brad-hobbswd/service.html">Services</a>
-  <a href="/brad-hobbswd/process.html">The Process</a>
-  <a href="/brad-hobbswd/packages.html">Packages</a>
-  <a href="/brad-hobbswd/links.html">My Work</a>
-  <a href="/brad-hobbswd/resources.html">Resources</a>
-  <a href="/brad-hobbswd/contact.html">Contact</a>
+  <a data-nav="home" href="/brad-hobbswd/index.html">Home</a>
+  <a data-nav="services" href="/brad-hobbswd/service.html">Services</a>
+  <a data-nav="process" href="/brad-hobbswd/process.html">The Process</a>
+  <a data-nav="packages" href="/brad-hobbswd/packages.html">Packages</a>
+  <a data-nav="work" href="/brad-hobbswd/links.html">My Work</a>
+  <a data-nav="resources" href="/brad-hobbswd/resources.html">Resources</a>
+  <a data-nav="contact" href="/brad-hobbswd/contact.html">Contact</a>
 </div>
