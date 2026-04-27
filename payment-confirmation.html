@@ -11,14 +11,32 @@
 
 <style>
 
-/* CLEAN SPACING + ALIGNMENT (SAFE) */
-
+/* ===== FORM CARD (RESTORED DESIGN) ===== */
 .formCard{
   max-width:700px;
-  margin:40px auto;
-  padding:30px;
+  margin:50px auto;
+  padding:32px;
+
+  border-radius:22px;
+
+  backdrop-filter:blur(14px);
+  background:rgba(255,255,255,.04);
+
+  border:1px solid rgba(255,255,255,.12);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.5),
+    0 0 25px rgba(47,179,255,.12);
 }
 
+/* OPTIONAL HOVER */
+.formCard:hover{
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.6),
+    0 0 30px rgba(47,179,255,.18);
+}
+
+/* ===== FORM STRUCTURE ===== */
 .customForm{
   display:flex;
   flex-direction:column;
@@ -37,13 +55,14 @@
   opacity:.85;
 }
 
+/* INPUTS */
 .formGroup input[type="text"],
 .formGroup input[type="email"]{
   padding:12px;
   border-radius:10px;
 }
 
-/* RADIO FIX */
+/* RADIO */
 .radioGroup{
   display:flex;
   flex-direction:column;
@@ -132,7 +151,7 @@
         </div>
       </div>
 
-      <!-- PAYMENT TYPE (FIXED) -->
+      <!-- PAYMENT TYPE -->
       <div class="formGroup">
         <label>Payment Type *</label>
 
@@ -149,7 +168,7 @@
         </div>
       </div>
 
-      <!-- AMOUNT (FIXED FORMAT) -->
+      <!-- AMOUNT -->
       <div class="formGroup">
         <label>Amount Sent *</label>
         <input type="text" name="entry.698385734" placeholder="51, 400, 700, 1250" required>
