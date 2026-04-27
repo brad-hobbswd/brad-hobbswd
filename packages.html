@@ -5,11 +5,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=2">
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=5">
 
 <title>Packages | Brad Hobbs Web Design</title>
-
-<link rel="icon" href="/brad-hobbswd/favicon.ico">
 
 </head>
 
@@ -21,18 +19,11 @@
 
 <main>
 
-<!-- BANNER -->
-<section class="bannerSection">
-  <div class="bannerCard">
-    <img class="bannerImg" src="images/A061F20E-B72E-45DD-B863-37AEC5BFFF82.jpeg">
-  </div>
-</section>
-
 <!-- INTRO -->
 <section class="packagesIntro">
   <h2 class="packagesTitle">Choose the Right Website for Your Vision</h2>
   <p class="packagesSubtitle">
-    Tap a package below to explore what is possible for your website 👇
+    Tap a package below to explore what is possible 👇
   </p>
 </section>
 
@@ -72,7 +63,7 @@ class="customForm">
 <input type="text" name="entry.2136352736" required>
 </div>
 
-<!-- 🔥 FIXED (no name attribute) -->
+<!-- FIXED hidden (NO name) -->
 <input type="hidden" id="selectedPackage">
 
 <!-- EMAIL -->
@@ -81,14 +72,52 @@ class="customForm">
 <input type="email" name="entry.1275926525" required>
 </div>
 
+<!-- BUSINESS -->
+<div class="formGroup">
+<label>Organization or Business Name</label>
+<input type="text" name="entry.378796952">
+</div>
+
+<!-- LOCATION -->
+<div class="formGroup">
+<label>Location (City & State)</label>
+<input type="text" name="entry.1659577324">
+</div>
+
 <!-- PACKAGE -->
 <div class="formGroup">
-<label>Which package?</label>
+<label>Which website package are you interested in?</label>
 
-<label><input type="radio" name="entry.1478334189" value="Starter Website Package" required> Starter</label>
-<label><input type="radio" name="entry.1478334189" value="Business Website Package"> Business</label>
-<label><input type="radio" name="entry.1478334189" value="Premium Website Package"> Premium</label>
+<label><input type="radio" name="entry.1478334189" value="Starter Website Package" required> Starter Website Package</label>
+<label><input type="radio" name="entry.1478334189" value="Business Website Package"> Business Website Package</label>
+<label><input type="radio" name="entry.1478334189" value="Premium Website Package"> Premium Website Package</label>
+<label><input type="radio" name="entry.1478334189" value="Not sure yet"> Not sure yet</label>
+</div>
 
+<!-- PURPOSE -->
+<div class="formGroup">
+<label>Describe the purpose of the website</label>
+<textarea name="entry.1603760099"></textarea>
+</div>
+
+<!-- TIMELINE -->
+<div class="formGroup">
+<label>Timeline</label>
+
+<label><input type="radio" name="entry.592094893" value="ASAP"> ASAP</label>
+<label><input type="radio" name="entry.592094893" value="30 days"> 30 days</label>
+<label><input type="radio" name="entry.592094893" value="Flexible"> Flexible</label>
+</div>
+
+<!-- AGREEMENT -->
+<div class="formGroup">
+<label>
+<input type="checkbox" 
+name="entry.1913681571" 
+value="Agreed" 
+required>
+I understand this application must be reviewed before payment is requested
+</label>
 </div>
 
 <button class="btn btnPrimary">Submit Application</button>
@@ -120,12 +149,9 @@ class="customForm">
 
 <script>
 
-/* =========================
-   OPEN PACKAGE MODAL
-========================= */
+/* OPEN MODAL + FIXED PACKAGE SELECT */
 function openPackage(id){
 
-  // 🔥 FIX: set radio instead of hidden field
   const radios = document.querySelectorAll('input[name="entry.1478334189"]');
   radios.forEach(r => r.checked = false);
 
@@ -153,13 +179,11 @@ function openPackage(id){
   document.body.style.overflow = "hidden";
 }
 
-/* CLOSE */
 function closePackage(){
   document.getElementById("packageModal").classList.remove("active");
   document.body.style.overflow = "auto";
 }
 
-/* CLICK OUTSIDE */
 window.addEventListener("click", function(e){
   if(e.target.id === "packageModal"){
     closePackage();
@@ -186,7 +210,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
-/* SCROLL */
 function goToForm(){
   closePackage();
   document.getElementById("packageContact").scrollIntoView({ behavior: "smooth" });
@@ -194,7 +217,7 @@ function goToForm(){
 
 </script>
 
-<!-- HIDDEN CONTENT -->
+<!-- HIDDEN MODAL CONTENT -->
 <div id="starter" style="display:none;">
   <h2>Starter Website Package</h2>
   <p>Strong starting point for your online presence.</p>
