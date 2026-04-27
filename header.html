@@ -10,7 +10,7 @@
 /* ===== CONTAINER ===== */
 .topbar{
   position:fixed;
-  top:0px;
+  top:12px; /* ← UPDATED: brings navbar down slightly */
   left:50%;
   transform:translateX(-50%);
   z-index:1000;
@@ -172,11 +172,13 @@
 
 }
 
-  .topbar.scrolled{
+/* ===== SCROLL EFFECT ===== */
+.topbar.scrolled{
   box-shadow:
     0 14px 40px rgba(0,0,0,.5),
     0 0 20px rgba(47,179,255,.25);
 }
+
 </style>
 
 
