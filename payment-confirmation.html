@@ -11,7 +11,7 @@
 
 <style>
 
-/* ===== FORM CLEANUP (DOES NOT BREAK THEME) ===== */
+/* CLEAN SPACING + ALIGNMENT (SAFE) */
 
 .formCard{
   max-width:700px;
@@ -37,7 +37,6 @@
   opacity:.85;
 }
 
-/* INPUTS */
 .formGroup input[type="text"],
 .formGroup input[type="email"]{
   padding:12px;
@@ -59,7 +58,6 @@
   cursor:pointer;
 }
 
-/* BUTTON SPACING */
 .submitBtn{
   margin-top:10px;
 }
@@ -134,14 +132,14 @@
         </div>
       </div>
 
-      <!-- PAYMENT TYPE -->
+      <!-- PAYMENT TYPE (FIXED) -->
       <div class="formGroup">
         <label>Payment Type *</label>
 
         <div class="radioGroup">
           <label>
-            <input type="radio" name="entry.177527919" value="Deposit Only (Admin Fee)" required>
-            Deposit Only (Admin Fee)
+            <input type="radio" name="entry.177527919" value="Deposit" required>
+            Deposit
           </label>
 
           <label>
@@ -151,10 +149,10 @@
         </div>
       </div>
 
-      <!-- AMOUNT -->
+      <!-- AMOUNT (FIXED FORMAT) -->
       <div class="formGroup">
         <label>Amount Sent *</label>
-        <input type="text" name="entry.698385734" placeholder="$51, $400, $700, $1250" required>
+        <input type="text" name="entry.698385734" placeholder="51, 400, 700, 1250" required>
       </div>
 
       <!-- CASH APP -->
