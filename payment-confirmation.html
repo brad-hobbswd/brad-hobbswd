@@ -5,7 +5,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="/brad-hobbswd/style.css">
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=2">
 
 <title>Payment Confirmation | Brad Hobbs Web Design</title>
 
@@ -60,7 +60,6 @@
   gap:8px;
 }
 
-/* ONLY top labels */
 .formBlock > label{
   font-weight:700;
   font-size:14px;
@@ -100,20 +99,6 @@ input:focus{
 .radioGroup input[type="radio"]{
   width:auto;
   margin:0;
-}
-
-/* ===== CHECKBOX ===== */
-.checkboxGroup{
-  display:flex;
-  align-items:flex-start;
-  gap:8px;
-  cursor:pointer;
-  font-size:14px;
-}
-
-.checkboxGroup input{
-  width:auto;
-  margin-top:3px;
 }
 
 /* ===== BUTTON ===== */
@@ -210,17 +195,9 @@ input:focus{
         <input type="text" name="entry.1513308410" placeholder="$brad1gabe" required>
       </div>
 
-      <!-- CHECKBOX -->
-      <div class="checkboxGroup">
-        <input 
-          type="checkbox" 
-          name="entry.1501782927" 
-          value="I included my name and package in the Cash App payment note" 
-          required>
-
-        <span>
-          I included my name and package in the Cash App payment note
-        </span>
+      <!-- NOTE (REPLACED CHECKBOX) -->
+      <div class="confirmNote">
+        Include your name and package in your Cash App note so your payment can be matched correctly.
       </div>
 
       <button class="btn btnPrimary submitBtn">Submit Confirmation</button>
@@ -228,10 +205,6 @@ input:focus{
     </form>
 
     <iframe name="hidden_iframe" style="display:none;"></iframe>
-
-    <div class="confirmNote">
-      Your submission ensures your payment is matched and your project can begin.
-    </div>
 
   </div>
 
@@ -250,16 +223,20 @@ input:focus{
 document.addEventListener("DOMContentLoaded", function(){
 
   const form = document.querySelector(".customForm");
+  const iframe = document.querySelector('iframe[name="hidden_iframe"]');
 
-  if(!form) return;
+  if(!form || !iframe) return;
+
+  let submitted = false;
 
   form.addEventListener("submit", function(){
+    submitted = true;
+  });
 
-    // give Google time to process before redirect
-    setTimeout(function(){
+  iframe.addEventListener("load", function(){
+    if(submitted){
       window.location.href = "/brad-hobbswd/thanks.html";
-    }, 1200);
-
+    }
   });
 
 });
