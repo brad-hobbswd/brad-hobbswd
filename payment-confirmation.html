@@ -11,19 +11,57 @@
 
 <style>
 
-/* FIX RADIO + CHECKBOX ALIGNMENT */
-.formGroup label{
+/* ===== FORM CLEANUP (DOES NOT BREAK THEME) ===== */
+
+.formCard{
+  max-width:700px;
+  margin:40px auto;
+  padding:30px;
+}
+
+.customForm{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.formGroup{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.formGroup > label{
+  font-weight:600;
+  font-size:14px;
+  opacity:.85;
+}
+
+/* INPUTS */
+.formGroup input[type="text"],
+.formGroup input[type="email"]{
+  padding:12px;
+  border-radius:10px;
+}
+
+/* RADIO FIX */
+.radioGroup{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-top:5px;
+}
+
+.radioGroup label{
   display:flex;
   align-items:center;
   gap:10px;
   cursor:pointer;
-  margin:6px 0;
 }
 
-.formGroup input[type="radio"],
-.formGroup input[type="checkbox"]{
-  width:auto;
-  margin:0;
+/* BUTTON SPACING */
+.submitBtn{
+  margin-top:10px;
 }
 
 </style>
@@ -38,16 +76,20 @@
 
 <main>
 
+<!-- INTRO -->
 <section class="packagesIntro">
+
   <h2 class="packagesTitle">Confirm Your Payment</h2>
 
   <p class="packagesSubtitle">
     This step ensures your payment is matched correctly and your project can begin without delay.
   </p>
+
 </section>
 
 <div class="sectionDivider"></div>
 
+<!-- FORM -->
 <section class="formSection">
 
   <div class="formCard">
@@ -74,17 +116,39 @@
       <div class="formGroup">
         <label>Package Selected *</label>
 
-        <label><input type="radio" name="entry.50606836" value="Starter Website Package" required> Starter Website Package</label>
-        <label><input type="radio" name="entry.50606836" value="Business Website Package"> Business Website Package</label>
-        <label><input type="radio" name="entry.50606836" value="Premium Website Package"> Premium Website Package</label>
+        <div class="radioGroup">
+          <label>
+            <input type="radio" name="entry.50606836" value="Starter Website Package" required>
+            Starter Website Package
+          </label>
+
+          <label>
+            <input type="radio" name="entry.50606836" value="Business Website Package">
+            Business Website Package
+          </label>
+
+          <label>
+            <input type="radio" name="entry.50606836" value="Premium Website Package">
+            Premium Website Package
+          </label>
+        </div>
       </div>
 
       <!-- PAYMENT TYPE -->
       <div class="formGroup">
         <label>Payment Type *</label>
 
-        <label><input type="radio" name="entry.177527919" value="Deposit Only (Admin Fee)" required> Deposit Only (Admin Fee)</label>
-        <label><input type="radio" name="entry.177527919" value="Full Payment (One Time and Admin Fee)"> Full Payment (One Time and Admin Fee)</label>
+        <div class="radioGroup">
+          <label>
+            <input type="radio" name="entry.177527919" value="Deposit Only (Admin Fee)" required>
+            Deposit Only (Admin Fee)
+          </label>
+
+          <label>
+            <input type="radio" name="entry.177527919" value="Full Payment (One Time and Admin Fee)">
+            Full Payment (One Time and Admin Fee)
+          </label>
+        </div>
       </div>
 
       <!-- AMOUNT -->
@@ -99,7 +163,12 @@
         <input type="text" name="entry.1513308410" placeholder="$brad1gabe" required>
       </div>
 
-      <button class="btn btnPrimary">Submit Confirmation</button>
+      <!-- NOTE -->
+      <p style="font-size:13px; opacity:.75; text-align:center;">
+        Include your name and selected package in your Cash App payment note.
+      </p>
+
+      <button class="btn btnPrimary submitBtn">Submit Confirmation</button>
 
     </form>
 
@@ -123,6 +192,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
   const form = document.querySelector(".customForm");
   const iframe = document.querySelector('iframe[name="hidden_iframe"]');
+
+  if(!form || !iframe) return;
 
   let submitted = false;
 
