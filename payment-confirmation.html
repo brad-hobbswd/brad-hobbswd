@@ -5,7 +5,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="/brad-hobbswd/style.css">
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=2">
 
 <title>Payment Confirmation | Brad Hobbs Web Design</title>
 
@@ -47,7 +47,7 @@
     0 0 25px rgba(47,179,255,.12);
 }
 
-/* ===== FORM STRUCTURE ===== */
+/* ===== FORM ===== */
 .customForm{
   display:flex;
   flex-direction:column;
@@ -66,7 +66,6 @@
   color:var(--muted);
 }
 
-/* ===== INPUTS ===== */
 input{
   width:100%;
   padding:12px;
@@ -81,7 +80,6 @@ input:focus{
   box-shadow:0 0 0 2px rgba(47,179,255,.2);
 }
 
-/* ===== RADIO ===== */
 .radioGroup{
   display:flex;
   flex-direction:column;
@@ -93,15 +91,8 @@ input:focus{
   align-items:center;
   gap:8px;
   cursor:pointer;
-  font-weight:400;
 }
 
-.radioGroup input[type="radio"]{
-  width:auto;
-  margin:0;
-}
-
-/* ===== CHECKBOX ===== */
 .checkboxGroup{
   display:flex;
   align-items:flex-start;
@@ -115,12 +106,10 @@ input:focus{
   margin-top:3px;
 }
 
-/* ===== BUTTON ===== */
 .submitBtn{
   margin-top:10px;
 }
 
-/* ===== NOTE ===== */
 .confirmNote{
   text-align:center;
   margin-top:20px;
@@ -152,11 +141,7 @@ input:focus{
 <section>
   <div class="confirmCard">
 
-    <form 
-      action="https://docs.google.com/forms/d/e/1FAIpQLSduzEGfRBkUNuZ7QcHD8YQniOLgzBi7KdH1PL-drRS2DvpL6g/formResponse"
-      method="POST"
-      target="hidden_iframe"
-      class="customForm">
+    <form class="customForm" onsubmit="sendToGoogle(event)">
 
       <!-- NAME -->
       <div class="formBlock">
@@ -180,7 +165,7 @@ input:focus{
         </div>
       </div>
 
-      <!-- PAYMENT TYPE (FIXED) -->
+      <!-- PAYMENT TYPE -->
       <div class="formBlock">
         <label>Payment Type *</label>
         <div class="radioGroup">
@@ -192,13 +177,13 @@ input:focus{
       <!-- AMOUNT -->
       <div class="formBlock">
         <label>Amount Sent *</label>
-        <input type="text" name="entry.698385734" placeholder="$51, $400, $700, $1250" required>
+        <input type="text" name="entry.698385734" required>
       </div>
 
       <!-- CASH APP -->
       <div class="formBlock">
         <label>Cash App Name *</label>
-        <input type="text" name="entry.1513308410" placeholder="$brad1gabe" required>
+        <input type="text" name="entry.1513308410" required>
       </div>
 
       <!-- CHECKBOX -->
@@ -206,8 +191,7 @@ input:focus{
         <input 
           type="checkbox" 
           name="entry.1501782927" 
-          value="I included my name and package in the Cash App payment note" 
-          required>
+          value="I included my name and package in the Cash App payment note">
         <span>
           I included my name and package in the Cash App payment note
         </span>
@@ -217,10 +201,8 @@ input:focus{
 
     </form>
 
-    <iframe name="hidden_iframe" style="display:none;"></iframe>
-
     <div class="confirmNote">
-      Your submission ensures your payment is matched and your project can begin.
+      You will be taken to a secure confirmation page to finalize submission.
     </div>
 
   </div>
@@ -236,24 +218,32 @@ input:focus{
 <script src="/brad-hobbswd/layout.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function(){
+function sendToGoogle(e){
+  e.preventDefault();
 
-  const form = document.querySelector(".customForm");
-  const iframe = document.querySelector('iframe[name="hidden_iframe"]');
+  const name = document.querySelector('[name="entry.1547660884"]').value;
+  const email = document.querySelector('[name="entry.1180773792"]').value;
+  const amount = document.querySelector('[name="entry.698385734"]').value;
+  const cash = document.querySelector('[name="entry.1513308410"]').value;
 
-  let submitted = false;
+  const pkg = document.querySelector('input[name="entry.50606836"]:checked')?.value;
+  const type = document.querySelector('input[name="entry.177527919"]:checked')?.value;
 
-  form.addEventListener("submit", function(){
-    submitted = true;
-  });
+  const confirm = document.querySelector('input[name="entry.1501782927"]')?.checked
+    ? "I included my name and package in the Cash App payment note"
+    : "";
 
-  iframe.addEventListener("load", function(){
-    if(submitted){
-      window.location.href = "/brad-hobbswd/thanks.html";
-    }
-  });
+  const url = "https://docs.google.com/forms/d/e/1FAIpQLSduzEGfRBkUNuZ7QcHD8YQniOLgzBi7KdH1PL-drRS2DvpL6g/viewform?usp=pp_url"
+    + "&entry.1547660884=" + encodeURIComponent(name)
+    + "&entry.1180773792=" + encodeURIComponent(email)
+    + "&entry.50606836=" + encodeURIComponent(pkg)
+    + "&entry.177527919=" + encodeURIComponent(type)
+    + "&entry.698385734=" + encodeURIComponent(amount)
+    + "&entry.1513308410=" + encodeURIComponent(cash)
+    + "&entry.1501782927=" + encodeURIComponent(confirm);
 
-});
+  window.location.href = url;
+}
 </script>
 
 </body>
