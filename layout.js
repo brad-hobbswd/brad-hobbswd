@@ -58,7 +58,7 @@ async function loadFooter() {
 function setActiveNav() {
 
   const currentPage = document.body.getAttribute("data-page");
-  const links = document.querySelectorAll(".nav a");
+  const links = document.querySelectorAll("[data-nav]");
 
   let matchFound = false;
 
