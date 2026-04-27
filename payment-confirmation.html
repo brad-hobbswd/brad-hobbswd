@@ -250,18 +250,16 @@ input:focus{
 document.addEventListener("DOMContentLoaded", function(){
 
   const form = document.querySelector(".customForm");
-  const iframe = document.querySelector('iframe[name="hidden_iframe"]');
 
-  let submitted = false;
+  if(!form) return;
 
   form.addEventListener("submit", function(){
-    submitted = true;
-  });
 
-  iframe.addEventListener("load", function(){
-    if(submitted){
+    // give Google time to process before redirect
+    setTimeout(function(){
       window.location.href = "/brad-hobbswd/thanks.html";
-    }
+    }, 1200);
+
   });
 
 });
