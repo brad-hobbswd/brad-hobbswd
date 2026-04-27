@@ -5,20 +5,11 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=3">
-
-<style>
-
-/* (ALL YOUR ORIGINAL CSS REMAINS EXACTLY THE SAME) */
-
-</style>
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=2">
 
 <title>Packages | Brad Hobbs Web Design</title>
 
 <link rel="icon" href="/brad-hobbswd/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
 
 </head>
 
@@ -40,21 +31,8 @@
 <!-- INTRO -->
 <section class="packagesIntro">
   <h2 class="packagesTitle">Choose the Right Website for Your Vision</h2>
-
   <p class="packagesSubtitle">
-    Every website is built with purpose, clarity, and intention. This is more than design.
-  </p>
-
-  <p class="packagesSubtitle" style="margin-top:12px;">
-    Each package meets you at a different stage.
-  </p>
-
-  <p class="packagesSubtitle" style="margin-top:14px; font-weight:700;">
-    Tap a package below to explore what is possible 👇
-  </p>
-
-  <p class="packagesSubtitle" style="margin-top:12px; font-style:italic; opacity:.9;">
-    Built with excellence. Led with purpose. Centered on Jesus.
+    Tap a package below to explore what is possible for your website 👇
   </p>
 </section>
 
@@ -62,9 +40,17 @@
 
 <!-- CARDS -->
 <section class="packageSection">
-  <div class="package-card" onclick="openPackage('starter')"><img src="C3857A28-69EA-4491-BFE7-EED2D131AE9B.png"></div>
-  <div class="package-card" onclick="openPackage('business')"><img src="428002DB-DBEC-48CD-8ED0-851AE686E827.png"></div>
-  <div class="package-card" onclick="openPackage('premium')"><img src="1CED57CD-3692-4A62-9B8C-E377BE84063A.png"></div>
+  <div class="package-card" onclick="openPackage('starter')">
+    <img src="C3857A28-69EA-4491-BFE7-EED2D131AE9B.png">
+  </div>
+
+  <div class="package-card" onclick="openPackage('business')">
+    <img src="428002DB-DBEC-48CD-8ED0-851AE686E827.png">
+  </div>
+
+  <div class="package-card" onclick="openPackage('premium')">
+    <img src="1CED57CD-3692-4A62-9B8C-E377BE84063A.png">
+  </div>
 </section>
 
 <div class="sectionDivider"></div>
@@ -72,31 +58,8 @@
 <!-- FORM -->
 <section id="packageContact" class="formSection">
 
-  <div class="formHeader">
-
-    <h2 class="formMainTitle">Start Your Project</h2>
-
-    <p class="formLead">
-      This application helps create a clear direction for your website.
-    </p>
-
-    <div class="formIntroCard">
-
-      <h3 class="formSubTitle">Website Project Application</h3>
-
-      <p>
-        Your request will be reviewed first. Once approved, you will be directed to secure your project with payment.
-      </p>
-
-      <p class="formAssurance">
-        Administrative Fee is $50.00 (non-refundable)
-      </p>
-
-    </div>
-
-  </div>
-  
 <div class="formCard">
+
 <form 
 action="https://docs.google.com/forms/d/e/1FAIpQLSfmeW2hfpYLFM9PzfKvhVFQLB5MkKnf88Z36SW7MF082nbg_A/formResponse"
 method="POST"
@@ -109,8 +72,8 @@ class="customForm">
 <input type="text" name="entry.2136352736" required>
 </div>
 
-<!-- 🔥 NEW HIDDEN FIELD -->
-<input type="hidden" id="selectedPackage" name="entry.1478334189">
+<!-- 🔥 FIXED (no name attribute) -->
+<input type="hidden" id="selectedPackage">
 
 <!-- EMAIL -->
 <div class="formGroup">
@@ -118,30 +81,15 @@ class="customForm">
 <input type="email" name="entry.1275926525" required>
 </div>
 
-<!-- BUSINESS -->
-<div class="formGroup">
-<label>Organization or Business Name</label>
-<input type="text" name="entry.378796952">
-</div>
-
-<!-- LOCATION -->
-<div class="formGroup">
-<label>Location (City & State)</label>
-<input type="text" name="entry.1659577324">
-</div>
-
 <!-- PACKAGE -->
 <div class="formGroup">
-<label>Which website package are you interested in?</label>
+<label>Which package?</label>
 
-<label><input type="radio" name="entry.1478334189" value="Starter Website Package" required> Starter Website Package</label>
-<label><input type="radio" name="entry.1478334189" value="Business Website Package"> Business Website Package</label>
-<label><input type="radio" name="entry.1478334189" value="Premium Website Package"> Premium Website Package</label>
-<label><input type="radio" name="entry.1478334189" value="Not sure yet, need guidance"> Not sure yet</label>
+<label><input type="radio" name="entry.1478334189" value="Starter Website Package" required> Starter</label>
+<label><input type="radio" name="entry.1478334189" value="Business Website Package"> Business</label>
+<label><input type="radio" name="entry.1478334189" value="Premium Website Package"> Premium</label>
 
 </div>
-
-<!-- KEEP ALL YOUR OTHER FIELDS EXACTLY THE SAME -->
 
 <button class="btn btnPrimary">Submit Application</button>
 
@@ -160,11 +108,65 @@ class="customForm">
 
 </div>
 
+<!-- MODAL -->
+<div id="packageModal" class="packageModal">
+  <div class="modalContent" onclick="event.stopPropagation()">
+    <span class="modalClose" onclick="closePackage()">✕</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
 <script src="/brad-hobbswd/layout.js"></script>
 
 <script>
 
-/* FORM REDIRECT FIX */
+/* =========================
+   OPEN PACKAGE MODAL
+========================= */
+function openPackage(id){
+
+  // 🔥 FIX: set radio instead of hidden field
+  const radios = document.querySelectorAll('input[name="entry.1478334189"]');
+  radios.forEach(r => r.checked = false);
+
+  if(id === "starter"){
+    document.querySelector('input[value="Starter Website Package"]').checked = true;
+  }
+
+  if(id === "business"){
+    document.querySelector('input[value="Business Website Package"]').checked = true;
+  }
+
+  if(id === "premium"){
+    document.querySelector('input[value="Premium Website Package"]').checked = true;
+  }
+
+  const source = document.getElementById(id);
+  if(!source) return;
+
+  const modal = document.getElementById("packageModal");
+  const body = document.getElementById("modalBody");
+
+  body.innerHTML = source.innerHTML;
+  modal.classList.add("active");
+
+  document.body.style.overflow = "hidden";
+}
+
+/* CLOSE */
+function closePackage(){
+  document.getElementById("packageModal").classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+
+/* CLICK OUTSIDE */
+window.addEventListener("click", function(e){
+  if(e.target.id === "packageModal"){
+    closePackage();
+  }
+});
+
+/* FORM SUBMIT */
 document.addEventListener("DOMContentLoaded", function(){
 
   const form = document.querySelector(".customForm");
@@ -184,7 +186,32 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
+/* SCROLL */
+function goToForm(){
+  closePackage();
+  document.getElementById("packageContact").scrollIntoView({ behavior: "smooth" });
+}
+
 </script>
+
+<!-- HIDDEN CONTENT -->
+<div id="starter" style="display:none;">
+  <h2>Starter Website Package</h2>
+  <p>Strong starting point for your online presence.</p>
+  <button class="btn btnPrimary" onclick="goToForm()">Apply for This Package</button>
+</div>
+
+<div id="business" style="display:none;">
+  <h2>Business Website Package</h2>
+  <p>Designed for growth and visibility.</p>
+  <button class="btn btnPrimary" onclick="goToForm()">Apply for This Package</button>
+</div>
+
+<div id="premium" style="display:none;">
+  <h2>Premium Website Package</h2>
+  <p>Built for expansion and impact.</p>
+  <button class="btn btnPrimary" onclick="goToForm()">Apply for This Package</button>
+</div>
 
 </body>
 </html>
