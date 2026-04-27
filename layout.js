@@ -25,6 +25,11 @@ async function loadHeader() {
     setActiveNav();
     attachScrollEffect();
 
+    // ENSURE MOBILE LINKS ALSO GET ACTIVE STATE
+    setTimeout(() => {
+      setActiveNav();
+    }, 50);
+
   } catch (err) {
     console.error("Header load error:", err);
   }
