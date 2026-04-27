@@ -21,7 +21,7 @@ async function loadHeader() {
 
     header.innerHTML = html;
 
-    // ✅ VERY IMPORTANT: run AFTER inject
+    // RUN AFTER INJECTION
     setActiveNav();
     attachScrollEffect();
 
@@ -53,13 +53,11 @@ async function loadFooter() {
 
 
 // =========================
-// ACTIVE NAV GLOW
+// ACTIVE NAV
 // =========================
 function setActiveNav() {
 
   const currentPage = document.body.getAttribute("data-page");
-  console.log("Current page:", currentPage);
-
   const links = document.querySelectorAll(".nav a");
 
   let matchFound = false;
@@ -67,28 +65,20 @@ function setActiveNav() {
   links.forEach(link => {
     const nav = link.getAttribute("data-nav");
 
-    console.log("Checking:", nav);
-
     link.classList.remove("active");
 
     if (nav === currentPage) {
-      console.log("MATCH FOUND:", nav);
       link.classList.add("active");
       matchFound = true;
     }
   });
 
-  // ✅ FALLBACK (ONLY runs if no match)
   if (!matchFound) {
-    console.log("No data-page match, using URL fallback");
-
     const path = window.location.pathname;
 
     links.forEach(link => {
       const href = link.getAttribute("href");
-
       if (href && path.includes(href)) {
-        console.log("URL MATCH:", href);
         link.classList.add("active");
       }
     });
@@ -114,13 +104,13 @@ function toggleMenu() {
 
 
 // =========================
-// SCROLL EFFECT (UPGRADED)
+// SCROLL EFFECT (FIXED TRANSFORM)
 // =========================
 let scrollAttached = false;
 
 function attachScrollEffect() {
 
-  if (scrollAttached) return; // ✅ prevents duplicate listeners
+  if (scrollAttached) return;
   scrollAttached = true;
 
   const topbar = document.querySelector(".topbar");
@@ -132,19 +122,19 @@ function attachScrollEffect() {
 
     const currentScroll = window.scrollY;
 
-    // ===== GLOW / SHADOW =====
+    // GLOW EFFECT
     if (currentScroll > 10) {
       topbar.classList.add("scrolled");
     } else {
       topbar.classList.remove("scrolled");
     }
 
-    // ===== SUBTLE FLOAT EFFECT =====
+    // FLOAT EFFECT (FIXED TRANSFORM)
     if (currentScroll > lastScroll && currentScroll > 100) {
-      topbar.style.transform = "translate(-50%, -20px)";
+      topbar.style.transform = "translateX(-50%) translateY(-20px)";
       topbar.style.opacity = "0.95";
     } else {
-      topbar.style.transform = "translate(-50%, 0)";
+      topbar.style.transform = "translateX(-50%) translateY(0)";
       topbar.style.opacity = "1";
     }
 
