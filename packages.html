@@ -338,6 +338,60 @@
 body[data-page="packages"] .bannerSection:first-of-type{
   margin-top:10px;
 }
+
+/* ===== SITE ALERT ===== */
+.siteAlert{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:10000;
+}
+
+.siteAlert.hidden{
+  display:none;
+}
+
+.siteAlertCard{
+  width:min(600px,90%);
+  padding:30px;
+  border-radius:20px;
+  background:#050a14;
+  border:1px solid rgba(255,255,255,.12);
+  text-align:center;
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.6),
+    0 0 25px rgba(47,179,255,.15);
+  animation:fadeIn .25s ease;
+}
+
+.siteAlertCard h2{
+  margin-bottom:12px;
+}
+
+.siteAlertCard p{
+  color:var(--muted);
+  margin-bottom:10px;
+  line-height:1.6;
+}
+
+/* ===== FORM LOCK ===== */
+.formLocked{
+  opacity:.45;
+  pointer-events:none;
+  filter:blur(1px);
+  user-select:none;
+}
+
+.formUnlockNotice{
+  text-align:center;
+  margin-bottom:16px;
+  font-weight:700;
+  color:var(--accent2);
+}
+
   
 </style>
 
@@ -351,6 +405,41 @@ body[data-page="packages"] .bannerSection:first-of-type{
 </head>
 
 <body data-page="packages">
+  
+  <!-- ===== PRELOAD ALERT ===== -->
+<div id="siteAlert" class="siteAlert">
+  <div class="siteAlertCard">
+    <h2>Before You Continue</h2>
+
+    <p>
+      Every website requires a domain and hosting before launch.
+    </p>
+
+    <p>
+      Preparation on both sides allows the project to move forward without delays.
+    </p>
+
+    <p>
+      Development is completed here while clients prepare content, branding, and required information.
+    </p>
+
+    <p style="font-weight:700; margin-top:10px;">
+      Please confirm you understand before submitting a project application.
+    </p>
+
+    <div style="margin-top:18px; display:flex; flex-direction:column; gap:10px;">
+      
+      <button onclick="acceptSiteRequirements()" class="btn btnPrimary">
+        I Understand & Want to Proceed
+      </button>
+
+      <button onclick="viewOnlyMode()" class="btn" style="opacity:.7;">
+        View Plans Only
+      </button>
+
+    </div>
+  </div>
+</div>
 
 <div class="wrap">
 
@@ -426,6 +515,11 @@ body[data-page="packages"] .bannerSection:first-of-type{
   </div>
   
 <div class="formCard">
+  
+  <div id="formNotice" class="formUnlockNotice" style="display:none;">
+  Please confirm the project requirements before submitting an application.
+</div>
+  
 <form 
 action="https://docs.google.com/forms/d/e/1FAIpQLSfmeW2hfpYLFM9PzfKvhVFQLB5MkKnf88Z36SW7MF082nbg_A/formResponse"
 method="POST"
@@ -649,6 +743,18 @@ document.addEventListener("DOMContentLoaded", function(){
    SCROLL TO FORM FROM MODAL
 ========================= */
 function goToForm(){
+
+  const access = localStorage.getItem("siteAccess");
+
+  if(access !== "granted"){
+    const alert = document.getElementById("siteAlert");
+    if(alert){
+      alert.classList.remove("hidden");
+    }
+    document.body.style.overflow = "hidden";
+    return;
+  }
+
   closePackage();
 
   const section = document.getElementById("packageContact");
@@ -658,6 +764,87 @@ function goToForm(){
     behavior: "smooth"
   });
 }
+
+/* =========================
+   SITE MODE CONTROL
+========================= */
+
+function acceptSiteRequirements(){
+  localStorage.setItem("siteAccess", "granted");
+
+  unlockForm();
+  closeSiteAlert();
+}
+
+function viewOnlyMode(){
+  localStorage.setItem("siteAccess", "viewOnly");
+
+  lockForm();
+  closeSiteAlert();
+}
+
+function lockForm(){
+  const formCard = document.querySelector(".formCard");
+  const notice = document.getElementById("formNotice");
+
+  if(formCard){
+    formCard.classList.add("formLocked");
+  }
+
+  if(notice){
+    notice.style.display = "block";
+  }
+}
+
+function unlockForm(){
+  const formCard = document.querySelector(".formCard");
+  const notice = document.getElementById("formNotice");
+
+  if(formCard){
+    formCard.classList.remove("formLocked");
+  }
+
+  if(notice){
+    notice.style.display = "none";
+  }
+}
+
+function closeSiteAlert(){
+  const alert = document.getElementById("siteAlert");
+
+  if(alert){
+    alert.classList.add("hidden");
+  }
+
+  document.body.style.overflow = "auto";
+}
+
+/* =========================
+   INIT STATE
+========================= */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const alert = document.getElementById("siteAlert");
+  const access = localStorage.getItem("siteAccess");
+
+  if(access === "granted"){
+    unlockForm();
+    if(alert) alert.classList.add("hidden");
+    return;
+  }
+
+  if(access === "viewOnly"){
+    lockForm();
+    if(alert) alert.classList.add("hidden");
+    return;
+  }
+
+  // first visit
+  document.body.style.overflow = "hidden";
+  lockForm();
+
+});
 
 </script>
 <!-- ===== PACKAGE CONTENT (REQUIRED FOR MODAL) ===== -->
