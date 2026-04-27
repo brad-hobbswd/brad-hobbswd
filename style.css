@@ -252,3 +252,11 @@ img{
   margin:18px auto 4px;  /* 🔥 tighter to footer only */
 }
 
+/* ================= NAVBAR (GLOBAL FIX) ================= */
+
+.topbar{
+  transition:
+    transform .35s ease,
+    box-shadow .3s ease,
+    opacity .3s ease;
+}
