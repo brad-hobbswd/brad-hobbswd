@@ -5,114 +5,25 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=2">
+<link rel="stylesheet" href="/brad-hobbswd/style.css">
 
 <title>Payment Confirmation | Brad Hobbs Web Design</title>
 
 <style>
 
-/* ===== INTRO ===== */
-.confirmIntro{
-  text-align:center;
-  padding:30px 0 10px;
-}
-
-.confirmTitle{
-  font-size:30px;
-  font-weight:900;
-}
-
-.confirmSubtitle{
-  color:var(--muted);
-  margin-top:14px;
-  max-width:650px;
-  margin-inline:auto;
-  line-height:1.6;
-}
-
-/* ===== FORM CARD ===== */
-.confirmCard{
-  width:min(700px,92%);
-  margin:40px auto;
-  padding:32px;
-
-  border-radius:22px;
-  border:1px solid rgba(255,255,255,.12);
-
-  background:rgba(255,255,255,.04);
-  backdrop-filter:blur(10px);
-
-  box-shadow:
-    0 25px 60px rgba(0,0,0,.5),
-    0 0 25px rgba(47,179,255,.12);
-}
-
-/* ===== FORM ===== */
-.customForm{
-  display:flex;
-  flex-direction:column;
-  gap:22px;
-}
-
-.formBlock{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-
-/* ===== LABEL TITLE ===== */
-.formBlock > label{
-  font-weight:700;
-  font-size:14px;
-  color:var(--muted);
-}
-
-/* ===== INPUTS ===== */
-input{
-  width:100%;
-  padding:12px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
-  color:var(--text);
-}
-
-input:focus{
-  border-color:var(--accent);
-  box-shadow:0 0 0 2px rgba(47,179,255,.2);
-}
-
-/* ===== RADIO FIX (THIS IS THE KEY FIX) ===== */
-.radioGroup{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.radioGroup label{
+/* FIX RADIO + CHECKBOX ALIGNMENT */
+.formGroup label{
   display:flex;
   align-items:center;
-  gap:12px;
-  justify-content:flex-start;
+  gap:10px;
   cursor:pointer;
+  margin:6px 0;
 }
 
-.radioGroup input[type="radio"]{
-  margin:0;
+.formGroup input[type="radio"],
+.formGroup input[type="checkbox"]{
   width:auto;
-}
-
-/* ===== BUTTON ===== */
-.submitBtn{
-  margin-top:10px;
-}
-
-/* ===== NOTE ===== */
-.confirmNote{
-  text-align:center;
-  margin-top:20px;
-  font-size:13px;
-  opacity:.8;
+  margin:0;
 }
 
 </style>
@@ -127,19 +38,19 @@ input:focus{
 
 <main>
 
-<!-- INTRO -->
-<section class="confirmIntro">
-  <h2 class="confirmTitle">Confirm Your Payment</h2>
-  <p class="confirmSubtitle">
-    This step ensures your payment is matched correctly so your project can move forward without delay.
+<section class="packagesIntro">
+  <h2 class="packagesTitle">Confirm Your Payment</h2>
+
+  <p class="packagesSubtitle">
+    This step ensures your payment is matched correctly and your project can begin without delay.
   </p>
 </section>
 
 <div class="sectionDivider"></div>
 
-<!-- FORM -->
-<section>
-  <div class="confirmCard">
+<section class="formSection">
+
+  <div class="formCard">
 
     <form 
       action="https://docs.google.com/forms/d/e/1FAIpQLSduzEGfRBkUNuZ7QcHD8YQniOLgzBi7KdH1PL-drRS2DvpL6g/formResponse"
@@ -148,60 +59,54 @@ input:focus{
       class="customForm">
 
       <!-- NAME -->
-      <div class="formBlock">
+      <div class="formGroup">
         <label>Full Name *</label>
         <input type="text" name="entry.1547660884" required>
       </div>
 
       <!-- EMAIL -->
-      <div class="formBlock">
+      <div class="formGroup">
         <label>Email Address *</label>
         <input type="email" name="entry.1180773792" required>
       </div>
 
       <!-- PACKAGE -->
-      <div class="formBlock">
+      <div class="formGroup">
         <label>Package Selected *</label>
-        <div class="radioGroup">
-          <label><input type="radio" name="entry.50606836" value="Starter Website Package" required> Starter Website Package</label>
-          <label><input type="radio" name="entry.50606836" value="Business Website Package"> Business Website Package</label>
-          <label><input type="radio" name="entry.50606836" value="Premium Website Package"> Premium Website Package</label>
-        </div>
+
+        <label><input type="radio" name="entry.50606836" value="Starter Website Package" required> Starter Website Package</label>
+        <label><input type="radio" name="entry.50606836" value="Business Website Package"> Business Website Package</label>
+        <label><input type="radio" name="entry.50606836" value="Premium Website Package"> Premium Website Package</label>
       </div>
 
       <!-- PAYMENT TYPE -->
-      <div class="formBlock">
+      <div class="formGroup">
         <label>Payment Type *</label>
-        <div class="radioGroup">
-          <label><input type="radio" name="entry.177527919" value="Deposit" required> Deposit</label>
-          <label><input type="radio" name="entry.177527919" value="Full Payment (One Time and Admin Fee)"> Full Payment</label>
-        </div>
+
+        <label><input type="radio" name="entry.177527919" value="Deposit Only (Admin Fee)" required> Deposit Only (Admin Fee)</label>
+        <label><input type="radio" name="entry.177527919" value="Full Payment (One Time and Admin Fee)"> Full Payment (One Time and Admin Fee)</label>
       </div>
 
       <!-- AMOUNT -->
-      <div class="formBlock">
+      <div class="formGroup">
         <label>Amount Sent *</label>
         <input type="text" name="entry.698385734" placeholder="$51, $400, $700, $1250" required>
       </div>
 
       <!-- CASH APP -->
-      <div class="formBlock">
+      <div class="formGroup">
         <label>Cash App Name *</label>
         <input type="text" name="entry.1513308410" placeholder="$brad1gabe" required>
       </div>
 
-      <!-- NOTE -->
-      <div class="confirmNote">
-        Include your name and selected package in your Cash App payment note.
-      </div>
-
-      <button class="btn btnPrimary submitBtn">Submit Confirmation</button>
+      <button class="btn btnPrimary">Submit Confirmation</button>
 
     </form>
 
     <iframe name="hidden_iframe" style="display:none;"></iframe>
 
   </div>
+
 </section>
 
 </main>
@@ -218,8 +123,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   const form = document.querySelector(".customForm");
   const iframe = document.querySelector('iframe[name="hidden_iframe"]');
-
-  if(!form || !iframe) return;
 
   let submitted = false;
 
