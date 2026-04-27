@@ -96,6 +96,7 @@ function setActiveNav() {
 
 }
 
+
 // =========================
 // MOBILE MENU
 // =========================
@@ -113,15 +114,42 @@ function toggleMenu() {
 
 
 // =========================
-// SCROLL EFFECT (SAFE ATTACH)
+// SCROLL EFFECT (UPGRADED)
 // =========================
+let scrollAttached = false;
+
 function attachScrollEffect() {
+
+  if (scrollAttached) return; // ✅ prevents duplicate listeners
+  scrollAttached = true;
 
   const topbar = document.querySelector(".topbar");
   if (!topbar) return;
 
+  let lastScroll = 0;
+
   window.addEventListener("scroll", () => {
-    topbar.classList.toggle("scrolled", window.scrollY > 10);
+
+    const currentScroll = window.scrollY;
+
+    // ===== GLOW / SHADOW =====
+    if (currentScroll > 10) {
+      topbar.classList.add("scrolled");
+    } else {
+      topbar.classList.remove("scrolled");
+    }
+
+    // ===== SUBTLE FLOAT EFFECT =====
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      topbar.style.transform = "translate(-50%, -20px)";
+      topbar.style.opacity = "0.95";
+    } else {
+      topbar.style.transform = "translate(-50%, 0)";
+      topbar.style.opacity = "1";
+    }
+
+    lastScroll = currentScroll;
+
   });
 
 }
