@@ -5,7 +5,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=2">
+<link rel="stylesheet" href="/brad-hobbswd/style.css">
 
 <title>Payment Confirmation | Brad Hobbs Web Design</title>
 
@@ -101,6 +101,20 @@ input:focus{
   margin:0;
 }
 
+/* ===== CHECKBOX ===== */
+.checkboxGroup{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.checkboxGroup input{
+  width:auto;
+  margin-top:3px;
+}
+
 /* ===== BUTTON ===== */
 .submitBtn{
   margin-top:10px;
@@ -126,22 +140,16 @@ input:focus{
 
 <main>
 
-<!-- INTRO -->
 <section class="confirmIntro">
-
   <h2 class="confirmTitle">Confirm Your Payment</h2>
-
   <p class="confirmSubtitle">
     This step ensures your payment is matched correctly so your project can move forward without delay.
   </p>
-
 </section>
 
 <div class="sectionDivider"></div>
 
-<!-- FORM -->
 <section>
-
   <div class="confirmCard">
 
     <form 
@@ -165,7 +173,6 @@ input:focus{
       <!-- PACKAGE -->
       <div class="formBlock">
         <label>Package Selected *</label>
-
         <div class="radioGroup">
           <label><input type="radio" name="entry.50606836" value="Starter Website Package" required> Starter Website Package</label>
           <label><input type="radio" name="entry.50606836" value="Business Website Package"> Business Website Package</label>
@@ -173,12 +180,11 @@ input:focus{
         </div>
       </div>
 
-      <!-- PAYMENT TYPE -->
+      <!-- PAYMENT TYPE (FIXED) -->
       <div class="formBlock">
         <label>Payment Type *</label>
-
         <div class="radioGroup">
-          <label><input type="radio" name="entry.177527919" value="Deposit" required> Deposit</label>
+          <label><input type="radio" name="entry.177527919" value="Deposit Only (Admin Fee)" required> Deposit</label>
           <label><input type="radio" name="entry.177527919" value="Full Payment (One Time and Admin Fee)"> Full Payment</label>
         </div>
       </div>
@@ -195,9 +201,16 @@ input:focus{
         <input type="text" name="entry.1513308410" placeholder="$brad1gabe" required>
       </div>
 
-      <!-- NOTE (REPLACED CHECKBOX) -->
-      <div class="confirmNote">
-        Include your name and package in your Cash App note so your payment can be matched correctly.
+      <!-- CHECKBOX -->
+      <div class="checkboxGroup">
+        <input 
+          type="checkbox" 
+          name="entry.1501782927" 
+          value="I included my name and package in the Cash App payment note" 
+          required>
+        <span>
+          I included my name and package in the Cash App payment note
+        </span>
       </div>
 
       <button class="btn btnPrimary submitBtn">Submit Confirmation</button>
@@ -206,8 +219,11 @@ input:focus{
 
     <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-  </div>
+    <div class="confirmNote">
+      Your submission ensures your payment is matched and your project can begin.
+    </div>
 
+  </div>
 </section>
 
 </main>
@@ -224,8 +240,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   const form = document.querySelector(".customForm");
   const iframe = document.querySelector('iframe[name="hidden_iframe"]');
-
-  if(!form || !iframe) return;
 
   let submitted = false;
 
