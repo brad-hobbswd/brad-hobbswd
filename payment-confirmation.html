@@ -9,6 +9,117 @@
 
 <title>Payment Confirmation | Brad Hobbs Web Design</title>
 
+<style>
+
+/* ===== PAGE SPACING ===== */
+.confirmWrapper{
+  margin-top:40px;
+}
+
+/* ===== INTRO ===== */
+.confirmIntro{
+  text-align:center;
+  padding:20px 0 10px;
+}
+
+.confirmTitle{
+  font-size:30px;
+  font-weight:900;
+}
+
+.confirmSubtitle{
+  color:var(--muted);
+  margin-top:14px;
+  max-width:650px;
+  margin-inline:auto;
+  line-height:1.6;
+}
+
+/* ===== FORM CARD ===== */
+.confirmCard{
+  width:min(700px,92%);
+  margin:40px auto;
+  padding:32px;
+
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.12);
+
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.5),
+    0 0 25px rgba(47,179,255,.12);
+}
+
+/* ===== FORM LAYOUT ===== */
+.customForm{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+/* grouping */
+.formBlock{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+/* label spacing */
+.formBlock label{
+  font-weight:700;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* radio group spacing */
+.radioGroup{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+/* checkbox */
+.checkboxGroup{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:14px;
+  line-height:1.4;
+}
+
+/* inputs */
+input, textarea{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
+  color:var(--text);
+}
+
+/* focus */
+input:focus, textarea:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 2px rgba(47,179,255,.2);
+}
+
+/* button spacing */
+.submitBtn{
+  margin-top:10px;
+}
+
+/* note */
+.confirmNote{
+  text-align:center;
+  margin-top:20px;
+  font-size:13px;
+  opacity:.8;
+}
+
+</style>
+
 </head>
 
 <body data-page="payment-confirmation">
@@ -20,12 +131,12 @@
 <main>
 
 <!-- INTRO -->
-<section class="packagesIntro">
+<section class="confirmIntro">
 
-  <h2 class="packagesTitle">Confirm Your Payment</h2>
+  <h2 class="confirmTitle">Confirm Your Payment</h2>
 
-  <p class="packagesSubtitle">
-    This step ensures your payment is matched correctly and your project can begin without delay.
+  <p class="confirmSubtitle">
+    This step ensures your payment is matched correctly so your project can move forward without delay.
   </p>
 
 </section>
@@ -33,9 +144,9 @@
 <div class="sectionDivider"></div>
 
 <!-- FORM -->
-<section class="formSection">
+<section class="confirmWrapper">
 
-  <div class="formCard">
+  <div class="confirmCard">
 
     <form 
       action="https://docs.google.com/forms/d/e/1FAIpQLSduzEGfRBkUNuZ7QcHD8YQniOLgzBi7KdH1PL-drRS2DvpL6g/formResponse"
@@ -44,63 +155,72 @@
       class="customForm">
 
       <!-- NAME -->
-      <div class="formGroup">
+      <div class="formBlock">
         <label>Full Name *</label>
         <input type="text" name="entry.1547660884" required>
       </div>
 
       <!-- EMAIL -->
-      <div class="formGroup">
+      <div class="formBlock">
         <label>Email Address *</label>
         <input type="email" name="entry.1180773792" required>
       </div>
 
       <!-- PACKAGE -->
-      <div class="formGroup">
+      <div class="formBlock">
         <label>Package Selected *</label>
 
-        <label><input type="radio" name="entry.50606836" value="Starter Website Package" required> Starter Website Package</label>
-        <label><input type="radio" name="entry.50606836" value="Business Website Package"> Business Website Package</label>
-        <label><input type="radio" name="entry.50606836" value="Premium Website Package"> Premium Website Package</label>
+        <div class="radioGroup">
+          <label><input type="radio" name="entry.50606836" value="Starter Website Package" required> Starter Website Package</label>
+          <label><input type="radio" name="entry.50606836" value="Business Website Package"> Business Website Package</label>
+          <label><input type="radio" name="entry.50606836" value="Premium Website Package"> Premium Website Package</label>
+        </div>
       </div>
 
       <!-- PAYMENT TYPE -->
-      <div class="formGroup">
+      <div class="formBlock">
         <label>Payment Type *</label>
 
-        <label><input type="radio" name="entry.177527919" value="Deposit" required> Deposit</label>
-        <label><input type="radio" name="entry.177527919" value="Full Payment (One Time and Admin Fee)"> Full Payment</label>
+        <div class="radioGroup">
+          <label><input type="radio" name="entry.177527919" value="Deposit" required> Deposit</label>
+          <label><input type="radio" name="entry.177527919" value="Full Payment (One Time and Admin Fee)"> Full Payment</label>
+        </div>
       </div>
 
       <!-- AMOUNT -->
-      <div class="formGroup">
+      <div class="formBlock">
         <label>Amount Sent *</label>
         <input type="text" name="entry.698385734" placeholder="$51, $400, $700, $1250" required>
       </div>
 
       <!-- CASH APP -->
-      <div class="formGroup">
+      <div class="formBlock">
         <label>Cash App Name *</label>
         <input type="text" name="entry.1513308410" placeholder="$brad1gabe" required>
       </div>
 
       <!-- CONFIRMATION -->
-      <div class="formGroup">
-        <label>
-          <input 
-            type="checkbox" 
-            name="entry.1501782927" 
-            value="I included my name and package in the Cash App payment note" 
-            required>
+      <div class="checkboxGroup">
+        <input 
+          type="checkbox" 
+          name="entry.1501782927" 
+          value="I included my name and package in the Cash App payment note" 
+          required>
+
+        <span>
           I included my name and package in the Cash App payment note
-        </label>
+        </span>
       </div>
 
-      <button class="btn btnPrimary">Submit Confirmation</button>
+      <button class="btn btnPrimary submitBtn">Submit Confirmation</button>
 
     </form>
 
     <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <div class="confirmNote">
+      Your submission ensures your payment is matched correctly and your project can begin.
+    </div>
 
   </div>
 
