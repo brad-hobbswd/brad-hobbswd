@@ -744,9 +744,7 @@ document.addEventListener("DOMContentLoaded", function(){
 ========================= */
 function goToForm(){
 
-  const access = localStorage.getItem("siteAccess");
-
-  if(access !== "granted"){
+  if(!siteAccessGranted){
     const alert = document.getElementById("siteAlert");
     if(alert){
       alert.classList.remove("hidden");
@@ -766,19 +764,19 @@ function goToForm(){
 }
 
 /* =========================
-   SITE MODE CONTROL
+   SITE MODE CONTROL (STRICT)
 ========================= */
 
-function acceptSiteRequirements(){
-  localStorage.setItem("siteAccess", "granted");
+let siteAccessGranted = false;
 
+function acceptSiteRequirements(){
+  siteAccessGranted = true;
   unlockForm();
   closeSiteAlert();
 }
 
 function viewOnlyMode(){
-  localStorage.setItem("siteAccess", "viewOnly");
-
+  siteAccessGranted = false;
   lockForm();
   closeSiteAlert();
 }
@@ -820,31 +818,26 @@ function closeSiteAlert(){
 }
 
 /* =========================
-   INIT STATE
+   INIT (ALWAYS LOCK)
 ========================= */
 
 document.addEventListener("DOMContentLoaded", function(){
 
   const alert = document.getElementById("siteAlert");
-  const access = localStorage.getItem("siteAccess");
 
-  if(access === "granted"){
-    unlockForm();
-    if(alert) alert.classList.add("hidden");
-    return;
+  // ALWAYS reset access
+  siteAccessGranted = false;
+
+  if(alert){
+    alert.classList.remove("hidden");
   }
 
-  if(access === "viewOnly"){
-    lockForm();
-    if(alert) alert.classList.add("hidden");
-    return;
-  }
-
-  // first visit
   document.body.style.overflow = "hidden";
   lockForm();
 
 });
+
+
 
 </script>
 <!-- ===== PACKAGE CONTENT (REQUIRED FOR MODAL) ===== -->
