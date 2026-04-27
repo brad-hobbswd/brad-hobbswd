@@ -11,15 +11,10 @@
 
 <style>
 
-/* ===== PAGE SPACING ===== */
-.confirmWrapper{
-  margin-top:40px;
-}
-
 /* ===== INTRO ===== */
 .confirmIntro{
   text-align:center;
-  padding:20px 0 10px;
+  padding:30px 0 10px;
 }
 
 .confirmTitle{
@@ -52,45 +47,28 @@
     0 0 25px rgba(47,179,255,.12);
 }
 
-/* ===== FORM LAYOUT ===== */
+/* ===== FORM STRUCTURE ===== */
 .customForm{
   display:flex;
   flex-direction:column;
   gap:22px;
 }
 
-/* grouping */
 .formBlock{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-/* label spacing */
-.formBlock label{
-  font-weight:700;
-  font-size:14px;
-  color:var(--muted);
-}
-
-/* radio group spacing */
-.radioGroup{
   display:flex;
   flex-direction:column;
   gap:8px;
 }
 
-/* checkbox */
-.checkboxGroup{
-  display:flex;
-  align-items:flex-start;
-  gap:10px;
+/* ONLY top labels */
+.formBlock > label{
+  font-weight:700;
   font-size:14px;
-  line-height:1.4;
+  color:var(--muted);
 }
 
-/* inputs */
-input, textarea{
+/* ===== INPUTS ===== */
+input{
   width:100%;
   padding:12px;
   border-radius:12px;
@@ -99,18 +77,51 @@ input, textarea{
   color:var(--text);
 }
 
-/* focus */
-input:focus, textarea:focus{
+input:focus{
   border-color:var(--accent);
   box-shadow:0 0 0 2px rgba(47,179,255,.2);
 }
 
-/* button spacing */
+/* ===== RADIO ===== */
+.radioGroup{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.radioGroup label{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  font-weight:400;
+}
+
+.radioGroup input[type="radio"]{
+  width:auto;
+  margin:0;
+}
+
+/* ===== CHECKBOX ===== */
+.checkboxGroup{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.checkboxGroup input{
+  width:auto;
+  margin-top:3px;
+}
+
+/* ===== BUTTON ===== */
 .submitBtn{
   margin-top:10px;
 }
 
-/* note */
+/* ===== NOTE ===== */
 .confirmNote{
   text-align:center;
   margin-top:20px;
@@ -144,7 +155,7 @@ input:focus, textarea:focus{
 <div class="sectionDivider"></div>
 
 <!-- FORM -->
-<section class="confirmWrapper">
+<section>
 
   <div class="confirmCard">
 
@@ -199,7 +210,7 @@ input:focus, textarea:focus{
         <input type="text" name="entry.1513308410" placeholder="$brad1gabe" required>
       </div>
 
-      <!-- CONFIRMATION -->
+      <!-- CHECKBOX -->
       <div class="checkboxGroup">
         <input 
           type="checkbox" 
@@ -219,7 +230,7 @@ input:focus, textarea:focus{
     <iframe name="hidden_iframe" style="display:none;"></iframe>
 
     <div class="confirmNote">
-      Your submission ensures your payment is matched correctly and your project can begin.
+      Your submission ensures your payment is matched and your project can begin.
     </div>
 
   </div>
