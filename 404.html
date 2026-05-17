@@ -14,7 +14,7 @@
 <style>
 
 .errorWrap{
-min-height:70vh;
+min-height:75vh;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -22,54 +22,74 @@ padding:40px 24px;
 }
 
 .errorCard{
-max-width:760px;
+max-width:800px;
 width:100%;
 text-align:center;
-
 padding:50px 35px;
 
 border-radius:22px;
 
-background:rgba(255,255,255,.03);
+background:
+linear-gradient(
+145deg,
+rgba(47,179,255,.08),
+rgba(255,255,255,.03)
+);
 
-border:1px solid rgba(255,255,255,.08);
+border:1px solid rgba(47,179,255,.15);
 
 box-shadow:
-0 12px 40px rgba(0,0,0,.45);
+0 15px 45px rgba(0,0,0,.45),
+0 0 25px rgba(47,179,255,.10);
+
+position:relative;
+overflow:hidden;
+}
+
+.errorCard:before{
+content:"<div> </div>";
+position:absolute;
+top:20px;
+left:20px;
+opacity:.06;
+font-size:2rem;
+font-family:monospace;
 }
 
 .errorCode{
-font-size:5rem;
+font-size:6rem;
 font-weight:800;
-margin-bottom:12px;
-line-height:1;
+margin-bottom:10px;
 }
 
-.errorCard h1{
-margin-bottom:20px;
+.errorTag{
+font-family:monospace;
+opacity:.65;
+margin-bottom:25px;
 }
 
 .errorCard p{
 line-height:1.8;
 color:var(--muted);
-max-width:620px;
+max-width:650px;
 margin:0 auto 16px;
 }
 
 .buttonArea{
-margin-top:30px;
+margin-top:35px;
 }
 
-.smallText{
-font-size:.92rem;
-margin-top:18px;
-opacity:.7;
+.devNote{
+margin-top:25px;
+font-family:monospace;
+opacity:.55;
+font-size:.9rem;
 }
 
 @media(max-width:768px){
 
 .errorCode{
-font-size:4rem;
+font-size:4.5rem;
 }
 
 .errorCard{
@@ -96,20 +116,24 @@ padding:35px 24px;
 404
 </div>
 
+<div class="errorTag">
+PageNotFound.js
+</div>
+
 <h1>
-Looks like this page escaped during development.
+Oops. This page slipped out of the design layout.
 </h1>
 
 <p>
-A few pixels packed their bags, a button wandered off, and this page somehow disappeared into the internet wilderness.
+A wandering div, missing route, curious button, or escaped line of code may have taken this page somewhere unexpected.
 </p>
 
 <p>
-Brad Hobbs Web Design searched the layout, checked the code, refreshed the browser, and followed the breadcrumbs. Nothing turned up.
+Brad Hobbs Web Design searched the files, inspected the elements, refreshed the browser, and checked the console. No luck.
 </p>
 
 <p>
-Home remains safely online and waiting.
+Home remains stable, responsive, and fully deployed.
 </p>
 
 <div class="buttonArea">
@@ -120,9 +144,9 @@ Return Home
 
 </div>
 
-<div class="smallText">
+<div class="devNote">
 
-Error 404: Missing page. Designer mildly concerned.
+// Developer note: page currently unavailable
 
 </div>
 
