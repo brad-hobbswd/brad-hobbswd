@@ -45,7 +45,12 @@ display:flex;
 align-items:center;
 justify-content:center;
 flex-wrap:wrap;
-gap:14px;
+gap:0;
+}
+
+.footerText span,
+.footerText a{
+margin:0 8px;
 }
 
 .footerText a{
@@ -59,15 +64,20 @@ opacity:.75;
 }
 
 .footerDivider{
-opacity:.45;
+opacity:.4;
+margin:0 2px;
 }
 
 @media(max-width:768px){
 
 .footerText{
-gap:8px;
-font-size:.95rem;
-padding:0 10px;
+padding:0 12px;
+line-height:1.8;
+}
+
+.footerText span,
+.footerText a{
+margin:0 6px;
 }
 
 }
