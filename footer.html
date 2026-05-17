@@ -1,47 +1,56 @@
 <footer class="siteFooter">
   
-  <div class="footerInner">
+<div class="footerInner">
 
-    <div class="footerBrand">
-      Brad Hobbs Web Design
-    </div>
+<div class="footerBrand">
+Brad Hobbs Web Design
+</div>
 
-    <div class="footerText">
+<div class="footerText">
 
-      © <span id="y"></span> All rights reserved
+<span>
+© <span id="y"></span> All rights reserved
+</span>
 
-      <span class="footerDivider">•</span>
+<span class="footerDivider">•</span>
 
-      <a href="/brad-hobbswd/privacy.html">
-        Privacy Policy
-      </a>
+<a href="/brad-hobbswd/privacy.html">
+Privacy Policy
+</a>
 
-      <span class="footerDivider">•</span>
+<span class="footerDivider">•</span>
 
-      <a href="/brad-hobbswd/terms.html">
-        Terms
-      </a>
+<a href="/brad-hobbswd/terms.html">
+Terms
+</a>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </footer>
 
 <style>
 
-.footerText{
+.footerInner{
 display:flex;
-justify-content:center;
+flex-direction:column;
 align-items:center;
-flex-wrap:wrap;
-gap:10px;
+gap:18px;
 text-align:center;
 }
 
+.footerText{
+display:flex;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
+gap:14px;
+}
+
 .footerText a{
-color:inherit;
 text-decoration:none;
+color:inherit;
 transition:.3s;
 }
 
@@ -50,7 +59,17 @@ opacity:.75;
 }
 
 .footerDivider{
-opacity:.6;
+opacity:.45;
+}
+
+@media(max-width:768px){
+
+.footerText{
+gap:8px;
+font-size:.95rem;
+padding:0 10px;
+}
+
 }
 
 </style>
