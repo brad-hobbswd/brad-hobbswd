@@ -12,7 +12,6 @@
 
 .bannerSection{
   margin-top:40px;
-
   display:flex;
   justify-content:center;
 }
@@ -67,73 +66,184 @@ body[data-page="services"] .bannerSection:first-of-type{
 }
 
 
-/* CONTENT */
+/* ===== SERVICE LAYOUT FIX ===== */
 
-.homeIntro{
+.serviceSection{
 
-max-width:700px;
+width:min(1100px,92%);
 
 margin:
-30px auto
-0;
+0 auto;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+
+/* TEXT CARDS */
+
+.serviceText{
+
+width:min(900px,100%);
+
+margin:
+20px auto;
 
 padding:
-0
-20px
+45px
 40px;
 
 text-align:center;
 
-}
+border-radius:22px;
 
+overflow:hidden;
 
-.homeIntro p{
+border:
+1px solid rgba(
+255,
+255,
+255,
+.12
+);
 
-color:var(--muted);
-
-line-height:1.8;
-
-margin-bottom:30px;
-
-}
-
-
-/* BUTTON CENTER */
-
-.resource-center{
-
-display:flex;
-
-justify-content:center;
-
-margin-top:20px;
-
-}
-
-
-.resource-center .btn{
-
-padding:
-16px
-30px;
+background:
+rgba(
+255,
+255,
+255,
+.03
+);
 
 box-shadow:
-0 10px 30px rgba(
+0 12px 40px rgba(
+0,
+0,
+0,
+.45
+),
+0 0 20px rgba(
 47,
 179,
 255,
-.22
+.12
 );
-
-transition:.35s;
 
 }
 
 
-.resource-center .btn:hover{
+.serviceText h2,
+.serviceText h3{
 
-transform:
-translateY(-4px);
+margin-bottom:18px;
+
+}
+
+
+.serviceText p{
+
+max-width:700px;
+
+margin:
+0 auto
+18px;
+
+line-height:1.8;
+
+color:var(--muted);
+
+}
+
+
+/* SERVICE POINTS */
+
+.servicePoints{
+
+margin-top:25px;
+
+}
+
+
+.servicePoints p{
+
+margin-bottom:14px;
+
+color:white;
+
+}
+
+
+/* LOWER BANNERS */
+
+.pageBanner{
+
+width:min(
+1100px,
+100%
+);
+
+margin:
+20px auto;
+
+border-radius:22px;
+
+overflow:hidden;
+
+border:
+1px solid rgba(
+255,
+255,
+255,
+.12
+);
+
+background:
+rgba(
+255,
+255,
+255,
+.03
+);
+
+box-shadow:
+0 12px 40px rgba(
+0,
+0,
+0,
+.45
+),
+0 0 20px rgba(
+47,
+179,
+255,
+.12
+);
+
+}
+
+
+.pageBanner img{
+
+width:100%;
+
+display:block;
+
+height:auto;
+
+}
+
+
+/* BUTTON */
+
+.btnPrimary{
+
+display:inline-block;
+
+margin-top:20px;
 
 }
 
@@ -150,7 +260,7 @@ width:min(
 height:1px;
 
 margin:
-70px auto;
+60px auto;
 
 background:
 linear-gradient(
