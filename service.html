@@ -8,7 +8,7 @@
 
 <style>
 
-/* ===== MATCH INDEX STRUCTURE ===== */
+/* ===== MATCH SERVICES STRUCTURE ===== */
 
 .bannerSection{
   margin-top:40px;
@@ -25,13 +25,10 @@ body[data-page="services"] .bannerSection:first-of-type{
 /* UNIFIED BANNER STYLE */
 
 .bannerCard{
-
   width:min(1100px,92%);
-
   margin:20px auto;
 
   border-radius:22px;
-
   overflow:hidden;
 
   border:1px solid rgba(255,255,255,.12);
@@ -39,105 +36,74 @@ body[data-page="services"] .bannerSection:first-of-type{
   background:
   rgba(
   255,
-  255,
-  255,
-  .03
-  );
+ 255,
+ 255,
+ .03
+ );
 
   box-shadow:
     0 12px 40px rgba(0,0,0,.45),
     0 0 20px rgba(47,179,255,.12);
-
 }
 
 
 .bannerCard img{
-
   width:100%;
-
   height:auto;
-
   display:block;
-
 }
 
 
-/* CONTENT */
+/* INTRO */
 
 .homeIntro{
+  max-width:700px;
 
-max-width:700px;
+  margin:
+  30px auto
+  0;
 
-margin:
-30px auto
-0;
+  padding:
+  0
+  20px
+  40px;
 
-padding:
-0
-20px
-40px;
-
-text-align:center;
-
+  text-align:center;
 }
 
 
 .homeIntro p{
+  color:var(--muted);
 
-color:var(--muted);
+  line-height:1.8;
 
-line-height:1.8;
-
-margin-bottom:30px;
-
+  margin-bottom:30px;
 }
 
 
-.homeIntro ul{
-
-list-style:none;
-
-padding:0;
-
-margin:25px auto;
-
-}
-
-
-.homeIntro li{
-
-line-height:2;
-
-color:white;
-
-}
-
-
-/* BUTTON */
+/* BUTTON CENTER */
 
 .resource-center{
-
-margin-top:20px;
-
+  margin-top:20px;
 }
 
 
 .resource-center .btn{
 
-padding:
-16px
-30px;
+  padding:
+  16px
+  30px;
 
-box-shadow:
-0 10px 30px rgba(
-47,
-179,
-255,
-.22
-);
+  box-shadow:
+  0 10px 30px
+  rgba(
+  47,
+  179,
+  255,
+  .22
+  );
 
-transition:.35s;
-
+  transition:.35s;
 }
 
 
@@ -153,37 +119,50 @@ translateY(-4px);
 
 .sectionDivider{
 
-width:min(
-900px,
-92%
-);
+  width:min(
+  900px,
+  92%
+  );
 
-height:1px;
+  height:1px;
 
-margin:
-70px auto;
+  margin:
+  70px auto;
 
-background:
-linear-gradient(
-90deg,
-transparent,
-rgba(47,179,255,.9),
-rgba(245,184,65,.9),
-transparent
-);
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(47,179,255,.9),
+    rgba(245,184,65,.9),
+    transparent
+  );
 
 }
 
 
-/* FOOTER FIX */
+/* ===== FOOTER FIX ONLY ===== */
+
+main{
+
+padding-bottom:50px;
+
+}
+
 
 .footerDivider{
 
 margin:
-70px auto
-35px;
+90px auto
+25px;
 
-opacity:.75;
+opacity:.65;
+
+}
+
+
+#siteFooter{
+
+padding-top:35px;
 
 }
 
