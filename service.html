@@ -8,106 +8,202 @@
 
 <style>
 
-/* ===== SERVICES TEXT ===== */
+/* ===== SERVICES STRUCTURE ===== */
 
-.serviceSection{
-  margin-bottom:40px;
+.bannerSection{
+  margin-top:40px;
 }
 
-.serviceText{
-  max-width:700px;
-  margin:18px auto 0 auto;
-  text-align:center;
-}
 
-.serviceText p{
-  color:var(--muted);
-  line-height:1.6;
-  margin-bottom:10px;
-}
+/* HERO TIGHTER TOP */
 
-/* POINTS */
-.servicePoints{
+body[data-page="services"] .bannerSection:first-of-type{
   margin-top:10px;
 }
 
-.servicePoints p{
-  margin:6px 0;
-  font-size:14px;
-  color:var(--muted);
-}
 
-/* DIVIDER */
-.sectionDivider{
-  width:min(900px,92%);
-  height:1px;
-  margin:50px auto;
+/* UNIFIED BANNER STYLE */
 
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(47,179,255,.9),
-    rgba(245,184,65,.9),
-    transparent
-  );
-}
+.bannerCard{
 
-
-/* ===== UNIFIED BANNER SYSTEM (FIXES EVERYTHING) ===== */
-
-/* applies to BOTH banner types */
-.bannerCard,
-.pageBanner{
   width:min(1100px,92%);
+
   margin:20px auto;
+
   border-radius:22px;
+
   overflow:hidden;
 
   border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.03);
+
+  background:
+  rgba(
+  255,
+  255,
+  255,
+  .03
+  );
 
   box-shadow:
     0 12px 40px rgba(0,0,0,.45),
     0 0 20px rgba(47,179,255,.12);
+
 }
 
-/* images inside banners */
-.bannerImg,
-.pageBanner img{
+.bannerCard img{
+
   width:100%;
+
   height:auto;
+
   display:block;
+
 }
 
 
-/* ===== BUTTON FIX ===== */
+/* CONTENT SECTIONS */
 
-.btn{
-  display:inline-block;
-  padding:10px 16px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  font-weight:900;
-  cursor:pointer;
+.contentSection{
+
+  max-width:760px;
+
+  margin:
+  35px auto;
+
+  padding:
+  0
+  20px;
+
+  text-align:center;
+
 }
 
-.btnPrimary{
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  color:#031427;
-  border:none;
+
+.contentSection p{
+
+  color:var(--muted);
+
+  line-height:1.9;
+
+  margin-bottom:18px;
+
 }
 
-.btnPrimary:hover{
-  transform:translateY(-2px);
+
+.contentSection li{
+
+line-height:2;
+
+list-style:none;
+
 }
 
-  /* ================= FOOTER FIX ================= */
 
+/* CTA */
 
-  
-body[data-page="services"] .bannerSection:first-of-type{
-  margin-top:10px;
+.ctaSection{
+
+padding:
+20px
+20px
+80px;
+
+text-align:center;
+
 }
+
+
+.ctaSection h2{
+
+margin-bottom:25px;
+
+}
+
+
+.ctaSection p{
+
+max-width:720px;
+
+margin:
+0 auto
+35px;
+
+line-height:1.8;
+
+color:var(--muted);
+
+}
+
+
+/* BUTTON */
+
+.ctaSection .btn{
+
+padding:
+16px
+34px;
+
+box-shadow:
+0 10px 30px
+rgba(
+47,
+179,
+255,
+.22
+);
+
+transition:.35s;
+
+}
+
+
+.ctaSection .btn:hover{
+
+transform:
+translateY(-4px);
+
+}
+
+
+/* DIVIDER */
+
+.sectionDivider{
+
+width:
+min(
+900px,
+92%
+);
+
+height:1px;
+
+margin:
+75px auto;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(47,179,255,.9),
+rgba(245,184,65,.9),
+transparent
+);
+
+}
+
+
+/* FOOTER DIVIDER FIX */
+
+.footerDivider{
+
+margin:
+75px auto
+35px;
+
+opacity:.75;
+
+}
+
 </style>
 
 <title>Services | Brad Hobbs Web Design</title>
