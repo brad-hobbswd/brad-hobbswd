@@ -66,14 +66,13 @@ body[data-page="services"] .bannerSection:first-of-type{
 }
 
 
-/* ===== SERVICE LAYOUT FIX ===== */
+/* ===== SERVICE LAYOUT ===== */
 
 .serviceSection{
 
 width:min(1100px,92%);
 
-margin:
-0 auto;
+margin:0 auto;
 
 display:flex;
 
@@ -84,54 +83,24 @@ align-items:center;
 }
 
 
-/* TEXT CARDS */
+/* TEXT CONTENT */
 
 .serviceText{
 
-width:min(900px,100%);
+width:min(
+900px,
+92%
+);
 
 margin:
-20px auto;
+25px auto
+25px;
 
 padding:
-45px
-40px;
+0
+20px;
 
 text-align:center;
-
-border-radius:22px;
-
-overflow:hidden;
-
-border:
-1px solid rgba(
-255,
-255,
-255,
-.12
-);
-
-background:
-rgba(
-255,
-255,
-255,
-.03
-);
-
-box-shadow:
-0 12px 40px rgba(
-0,
-0,
-0,
-.45
-),
-0 0 20px rgba(
-47,
-179,
-255,
-.12
-);
 
 }
 
@@ -164,7 +133,6 @@ color:var(--muted);
 .servicePoints{
 
 margin-top:25px;
-
 }
 
 
@@ -183,7 +151,7 @@ color:white;
 
 width:min(
 1100px,
-100%
+92%
 );
 
 margin:
@@ -228,14 +196,13 @@ box-shadow:
 
 .pageBanner img{
 
-width:100%;
-
 display:block;
+
+width:100%;
 
 height:auto;
 
 }
-
 
 /* BUTTON */
 
@@ -253,14 +220,15 @@ margin-top:20px;
 .sectionDivider{
 
 width:min(
-900px,
+860px,
 92%
 );
 
 height:1px;
 
 margin:
-60px auto;
+50px auto
+70px;
 
 background:
 linear-gradient(
@@ -271,8 +239,9 @@ rgba(245,184,65,.9),
 transparent
 );
 
-}
+opacity:.85;
 
+}
 
 /* FOOTER FIX */
 
@@ -286,8 +255,8 @@ padding-bottom:50px;
 .footerDivider{
 
 margin:
-90px auto
-25px;
+70px auto
+45px;
 
 opacity:.65;
 
@@ -424,7 +393,7 @@ padding-top:35px;
 <div class="sectionDivider"></div>
 
 <!-- CTA -->
-<section class="serviceText" style="margin-top:40px;">
+<section class="serviceText" style="margin:60px auto 0;">
   <h2>Ready to Build Something That Works</h2>
   <p>
     Your business deserves clarity, structure, and a presence that reflects excellence.
