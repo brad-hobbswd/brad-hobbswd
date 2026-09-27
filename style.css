@@ -260,3 +260,30 @@ img{
     box-shadow .3s ease,
     opacity .3s ease;
 }
+
+
+/* ===== FOOTER VISIBILITY FIX ===== */
+#siteFooter{
+  width:100%;
+  margin:0 !important;
+  padding:0 !important;
+  background:#06162d !important;
+}
+#siteFooter .siteFooter{
+  display:block !important;
+  width:100% !important;
+  background:#06162d !important;
+  color:#dce8f6 !important;
+  border-top:2px solid #1689e8 !important;
+  opacity:1 !important;
+}
+#siteFooter .footerBrand strong,
+#siteFooter .footerBrand span,
+#siteFooter .footerNav a,
+#siteFooter .footerLegal{
+  opacity:1 !important;
+}
+#siteFooter .footerNav a{color:#dce8f6 !important;}
+#siteFooter .footerValues{color:#ffd34e !important;}
+#siteFooter .footerLegal{color:#8fa4be !important;}
+#siteFooter .footerLegal a{color:#b8c7e6 !important;}
