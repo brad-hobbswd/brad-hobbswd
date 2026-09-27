@@ -1,371 +1,82 @@
-<!-- ===== HEADER STYLES ===== -->
+<!-- BRAD HOBBS WEB DESIGN HEADER -->
 <style>
-
-/* ===== HEADER WRAPPER FIX ===== */
-#siteHeader{
-  position:relative;
-  z-index:1000;
-}
-
-/* ===== CONTAINER ===== */
+#siteHeader{position:relative;z-index:1000}
 .topbar{
-  position:fixed;
-  top:12px;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:1000;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  width:92%;
-  max-width:1100px;
-
-  padding:10px 16px;
-
-  border-radius:999px;
-
-  backdrop-filter:blur(14px);
-  background:rgba(5,10,20,.65);
-
-  border:1px solid rgba(255,255,255,.12);
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.35);
+  position:fixed;top:0;left:0;transform:none;z-index:1000;
+  width:100%;max-width:none;min-height:68px;padding:8px 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  border-radius:0;
+  background:rgba(5,18,40,.97);
+  border:0;border-bottom:2px solid rgba(22,137,232,.55);
+  box-shadow:0 5px 20px rgba(0,0,0,.28);
+  backdrop-filter:blur(12px);
 }
-
-/* ===== BRAND ===== */
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
+.brand{display:flex;align-items:center;gap:10px;overflow:hidden}
 .brand img{
-  height:40px;
-  display:block;
+  height:46px;width:auto;display:block;object-fit:cover;object-position:center;
+  transform:scale(1.08);
+  filter:drop-shadow(0 0 7px rgba(233,168,23,.42));
 }
-
-.brandText{
-  display:flex;
-  flex-direction:column;
-  line-height:1.1;
-}
-
-.brandText strong{
-  font-size:14px;
-  font-weight:900;
-  color:white;
-}
-
-.brandText span{
-  font-size:11px;
-  color:rgba(255,255,255,.7);
-}
-
-/* ===== NAV ===== */
-.nav{
-  display:flex;
-  gap:22px;
-  align-items:center;
-}
-
+.brandText{display:flex;flex-direction:column;line-height:1.05}
+.brandText strong{font-size:15px;font-weight:900;color:#fff}
+.brandText span{font-size:12px;color:rgba(255,255,255,.72)}
+.nav{display:flex;gap:27px;align-items:center}
 .nav a{
-  color:rgba(255,255,255,.7);
-  font-weight:700;
-  font-size:14px;
-  text-decoration:none;
-  transition:.25s ease;
+  position:relative;color:rgba(255,255,255,.86);font-weight:700;font-size:13px;
+  text-decoration:none;padding:14px 0;transition:.2s ease;
 }
-
-/* ===== HOVER GLOW ===== */
-.nav a:hover{
-  color:white;
-
-  text-shadow:
-    0 0 8px rgba(255,255,255,.6),
-    0 0 18px rgba(47,179,255,.7);
+.nav a::after{
+  content:"";position:absolute;left:0;right:0;bottom:4px;height:2px;
+  transform:scaleX(0);transform-origin:center;background:#f0b529;transition:.2s ease;
 }
-
-/* ===== ACTIVE GLOW ===== */
-.nav a.active{
-  color:white;
-  font-weight:900;
-
-  text-shadow:
-    0 0 10px rgba(47,179,255,.9),
-    0 0 22px rgba(47,179,255,.7);
-}
-
-/* ===== MOBILE BUTTON ===== */
+.nav a:hover,.nav a.active{color:#fff}
+.nav a:hover::after,.nav a.active::after{transform:scaleX(1)}
 .menuToggle{
-  display:none;
-  flex-direction:column;
-  gap:5px;
-  background:none;
-  border:none;
-  cursor:pointer;
+  display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;
 }
-
-.menuToggle span{
-  width:26px;
-  height:3px;
-  background:white;
-  border-radius:3px;
-}
-
-/* ===== MOBILE MENU ===== */
+.menuToggle span{width:25px;height:3px;background:#fff;border-radius:3px}
 .mobileMenu{
-  position:fixed;
-  top:0;
-  left:-260px;
-  width:260px;
-  height:100%;
-
-  background:#050a14;
-  padding:40px 20px;
-
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-
-  transition:left .3s ease;
-  z-index:9999;
+  position:fixed;top:0;left:-270px;width:270px;height:100%;
+  background:#050a14;padding:85px 24px 30px;display:flex;flex-direction:column;gap:20px;
+  transition:left .3s ease;z-index:9999;box-shadow:10px 0 35px rgba(0,0,0,.35)
 }
-
-.mobileMenu a{
-  color:white;
-  font-size:18px;
-  text-decoration:none;
-}
-
-/* ===== MOBILE ACTIVE GLOW ===== */
-.mobileMenu a.active{
-  color:white;
-  font-weight:900;
-
-  text-shadow:
-    0 0 14px rgba(47,179,255,1),
-    0 0 32px rgba(47,179,255,1),
-    0 0 8px rgba(255,255,255,.9);
-}
-
-.mobileMenu.open{
-  left:0;
-}
-
-/* ===== OVERLAY ===== */
+.mobileMenu a{color:#fff;font-size:18px;text-decoration:none}
+.mobileMenu a.active{color:#ffd34e}
+.mobileMenu.open{left:0}
 .menuOverlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.5);
-  opacity:0;
-  pointer-events:none;
-  transition:.3s ease;
-  z-index:9998;
+  position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;pointer-events:none;
+  transition:.3s ease;z-index:9998
 }
-
-.menuOverlay.active{
-  opacity:1;
-  pointer-events:auto;
-}
-
-/* ===== MOBILE BREAKPOINT ===== */
-@media (max-width:1024px){
-
-  .nav{
-    display:none;
-  }
-
-  .menuToggle{
-    display:flex;
-  }
-
-}
-
-/* ===== SCROLL EFFECT ===== */
-.topbar.scrolled{
-  box-shadow:
-    0 14px 40px rgba(0,0,0,.5),
-    0 0 20px rgba(47,179,255,.25);
-}
-
+.menuOverlay.active{opacity:1;pointer-events:auto}
+.topbar.scrolled{box-shadow:0 8px 28px rgba(0,0,0,.42),0 0 15px rgba(22,137,232,.18)}
+@media(max-width:1024px){.nav{display:none}.menuToggle{display:flex}}
 </style>
 
-
-<!-- ===== HEADER HTML ===== -->
-
 <div class="topbar">
-
-  <!-- LOGO -->
   <div class="brand">
-
-    <img
-    src="/brad-hobbswd/images/072FB4DA-2143-4158-B2DD-752E67E6F43D.png"
-    alt="Brad Hobbs Web Design">
-
-    <div class="brandText">
-
-      <strong>
-      Brad Hobbs
-      </strong>
-
-      <span>
-      Web Design
-      </span>
-
-    </div>
-
+    <img src="/brad-hobbswd/images/072FB4DA-2143-4158-B2DD-752E67E6F43D.png" alt="Brad Hobbs Web Design">
+    <div class="brandText"><strong>Brad Hobbs</strong><span>Web Design</span></div>
   </div>
-
-
-
-  <!-- NAV -->
   <nav class="nav">
-
-    <a data-nav="home"
-    href="/brad-hobbswd/index.html">
-
-    Home
-
-    </a>
-
-
-    <a data-nav="services"
-    href="/brad-hobbswd/service.html">
-
-    Services
-
-    </a>
-
-
-    <a data-nav="process"
-    href="/brad-hobbswd/process.html">
-
-    The Process
-
-    </a>
-
-
-    <a data-nav="packages"
-    href="/brad-hobbswd/packages.html">
-
-    Packages
-
-    </a>
-
-
-    <a data-nav="work"
-    href="https://brad-hobbswd.github.io/clients/">
-
-    My Work
-
-    </a>
-
-
-    <a data-nav="resources"
-    href="/brad-hobbswd/resources.html">
-
-    Resources
-
-    </a>
-
-
-    <a data-nav="contact"
-    href="/brad-hobbswd/contact.html">
-
-    Contact
-
-    </a>
-
+    <a data-nav="home" href="/brad-hobbswd/index.html">Home</a>
+    <a data-nav="services" href="/brad-hobbswd/service.html">Services</a>
+    <a data-nav="process" href="/brad-hobbswd/process.html">The Process</a>
+    <a data-nav="packages" href="/brad-hobbswd/packages.html">Packages</a>
+    <a data-nav="work" href="https://brad-hobbswd.github.io/clients/">My Work</a>
+    <a data-nav="resources" href="/brad-hobbswd/resources.html">Resources</a>
+    <a data-nav="contact" href="/brad-hobbswd/contact.html">Contact</a>
   </nav>
-
-
-  <!-- MOBILE BUTTON -->
-  <button
-  class="menuToggle"
-  onclick="toggleMenu()"
-  aria-label="Toggle navigation">
-
-    <span></span>
-    <span></span>
-    <span></span>
-
-  </button>
-
+  <button class="menuToggle" onclick="toggleMenu()" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
 </div>
 
+<div id="menuOverlay" class="menuOverlay" onclick="toggleMenu()"></div>
 
-<!-- OVERLAY -->
-
-<div
-id="menuOverlay"
-class="menuOverlay"
-onclick="toggleMenu()">
-
-</div>
-
-
-<!-- MOBILE MENU -->
-
-<div
-id="mobileMenu"
-class="mobileMenu">
-
-  <a data-nav="home"
-  href="/brad-hobbswd/index.html">
-
-  Home
-
-  </a>
-
-
-  <a data-nav="services"
-  href="/brad-hobbswd/service.html">
-
-  Services
-
-  </a>
-
-
-  <a data-nav="process"
-  href="/brad-hobbswd/process.html">
-
-  The Process
-
-  </a>
-
-
-  <a data-nav="packages"
-  href="/brad-hobbswd/packages.html">
-
-  Packages
-
-  </a>
-
-
-  <a data-nav="work"
-  href="https://brad-hobbswd.github.io/clients/">
-
-  My Work
-
-  </a>
-
-
-  <a data-nav="resources"
-  href="/brad-hobbswd/resources.html">
-
-  Resources
-
-  </a>
-
-
-  <a data-nav="contact"
-  href="/brad-hobbswd/contact.html">
-
-  Contact
-
-  </a>
-
+<div id="mobileMenu" class="mobileMenu">
+  <a data-nav="home" href="/brad-hobbswd/index.html">Home</a>
+  <a data-nav="services" href="/brad-hobbswd/service.html">Services</a>
+  <a data-nav="process" href="/brad-hobbswd/process.html">The Process</a>
+  <a data-nav="packages" href="/brad-hobbswd/packages.html">Packages</a>
+  <a data-nav="work" href="https://brad-hobbswd.github.io/clients/">My Work</a>
+  <a data-nav="resources" href="/brad-hobbswd/resources.html">Resources</a>
+  <a data-nav="contact" href="/brad-hobbswd/contact.html">Contact</a>
 </div>
