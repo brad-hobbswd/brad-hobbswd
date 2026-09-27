@@ -12,172 +12,406 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
 
-<meta name="description" content="Brad Hobbs builds responsive, modern websites with clear structure and strong calls to action." />
+<meta name="description" content="Brad Hobbs Web Design creates modern, responsive websites with clear structure, purposeful design, and practical support for businesses and organizations." />
 
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=3" />
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=4" />
 
 <style>
 
-/* ===== MATCH SERVICES STRUCTURE ===== */
+/* =========================
+   HOMEPAGE REDESIGN
+   ========================= */
 
-.bannerSection{
-margin-top:20px;
+.homeMain{
+  padding-bottom:20px;
 }
 
-/* HERO TIGHTER TOP */
-
-body[data-page="home"] .bannerSection:first-of-type{
-  margin-top:10px;
-}
-
-
-/* UNIFIED BANNER STYLE */
-
-.bannerCard{
-
+.homeHero{
   width:min(1100px,92%);
-
-  margin:10px auto;
-
+  margin:10px auto 0;
   border-radius:22px;
-
   overflow:hidden;
-
   border:1px solid rgba(255,255,255,.12);
-
-  background:
-  rgba(
-  255,
-  255,
-  255,
-  .03
-  );
-
   box-shadow:
-    0 12px 40px rgba(0,0,0,.45),
-    0 0 20px rgba(47,179,255,.12);
-
+    0 18px 50px rgba(0,0,0,.45),
+    0 0 24px rgba(47,179,255,.12);
 }
 
-.bannerCard img{
-
+.homeHero img{
   width:100%;
-
   height:auto;
-
   display:block;
-
 }
 
-
-/* INTRO */
-
-.homeIntro{
-
-  max-width:700px;
-
-  margin:
-  15px auto
-  0;
-
-  padding:
-  0
-  20px
-  20px;
-
-  text-align:center;
-
+.homeSection{
+  width:min(1100px,92%);
+  margin:28px auto;
+  border-radius:22px;
+  overflow:hidden;
 }
 
+.homeLight{
+  background:#f7faff;
+  color:#10213f;
+  box-shadow:0 18px 45px rgba(0,0,0,.22);
+}
 
-.homeIntro p{
+.homeLight h2,
+.homeLight h3{
+  color:#10213f;
+}
 
-  color:var(--muted);
+.homeLight p{
+  color:#40516f;
+}
 
+.homeInner{
+  padding:52px 42px;
+}
+
+.homeKicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+  color:#1766a8;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.homeKicker::before{
+  content:"";
+  width:36px;
+  height:3px;
+  border-radius:3px;
+  background:linear-gradient(90deg,#2fb3ff,#f5b841);
+}
+
+.homeTitle{
+  margin:0 0 16px;
+  font-size:clamp(32px,5vw,54px);
+  line-height:1.05;
+  letter-spacing:-.03em;
+}
+
+.homeTitle span{
+  color:#d49313;
+}
+
+.homeLead{
+  max-width:820px;
+  margin:0 auto;
+  font-size:18px;
   line-height:1.8;
-
-  margin-bottom:30px;
-
 }
 
-
-/* BUTTON CENTER */
-
-.resource-center{
-
-margin-top:35px;
-
-margin-bottom:40px;
-
+.homeCenter{
+  text-align:center;
 }
 
+.homeButtons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-top:28px;
+}
 
-.resource-center .btn{
+.homeButtons .btn{
+  text-align:center;
+  min-width:150px;
+}
 
-  padding:
-  16px
-  30px;
+.homeOutline{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:12px;
+  border:1px solid #2fb3ff;
+  color:#12629d;
+  font-weight:900;
+}
 
-  box-shadow:
-  0 10px 30px
-  rgba(
-  47,
-  179,
-  255,
-  .22
+.sectionHeading{
+  text-align:center;
+  margin-bottom:28px;
+}
+
+.sectionHeading h2{
+  margin:6px 0 8px;
+  font-size:clamp(28px,4vw,40px);
+}
+
+.sectionHeading p{
+  margin:0 auto;
+  max-width:700px;
+}
+
+.serviceGrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.serviceCard{
+  padding:24px 18px;
+  border:1px solid #dfe7f2;
+  border-radius:18px;
+  background:white;
+  text-align:center;
+  box-shadow:0 8px 24px rgba(16,33,63,.08);
+  transition:.25s ease;
+}
+
+.serviceCard:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 32px rgba(16,33,63,.13);
+}
+
+.serviceIcon{
+  width:48px;
+  height:48px;
+  margin:0 auto 14px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:linear-gradient(135deg,#e6f5ff,#fff5dc);
+  color:#1267a7;
+  font-size:22px;
+  font-weight:900;
+}
+
+.serviceCard h3{
+  margin:0 0 8px;
+  font-size:18px;
+}
+
+.serviceCard p{
+  margin:0 0 16px;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.serviceCard a{
+  color:#1267a7;
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+
+.processGrid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  position:relative;
+}
+
+.processCard{
+  position:relative;
+  padding:24px 14px;
+  text-align:center;
+}
+
+.processNumber{
+  width:48px;
+  height:48px;
+  margin:0 auto 14px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#10213f;
+  color:#f5b841;
+  font-weight:900;
+  box-shadow:0 0 0 5px rgba(47,179,255,.12);
+}
+
+.processCard h3{
+  font-size:16px;
+  margin:0 0 8px;
+}
+
+.processCard p{
+  font-size:13px;
+  line-height:1.55;
+  margin:0;
+}
+
+.workBand{
+  background:white;
+  color:#10213f;
+  border:1px solid #dfe7f2;
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+
+.workGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.workCard{
+  padding:28px 22px;
+  border-radius:18px;
+  background:#f4f8fd;
+  border:1px solid #dfe7f2;
+}
+
+.workCard h3{
+  margin:0 0 8px;
+  color:#10213f;
+}
+
+.workCard p{
+  margin:0 0 18px;
+  color:#50617d;
+  font-size:14px;
+}
+
+.darkBand{
+  background:
+    radial-gradient(500px 260px at 10% 50%,rgba(47,179,255,.18),transparent 70%),
+    linear-gradient(135deg,#061022,#0b1930);
+  color:white;
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
+}
+
+.darkBand h2,
+.darkBand h3{
+  color:white;
+}
+
+.darkBand p{
+  color:#c5d2e9;
+}
+
+.supportGrid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.supportCard{
+  padding:28px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.05);
+}
+
+.supportCard h3{
+  margin:0 0 10px;
+}
+
+.educationBand{
+  background:#f7faff;
+  color:#10213f;
+  border:1px solid #dfe7f2;
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+
+.educationGrid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:30px;
+  align-items:center;
+}
+
+.educationList{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-top:20px;
+}
+
+.educationList div{
+  padding:12px 14px;
+  border-radius:12px;
+  background:white;
+  border:1px solid #dfe7f2;
+  font-weight:700;
+  color:#314665;
+}
+
+.finalCta{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(5,15,31,.72),rgba(5,15,31,.72)),
+    linear-gradient(135deg,#14365b,#071224);
+  color:white;
+  text-align:center;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.finalCta h2{
+  color:white;
+  margin:0 0 12px;
+  font-size:clamp(28px,4vw,42px);
+}
+
+.finalCta p{
+  max-width:700px;
+  margin:0 auto;
+  color:#d6e1f4;
+}
+
+.finalCta .btn{
+  margin-top:24px;
+}
+
+.homeDivider{
+  width:min(850px,86%);
+  height:1px;
+  margin:34px auto;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(47,179,255,.75),
+    rgba(245,184,65,.75),
+    transparent
   );
-
-  transition:.35s;
-
 }
 
+@media (max-width:900px){
+  .serviceGrid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-.resource-center .btn:hover{
+  .processGrid{
+    grid-template-columns:1fr;
+  }
 
-transform:
-translateY(-4px);
+  .workGrid{
+    grid-template-columns:1fr;
+  }
 
+  .supportGrid{
+    grid-template-columns:1fr;
+  }
+
+  .educationGrid{
+    grid-template-columns:1fr;
+  }
 }
 
+@media (max-width:600px){
+  .homeInner{
+    padding:38px 22px;
+  }
 
-/* DIVIDER */
+  .serviceGrid{
+    grid-template-columns:1fr;
+  }
 
-.sectionDivider{
+  .educationList{
+    grid-template-columns:1fr;
+  }
 
-width:min(
-900px,
-92%
-);
-
-height:1px;
-
-margin:
-25px auto;
-
-background:
-linear-gradient(
-90deg,
-transparent,
-rgba(47,179,255,.9),
-rgba(245,184,65,.9),
-transparent
-);
-
-opacity:.85;
-
-}
-
-
-/* FOOTER DIVIDER FIX */
-
-.footerDivider{
-
-margin:
-70px auto
-35px;
-
-opacity:.75;
-
+  .homeLead{
+    font-size:16px;
+  }
 }
 
 </style>
@@ -190,46 +424,325 @@ opacity:.75;
 
 <header id="siteHeader"></header>
 
-<main>
+<main class="homeMain">
 
-<!-- HERO -->
-<section class="bannerSection">
-  <div class="bannerCard">
-    <img src="587C175D-DD5A-4090-8BEA-D9BD89C76DF9.png" alt="Brad Hobbs Professional Web Designer Banner">
+<!-- EXISTING PRIMARY BANNER
+     KEPT AS THE MAIN VISUAL STATEMENT -->
+<section class="homeHero">
+  <img
+    src="587C175D-DD5A-4090-8BEA-D9BD89C76DF9.png"
+    alt="Brad Hobbs Professional Web Designer Banner">
+</section>
+
+<div class="homeDivider"></div>
+
+<!-- PURPOSE -->
+<section class="homeSection homeLight">
+  <div class="homeInner homeCenter">
+
+    <div class="homeKicker">Building a Better Digital Presence</div>
+
+    <h1 class="homeTitle">
+      Websites With <span>Purpose.</span>
+    </h1>
+
+    <p class="homeLead">
+      Every business, organization, ministry, and entrepreneur has a story to tell.
+      I create modern, responsive websites that bring your vision together with clear structure,
+      thoughtful design, practical functionality, and a professional user experience.
+    </p>
+
+    <p class="homeLead">
+      My goal is simple: build a website that represents you well and gives your organization
+      room to grow.
+    </p>
+
+    <div class="homeButtons">
+      <a href="/brad-hobbswd/packages.html" class="btn btnPrimary">Start a Project</a>
+      <a href="/brad-hobbswd/service.html" class="homeOutline">Explore Services</a>
+    </div>
+
   </div>
 </section>
 
-<div class="sectionDivider"></div>
+<!-- SERVICES -->
+<section class="homeSection homeLight">
+  <div class="homeInner">
 
-<!-- SUPPORT -->
-<section class="bannerSection">
-  <div class="bannerCard">
-  <img src="5E94ABE7-45CC-4C5B-A4AC-CAC6EC197952.png" alt="Modern Websites With Clear Structure Banner">
+    <div class="sectionHeading">
+      <div class="homeKicker" style="justify-content:center;">What I Do</div>
+      <h2>Complete Website Solutions</h2>
+      <p>
+        From building a website from the ground up to helping you maintain it after launch,
+        the services are designed around where you are and what you need.
+      </p>
+    </div>
+
+    <div class="serviceGrid">
+
+      <article class="serviceCard">
+        <div class="serviceIcon">01</div>
+        <h3>Web Design</h3>
+        <p>Custom websites built around your goals, audience, content, and vision.</p>
+        <a href="/brad-hobbswd/service.html">Learn More</a>
+      </article>
+
+      <article class="serviceCard">
+        <div class="serviceIcon">02</div>
+        <h3>Website Redesign</h3>
+        <p>A complete transformation of an existing website with a cleaner modern experience.</p>
+        <a href="/brad-hobbswd/service.html">Learn More</a>
+      </article>
+
+      <article class="serviceCard">
+        <div class="serviceIcon">03</div>
+        <h3>Website Management</h3>
+        <p>Ongoing updates, content changes, maintenance, and improvements after launch.</p>
+        <a href="/brad-hobbswd/service.html">Learn More</a>
+      </article>
+
+      <article class="serviceCard">
+        <div class="serviceIcon">04</div>
+        <h3>Website Monitoring</h3>
+        <p>Keep an eye on your website while it is being managed so issues can be addressed.</p>
+        <a href="/brad-hobbswd/service.html">Learn More</a>
+      </article>
+
+      <article class="serviceCard">
+        <div class="serviceIcon">05</div>
+        <h3>E Commerce</h3>
+        <p>Online store functionality designed to showcase products and support online ordering.</p>
+        <a href="/brad-hobbswd/service.html">Learn More</a>
+      </article>
+
+      <article class="serviceCard">
+        <div class="serviceIcon">06</div>
+        <h3>SEO and Digital Support</h3>
+        <p>Clear site structure, search visibility support, and practical digital improvements.</p>
+        <a href="/brad-hobbswd/service.html">Learn More</a>
+      </article>
+
+      <article class="serviceCard">
+        <div class="serviceIcon">07</div>
+        <h3>Education Services</h3>
+        <p>Basic computer classes and practical digital skills training for individuals and organizations.</p>
+        <a href="/brad-hobbswd/service.html">Learn More</a>
+      </article>
+
+    </div>
+
   </div>
 </section>
 
-<div class="sectionDivider"></div>
+<!-- PROCESS -->
+<section class="homeSection homeLight">
+  <div class="homeInner">
 
-<!-- INTRO -->
-<section class="homeIntro">
+    <div class="sectionHeading">
+      <div class="homeKicker" style="justify-content:center;">My Approach</div>
+      <h2>A Clear and Simple Process</h2>
+      <p>
+        Building a website should feel organized and understandable from the first conversation
+        through launch and ongoing support.
+      </p>
+    </div>
 
-<h1>Brad Hobbs Web Design</h1>
+    <div class="processGrid">
 
-<p>
-Hosting and domain materials for building websites appear on the resources page. Website design projects return to Brad Hobbs Web Design.
-</p>
+      <article class="processCard">
+        <div class="processNumber">01</div>
+        <h3>Discovery and Direction</h3>
+        <p>Understand your vision, goals, audience, and needs before the build begins.</p>
+      </article>
 
-<div class="resource-center">
-  <a href="/brad-hobbswd/resources.html" class="btn btnPrimary">
-    Website Hosting and Domain Resources
-  </a>
-</div>
+      <article class="processCard">
+        <div class="processNumber">02</div>
+        <h3>Design and Build</h3>
+        <p>Structure, design, and functionality are developed into a professional website.</p>
+      </article>
 
+      <article class="processCard">
+        <div class="processNumber">03</div>
+        <h3>Review and Refine</h3>
+        <p>You review the working website and requested changes are made before launch.</p>
+      </article>
+
+      <article class="processCard">
+        <div class="processNumber">04</div>
+        <h3>Launch</h3>
+        <p>After approval, required launch steps are completed and the website goes live.</p>
+      </article>
+
+      <article class="processCard">
+        <div class="processNumber">05</div>
+        <h3>Manage and Monitor</h3>
+        <p>Optional ongoing support keeps the website updated and monitored after launch.</p>
+      </article>
+
+    </div>
+
+    <div class="homeButtons">
+      <a href="/brad-hobbswd/process.html" class="btn btnPrimary">View the Full Process</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- MY WORK -->
+<section class="homeSection workBand">
+  <div class="homeInner">
+
+    <div class="sectionHeading">
+      <div class="homeKicker">Selected Work</div>
+      <h2>Websites I Have Built</h2>
+      <p>
+        Explore the work directly through the client portfolio. The portfolio contains the actual
+        projects rather than placeholder examples.
+      </p>
+    </div>
+
+    <div class="workGrid">
+
+      <article class="workCard">
+        <h3>Client Websites</h3>
+        <p>
+          Browse completed website projects and see the design, structure, and functionality
+          created for real clients.
+        </p>
+        <a href="https://brad-hobbswd.github.io/clients/" class="btn btnPrimary">View My Work</a>
+      </article>
+
+      <article class="workCard">
+        <h3>Custom Website Projects</h3>
+        <p>
+          Each project is shaped around the client, the audience, the content, and the purpose
+          of the website.
+        </p>
+        <a href="https://brad-hobbswd.github.io/clients/" class="homeOutline">Explore Projects</a>
+      </article>
+
+      <article class="workCard">
+        <h3>Ready for Your Project</h3>
+        <p>
+          Have an existing website that needs work, or are you ready to build something new?
+        </p>
+        <a href="/brad-hobbswd/packages.html" class="btn btnPrimary">Start Your Project</a>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- MANAGEMENT AND MONITORING -->
+<section class="homeSection darkBand">
+  <div class="homeInner">
+
+    <div class="sectionHeading">
+      <div class="homeKicker" style="color:#8ed9ff;justify-content:center;">Beyond the Launch</div>
+      <h2>Management and Monitoring</h2>
+      <p>
+        A website should not simply be launched and forgotten.
+        Ongoing management can keep your content current, while monitoring helps identify
+        issues that need attention.
+      </p>
+    </div>
+
+    <div class="supportGrid">
+
+      <article class="supportCard">
+        <h3>Website Management</h3>
+        <p>
+          Need an update, a content change, a new section, or continued improvements?
+          Website management provides ongoing support after your site is live.
+        </p>
+        <a href="/brad-hobbswd/service.html" class="btn btnPrimary">Learn About Services</a>
+      </article>
+
+      <article class="supportCard">
+        <h3>Website Monitoring</h3>
+        <p>
+          Monitoring provides another layer of attention while your website is being managed,
+          helping identify problems that may need to be addressed.
+        </p>
+        <a href="/brad-hobbswd/service.html" class="btn btnPrimary">Learn About Services</a>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="homeSection educationBand">
+  <div class="homeInner educationGrid">
+
+    <div>
+      <div class="homeKicker">Learn. Build. Grow.</div>
+      <h2>Education Services</h2>
+      <p>
+        Web design is only one part of practical digital support.
+        I also provide basic computer classes and practical digital skills training for
+        individuals and organizations.
+      </p>
+
+      <div class="educationList">
+        <div>Basic Computer Skills</div>
+        <div>Internet and Email</div>
+        <div>Microsoft Office</div>
+        <div>Online Safety</div>
+        <div>Technology for Work</div>
+        <div>Practical Digital Skills</div>
+      </div>
+    </div>
+
+    <div class="homeCenter">
+      <a href="/brad-hobbswd/service.html" class="btn btnPrimary">Explore Education Services</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="homeSection homeLight">
+  <div class="homeInner homeCenter">
+
+    <div class="homeKicker" style="justify-content:center;">Helpful Resources</div>
+
+    <h2>Hosting, Domains, and Website Resources</h2>
+
+    <p class="homeLead">
+      Website hosting and domain resources are available separately so you can find the
+      information you need without crowding the main website design experience.
+    </p>
+
+    <div class="homeButtons">
+      <a href="/brad-hobbswd/resources.html" class="homeOutline">Visit Resources</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="homeSection finalCta">
+  <div class="homeInner">
+
+    <h2>Ready to Build Something That Represents Your Vision?</h2>
+
+    <p>
+      Let’s create a website that looks professional, communicates clearly,
+      and gives your organization room to grow.
+    </p>
+
+    <a href="/brad-hobbswd/packages.html" class="btn btnPrimary">Start Your Project</a>
+
+  </div>
 </section>
 
 </main>
 
-<div class="sectionDivider footerDivider"></div>
+<div class="homeDivider"></div>
+
 <div id="siteFooter"></div>
 
 </div>
