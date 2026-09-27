@@ -134,14 +134,9 @@ function attachScrollEffect() {
       topbar.classList.remove("scrolled");
     }
 
-    // FLOAT EFFECT (FIXED TRANSFORM)
-    if (currentScroll > lastScroll && currentScroll > 100) {
-      topbar.style.transform = "translateX(-50%) translateY(-20px)";
-      topbar.style.opacity = "0.95";
-    } else {
-      topbar.style.transform = "translateX(-50%) translateY(0)";
-      topbar.style.opacity = "1";
-    }
+    // KEEP HEADER STATIONARY WHILE SCROLLING
+    topbar.style.transform = "translateY(0)";
+    topbar.style.opacity = "1";
 
     lastScroll = currentScroll;
 
