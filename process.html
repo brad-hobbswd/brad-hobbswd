@@ -7,203 +7,60 @@
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=8" />
 
 <style>
-
-/* ===== TOP SPACING FIX (MATCH SERVICES) ===== */
-.bannerSection{
-  margin-top:40px;
+:root{
+  --process-navy:#07162d;
+  --process-blue:#0b63b6;
+  --process-bright:#1689e8;
+  --process-gold:#e9a817;
+  --process-ink:#12233f;
+  --process-muted:#52627b;
+  --process-light:#f5f8fc;
+  --process-line:#dce5ef;
 }
-
-/* ===== TEXT ===== */
-.serviceText{
-
-max-width:700px;
-
-margin:
-10px auto
-6px;
-
-padding:
-0
-12px;
-
-text-align:center;
-
-}
-
-.serviceText p{
-  color:var(--muted);
-  line-height:1.6;
-  margin-bottom:10px;
-}
-
-/* ===== DIVIDER ===== */
-.sectionDivider{
-
-width:min(
-860px,
-92%
-);
-
-height:1px;
-
-margin:
-24px auto
-34px;
-
-background:
-linear-gradient(
-90deg,
-transparent,
-rgba(47,179,255,.9),
-rgba(245,184,65,.9),
-transparent
-);
-
-}
-
-/* ===== UNIFIED BANNERS ===== */
-.bannerCard,
-.pageBanner,
-.processSection{
-  width:min(1100px,92%);
-  margin:10px auto;
-  border-radius:22px;
-  overflow:hidden;
-
-  border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.03);
-
-  box-shadow:
-    0 12px 40px rgba(0,0,0,.45),
-    0 0 20px rgba(47,179,255,.12);
-}
-
-.bannerCard img,
-.pageBanner img,
-.processSection img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-/* ===== DEMO PREVIEW ===== */
-.demoPreview{
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:22px;
-  padding:22px;
-  margin:20px auto;
-
-  background:rgba(255,255,255,.04);
-  backdrop-filter:blur(10px);
-
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.5),
-    0 0 25px rgba(47,179,255,.15);
-
-  max-width:1100px;
-}
-
-/* GRID */
-.demoGrid{
-  display:grid;
-  grid-template-columns:320px 1fr;
-  gap:40px;
-  align-items:center;
-}
-
-.demoItem{
-  text-align:center;
-}
-
-.demoVideo.mobile{
-  width:100%;
-  max-width:300px;
-  border-radius:28px;
-  border:6px solid rgba(255,255,255,.08);
-
-  box-shadow:
-    0 25px 60px rgba(0,0,0,.6),
-    0 0 30px rgba(47,179,255,.25);
-}
-
-.demoVideo.desktop{
-  width:100%;
-  border-radius:16px;
-
-  box-shadow:
-    0 25px 60px rgba(0,0,0,.6),
-    0 0 30px rgba(47,179,255,.25);
-}
-
-.demoItem h5{
-  margin-bottom:12px;
-  color:var(--muted);
-}
-
-.demoVideo:hover{
-  transform:scale(1.02);
-  transition:.3s ease;
-}
-
-@media (max-width:900px){
-  .demoGrid{
-    grid-template-columns:1fr;
-    gap:30px;
-  }
-
-  .demoVideo.mobile{
-    max-width:260px;
-    margin:0 auto;
-  }
-}
-
-/* ===== BUTTON FIX ===== */
-.btn{
-  display:inline-block;
-  padding:10px 16px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  font-weight:900;
-  cursor:pointer;
-}
-
-.btnPrimary{
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  color:#031427;
-  border:none;
-}
-
-/* ===== CTA CENTER FIX ===== */
-.processCta{
-
-margin-top:50px;
-
-margin-bottom:55px;
-
-text-align:center;
-
-}
-
-.processCta .btn{
-  display:inline-block;
-  margin-top:28px;
-}
-
-body[data-page="process"] .bannerSection:first-of-type{
-  margin-top:10px;
-}
-
-  /* FOOTER ENDING */
-
-.footerDivider{
-
-margin:
-70px auto
-45px;
-
-opacity:.75;
-
-}
+body[data-page="process"]{background:#eef3f8;color:var(--process-ink);padding-top:0!important}
+body[data-page="process"] .wrap{width:100%;max-width:none;margin:0;padding:0}
+body[data-page="process"] #siteHeader{height:70px;position:relative}
+body[data-page="process"] main{width:100%;margin:0;padding:0}
+.processHero{background:#fff;width:100%}
+.processHeroImage{width:100%;line-height:0;overflow:hidden;background:#061327}
+.processHeroImage img{display:block;width:100%;height:auto}
+.processIntro,.processBlock,.processCtaNew{width:100%;background:#fff}
+.processInner{width:min(1180px,92%);margin:0 auto;padding:62px 0}
+.processIntroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.processEyebrow{display:flex;align-items:center;gap:11px;margin:0 0 12px;color:#123d70;font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.processEyebrow:before{content:"";width:40px;height:2px;background:var(--process-gold)}
+.processHeading{margin:0;color:var(--process-ink);font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,4.4vw,56px);line-height:1.04;letter-spacing:-.035em}
+.processHeading span{color:var(--process-gold)}
+.processLead{margin:18px 0 0;max-width:700px;color:var(--process-muted);font-size:17px;line-height:1.72}
+.processIntroCard{background:#fff;border:1px solid var(--process-line);border-radius:12px;padding:12px;box-shadow:0 15px 35px rgba(18,42,72,.10)}
+.processIntroCard img{width:100%;height:auto;display:block;border-radius:7px}
+.processStage{width:min(1180px,92%);margin:0 auto;padding:62px 0}
+.processStageImage{background:#fff;border:1px solid var(--process-line);border-radius:12px;padding:12px;box-shadow:0 14px 32px rgba(18,42,72,.10)}
+.processStageImage img{width:100%;height:auto;display:block;border-radius:7px}
+.processStageText{text-align:center;max-width:760px;margin:28px auto 0}
+.processStageText h2{margin:0;color:var(--process-ink);font-family:Georgia,"Times New Roman",serif;font-size:clamp(29px,3.6vw,43px);line-height:1.08}
+.processStageText p{margin:14px 0 0;color:var(--process-muted);font-size:16px;line-height:1.7}
+.processStage.alt{background:var(--process-light)}
+.processStage.altWrap{width:100%;background:var(--process-light)}
+.processDemo{width:min(1180px,92%);margin:0 auto;padding:62px 0}
+.processDemoCard{background:#07162d;border:1px solid rgba(22,137,232,.25);border-radius:14px;padding:24px;box-shadow:0 18px 45px rgba(0,0,0,.18)}
+.processDemoTitle{text-align:center;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:30px;margin:0 0 26px}
+.processDemoGrid{display:grid;grid-template-columns:320px 1fr;gap:40px;align-items:center}
+.processDemoItem{text-align:center}
+.processDemoItem h3{margin:0 0 12px;color:#dce7f4;font-size:14px;text-transform:uppercase;letter-spacing:.08em}
+.processDemoItem video{display:block;width:100%;height:auto}
+.processDemoMobile{max-width:300px;margin:0 auto;border-radius:28px;border:6px solid rgba(255,255,255,.08);box-shadow:0 20px 45px rgba(0,0,0,.45)}
+.processDemoDesktop{border-radius:12px;box-shadow:0 20px 45px rgba(0,0,0,.45)}
+.processDemoCopy{max-width:760px;margin:30px auto 0;text-align:center}
+.processDemoCopy h3{margin:0;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:31px}
+.processDemoCopy p{margin:13px 0 0;color:#dce7f4;font-size:16px;line-height:1.7}
+.processCtaNew{background:radial-gradient(900px 320px at 50% 0%,rgba(22,137,232,.30),transparent 65%),radial-gradient(700px 300px at 20% 100%,rgba(233,168,23,.10),transparent 70%),linear-gradient(135deg,#061329 0%,#071d3b 48%,#041022 100%);color:#fff}
+.processCtaNew .processInner{text-align:center;padding:58px 0}
+.processCtaNew h2{margin:0;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(31px,4vw,48px)}
+.processCtaNew p{max-width:700px;margin:14px auto 0;color:#dce7f4;font-size:16px;line-height:1.7}
+.processButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 21px;margin-top:24px;border-radius:7px;background:var(--process-gold);color:#111d31!important;font-weight:900;text-decoration:none!important}
+@media(max-width:900px){.processIntroGrid{grid-template-columns:1fr}.processIntroCard{max-width:700px;margin:0 auto}.processDemoGrid{grid-template-columns:1fr;gap:30px}.processDemoMobile{max-width:260px}}
+@media(max-width:600px){body[data-page="process"] #siteHeader{height:64px}.processInner,.processStage,.processDemo{width:92%;padding:46px 0}.processHeading{font-size:39px}.processLead{font-size:15px}.processIntroCard,.processStageImage{padding:8px}.processDemoCard{padding:16px}}
 </style>
 
 <title>The Process | Brad Hobbs Web Design</title>
@@ -221,125 +78,50 @@ opacity:.75;
 <header id="siteHeader"></header>
 
 <main>
+<section class="processHero"><div class="processHeroImage"><img src="images/71E9F858-20C4-447E-9BD2-9002B435C474.jpeg" alt="The Process"></div></section>
 
-<!-- INTRO BANNER -->
-<section class="bannerSection">
-  <div class="bannerCard">
-    <img src="images/71E9F858-20C4-447E-9BD2-9002B435C474.jpeg" alt="The Process">
-  </div>
-</section>
-
-<!-- INTRO TEXT -->
-<section class="serviceText">
-  <h2>A Process Built for Clarity and Confidence</h2>
-  <p>
-    Building a website should not feel confusing or overwhelming.
-    A clear process brings direction, removes uncertainty, and ensures every step is handled with purpose.
-  </p>
-  <p>
-    Each stage is designed to guide you forward with confidence so your vision becomes structured, clear, and effective.
-  </p>
-</section>
-
-<div class="sectionDivider"></div>
-
-<!-- DISCOVERY -->
-<section class="processSection">
-  <img src="images/DFF1E597-8CC3-4AE7-BE40-D1D6737DF77E.png" alt="Discovery Phase">
-</section>
-
-<section class="serviceText">
-  <h3>Discovery and Direction</h3>
-  <p>
-    Every project begins with understanding your vision, your goals, and what success looks like.
-    This step creates a strong foundation so nothing feels rushed or unclear.
-  </p>
-</section>
-
-<div class="sectionDivider"></div>
-
-<!-- BUILD -->
-<section class="processSection">
-  <img src="images/B6A46CDB-23C4-40A3-A10D-D9FB2A6567AC.png" alt="Build Phase">
-</section>
-
-<section class="serviceText">
-  <h3>Structure, Design, and Build</h3>
-  <p>
-    Your website is organized and designed with intention.
-    Every section is built to be clear, professional, and aligned with your goals.
-  </p>
-</section>
-
-<div class="sectionDivider"></div>
-
-<!-- DEMO (MOVED ONLY, UNCHANGED) -->
-<section class="demoPreview">
-
-  <h4 style="text-align:center; margin-bottom:18px; color:var(--muted);">
-    Real Site Preview
-  </h4>
-
-  <div class="demoGrid">
-
-    <div class="demoItem">
-      <h5>Mobile View</h5>
-      <video autoplay muted loop playsinline class="demoVideo mobile">
-        <source src="ScreenRecording_04-11-2026 05-10-47_1 2.mp4" type="video/mp4">
-      </video>
+<section class="processIntro">
+  <div class="processInner processIntroGrid">
+    <div>
+      <div class="processEyebrow">The Process</div>
+      <h1 class="processHeading">A Process Built for <span>Clarity and Confidence.</span></h1>
+      <p class="processLead">Building a website should not feel confusing or overwhelming. A clear process brings direction, removes uncertainty, and ensures every step is handled with purpose. Each stage is designed to guide you forward with confidence so your vision becomes structured, clear, and effective.</p>
     </div>
+    <div class="processIntroCard"><img src="images/DFF1E597-8CC3-4AE7-BE40-D1D6737DF77E.png" alt="Discovery Phase"></div>
+  </div>
+</section>
 
-    <div class="demoItem">
-      <h5>Desktop View</h5>
-      <video autoplay muted loop playsinline class="demoVideo desktop">
-        <source src="desktop-preview.mp4" type="video/mp4">
-      </video>
+<section class="processStage altWrap">
+  <div class="processStage">
+    <div class="processStageImage"><img src="images/DFF1E597-8CC3-4AE7-BE40-D1D6737DF77E.png" alt="Discovery Phase"></div>
+    <div class="processStageText"><h2>Discovery and Direction</h2><p>Every project begins with understanding your vision, your goals, and what success looks like. This step creates a strong foundation so nothing feels rushed or unclear.</p></div>
+  </div>
+</section>
+
+<section class="processStage">
+  <div class="processStageImage"><img src="images/B6A46CDB-23C4-40A3-A10D-D9FB2A6567AC.png" alt="Build Phase"></div>
+  <div class="processStageText"><h2>Structure, Design, and Build</h2><p>Your website is organized and designed with intention. Every section is built to be clear, professional, and aligned with your goals.</p></div>
+</section>
+
+<section class="processDemo">
+  <div class="processDemoCard">
+    <h2 class="processDemoTitle">Real Site Preview</h2>
+    <div class="processDemoGrid">
+      <div class="processDemoItem"><h3>Mobile View</h3><video autoplay muted loop playsinline class="processDemoMobile"><source src="ScreenRecording_04-11-2026 05-10-47_1 2.mp4" type="video/mp4"></video></div>
+      <div class="processDemoItem"><h3>Desktop View</h3><video autoplay muted loop playsinline class="processDemoDesktop"><source src="desktop-preview.mp4" type="video/mp4"></video></div>
     </div>
-
+    <div class="processDemoCopy"><h3>Preview Before Launch</h3><p>Before your website goes live, you experience a fully working version across both mobile and desktop. This ensures your design, layout, and functionality feel strong on every screen. Adjustments are made with clarity so your final launch reflects your vision with confidence.</p></div>
   </div>
-
-  <div class="serviceText">
-    <h3>Preview Before Launch</h3>
-    <p>
-      Before your website goes live, you experience a fully working version across both mobile and desktop.
-      This ensures your design, layout, and functionality feel strong on every screen.
-    </p>
-    <p>
-      Adjustments are made with clarity so your final launch reflects your vision with confidence.
-    </p>
-  </div>
-
 </section>
 
-<div class="sectionDivider"></div>
-
-<!-- LAUNCH -->
-<section class="processSection">
-  <img src="images/9E478BA3-22E4-4654-AB21-30487088C714.png" alt="Launch Phase">
+<section class="processStage">
+  <div class="processStageImage"><img src="images/9E478BA3-22E4-4654-AB21-30487088C714.png" alt="Launch Phase"></div>
+  <div class="processStageText"><h2>Launch and Ongoing Support</h2><p>Once everything is complete, your website goes live with confidence. Continued support ensures you are guided even after launch.</p></div>
 </section>
 
-<section class="serviceText">
-  <h3>Launch and Ongoing Support</h3>
-  <p>
-    Once everything is complete, your website goes live with confidence.
-    Continued support ensures you are guided even after launch.
-  </p>
+<section class="processCtaNew">
+  <div class="processInner"><h2>Ready to Start with a Clear Process?</h2><p>You deserve a process that feels structured, supportive, and focused. Let’s build something that works for you from start to finish.</p><a href="/brad-hobbswd/packages.html" class="processButton">START YOUR PROJECT →</a></div>
 </section>
-
-<div class="sectionDivider"></div>
-
-<!-- CTA -->
-<section class="serviceText processCta">
-  <h2>Ready to Start with a Clear Process</h2>
-  <p>
-    You deserve a process that feels structured, supportive, and focused.
-    Let’s build something that works for you from start to finish.
-  </p>
-  <a href="/brad-hobbswd/packages.html" class="btn btnPrimary">
-    Start Your Project
-  </a>
-</section>
-
 </main>
 
 <div class="sectionDivider footerDivider"></div>
