@@ -1,102 +1,28 @@
 <footer class="siteFooter">
-  
-<div class="footerInner">
-
-<div class="footerBrand">
-Brad Hobbs Web Design
-</div>
-
-<div class="footerText">
-
-<span>
-© <span id="y"></span> All rights reserved
-</span>
-
-<span class="footerDivider">•</span>
-
-<a href="/brad-hobbswd/privacy.html">
-Privacy Policy
-</a>
-
-<span class="footerDivider">•</span>
-
-<a href="/brad-hobbswd/terms.html">
-Terms
-</a>
-
-</div>
-
-</div>
-
+  <div class="footerInner">
+    <div class="footerBrand">
+      <img src="/brad-hobbswd/images/072FB4DA-2143-4158-B2DD-752E67E6F43D.png" alt="Brad Hobbs Web Design">
+      <div><strong>Brad Hobbs</strong><span>Web Design</span></div>
+    </div>
+    <nav class="footerNav">
+      <a href="/brad-hobbswd/index.html">Home</a>
+      <a href="/brad-hobbswd/service.html">Services</a>
+      <a href="/brad-hobbswd/process.html">Process</a>
+      <a href="/brad-hobbswd/packages.html">Packages</a>
+      <a href="https://brad-hobbswd.github.io/clients/">My Work</a>
+      <a href="/brad-hobbswd/contact.html">Contact</a>
+    </nav>
+    <div class="footerValues">FAITH&nbsp;&nbsp; • &nbsp;&nbsp;PURPOSE&nbsp;&nbsp; • &nbsp;&nbsp;INTEGRITY&nbsp;&nbsp; • &nbsp;&nbsp;EXCELLENCE</div>
+    <div class="footerLegal">© <span id="y"></span> Brad Hobbs Web Design &nbsp; | &nbsp; <a href="/brad-hobbswd/privacy.html">Privacy</a> &nbsp; | &nbsp; <a href="/brad-hobbswd/terms.html">Terms</a></div>
+  </div>
 </footer>
-
 <style>
-
-.footerInner{
-display:flex;
-flex-direction:column;
-align-items:center;
-text-align:center;
-gap:14px;
-padding:8px 20px;
-}
-
-.footerBrand{
-font-size:1rem;
-opacity:.85;
-}
-
-.footerText{
-display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-gap:0;
-font-size:.95rem;
-}
-
-.footerText span,
-.footerText a{
-margin:0 6px;
-}
-
-.footerText a{
-text-decoration:none;
-color:inherit;
-transition:.3s;
-}
-
-.footerText a:hover{
-opacity:.75;
-}
-
-.footerDivider{
-opacity:.35;
-margin:0;
-}
-
-@media(max-width:768px){
-
-.footerInner{
-gap:10px;
-padding:4px 12px;
-}
-
-.footerText{
-font-size:.9rem;
-line-height:1.7;
-}
-
-.footerText span,
-.footerText a{
-margin:0 4px;
-}
-
-}
-
+.siteFooter{margin-top:0;background:#06162d;color:#dce8f6;border-top:2px solid #1689e8}
+.footerInner{width:min(1180px,92%);margin:0 auto;padding:28px 0 20px;display:grid;grid-template-columns:1fr 1.4fr auto;gap:18px;align-items:center}
+.footerBrand{display:flex;align-items:center;gap:10px}.footerBrand img{width:50px;height:50px;object-fit:contain}.footerBrand strong{display:block;color:#fff;font-size:15px}.footerBrand span{display:block;color:#aebfd4;font-size:12px}
+.footerNav{display:flex;justify-content:center;flex-wrap:wrap;gap:13px}.footerNav a{color:#dce8f6;text-decoration:none;font-size:12px}.footerNav a:hover{color:#ffd34e}
+.footerValues{color:#ffd34e;font-size:10px;font-weight:900;line-height:1.7;max-width:120px}
+.footerLegal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:12px;text-align:center;color:#8fa4be;font-size:10px}.footerLegal a{color:inherit}
+@media(max-width:800px){.footerInner{grid-template-columns:1fr;text-align:center}.footerBrand{justify-content:center}.footerValues{max-width:none}.footerLegal{grid-column:auto}}
 </style>
-
-<script>
-document.getElementById("y").textContent =
-new Date().getFullYear();
-</script>
+<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
