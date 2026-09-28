@@ -11,146 +11,42 @@
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=9">
 
 <style>
-
-/* ===== FORM CENTERING ===== */
-.contactWrap{
-  display:flex;
-  justify-content:center;
-  width:100%;
-  margin:60px auto 50px auto;
+:root{--c-navy:#07162d;--c-blue:#1689e8;--c-gold:#e9a817;--c-ink:#12233f;--c-muted:#596a82;--c-light:#f4f7fb;--c-line:#dbe4ee}
+body[data-page="contact"]{padding-top:0!important;background:var(--c-light);color:var(--c-ink)}
+body[data-page="contact"] .wrap{width:100%;max-width:none;margin:0;padding:0}
+body[data-page="contact"] #siteHeader{height:70px;position:relative}
+body[data-page="contact"] main{width:100%;margin:0;padding:0}
+body[data-page="contact"] .bannerSection{margin:0;background:#061327;line-height:0}
+body[data-page="contact"] .bannerCard{display:block;width:100%;margin:0;border:0;border-radius:0;overflow:hidden;background:#061327;box-shadow:none}
+body[data-page="contact"] .bannerCard img{width:100%;height:auto;display:block}
+body[data-page="contact"] .bannerSection:nth-of-type(2) .bannerCard{cursor:pointer}
+body[data-page="contact"] .bannerSection:nth-of-type(2) .bannerCard:hover{filter:brightness(1.04)}
+body[data-page="contact"] .sectionDivider{width:min(900px,88%);height:1px;margin:0 auto;background:linear-gradient(90deg,transparent,var(--c-blue),var(--c-gold),transparent)}
+.serviceText{background:#fff;width:100%;max-width:none;margin:0;padding:68px 0;text-align:center}
+.serviceText h2{width:92%;margin:0 auto;font-family:Georgia,"Times New Roman",serif;color:var(--c-ink);font-size:clamp(34px,4.5vw,52px);line-height:1.08}
+.serviceText p{width:min(700px,92%);margin:15px auto 0;color:var(--c-muted);line-height:1.7;font-size:16px}
+.contactWrap{width:100%;box-sizing:border-box;margin:0;padding:72px 0;background:var(--c-light);display:flex;justify-content:center}
+#quoteForm.card{box-sizing:border-box;width:min(760px,92%);max-width:none;margin:0;padding:34px;border-radius:15px;background:#fff;border:1px solid var(--c-line);box-shadow:0 20px 48px rgba(18,42,72,.11)}
+.formTitle{text-align:center;margin:0;color:var(--c-ink);font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,4vw,46px);line-height:1.08}
+.formSubtitle{color:var(--c-muted)}
+.formGrid{display:grid;gap:21px;margin-top:28px}
+.formLabel{display:block;text-align:left}
+.formLabelTitle{font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;color:#164c80}
+.formControl{box-sizing:border-box;width:100%;padding:13px 14px;border-radius:8px;border:1px solid #ccd8e5;background:#fff;color:var(--c-ink);font:inherit}
+.formControl::placeholder{color:#8796aa}
+.formControl:focus{outline:none;border-color:var(--c-blue);box-shadow:0 0 0 3px rgba(22,137,232,.12)}
+.formControl option{background:#fff;color:var(--c-ink)}
+.formLabel textarea{min-height:150px;resize:vertical}
+#sendBtn{width:100%;min-height:50px;margin-top:3px;border-radius:7px;font-weight:900}
+body[data-page="contact"] .footerDivider{display:none!important}
+@media(max-width:600px){
+ body[data-page="contact"] #siteHeader{height:64px}
+ .serviceText{padding:52px 0}.serviceText h2{font-size:38px}.serviceText p{font-size:15px}
+ .contactWrap{padding:52px 0}
+ #quoteForm.card{width:92%;padding:23px 18px}
+ .formTitle{font-size:37px}
+ .formGrid{gap:18px;margin-top:24px}
 }
-
-/* ===== FORM SIZE ===== */
-#quoteForm{
-  width:100%;
-  max-width:700px;
-  margin:0 auto;
-}
-
-/* ===== CARD LOOK ===== */
-#quoteForm.card{
-  padding:28px;
-  border-radius:20px;
-  background:rgba(255,255,255,.06);
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,.15);
-  box-shadow:0 25px 60px rgba(0,0,0,.55);
-}
-
-/* ===== GRID ===== */
-.formGrid{
-  display:grid;
-  gap:14px;
-}
-
-/* ===== TEXT ===== */
-.formTitle{
-  text-align:left;
-  font-size:24px;
-  font-weight:900;
-}
-
-.formSubtitle{
-  text-align:left;
-  color:var(--muted);
-  margin-bottom:18px;
-}
-
-/* ===== LABELS ===== */
-.formLabel{
-  display:block;
-  text-align:left;
-}
-
-.formLabelTitle{
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-bottom:6px;
-  color:var(--muted);
-}
-
-/* ===== INPUTS ===== */
-.formControl{
-  width:100%;
-  padding:12px 14px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.08);
-  color:white;
-  font-size:15px;
-}
-
-.formControl::placeholder{
-  color:rgba(255,255,255,.6);
-}
-
-.formControl:focus{
-  outline:none;
-  border:1px solid var(--accent);
-  box-shadow:0 0 12px rgba(47,179,255,.25);
-}
-
-/* ===== BUTTON ===== */
-#sendBtn{
-  width:100%;
-  margin-top:12px;
-  padding:14px;
-}
-
-/* ===== BANNER SYSTEM ===== */
-.bannerSection{ margin-top:30px; }
-
-.bannerCard{
-  display:block;
-  width:min(1100px,92%);
-  margin:0 auto;
-  border-radius:22px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.03);
-  box-shadow:0 12px 40px rgba(0,0,0,.45), 0 0 20px rgba(47,179,255,.12);
-}
-
-.bannerCard img{ width:100%; display:block; }
-
-.sectionDivider{
-  width:min(900px,92%);
-  height:1px;
-  margin:50px auto;
-  background:linear-gradient(90deg,transparent,rgba(47,179,255,.9),rgba(245,184,65,.9),transparent);
-}
-
-.serviceText{
-  max-width:700px;
-  margin:18px auto;
-  text-align:center;
-}
-
-.serviceText p{
-  color:var(--muted);
-  line-height:1.6;
-  margin-bottom:10px;
-}
-
-  /* ===== FIX SELECT VISIBILITY ===== */
-.formControl {
-  color: #ffffff;
-  background: rgba(255,255,255,.08);
-}
-
-/* Dropdown options (desktop fix) */
-.formControl option {
-  background: #0b1426; /* dark background */
-  color: #ffffff;      /* white text */
-}
-
-/* Fix placeholder color */
-.formControl option[value=""] {
-  color: #9fb3d9;
-}
-
 </style>
 
 </head>
