@@ -152,6 +152,30 @@ body[data-page="packages"] .sectionDivider{width:min(900px,88%);height:1px;margi
    display:block !important;
  }
 }
+</style><style id="packages-intro-hard-fix">
+body[data-page="packages"] .packagesIntro{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  box-sizing:border-box !important;
+  overflow:visible !important;
+}
+body[data-page="packages"] .packagesIntro .packagesTitle,
+body[data-page="packages"] .packagesIntro .packagesSubtitle{
+  position:static !important;
+  left:auto !important;
+  right:auto !important;
+  transform:none !important;
+  float:none !important;
+  box-sizing:border-box !important;
+  width:min(850px,calc(100% - 48px)) !important;
+  max-width:850px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+body[data-page="packages"] .packagesIntro .packagesTitle{
+  text-align:center !important;
+}
 </style></head>
 
 <body data-page="packages">
