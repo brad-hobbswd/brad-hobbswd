@@ -8,212 +8,66 @@
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=2">
 
 <style>
-
-/* ===== CORE LAYOUT ===== */
-
-.bannerSection{
-  margin-top:20px; /* ✅ FIXED (was 40px) */
+:root{
+  --r-navy:#07162d;--r-navy2:#0b2344;--r-blue:#1689e8;--r-gold:#e9a817;
+  --r-ink:#12233f;--r-muted:#596a82;--r-light:#f4f7fb;--r-line:#dbe4ee;
 }
-
-.bannerCard{
-  width:min(1100px,92%);
-  margin:20px auto;
-  border-radius:22px;
-  overflow:hidden;
-
-  border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.03);
-
-  box-shadow:
-    0 12px 40px rgba(0,0,0,.45),
-    0 0 20px rgba(47,179,255,.12);
+body.resourcesPage{padding-top:0!important;background:var(--r-light);color:var(--r-ink)}
+body.resourcesPage .wrap{width:100%;max-width:none;margin:0;padding:0}
+body.resourcesPage #siteHeader{height:70px;position:relative}
+body.resourcesPage main{width:100%;margin:0;padding:0}
+body.resourcesPage .bannerSection{margin:0;background:#061327;line-height:0}
+body.resourcesPage .bannerCard{width:100%;margin:0;border:0;border-radius:0;background:#061327;box-shadow:none}
+body.resourcesPage .bannerImg{width:100%;height:auto;display:block}
+body.resourcesPage .sectionDivider{width:min(900px,88%);height:1px;margin:0 auto;background:linear-gradient(90deg,transparent,var(--r-blue),var(--r-gold),transparent)}
+.hostingIntro{width:100%;max-width:none;margin:0;padding:72px 0;background:#fff;text-align:center}
+.hostingIntro h2{width:min(850px,92%);margin:0 auto;font-family:Georgia,"Times New Roman",serif;color:var(--r-ink);font-size:clamp(34px,4.5vw,52px);line-height:1.08}
+.hostingIntro p{width:min(760px,92%);margin:16px auto 0;color:var(--r-muted);font-size:16px;line-height:1.75}
+.domain-search,.dns-check{width:min(1120px,92%);box-sizing:border-box;margin:0 auto;padding:58px 30px;text-align:center;background:#fff}
+.domain-search h2,.dns-check h2{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(29px,3.5vw,42px);color:var(--r-ink)}
+.domain-search p{color:var(--r-muted)!important;line-height:1.6}
+.domain-search form,.dns-check form{display:flex;justify-content:center;align-items:center;gap:10px;max-width:650px;margin:22px auto 0}
+.domain-search input,.dns-check input{box-sizing:border-box;flex:1;width:auto;margin:0;padding:13px 15px;border:1px solid var(--r-line);border-radius:8px;background:#fff;color:var(--r-ink);font:inherit}
+.domain-search input:focus,.dns-check input:focus{outline:none;border-color:var(--r-blue);box-shadow:0 0 0 3px rgba(22,137,232,.12)}
+.domain-search button,.dns-check button{min-height:46px;padding:0 17px;border:0;border-radius:7px;background:var(--r-gold);color:#17243a;font-weight:900}
+body.resourcesPage main>section:nth-of-type(4){width:min(1160px,92%);margin:0 auto;padding:72px 0}
+body.resourcesPage main>section:nth-of-type(4)>h2{margin:0;text-align:center;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,4vw,46px);color:var(--r-ink)}
+body.resourcesPage main>section:nth-of-type(4)>p{max-width:760px;margin:13px auto 35px;text-align:center;color:var(--r-muted)!important;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{box-sizing:border-box;width:100%;max-width:none;min-height:190px;padding:22px;border-radius:14px;background:#fff;border:1px solid var(--r-line);box-shadow:0 14px 34px rgba(18,42,72,.08);transition:transform .22s ease,box-shadow .22s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(18,42,72,.14)}
+.cardInner{height:100%;align-items:flex-start}
+.logoImg{width:54px;height:54px;flex:0 0 54px}
+.cardTitle{margin:0;color:var(--r-ink);font-size:18px}
+.meta{color:#164c80;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin:6px 0 3px}
+.desc{color:var(--r-muted);font-size:14px;line-height:1.55}
+.actions{margin-top:12px}
+.card .btn{font-size:12px;padding:9px 13px}
+.featuredCard{border:1px solid rgba(233,168,23,.7);box-shadow:0 18px 40px rgba(18,42,72,.11)}
+.featuredCard .logoImg{width:72px;height:72px;flex:0 0 72px}
+.badge{background:var(--r-gold);color:#17243a;border-radius:5px;padding:4px 7px}
+.cta{box-sizing:border-box;width:100%;max-width:none;margin:0;padding:70px 20px;background:radial-gradient(700px 260px at 50% 0%,rgba(22,137,232,.27),transparent 68%),linear-gradient(135deg,#061329,#071d3b 52%,#041022);text-align:center}
+.cta h2{margin:0;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(33px,4.5vw,50px)}
+.cta p{max-width:700px;margin:15px auto 22px;color:#d7e4f2;line-height:1.7}
+.cta .btnPrimary{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:7px;font-weight:900}
+body.resourcesPage .footerDivider{display:none!important}
+@media(max-width:950px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){
+ body.resourcesPage #siteHeader{height:64px}
+ .hostingIntro{padding:52px 0}
+ .hostingIntro h2{font-size:38px}
+ .hostingIntro p{font-size:15px}
+ .domain-search,.dns-check{width:92%;padding:45px 10px}
+ .domain-search form,.dns-check form{flex-direction:column;align-items:stretch}
+ .domain-search input,.dns-check input{width:100%}
+ .domain-search button,.dns-check button{width:100%}
+ body.resourcesPage main>section:nth-of-type(4){width:92%;padding:52px 0}
+ .grid{grid-template-columns:1fr;gap:16px}
+ .card{min-height:0}
+ .cardInner{gap:14px}
+ .cta{padding:56px 20px}
+ .cta h2{font-size:36px;line-height:1.12}
 }
-
-.bannerImg{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-/* ===== DIVIDER ===== */
-
-.sectionDivider{
-  width:min(900px,92%);
-  height:1px;
-  margin:50px auto;
-
-  background:linear-gradient(
-    90deg,
-    transparent,
-    rgba(47,179,255,.9),
-    rgba(245,184,65,.9),
-    transparent
-  );
-}
-
-/* ===== GRID ===== */
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-  gap:22px;
-}
-
-/* ===== PREMIUM CARDS ===== */
-
-.card{
-  border-radius:22px;
-  overflow:hidden;
-
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.12);
-
-  padding:18px;
-
-  transition:.3s ease;
-
-  box-shadow:
-    0 12px 35px rgba(0,0,0,.45),
-    0 0 15px rgba(47,179,255,.08);
-}
-
-.cardInner{
-  display:flex;
-  gap:16px;
-  align-items:center;
-}
-
-.logoImg{
-  width:48px;
-  height:48px;
-  object-fit:contain;
-}
-
-.cardTitle{
-  font-size:16px;
-  font-weight:900;
-}
-
-.meta{
-  font-size:12px;
-  color:var(--muted);
-  margin-bottom:4px;
-}
-
-.desc{
-  font-size:14px;
-  color:var(--muted);
-}
-
-.actions{
-  margin-top:8px;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-
-  box-shadow:
-    0 20px 50px rgba(0,0,0,.6),
-    0 0 25px rgba(47,179,255,.25);
-}
-
-.card .btn{
-  font-size:13px;
-  padding:8px 12px;
-}
-
-/* ===== FORM SECTIONS ===== */
-
-.domain-search,
-.dns-check{
-  text-align:center;
-  margin:30px auto;
-}
-
-.domain-search input,
-.dns-check input{
-  padding:10px;
-  border-radius:10px;
-  border:1px solid var(--line);
-  width:220px;
-  margin-right:8px;
-}
-
-.domain-search button,
-.dns-check button{
-  padding:10px 14px;
-  border-radius:10px;
-  border:none;
-  font-weight:700;
-  cursor:pointer;
-
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  color:#031427;
-}
-
-/* ===== CTA ===== */
-
-.cta{
-  text-align:center;
-  width:min(700px,92%);
-  margin:40px auto;
-}
-
-.cta p{
-  color:var(--muted);
-  margin:10px 0 20px;
-}
-
-/* ===== FOOTER ===== */
-
-
-
-/* ===== CENTER INTRO TEXT ===== */
-
-.hostingIntro{
-  max-width:700px;
-  margin:0 auto;
-  text-align:center;
-}
-
-.hostingIntro p{
-  color:var(--muted);
-  margin-top:10px;
-}
-
-.featuredCard{
-  border:1px solid rgba(245,184,65,.6);
-  box-shadow:
-    0 20px 60px rgba(0,0,0,.6),
-    0 0 30px rgba(245,184,65,.25);
-}
-
-.badge{
-  display:inline-block;
-  font-size:11px;
-  font-weight:700;
-  padding:4px 8px;
-  border-radius:8px;
-  margin:6px 0;
-
-  background:linear-gradient(90deg,#f5b841,#ffdd88);
-  color:#1a1a1a;
-}
-
-/* ===== FEATURED LOGO OVERRIDE ===== */
-
-.featuredCard .logoImg{
-  width:80px;
-  height:80px;
-}
-
-/* Optional: give it a little breathing room */
-.featuredCard .cardInner{
-  gap:20px;
-}
-
-
-
 </style>
 
 <title>Resources | Brad Hobbs Web Design</title>
