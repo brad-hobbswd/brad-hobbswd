@@ -89,7 +89,15 @@ body[data-page="process"] .footerDivider{display:none!important}\n</style>
 <title>The Process | Brad Hobbs Web Design</title>
 <link rel="icon" href="/brad-hobbswd/favicon.ico">
 <meta name="description" content="A clear, guided website design process from discovery and planning through build, review, launch, and ongoing support.">
-</head>
+<style id="desktop-banner-sizing">
+@media(min-width:901px){
+ body[data-page="process"] .processHero{width:min(1180px,calc(100% - 48px));margin:24px auto 0;border-radius:16px;overflow:hidden;box-shadow:0 18px 42px rgba(18,42,72,.12)}
+ body[data-page="process"] .processHero img{width:100%;height:auto;display:block}
+}
+@media(max-width:900px){
+ body[data-page="process"] .processHero{width:100%;margin:0;border-radius:0;box-shadow:none}
+}
+</style></head>
 <body data-page="process">
 <div class="wrap">
 <header id="siteHeader"></header>
