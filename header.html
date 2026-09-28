@@ -51,6 +51,24 @@
 .topbar.scrolled{box-shadow:0 8px 28px rgba(0,0,0,.42),0 0 15px rgba(22,137,232,.18)}
 @media(max-width:1024px){.nav{display:none}.menuToggle{display:flex}}
 </style>
+<style id="desktop-nav-sizing">
+@media(min-width:1025px){
+  .topbar{
+    padding-left:max(24px,calc((100vw - 1320px)/2));
+    padding-right:max(24px,calc((100vw - 1320px)/2));
+    min-height:70px;
+  }
+  .brand{gap:11px}
+  .brand img{height:48px}
+  .brandText strong{font-size:16px}
+  .brandText span{font-size:12px}
+  .nav{gap:23px}
+  .nav a{font-size:13px;padding:12px 0}
+}
+@media(min-width:1500px){
+  .nav{gap:25px}
+}
+</style>
 
 <div class="topbar">
   <div class="brand">
