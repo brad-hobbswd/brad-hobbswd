@@ -136,6 +136,112 @@ body.resourcesPage .footerDivider{display:none!important}
    display:block !important;
  }
 }
+</style><style id="resources-final-layout">
+body.resourcesPage{
+  background:#f4f7fb !important;
+  color:#12233f !important;
+  overflow-x:hidden !important;
+}
+body.resourcesPage .hostingIntro{
+  width:100% !important;
+  max-width:none !important;
+  box-sizing:border-box !important;
+  padding:70px 24px 64px !important;
+}
+body.resourcesPage .hostingIntro h2,
+body.resourcesPage .hostingIntro p{
+  position:static !important;
+  transform:none !important;
+  float:none !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+body.resourcesPage .domain-search,
+body.resourcesPage .dns-check{
+  width:min(1120px,calc(100% - 48px)) !important;
+  max-width:1120px !important;
+  box-sizing:border-box !important;
+  margin:0 auto !important;
+  border-radius:0 !important;
+}
+body.resourcesPage .resourcesHosting{
+  width:min(1160px,calc(100% - 48px)) !important;
+  max-width:1160px !important;
+  margin:0 auto !important;
+  padding:70px 0 76px !important;
+  box-sizing:border-box !important;
+}
+body.resourcesPage .resourcesHosting > h2{
+  margin:0 !important;
+  text-align:center !important;
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-size:clamp(32px,4vw,46px) !important;
+  line-height:1.1 !important;
+  color:#12233f !important;
+}
+body.resourcesPage .resourcesHosting > p{
+  width:min(760px,100%) !important;
+  max-width:760px !important;
+  margin:14px auto 36px !important;
+  text-align:center !important;
+  color:#596a82 !important;
+  line-height:1.7 !important;
+}
+body.resourcesPage .resourcesHosting .grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:22px !important;
+  width:100% !important;
+}
+body.resourcesPage .resourcesHosting .card{
+  min-width:0 !important;
+  min-height:220px !important;
+  padding:24px !important;
+  box-sizing:border-box !important;
+  background:#fff !important;
+  border:1px solid #dbe4ee !important;
+  border-radius:14px !important;
+  box-shadow:0 14px 34px rgba(18,42,72,.08) !important;
+}
+body.resourcesPage .resourcesHosting .cardInner{
+  display:flex !important;
+  gap:16px !important;
+  align-items:flex-start !important;
+  height:auto !important;
+}
+body.resourcesPage .resourcesHosting .cardInner > div{
+  min-width:0 !important;
+}
+body.resourcesPage .resourcesHosting .logoImg{
+  object-fit:contain !important;
+  max-width:72px !important;
+}
+body.resourcesPage .resourcesHosting .cardTitle{
+  color:#12233f !important;
+  line-height:1.2 !important;
+}
+body.resourcesPage .resourcesHosting .desc{
+  color:#596a82 !important;
+  line-height:1.55 !important;
+}
+body.resourcesPage .resourcesHosting .actions{
+  margin-top:14px !important;
+}
+body.resourcesPage .cta{
+  margin-top:0 !important;
+}
+@media(max-width:950px) and (min-width:701px){
+  body.resourcesPage .resourcesHosting .grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  body.resourcesPage .resourcesHosting .card:last-child{grid-column:auto !important;max-width:none !important;justify-self:stretch !important}
+}
+@media(max-width:700px){
+  body.resourcesPage .hostingIntro{padding:52px 20px !important}
+  body.resourcesPage .domain-search,
+  body.resourcesPage .dns-check{width:calc(100% - 32px) !important;padding:45px 16px !important}
+  body.resourcesPage .resourcesHosting{width:calc(100% - 32px) !important;padding:52px 0 !important}
+  body.resourcesPage .resourcesHosting .grid{grid-template-columns:1fr !important;gap:16px !important}
+  body.resourcesPage .resourcesHosting .card{min-height:0 !important}
+}
 </style></head>
 
 <body class="resourcesPage" data-page="resources">
@@ -206,9 +312,9 @@ Check who owns a domain and view registration details instantly.
 <div class="sectionDivider"></div>
 
 <!-- HOSTING PLATFORMS -->
-<section>
+<section class="resourcesHosting">
 
-<h2 style="text-align:center;">Hosting Platforms</h2>
+<h2>Hosting Platforms</h2>
 
 <p style="text-align:center; color:var(--muted); margin-bottom:20px;">
 Start with Whois.com for the easiest and most reliable domain search and hosting setup.
