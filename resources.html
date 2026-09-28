@@ -51,7 +51,7 @@ body.resourcesPage main>section:nth-of-type(4)>p{max-width:760px;margin:13px aut
 .cta p{max-width:700px;margin:15px auto 22px;color:#d7e4f2;line-height:1.7}
 .cta .btnPrimary{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:7px;font-weight:900}
 body.resourcesPage .footerDivider{display:none!important}
-@media(max-width:950px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:950px) and (min-width:701px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid .card:last-child{grid-column:1/-1;max-width:calc((100% - 20px)/2);justify-self:center}}\n@media(max-width:700px){.grid{grid-template-columns:1fr}.grid .card:last-child{grid-column:auto;max-width:none}}
 @media(max-width:700px){
  body.resourcesPage #siteHeader{height:64px}
  .hostingIntro{padding:52px 0}
