@@ -81,7 +81,17 @@ body.resourcesPage .footerDivider{display:none!important}
 
 <meta name="description" content="Website hosting, domain tools, and resources to support your online presence.">
 
-</head>
+<style id="desktop-banner-sizing">
+@media(min-width:901px){
+ body.resourcesPage .bannerSection{width:min(1180px,calc(100% - 48px));margin:24px auto 0!important}
+ body.resourcesPage .bannerCard{width:100%;border-radius:16px!important;overflow:hidden;box-shadow:0 18px 42px rgba(18,42,72,.12)!important}
+ body.resourcesPage .bannerImg{width:100%;height:auto;display:block}
+}
+@media(max-width:900px){
+ body.resourcesPage .bannerSection{width:100%;margin:0!important}
+ body.resourcesPage .bannerCard{border-radius:0!important}
+}
+</style></head>
 
 <body class="resourcesPage" data-page="resources">
 
