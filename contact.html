@@ -59,6 +59,24 @@ body[data-page="contact"] .footerDivider{display:none!important}
  body[data-page="contact"] .bannerSection{width:100%;margin:0!important}
  body[data-page="contact"] .bannerCard{border-radius:0!important}
 }
+</style><style id="final-first-banner-sizing">
+@media(min-width:1025px){
+ body[data-page="contact"] .bannerSection{
+   width:min(1180px,calc(100% - 64px))!important;
+   margin:28px auto 0!important;
+ }
+ body[data-page="contact"] .bannerSection img{
+   width:100%!important;
+   height:auto!important;
+   display:block!important;
+ }
+}
+@media(max-width:1024px){
+ body[data-page="contact"] .bannerSection{
+   width:100%!important;
+   margin:0!important;
+ }
+}
 </style></head>
 
 <body data-page="contact">
