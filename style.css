@@ -340,3 +340,39 @@ body[data-page="home"] .cta{
     height:64px !important;
   }
 }
+
+/* FINAL DESKTOP FIRST-BANNER STANDARD */
+@media (min-width:1025px){
+  body[data-page="home"] .homeHero,
+  body[data-page="services"] .servicesHero,
+  body[data-page="process"] .processHero,
+  body[data-page="packages"] .bannerSection,
+  body[data-page="resources"] .bannerSection,
+  body[data-page="contact"] .bannerSection:first-of-type{
+    width:min(1180px,calc(100% - 64px)) !important;
+    max-width:1180px !important;
+    margin:28px auto 0 !important;
+    box-sizing:border-box !important;
+  }
+  body[data-page="home"] .homeHero img,
+  body[data-page="services"] .servicesHero img,
+  body[data-page="process"] .processHero img,
+  body[data-page="packages"] .bannerSection img,
+  body[data-page="resources"] .bannerSection img,
+  body[data-page="contact"] .bannerSection:first-of-type img{
+    width:100% !important;
+    height:auto !important;
+    display:block !important;
+  }
+}
+@media (max-width:1024px){
+  body[data-page="home"] .homeHero,
+  body[data-page="services"] .servicesHero,
+  body[data-page="process"] .processHero,
+  body[data-page="packages"] .bannerSection,
+  body[data-page="resources"] .bannerSection,
+  body[data-page="contact"] .bannerSection:first-of-type{
+    width:100% !important;
+    margin:0 !important;
+  }
+}
