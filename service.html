@@ -50,7 +50,8 @@ body[data-page="services"] main{
 
 .servicesHero{
   background:#fff;
-  width:100%;
+  width:min(1180px,calc(100% - 64px));
+  margin:28px auto 0;
 }
 
 .servicesHeroImage{
@@ -58,6 +59,7 @@ body[data-page="services"] main{
   line-height:0;
   overflow:hidden;
   background:#061327;
+  border-radius:16px;
 }
 
 .servicesHeroImage img{
@@ -398,6 +400,9 @@ body[data-page="services"] main{
  body[data-page="services"] .servicesHero{
    width:100%!important;
    margin:0!important;
+ }
+ body[data-page="services"] .servicesHeroImage{
+   border-radius:0!important;
  }
 }
 </style></head>
