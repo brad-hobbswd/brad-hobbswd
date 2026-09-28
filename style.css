@@ -376,3 +376,52 @@ body[data-page="home"] .cta{
     margin:0 !important;
   }
 }
+
+
+/* ===== SITEWIDE BANNER FINISH ===== */
+.siteBanner,
+body[data-page="home"] .homeHero,
+body[data-page="services"] .servicesHero,
+body[data-page="process"] .processHero,
+body[data-page="packages"] .bannerSection,
+body[data-page="resources"] .bannerSection,
+body[data-page="contact"] .bannerSection{
+  -webkit-font-smoothing:antialiased !important;
+}
+@media (min-width:1025px){
+  body[data-page="home"] .homeHero,
+  body[data-page="services"] .servicesHero,
+  body[data-page="process"] .processHero,
+  body[data-page="packages"] .bannerSection,
+  body[data-page="resources"] .bannerSection,
+  body[data-page="contact"] .bannerSection{
+    border-radius:18px !important;
+    overflow:hidden !important;
+    box-shadow:
+      0 10px 28px rgba(18,42,72,.08),
+      0 2px 8px rgba(18,42,72,.05) !important;
+    background:#061327 !important;
+  }
+  body[data-page="home"] .homeHero img,
+  body[data-page="services"] .servicesHero img,
+  body[data-page="process"] .processHero img,
+  body[data-page="packages"] .bannerSection img,
+  body[data-page="resources"] .bannerSection img,
+  body[data-page="contact"] .bannerSection img{
+    border-radius:0 !important;
+    backface-visibility:hidden !important;
+    transform:translateZ(0) !important;
+  }
+}
+@media (max-width:1024px){
+  body[data-page="home"] .homeHero,
+  body[data-page="services"] .servicesHero,
+  body[data-page="process"] .processHero,
+  body[data-page="packages"] .bannerSection,
+  body[data-page="resources"] .bannerSection,
+  body[data-page="contact"] .bannerSection{
+    border-radius:0 !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
+  }
+}
