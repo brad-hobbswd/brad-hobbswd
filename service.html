@@ -432,7 +432,22 @@ body[data-page="services"] main{
    display:block !important;
  }
 }
-</style></head>
+</style>
+<style id="seven-services-detail">
+.serviceOverviewGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;align-items:stretch}
+.serviceOverviewCard{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0;padding:22px 12px 20px;background:#fff;border:1px solid #dce5ef;border-radius:11px;box-shadow:0 9px 25px rgba(18,42,72,.07);text-decoration:none!important;color:#12233f!important;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.serviceOverviewCard:hover{transform:translateY(-3px);border-color:#1689e8;box-shadow:0 14px 30px rgba(18,42,72,.11)}
+.serviceIcon{width:48px;height:48px;border:2px solid #0b63b6;border-radius:50%;display:grid;place-items:center;color:#0b63b6;font-size:18px;font-weight:900;margin-bottom:12px;background:#fbf8e8}
+.serviceOverviewCard h3{margin:0;color:#09244b;font-size:15px;line-height:1.25}.serviceOverviewCard p{margin:11px 0 18px;color:#52627b;font-size:12px;line-height:1.5}.serviceOverviewCard b{margin-top:auto;color:#b97800;font-size:11px;letter-spacing:.05em}
+.serviceDetail{background:#fff}.serviceDetail.alt{background:#f5f8fc}.serviceDetailGrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.serviceDetailGrid.reverse>div:first-child{order:2}.serviceDetailGrid.reverse>div:last-child{order:1}
+.serviceDetailImage{background:#fff;border:1px solid #dce5ef;border-radius:12px;padding:12px;box-shadow:0 14px 32px rgba(18,42,72,.09)}.serviceDetailImage img{width:100%;height:auto;display:block;border-radius:7px}
+.serviceDetailCopy h2{margin:0;color:#12233f;font-family:Georgia,"Times New Roman",serif;font-size:clamp(29px,3.5vw,44px);line-height:1.08}.serviceDetailCopy p{margin:15px 0 0;color:#52627b;font-size:16px;line-height:1.72}.serviceDetailCopy ul,.serviceDetailPanel ul{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:9px}.serviceDetailCopy li,.serviceDetailPanel li{color:#43546d;font-size:14px;line-height:1.45}.serviceDetailCopy li::before,.serviceDetailPanel li::before{content:"✓";color:#d39a0d;font-weight:900;margin-right:9px}
+.serviceDetailPanel{background:#fff;border:1px solid #dce5ef;border-radius:14px;padding:30px;box-shadow:0 14px 32px rgba(18,42,72,.08)}.serviceDetailPanel .detailNumber{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#07162d;color:#ffd34e;font-weight:900;margin-bottom:18px}.serviceDetailPanel h3{margin:0;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:28px}.serviceDetailPanel p{margin:13px 0 0;color:#52627b;font-size:15px;line-height:1.7}
+@media(max-width:1100px){.serviceOverviewGrid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:800px){.serviceOverviewGrid{grid-template-columns:repeat(2,1fr)}.serviceDetailGrid{grid-template-columns:1fr;gap:30px}.serviceDetailGrid.reverse>div:first-child,.serviceDetailGrid.reverse>div:last-child{order:initial}}
+@media(max-width:500px){.serviceOverviewGrid{grid-template-columns:1fr}.serviceOverviewCard{padding:22px 20px}.serviceDetailCopy p{font-size:15px}.serviceDetailPanel{padding:23px}}
+</style>
+</head>
 
 <body data-page="services">
 
@@ -476,53 +491,103 @@ body[data-page="services"] main{
       <div class="sectionHeading">
         <div class="servicesEyebrow">Complete Website Solutions</div>
         <h2>Services That Help You Build, Improve, and Grow</h2>
-        <p>From the first design conversation through ongoing support, your digital presence can be built with a clear plan.</p>
+        <p>Each service below is explained in practical terms so you can see what it includes, why it matters, and how it can support your business or organization.</p>
       </div>
 
-      <div class="serviceCards">
+      <div class="serviceOverviewGrid">
+        <a href="#web-design" class="serviceOverviewCard"><span class="serviceIcon">▣</span><h3>Web Design</h3><p>Custom websites built around your goals and your business.</p><b>LEARN MORE →</b></a>
+        <a href="#redesign" class="serviceOverviewCard"><span class="serviceIcon">↻</span><h3>Website Redesign</h3><p>A complete transformation of an existing website.</p><b>LEARN MORE →</b></a>
+        <a href="#management" class="serviceOverviewCard"><span class="serviceIcon">⚙</span><h3>Website Management</h3><p>Ongoing updates, content changes, maintenance, and improvements.</p><b>LEARN MORE →</b></a>
+        <a href="#monitoring" class="serviceOverviewCard"><span class="serviceIcon">⌕</span><h3>Website Monitoring</h3><p>Keeping an eye on your website so issues can be addressed quickly.</p><b>LEARN MORE →</b></a>
+        <a href="#ecommerce" class="serviceOverviewCard"><span class="serviceIcon">▱</span><h3>E Commerce</h3><p>Online stores designed to showcase products and support ordering.</p><b>LEARN MORE →</b></a>
+        <a href="#seo" class="serviceOverviewCard"><span class="serviceIcon">▥</span><h3>SEO &amp; Digital Support</h3><p>Website structure, search visibility, technical support, and ongoing digital help.</p><b>LEARN MORE →</b></a>
+        <a href="#education" class="serviceOverviewCard"><span class="serviceIcon">◆</span><h3>Education Services</h3><p>Basic computer classes and practical digital skills training.</p><b>LEARN MORE →</b></a>
+      </div>
+    </div>
+  </section>
 
-        <article class="serviceCardNew">
-          <img src="images/45A124B9-1AFC-448F-AEE9-861E774E3F23.png" alt="Professional website design">
-          <div class="serviceCardContent">
-            <h3>Website Design</h3>
-            <p>Your website is often the first impression people receive. That experience should feel clear, professional, and aligned with who you are.</p>
-            <div class="servicePointsNew">
-              <div>Custom design built around your vision</div>
-              <div>Clean layout that builds trust</div>
-              <div>Mobile-friendly design</div>
-              <div>Structured to guide visitors toward action</div>
-            </div>
-          </div>
-        </article>
+  <section class="serviceDetail" id="web-design">
+    <div class="servicesInner serviceDetailGrid">
+      <div class="serviceDetailImage"><img src="images/45A124B9-1AFC-448F-AEE9-861E774E3F23.png" alt="Professional website design"></div>
+      <div class="serviceDetailCopy">
+        <div class="servicesEyebrow">01 • Web Design</div>
+        <h2>Websites Built Around Your Vision</h2>
+        <p>Web design is more than choosing colors and putting information on a page. Your website should communicate who you are, what you offer, and what visitors should do next.</p>
+        <p>I build custom websites with a clear structure, professional presentation, responsive layouts, and an experience designed around your goals.</p>
+        <ul><li>Custom website planning and design</li><li>Responsive layouts for desktop, tablet, and mobile</li><li>Clear navigation and organized content</li><li>Calls to action that guide visitors</li><li>Professional presentation aligned with your brand</li></ul>
+      </div>
+    </div>
+  </section>
 
-        <article class="serviceCardNew">
-          <img src="images/E6E98EAA-C3F2-475C-884E-2CDF132E321D.png" alt="Business support and website guidance">
-          <div class="serviceCardContent">
-            <h3>Business Support</h3>
-            <p>Every strong business needs structure. Guidance and direction can help you move forward with confidence and purpose.</p>
-            <div class="servicePointsNew">
-              <div>Clear direction for your business goals</div>
-              <div>Support organizing services and offers</div>
-              <div>Help simplifying ideas into a workable plan</div>
-              <div>Focused growth that builds something sustainable</div>
-            </div>
-          </div>
-        </article>
+  <section class="serviceDetail alt" id="redesign">
+    <div class="servicesInner serviceDetailGrid reverse">
+      <div class="serviceDetailImage"><img src="images/61EAEF59-D39E-4CC7-A0A8-6DA7B79E729A.jpeg" alt="Website redesign services"></div>
+      <div class="serviceDetailCopy">
+        <div class="servicesEyebrow">02 • Website Redesign</div>
+        <h2>Give Your Existing Website a Fresh Direction</h2>
+        <p>If your current website feels outdated, difficult to navigate, inconsistent, or no longer represents your business, a redesign can give it a completely different experience without losing the purpose behind it.</p>
+        <p>The goal is to improve clarity, presentation, usability, and structure so your website feels current and works better for the people using it.</p>
+        <ul><li>Review of the existing website</li><li>Modern visual and layout improvements</li><li>Improved navigation and content organization</li><li>Mobile and responsive improvements</li><li>Refined calls to action and user experience</li></ul>
+      </div>
+    </div>
+  </section>
 
-        <article class="serviceCardNew">
-          <img src="images/AC31881C-E476-4DA1-B64F-5D446DCE18F0.png" alt="SEO structure and search visibility">
-          <div class="serviceCardContent">
-            <h3>SEO Structure</h3>
-            <p>A strong website must also be visible. Proper structure helps your site reach people who are already searching for what you offer.</p>
-            <div class="servicePointsNew">
-              <div>Clean page structure for search engines</div>
-              <div>Keyword-focused layout that feels natural</div>
-              <div>Optimized performance and organization</div>
-              <div>Built for long-term visibility</div>
-            </div>
-          </div>
-        </article>
+  <section class="serviceDetail" id="management">
+    <div class="servicesInner serviceDetailGrid">
+      <div class="serviceDetailPanel"><span class="detailNumber">03</span><h3>Website Management</h3><p>Your website should not become something you have to worry about every time a change is needed. Website management provides ongoing help with the day to day upkeep of your digital presence.</p><ul><li>Text and content updates</li><li>Image and page changes</li><li>New pages and sections</li><li>Routine maintenance</li><li>Continued improvements as your needs change</li></ul></div>
+      <div class="serviceDetailCopy">
+        <div class="servicesEyebrow">03 • Website Management</div>
+        <h2>Keep Your Website Current</h2>
+        <p>Businesses change. Services change. Hours change. Promotions change. Your website should be able to change with you.</p>
+        <p>Management support helps keep your website accurate, useful, organized, and aligned with what is happening in your business.</p>
+      </div>
+    </div>
+  </section>
 
+  <section class="serviceDetail alt" id="monitoring">
+    <div class="servicesInner serviceDetailGrid reverse">
+      <div class="serviceDetailPanel"><span class="detailNumber">04</span><h3>Website Monitoring</h3><p>Monitoring is focused on keeping watch over the condition and accessibility of your website so problems can be identified and addressed as quickly as possible.</p><ul><li>Website availability checks</li><li>Basic issue identification</li><li>Monitoring of important website functions</li><li>Attention to noticeable errors or disruptions</li><li>Communication when an issue needs attention</li></ul></div>
+      <div class="serviceDetailCopy">
+        <div class="servicesEyebrow">04 • Website Monitoring</div>
+        <h2>Keep an Eye on What You Have Built</h2>
+        <p>A website can look perfect when it launches and still experience problems later. Monitoring adds another layer of awareness after launch.</p>
+        <p>It works alongside management so your website is not simply launched and forgotten.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="serviceDetail" id="ecommerce">
+    <div class="servicesInner serviceDetailGrid">
+      <div class="serviceDetailPanel"><span class="detailNumber">05</span><h3>E Commerce</h3><p>Turn your website into a place where customers can explore products and move toward an online purchase.</p><ul><li>Product focused page layouts</li><li>Online store structure</li><li>Product presentation and organization</li><li>Customer friendly navigation</li><li>Support for connecting your chosen commerce platform</li></ul></div>
+      <div class="serviceDetailCopy">
+        <div class="servicesEyebrow">05 • E Commerce</div>
+        <h2>Create a Store That Makes Sense</h2>
+        <p>An online store needs more than products on a screen. Customers need to understand what you sell, find what they want, and know how to move through the purchasing process.</p>
+        <p>E commerce design focuses on a clean shopping experience that presents your products professionally and supports your business goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="serviceDetail alt" id="seo">
+    <div class="servicesInner serviceDetailGrid reverse">
+      <div class="serviceDetailImage"><img src="images/AC31881C-E476-4DA1-B64F-5D446DCE18F0.png" alt="SEO and digital support"></div>
+      <div class="serviceDetailCopy">
+        <div class="servicesEyebrow">06 • SEO &amp; Digital Support</div>
+        <h2>Help People Find and Use Your Website</h2>
+        <p>A professional website also needs a strong foundation. SEO and digital support focuses on organization, structure, technical details, and practical improvements that help your website communicate clearly with both visitors and search engines.</p>
+        <ul><li>Search friendly page structure</li><li>Titles, descriptions, headings, and content organization</li><li>Technical and website structure support</li><li>Digital troubleshooting and guidance</li><li>Ongoing improvements as your website grows</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="serviceDetail" id="education">
+    <div class="servicesInner serviceDetailGrid">
+      <div class="serviceDetailPanel"><span class="detailNumber">07</span><h3>Education Services</h3><p>Technology should be useful, understandable, and accessible. Education services provide practical instruction for individuals and organizations who want more confidence using digital tools.</p><ul><li>Basic computer skills</li><li>Internet and online safety basics</li><li>Email and file management</li><li>Practical website and digital skills</li><li>Training tailored to the learner's needs</li></ul></div>
+      <div class="serviceDetailCopy">
+        <div class="servicesEyebrow">07 • Education Services</div>
+        <h2>Learn the Skills Behind the Technology</h2>
+        <p>Not everyone needs a complicated technical course. Sometimes you simply need someone to explain the technology clearly and show you how to use it.</p>
+        <p>Education services are designed around practical digital skills that can help individuals and organizations become more comfortable and capable with technology.</p>
       </div>
     </div>
   </section>
