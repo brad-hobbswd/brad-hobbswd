@@ -4,75 +4,198 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Website Management | Brad Hobbs Web Design</title>
-<meta name="description" content="Ongoing website support for updates, content changes, page improvements, and the everyday maintenance that keeps your site useful.">
+<meta name="description" content="Ongoing website management for content updates, page changes, announcements, and website improvements. Updates are completed within 24 hours of being received.">
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
 </head>
 <body>
 <div id="siteHeader"></div>
-<main class="servicePage">
+
+<main class="managementPage">
+
 <style>
-.servicePage{min-height:100vh;background:linear-gradient(180deg,#07152a 0%,#0a1d35 42%,#eef3f8 42%,#eef3f8 100%);color:#12233f}
-.serviceHero{width:min(1120px,92%);margin:0 auto;padding:150px 0 75px;color:#fff}
-.serviceEyebrow{color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
-.serviceHero h1{max-width:820px;margin:12px 0 18px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,7vw,70px);line-height:1.02}
-.serviceHero p{max-width:760px;margin:0;color:#d9e7f7;font-size:17px;line-height:1.75}
-.serviceBody{width:min(1000px,92%);margin:0 auto;padding:0 0 80px}
-.serviceGrid{display:grid;grid-template-columns:1fr 1.35fr;gap:28px;align-items:start}
-.servicePanel,.serviceContent{background:#fff;border:1px solid #dce5ef;border-radius:18px;box-shadow:0 12px 32px rgba(18,42,72,.1)}
-.servicePanel{padding:28px;position:relative;overflow:hidden}
-.servicePanel:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,#1689e8,#f0b529)}
-.serviceNumber{display:block;color:#b27600;font-size:12px;font-weight:900;letter-spacing:.12em}
-.servicePanel h2{margin:10px 0 16px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:26px}
-.servicePanel ul{margin:0;padding-left:19px;color:#52627b;line-height:1.8}
-.serviceContent{padding:34px}
-.serviceContent h2{margin:0 0 15px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:34px}
-.serviceContent p{margin:0 0 17px;color:#52627b;font-size:15px;line-height:1.75}
-.serviceContent h3{margin:25px 0 9px;color:#15345d;font-size:18px}
-.serviceContent ul{color:#52627b;line-height:1.8;padding-left:20px}
-.serviceCTA{display:inline-block;margin-top:10px;padding:12px 18px;border-radius:999px;background:#15345d;color:#fff;text-decoration:none;font-weight:800;font-size:13px}
-.serviceCTA:hover{background:#1689e8}
-@media(max-width:760px){
-.servicePage{background:linear-gradient(180deg,#07152a 0%,#0a1d35 31%,#eef3f8 31%,#eef3f8 100%)}
-.serviceHero{padding:125px 0 55px}
-.serviceHero h1{font-size:clamp(38px,11vw,54px)}
-.serviceHero p{font-size:15px}
-.serviceGrid{grid-template-columns:1fr}
-.serviceContent{padding:26px}
-.serviceContent h2{font-size:28px}
+.managementPage{background:#eef3f8;color:#12233f;overflow:hidden}
+.managementHero{position:relative;background:radial-gradient(circle at 82% 28%,rgba(47,179,255,.18),transparent 27%),radial-gradient(circle at 15% 75%,rgba(255,211,78,.08),transparent 24%),linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.managementHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:80px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.managementHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:155px 0 125px}
+.managementEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.managementEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.managementHero h1{max-width:850px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,78px);line-height:1.01;letter-spacing:-.025em}
+.managementHero h1 span{color:#ffd45f}
+.managementLead{max-width:760px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.managementActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.managementButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:900;transition:.2s ease}
+.managementButton.primary{background:#1689e8;color:#fff;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.managementButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.managementButton.secondary{border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.05)}
+.managementButton.secondary:hover{background:rgba(255,255,255,.1)}
+.managementMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.managementMeta span{display:flex;align-items:center;gap:7px}.managementMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
+
+.managementSection{width:min(1120px,92%);margin:auto;padding:88px 0}
+.managementIntro{max-width:740px;margin-bottom:35px}
+.managementEyebrowSmall{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.managementSection h2{margin:9px 0 12px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px);line-height:1.08}
+.managementIntro p{margin:0;color:#596a82;font-size:16px;line-height:1.75}
+
+.updatePromise{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch}
+.promiseMain{position:relative;padding:36px;border-radius:24px;background:linear-gradient(145deg,#0a1d35,#123c62);color:#fff;box-shadow:0 20px 45px rgba(7,24,45,.18);overflow:hidden}
+.promiseMain:before{content:"24";position:absolute;right:-15px;top:-45px;color:rgba(255,255,255,.055);font-size:190px;font-weight:900;line-height:1}
+.promiseLabel{position:relative;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.promiseMain h3{position:relative;margin:12px 0 12px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:36px}
+.promiseMain p{position:relative;max-width:600px;margin:0;color:#c4d5e7;font-size:15px;line-height:1.75}
+.promiseSide{display:grid;gap:15px}
+.promisePoint{padding:23px;border:1px solid #dce5ef;border-radius:18px;background:#fff;box-shadow:0 10px 26px rgba(18,42,72,.07)}
+.promisePoint strong{display:block;color:#15345d;font-size:15px}.promisePoint span{display:block;margin-top:6px;color:#65758b;font-size:13px;line-height:1.6}
+
+.managementCards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.managementCard{position:relative;padding:28px;min-height:225px;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08);overflow:hidden;transition:.22s ease}
+.managementCard:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#1689e8,#ffd45f)}
+.managementCard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(18,42,72,.13)}
+.managementIcon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#edf7ff;color:#1689e8;font-size:20px;font-weight:900}
+.managementCard h3{margin:19px 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:22px}
+.managementCard p{margin:0;color:#617189;font-size:14px;line-height:1.7}
+
+.workflowSection{background:#07182d;color:#fff;position:relative}
+.workflowSection:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:rgba(47,179,255,.28)}
+.workflowSection .managementSection{padding:90px 0}
+.workflowSection .managementEyebrowSmall{color:#ffd45f}
+.workflowSection h2{color:#fff}
+.workflowSection .managementIntro p{color:#b8cbe0}
+.workflowGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.workflowCard{padding:25px 20px;border:1px solid rgba(255,255,255,.11);border-radius:17px;background:rgba(255,255,255,.045)}
+.workflowNumber{color:#4db8ff;font-size:12px;font-weight:900;letter-spacing:.1em}
+.workflowCard h3{margin:12px 0 8px;color:#fff;font-size:17px}
+.workflowCard p{margin:0;color:#a9bdd4;font-size:13px;line-height:1.65}
+
+.expectGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.expectPanel{padding:30px;border-radius:21px;border:1px solid #dce5ef;background:#fff;box-shadow:0 12px 32px rgba(18,42,72,.07)}
+.expectPanel.dark{background:#0a1d35;border-color:#0a1d35;color:#fff}
+.expectPanel h3{margin:0 0 18px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:26px}
+.expectPanel.dark h3{color:#fff}
+.expectList{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.expectList li{display:flex;gap:10px;color:#5b6c83;font-size:14px;line-height:1.6}.expectPanel.dark li{color:#bfd0e2}
+.expectList li:before{content:"✓";color:#1689e8;font-weight:900}.expectPanel.dark li:before{color:#ffd45f}
+
+.finalCTA{background:linear-gradient(135deg,#0a1d35,#123c62);color:#fff;text-align:center}
+.finalCTA .managementSection{padding:88px 0}
+.finalCTA h2{color:#fff;max-width:720px;margin:10px auto 14px}
+.finalCTA p{max-width:650px;margin:0 auto;color:#c5d6e8;font-size:15px;line-height:1.75}
+.finalCTA .managementActions{justify-content:center}
+
+@media(max-width:900px){
+.updatePromise{grid-template-columns:1fr}.managementCards{grid-template-columns:1fr 1fr}.workflowGrid{grid-template-columns:1fr 1fr}.expectGrid{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+.managementHeroInner{padding:130px 0 100px}.managementHero h1{font-size:clamp(40px,12vw,58px)}.managementLead{font-size:15px}.managementMeta{gap:10px 15px}
+.managementSection{padding:68px 0}.managementCards,.workflowGrid{grid-template-columns:1fr}.managementCard{min-height:0}.promiseMain{padding:28px}.promiseMain h3{font-size:30px}
+.managementButton{width:100%}.managementActions{flex-direction:column}
 }
 </style>
-<section class="serviceHero">
-  <div class="serviceEyebrow">03 • Website Management</div>
-  <h1>Keep Your Website Current</h1>
-  <p>Keep your website useful after launch with practical updates, content changes, page improvements, and ongoing support.</p>
-</section>
-<section class="serviceBody">
-  <div class="serviceGrid">
-    <aside class="servicePanel">
-      <span class="serviceNumber">03</span>
-      <h2>Website Management</h2>
-      <ul>
-        <li>Professional, practical support</li>
-        <li>Responsive website experience</li>
-        <li>Clear organization and presentation</li>
-        <li>Built around your goals</li>
-      </ul>
-    </aside>
-    <article class="serviceContent">
-      <h2>Keep Your Website Current</h2>
-      <p>Keep your website useful after launch with practical updates, content changes, page improvements, and ongoing support. The focus is practical: create something that looks professional, communicates clearly, and serves a real purpose.</p>
-      <h3>Content Updates</h3>
-      <p>Add or revise text, images, links, announcements, services, and other website content.</p>
-      <h3>Page Improvements</h3>
-      <p>Make adjustments as your business, organization, or audience changes.</p>
-      <h3>Ongoing Support</h3>
-      <p>Have a clear place to turn when your website needs attention or a change.</p>
-      <h3>Built for the Next Step</h3>
-      <p>Your website should continue working for you after the original project is complete.</p>
-      <a class="serviceCTA" href="/brad-hobbswd/contact.html">Start a Project</a>
-    </article>
+
+<section class="managementHero">
+  <div class="managementHeroInner">
+    <div class="managementEyebrow">03 • Website Management</div>
+    <h1>Keep Your Website <span>Current.</span></h1>
+    <p class="managementLead">Your website should not become outdated the moment it launches. I provide ongoing website management so your content, announcements, services, and important information can stay current.</p>
+    <div class="managementActions">
+      <a class="managementButton primary" href="/brad-hobbswd/contact.html">Request an Update</a>
+      <a class="managementButton secondary" href="https://brad-hobbswd.github.io/clients/" target="_blank" rel="noopener noreferrer">View My Work</a>
+    </div>
+    <div class="managementMeta">
+      <span><i></i> Content Updates</span>
+      <span><i></i> Page Changes</span>
+      <span><i></i> Ongoing Support</span>
+      <span><i></i> 24 Hour Updates</span>
+    </div>
   </div>
 </section>
+
+<section class="managementSection">
+  <div class="managementIntro">
+    <div class="managementEyebrowSmall">The Management Promise</div>
+    <h2>Send the Update. I Will Handle the Rest.</h2>
+    <p>When you have a new announcement, photo, service, event, link, document, or other website change, you should not have to figure out how to make the update yourself.</p>
+  </div>
+  <div class="updatePromise">
+    <div class="promiseMain">
+      <div class="promiseLabel">Standard Update Turnaround</div>
+      <h3>Updates Completed Within 24 Hours.</h3>
+      <p>Once your update request and the information needed to complete it are received, I will work to make the requested website update within 24 hours.</p>
+    </div>
+    <div class="promiseSide">
+      <div class="promisePoint"><strong>Send What Changed</strong><span>Provide the new text, image, link, announcement, document, or other information.</span></div>
+      <div class="promisePoint"><strong>I Make the Update</strong><span>The requested change is added to the appropriate area of your website.</span></div>
+      <div class="promisePoint"><strong>You Keep Moving</strong><span>Your website stays current without you having to manage the technical side.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="managementSection">
+  <div class="managementIntro">
+    <div class="managementEyebrowSmall">What I Can Manage</div>
+    <h2>Small Changes Can Make a Big Difference.</h2>
+    <p>Website management is about keeping the information people see online aligned with what is happening in your business or organization.</p>
+  </div>
+  <div class="managementCards">
+    <article class="managementCard"><div class="managementIcon">✎</div><h3>Content Updates</h3><p>Update text, photos, announcements, contact information, services, hours, links, and other website content.</p></article>
+    <article class="managementCard"><div class="managementIcon">▣</div><h3>Page Changes</h3><p>Add, remove, reorganize, or adjust page content as your needs and priorities change.</p></article>
+    <article class="managementCard"><div class="managementIcon">↗</div><h3>Website Improvements</h3><p>Make practical adjustments to presentation, calls to action, layout, and visitor experience when needed.</p></article>
+  </div>
+</section>
+
+<section class="workflowSection">
+  <div class="managementSection">
+    <div class="managementIntro">
+      <div class="managementEyebrowSmall">How It Works</div>
+      <h2>A Simple Way to Keep Things Updated.</h2>
+      <p>The goal is to make ongoing website changes simple for you and organized on my end.</p>
+    </div>
+    <div class="workflowGrid">
+      <article class="workflowCard"><div class="workflowNumber">01</div><h3>Send</h3><p>Send the update and the information needed to make the change.</p></article>
+      <article class="workflowCard"><div class="workflowNumber">02</div><h3>Review</h3><p>I review the request and identify the appropriate page or website area.</p></article>
+      <article class="workflowCard"><div class="workflowNumber">03</div><h3>Update</h3><p>I make the requested change and check the updated presentation.</p></article>
+      <article class="workflowCard"><div class="workflowNumber">04</div><h3>Complete</h3><p>The goal is to have standard updates completed within 24 hours of receipt.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="managementSection">
+  <div class="expectGrid">
+    <div class="expectPanel">
+      <h3>Good Requests Include</h3>
+      <ul class="expectList">
+        <li>The page or section that needs changed</li>
+        <li>The exact new text or information</li>
+        <li>Images or files that need added</li>
+        <li>Links that should be included</li>
+        <li>The date an announcement should appear</li>
+      </ul>
+    </div>
+    <div class="expectPanel dark">
+      <h3>What You Can Expect</h3>
+      <ul class="expectList">
+        <li>Professional website updates</li>
+        <li>Responsive presentation checks</li>
+        <li>Clear communication around requests</li>
+        <li>Standard updates handled within 24 hours</li>
+        <li>Ongoing support as your website changes</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="finalCTA">
+  <div class="managementSection">
+    <div class="managementEyebrowSmall">Need Something Updated?</div>
+    <h2>Keep Your Website Moving With You.</h2>
+    <p>Send the change when it comes in, and I will handle the website side of the update. Standard update requests are completed within 24 hours after the required information is received.</p>
+    <div class="managementActions">
+      <a class="managementButton primary" href="/brad-hobbswd/contact.html">Request an Update</a>
+      <a class="managementButton secondary" href="https://brad-hobbswd.github.io/clients/" target="_blank" rel="noopener noreferrer">View My Work</a>
+    </div>
+  </div>
+</section>
+
 </main>
 <div id="siteFooter"></div>
 <script src="/brad-hobbswd/layout.js"></script>
