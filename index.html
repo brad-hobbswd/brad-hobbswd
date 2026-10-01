@@ -157,9 +157,21 @@ body{
 
 .purposeGrid{
   display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:48px;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:42px;
   align-items:center;
+}
+
+.purposeGrid > div{
+  min-width:0;
+}
+
+.purposeGrid .homeLead{
+  max-width:100%;
+}
+
+.purposeVisual{
+  overflow:visible;
 }
 
 .purposeVisual{
