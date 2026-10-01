@@ -608,7 +608,11 @@ body{
 
   .purposeVisual{
     min-height:250px;
-    order:-1;
+    order:0;
+  }
+
+  .purposeGrid > div:first-child{
+    order:1;
   }
 
   .processRow{
@@ -641,9 +645,23 @@ body{
   }
 
   .purposeVisual{
-    min-height:210px;
-    transform:scale(.84);
-    margin:-20px 0;
+    min-height:190px;
+    transform:scale(.78);
+    transform-origin:center top;
+    margin:0 0 -10px;
+  }
+
+  .purposeGrid{
+    gap:8px;
+  }
+
+  .purposeGrid > div:first-child{
+    padding-top:4px;
+  }
+
+  .homeLead{
+    font-size:16px;
+    line-height:1.65;
   }
 
   .device.desktop{
@@ -664,7 +682,21 @@ body{
   }
 
   .homeHeading{
-    font-size:38px;
+    font-size:36px;
+  }
+
+  .homeEyebrow{
+    font-size:11px;
+    letter-spacing:.1em;
+  }
+
+  .homeButtons{
+    margin-top:22px;
+  }
+
+  .homeButton{
+    width:100%;
+    min-height:48px;
   }
 }
 </style>
