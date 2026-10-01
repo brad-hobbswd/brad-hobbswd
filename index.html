@@ -503,6 +503,44 @@ body{
   transition:transform .3s ease;
 }
 .workCard:hover .workPreview img{transform:scale(1.035)}
+.workPreviewText{
+  height:158px;
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:radial-gradient(circle at 20% 20%,rgba(22,137,232,.24),transparent 38%),linear-gradient(145deg,#07162d,#0d2c50);
+  color:#fff;
+}
+.workPreviewText::after{display:none}
+.workPreviewText span{
+  color:#e9a817;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.workPreviewText strong{
+  margin-top:8px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:20px;
+  line-height:1.15;
+}
+.workPreviewFrame{
+  height:158px;
+  padding:0;
+}
+.workPreviewFrame::after{display:none}
+.workPreviewFrame iframe{
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+  background:#fff;
+  pointer-events:none;
+}
 .workPreview::after{
   content:"";
   position:absolute;
@@ -1071,8 +1109,31 @@ body{
           </div>
           <div class="workCardBody">
             <h3>Beautifully Broken Women's Conference</h3>
-            <p>Event website design focused on presentation, information, and registrations.</p>
-            <a class="workButton" href="https://brad-hobbswd.github.io/clients/">View Project →</a>
+            <p>Conference website design focused on presentation, information, and registrations.</p>
+            <a class="workButton" href="https://brad-hobbswd.github.io/beautifully-broken-conference/" target="_blank" rel="noopener noreferrer">View Project →</a>
+          </div>
+        </article>
+
+        <article class="workCard">
+          <div class="workPreview workPreviewText">
+            <span>DEVOTIONAL</span>
+            <strong>Anthony Blog Devotion</strong>
+          </div>
+          <div class="workCardBody">
+            <h3>Anthony Blog Devotion</h3>
+            <p>A focused devotional experience for inspirational writing and ministry content.</p>
+            <a class="workButton" href="https://brad-hobbswd.github.io/anthony-blog-devotion/" target="_blank" rel="noopener noreferrer">View Project →</a>
+          </div>
+        </article>
+
+        <article class="workCard">
+          <div class="workPreview workPreviewFrame">
+            <iframe src="https://www.bapbi.net/" title="Bethesda Apostolic Pentecostal Bible Institute website preview" loading="lazy"></iframe>
+          </div>
+          <div class="workCardBody">
+            <h3>Bethesda Apostolic Pentecostal Bible Institute</h3>
+            <p>Education and ministry website supporting biblical learning and student connection.</p>
+            <a class="workButton" href="https://www.bapbi.net/" target="_blank" rel="noopener noreferrer">View Project →</a>
           </div>
         </article>
 
@@ -1082,8 +1143,8 @@ body{
           </div>
           <div class="workCardBody">
             <h3>Mercy Message Podcast</h3>
-            <p>Podcast website with media, ministry content, and a focused digital presentation.</p>
-            <a class="workButton" href="https://brad-hobbswd.github.io/clients/">View Project →</a>
+            <p>Podcast and ministry website with media, content, and a focused digital presentation.</p>
+            <a class="workButton" href="https://brad-hobbswd.github.io/mercy-message-podcast/" target="_blank" rel="noopener noreferrer">View Project →</a>
           </div>
         </article>
 
@@ -1093,8 +1154,8 @@ body{
           </div>
           <div class="workCardBody">
             <h3>SGH Music Group</h3>
-            <p>Music group website supporting artists, media, updates, and digital presentation.</p>
-            <a class="workButton" href="https://brad-hobbswd.github.io/clients/">View Project →</a>
+            <p>Music and creative media website supporting artists, ministry, and digital presentation.</p>
+            <a class="workButton" href="https://brad-hobbswd.github.io/sghMusicgroup/" target="_blank" rel="noopener noreferrer">View Project →</a>
           </div>
         </article>
 
@@ -1105,7 +1166,29 @@ body{
           <div class="workCardBody">
             <h3>Broughtons Glass Service</h3>
             <p>Business website designed to present services clearly and create a professional online presence.</p>
-            <a class="workButton" href="https://brad-hobbswd.github.io/clients/">View Project →</a>
+            <a class="workButton" href="https://brad-hobbswd.github.io/broughtonsglassserv/" target="_blank" rel="noopener noreferrer">View Project →</a>
+          </div>
+        </article>
+
+        <article class="workCard">
+          <div class="workPreview">
+            <img src="https://raw.githubusercontent.com/brad-hobbswd/gg-s-pickles/main/872E8BC2-93BB-40C7-A363-721E1640C697.png" alt="GG's Pickles website">
+          </div>
+          <div class="workCardBody">
+            <h3>GG's Pickles</h3>
+            <p>Brand and business website built around personality, presentation, and customer experience.</p>
+            <a class="workButton" href="https://brad-hobbswd.github.io/gg-s-pickles/" target="_blank" rel="noopener noreferrer">View Project →</a>
+          </div>
+        </article>
+
+        <article class="workCard">
+          <div class="workPreview">
+            <img src="https://raw.githubusercontent.com/brad-hobbswd/growing-love-photography/main/IMG_0206.jpeg" alt="Growing Love Photography website">
+          </div>
+          <div class="workCardBody">
+            <h3>Growing Love Photography</h3>
+            <p>Photography website designed for visual storytelling and presenting meaningful moments.</p>
+            <a class="workButton" href="https://brad-hobbswd.github.io/growing-love-photography/" target="_blank" rel="noopener noreferrer">View Project →</a>
           </div>
         </article>
 
