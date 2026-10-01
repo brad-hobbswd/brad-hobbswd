@@ -55,11 +55,11 @@
 .servicesNavToggle{display:inline-flex!important;align-items:center;gap:6px}
 .servicesNavToggle .chevron{font-size:10px;transition:transform .2s ease}
 .servicesDropdown{
-  position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(-6px);
+  position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(-6px);
   width:255px;padding:9px;background:rgba(5,18,40,.98);
   border:1px solid rgba(47,179,255,.28);border-radius:14px;
   box-shadow:0 18px 40px rgba(0,0,0,.42),0 0 20px rgba(22,137,232,.12);
-  opacity:0;visibility:hidden;pointer-events:none;transition:.2s ease;
+  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease,visibility .18s ease,transform .18s ease;
 }
 .servicesNav:hover .servicesDropdown,
 .servicesNav:focus-within .servicesDropdown{
