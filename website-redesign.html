@@ -4,75 +4,246 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Website Redesign | Brad Hobbs Web Design</title>
-<meta name="description" content="Refresh an existing website with a cleaner structure, stronger presentation, better navigation, and a more responsive experience without losing what already works.">
+<meta name="description" content="Transform an existing website with a cleaner structure, stronger presentation, better navigation, improved mobile experience, and a fresh direction.">
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
 </head>
 <body>
 <div id="siteHeader"></div>
-<main class="servicePage">
+
+<main class="redesignPage">
+
 <style>
-.servicePage{min-height:100vh;background:linear-gradient(180deg,#07152a 0%,#0a1d35 42%,#eef3f8 42%,#eef3f8 100%);color:#12233f}
-.serviceHero{width:min(1120px,92%);margin:0 auto;padding:150px 0 75px;color:#fff}
-.serviceEyebrow{color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
-.serviceHero h1{max-width:820px;margin:12px 0 18px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,7vw,70px);line-height:1.02}
-.serviceHero p{max-width:760px;margin:0;color:#d9e7f7;font-size:17px;line-height:1.75}
-.serviceBody{width:min(1000px,92%);margin:0 auto;padding:0 0 80px}
-.serviceGrid{display:grid;grid-template-columns:1fr 1.35fr;gap:28px;align-items:start}
-.servicePanel,.serviceContent{background:#fff;border:1px solid #dce5ef;border-radius:18px;box-shadow:0 12px 32px rgba(18,42,72,.1)}
-.servicePanel{padding:28px;position:relative;overflow:hidden}
-.servicePanel:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,#1689e8,#f0b529)}
-.serviceNumber{display:block;color:#b27600;font-size:12px;font-weight:900;letter-spacing:.12em}
-.servicePanel h2{margin:10px 0 16px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:26px}
-.servicePanel ul{margin:0;padding-left:19px;color:#52627b;line-height:1.8}
-.serviceContent{padding:34px}
-.serviceContent h2{margin:0 0 15px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:34px}
-.serviceContent p{margin:0 0 17px;color:#52627b;font-size:15px;line-height:1.75}
-.serviceContent h3{margin:25px 0 9px;color:#15345d;font-size:18px}
-.serviceContent ul{color:#52627b;line-height:1.8;padding-left:20px}
-.serviceCTA{display:inline-block;margin-top:10px;padding:12px 18px;border-radius:999px;background:#15345d;color:#fff;text-decoration:none;font-weight:800;font-size:13px}
-.serviceCTA:hover{background:#1689e8}
-@media(max-width:760px){
-.servicePage{background:linear-gradient(180deg,#07152a 0%,#0a1d35 31%,#eef3f8 31%,#eef3f8 100%)}
-.serviceHero{padding:125px 0 55px}
-.serviceHero h1{font-size:clamp(38px,11vw,54px)}
-.serviceHero p{font-size:15px}
-.serviceGrid{grid-template-columns:1fr}
-.serviceContent{padding:26px}
-.serviceContent h2{font-size:28px}
+.redesignPage{background:#eef3f8;color:#12233f;overflow:hidden}
+.redesignHero{position:relative;background:radial-gradient(circle at 82% 28%,rgba(47,179,255,.18),transparent 27%),radial-gradient(circle at 15% 75%,rgba(255,211,78,.08),transparent 24%),linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.redesignHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:80px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.redesignHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:155px 0 125px}
+.redesignEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.redesignEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.redesignHero h1{max-width:850px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,78px);line-height:1.01;letter-spacing:-.025em}
+.redesignHero h1 span{color:#ffd45f}
+.redesignLead{max-width:760px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.redesignActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.redesignButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:900;transition:.2s ease}
+.redesignButton.primary{background:#1689e8;color:#fff;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.redesignButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.redesignButton.secondary{border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.05)}
+.redesignButton.secondary:hover{background:rgba(255,255,255,.1)}
+.redesignMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.redesignMeta span{display:flex;align-items:center;gap:7px}.redesignMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
+
+.redesignSection{width:min(1120px,92%);margin:auto;padding:88px 0}
+.redesignIntro{max-width:740px;margin-bottom:35px}
+.redesignEyebrowSmall{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.redesignSection h2{margin:9px 0 12px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px);line-height:1.08}
+.redesignIntro p{margin:0;color:#596a82;font-size:16px;line-height:1.75}
+
+.problemGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.problemCard{position:relative;padding:28px;min-height:215px;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08);overflow:hidden;transition:.22s ease}
+.problemCard:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#1689e8,#ffd45f)}
+.problemCard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(18,42,72,.13)}
+.problemIcon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#edf7ff;color:#1689e8;font-size:20px;font-weight:900}
+.problemCard h3{margin:19px 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:22px}
+.problemCard p{margin:0;color:#617189;font-size:14px;line-height:1.7}
+
+.changeSection{background:#07182d;color:#fff;position:relative}
+.changeSection:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:rgba(47,179,255,.28)}
+.changeSection .redesignSection{padding:90px 0}
+.changeSection .redesignEyebrowSmall{color:#ffd45f}
+.changeSection h2{color:#fff}
+.changeSection .redesignIntro p{color:#b8cbe0}
+.changeGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.changeCard{padding:25px 20px;border:1px solid rgba(255,255,255,.11);border-radius:17px;background:rgba(255,255,255,.045)}
+.changeNumber{color:#4db8ff;font-size:12px;font-weight:900;letter-spacing:.1em}
+.changeCard h3{margin:12px 0 8px;color:#fff;font-size:17px}
+.changeCard p{margin:0;color:#a9bdd4;font-size:13px;line-height:1.65}
+
+.beforeAfter{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.statePanel{position:relative;padding:30px;border-radius:22px;overflow:hidden;min-height:285px;border:1px solid #dce5ef;background:#fff;box-shadow:0 12px 32px rgba(18,42,72,.08)}
+.statePanel.improved{background:linear-gradient(145deg,#0a1d35,#123c62);border-color:#123c62;color:#fff}
+.stateLabel{font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#8b6a16}
+.statePanel.improved .stateLabel{color:#ffd45f}
+.statePanel h3{margin:10px 0 18px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:27px}
+.statePanel.improved h3{color:#fff}
+.stateList{display:grid;gap:11px;margin:0;padding:0;list-style:none}
+.stateList li{font-size:14px;line-height:1.6;color:#617189}.statePanel.improved .stateList li{color:#bfd0e2}
+.stateList li:before{content:"•";margin-right:9px;color:#1689e8;font-weight:900}
+.statePanel.improved .stateList li:before{color:#ffd45f}
+
+.portfolioSection{background:#f7f9fc;border-top:1px solid #dfe7ef;border-bottom:1px solid #dfe7ef}
+.portfolioGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.projectCard{display:block;overflow:hidden;background:#fff;border:1px solid #dce5ef;border-radius:17px;text-decoration:none;box-shadow:0 10px 28px rgba(18,42,72,.07);transition:.22s ease}
+.projectCard:hover{transform:translateY(-4px);box-shadow:0 17px 35px rgba(18,42,72,.13)}
+.projectImage{height:150px;background:#dbe8f3;overflow:hidden}
+.projectImage img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.projectCard:hover img{transform:scale(1.04)}
+.projectInfo{padding:16px}.projectInfo strong{display:block;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:17px}.projectInfo span{display:block;margin-top:6px;color:#1689e8;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+
+.finalCTA{background:linear-gradient(135deg,#0a1d35,#123c62);color:#fff;text-align:center}
+.finalCTA .redesignSection{padding:88px 0}
+.finalCTA h2{color:#fff;max-width:720px;margin:10px auto 14px}
+.finalCTA p{max-width:650px;margin:0 auto;color:#c5d6e8;font-size:15px;line-height:1.75}
+.finalCTA .redesignActions{justify-content:center}
+
+@media(max-width:900px){
+.problemGrid{grid-template-columns:1fr 1fr}.changeGrid{grid-template-columns:1fr 1fr}.beforeAfter{grid-template-columns:1fr}.portfolioGrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+.redesignHeroInner{padding:130px 0 100px}.redesignHero h1{font-size:clamp(40px,12vw,58px)}.redesignLead{font-size:15px}.redesignMeta{gap:10px 15px}
+.redesignSection{padding:68px 0}.problemGrid,.changeGrid,.portfolioGrid{grid-template-columns:1fr}.problemCard{min-height:0}
+.redesignButton{width:100%}.redesignActions{flex-direction:column}
 }
 </style>
-<section class="serviceHero">
-  <div class="serviceEyebrow">02 • Website Redesign</div>
-  <h1>Give Your Existing Website a Fresh Direction</h1>
-  <p>Transform an existing website that feels outdated, difficult to use, or no longer reflects where your organization is today.</p>
+
+<section class="redesignHero">
+  <div class="redesignHeroInner">
+    <div class="redesignEyebrow">02 • Website Redesign</div>
+    <h1>Give Your Existing Website a <span>Fresh Direction.</span></h1>
+    <p class="redesignLead">Your website may still have good content and a strong foundation. A redesign can bring the structure, presentation, and experience up to where your organization is today.</p>
+    <div class="redesignActions">
+      <a class="redesignButton primary" href="/brad-hobbswd/contact.html">Start a Redesign</a>
+      <a class="redesignButton secondary" href="https://brad-hobbswd.github.io/clients/" target="_blank" rel="noopener noreferrer">View My Work</a>
+    </div>
+    <div class="redesignMeta">
+      <span><i></i> Refresh</span>
+      <span><i></i> Reorganize</span>
+      <span><i></i> Improve</span>
+      <span><i></i> Preserve What Works</span>
+    </div>
+  </div>
 </section>
-<section class="serviceBody">
-  <div class="serviceGrid">
-    <aside class="servicePanel">
-      <span class="serviceNumber">02</span>
-      <h2>Website Redesign</h2>
-      <ul>
-        <li>Professional, practical support</li>
-        <li>Responsive website experience</li>
-        <li>Clear organization and presentation</li>
-        <li>Built around your goals</li>
-      </ul>
-    </aside>
-    <article class="serviceContent">
-      <h2>Give Your Existing Website a Fresh Direction</h2>
-      <p>Transform an existing website that feels outdated, difficult to use, or no longer reflects where your organization is today. The focus is practical: create something that looks professional, communicates clearly, and serves a real purpose.</p>
-      <h3>Review What You Have</h3>
-      <p>Look at the current structure, content, navigation, and overall experience to identify what should stay and what should change.</p>
-      <h3>Rebuild the Experience</h3>
-      <p>Improve the layout, hierarchy, mobile experience, and visual presentation while preserving useful content.</p>
-      <h3>Refine the Message</h3>
-      <p>Make important information easier to find and help visitors understand what you offer.</p>
-      <h3>Built for the Next Step</h3>
-      <p>A redesign should feel like a meaningful improvement, not simply a new coat of paint.</p>
-      <a class="serviceCTA" href="/brad-hobbswd/contact.html">Start a Project</a>
+
+<section class="redesignSection">
+  <div class="redesignIntro">
+    <div class="redesignEyebrowSmall">When It Is Time for a Change</div>
+    <h2>Your Website Should Keep Up With You.</h2>
+    <p>Businesses and organizations change. Services change. Branding changes. Sometimes the website simply no longer reflects the work happening behind it.</p>
+  </div>
+  <div class="problemGrid">
+    <article class="problemCard">
+      <div class="problemIcon">↻</div>
+      <h3>It Feels Outdated</h3>
+      <p>The design no longer represents the quality, personality, or direction of your organization.</p>
+    </article>
+    <article class="problemCard">
+      <div class="problemIcon">≡</div>
+      <h3>It Is Hard to Navigate</h3>
+      <p>Important information is buried, pages feel disconnected, or visitors are unsure where to go next.</p>
+    </article>
+    <article class="problemCard">
+      <div class="problemIcon">▣</div>
+      <h3>Mobile Needs Work</h3>
+      <p>The website may look acceptable on a computer but become difficult to use on phones and smaller screens.</p>
     </article>
   </div>
 </section>
+
+<section class="changeSection">
+  <div class="redesignSection">
+    <div class="redesignIntro">
+      <div class="redesignEyebrowSmall">The Redesign Process</div>
+      <h2>Improve What Matters.</h2>
+      <p>A redesign is not about changing everything. It is about identifying what needs attention and rebuilding the experience with purpose.</p>
+    </div>
+    <div class="changeGrid">
+      <article class="changeCard"><div class="changeNumber">01</div><h3>Review</h3><p>Look at your existing pages, content, navigation, visual identity, and visitor experience.</p></article>
+      <article class="changeCard"><div class="changeNumber">02</div><h3>Reorganize</h3><p>Create a clearer structure so visitors can find important information more naturally.</p></article>
+      <article class="changeCard"><div class="changeNumber">03</div><h3>Refresh</h3><p>Update layouts, typography, spacing, imagery, colors, and presentation where needed.</p></article>
+      <article class="changeCard"><div class="changeNumber">04</div><h3>Rebuild</h3><p>Bring the improved design together into a responsive experience built for today's visitors.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="redesignSection">
+  <div class="redesignIntro">
+    <div class="redesignEyebrowSmall">The Goal</div>
+    <h2>Keep What Works. Improve What Does Not.</h2>
+    <p>A good redesign respects the work that has already gone into your website while creating a better experience moving forward.</p>
+  </div>
+  <div class="beforeAfter">
+    <div class="statePanel">
+      <div class="stateLabel">What We Review</div>
+      <h3>Your Current Website</h3>
+      <ul class="stateList">
+        <li>Existing pages and content</li>
+        <li>Navigation and page organization</li>
+        <li>Branding, imagery, and presentation</li>
+        <li>Mobile and responsive behavior</li>
+        <li>Forms, links, and calls to action</li>
+      </ul>
+    </div>
+    <div class="statePanel improved">
+      <div class="stateLabel">Where We Are Going</div>
+      <h3>A Better Experience</h3>
+      <ul class="stateList">
+        <li>Cleaner visual hierarchy</li>
+        <li>More intuitive navigation</li>
+        <li>Stronger mobile presentation</li>
+        <li>Clearer messaging and calls to action</li>
+        <li>A website that better reflects you today</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="portfolioSection">
+  <div class="redesignSection">
+    <div class="redesignIntro">
+      <div class="redesignEyebrowSmall">Selected Work</div>
+      <h2>See the Difference a Stronger Website Can Make.</h2>
+      <p>Explore websites created and refined for businesses, organizations, ministries, creative projects, and personal brands.</p>
+    </div>
+    <div class="portfolioGrid">
+      <a class="projectCard" href="https://brad-hobbswd.github.io/beautifully-broken-conference/" target="_blank" rel="noopener noreferrer">
+        <div class="projectImage"><img src="https://raw.githubusercontent.com/brad-hobbswd/beautifully-broken-conference/main/att.hKHh2cg0i1UEwI5DQsEBDbWL_cOR9M7jN2XsJ0_Yb7k.jpeg" alt="Beautifully Broken Women's Conference website"></div>
+        <div class="projectInfo"><strong>Beautifully Broken</strong><span>View Project ↗</span></div>
+      </a>
+      <a class="projectCard" href="https://brad-hobbswd.github.io/mercy-message-podcast/" target="_blank" rel="noopener noreferrer">
+        <div class="projectImage"><img src="https://raw.githubusercontent.com/brad-hobbswd/mercy-message-podcast/main/C45347D9-25F7-43EF-A2B4-704D2385B318.png" alt="Mercy Message Podcast website"></div>
+        <div class="projectInfo"><strong>Mercy Message Podcast</strong><span>View Project ↗</span></div>
+      </a>
+      <a class="projectCard" href="https://brad-hobbswd.github.io/sghMusicgroup/" target="_blank" rel="noopener noreferrer">
+        <div class="projectImage"><img src="https://raw.githubusercontent.com/brad-hobbswd/sghMusicgroup/main/D6FE0D35-5FC7-4C31-ABE0-BCEA10E4A5CE.png" alt="SGH Music Group website"></div>
+        <div class="projectInfo"><strong>SGH Music Group</strong><span>View Project ↗</span></div>
+      </a>
+      <a class="projectCard" href="https://brad-hobbswd.github.io/broughtonsglassserv/" target="_blank" rel="noopener noreferrer">
+        <div class="projectImage"><img src="https://raw.githubusercontent.com/brad-hobbswd/broughtonsglassserv/main/images/0CB34EA2-2C57-44E5-AB94-33C007039683.png" alt="Broughtons Glass Service website"></div>
+        <div class="projectInfo"><strong>Broughtons Glass Service</strong><span>View Project ↗</span></div>
+      </a>
+      <a class="projectCard" href="https://brad-hobbswd.github.io/gg-s-pickles/" target="_blank" rel="noopener noreferrer">
+        <div class="projectImage"><img src="https://raw.githubusercontent.com/brad-hobbswd/gg-s-pickles/main/872E8BC2-93BB-40C7-A363-721E1640C697.png" alt="GG's Pickles website"></div>
+        <div class="projectInfo"><strong>GG's Pickles</strong><span>View Project ↗</span></div>
+      </a>
+      <a class="projectCard" href="https://brad-hobbswd.github.io/growing-love-photography/" target="_blank" rel="noopener noreferrer">
+        <div class="projectImage"><img src="https://raw.githubusercontent.com/brad-hobbswd/growing-love-photography/main/IMG_0206.jpeg" alt="Growing Love Photography website"></div>
+        <div class="projectInfo"><strong>Growing Love Photography</strong><span>View Project ↗</span></div>
+      </a>
+      <a class="projectCard" href="https://www.bapbi.net" target="_blank" rel="noopener noreferrer">
+        <div class="projectImage"><iframe title="BAPBI website preview" src="https://www.bapbi.net/" loading="lazy" style="width:100%;height:100%;border:0;pointer-events:none"></iframe></div>
+        <div class="projectInfo"><strong>BAPBI</strong><span>View Project ↗</span></div>
+      </a>
+      <a class="projectCard" href="https://brad-hobbswd.github.io/anthony-blog-devotion/" target="_blank" rel="noopener noreferrer">
+        <div class="projectImage" style="display:grid;place-items:center;background:linear-gradient(135deg,#0a1d35,#1689e8);color:#fff;font-family:Georgia,serif;font-size:22px;text-align:center;padding:20px">Anthony Blog<br>Devotion</div>
+        <div class="projectInfo"><strong>Anthony Blog Devotion</strong><span>View Project ↗</span></div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:30px">
+      <a class="redesignButton primary" href="https://brad-hobbswd.github.io/clients/" target="_blank" rel="noopener noreferrer">View Full Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<section class="finalCTA">
+  <div class="redesignSection">
+    <div class="redesignEyebrowSmall">Ready for a Fresh Direction?</div>
+    <h2>Your Website Can Grow Without Starting Over.</h2>
+    <p>If your current website has a foundation worth keeping but needs a better structure, presentation, or experience, a redesign can move it forward.</p>
+    <div class="redesignActions">
+      <a class="redesignButton primary" href="/brad-hobbswd/contact.html">Start a Redesign</a>
+      <a class="redesignButton secondary" href="/brad-hobbswd/packages.html">Explore Packages</a>
+    </div>
+  </div>
+</section>
+
 </main>
 <div id="siteFooter"></div>
 <script src="/brad-hobbswd/layout.js"></script>
