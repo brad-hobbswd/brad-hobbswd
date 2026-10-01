@@ -50,6 +50,37 @@
 .menuOverlay.active{opacity:1;pointer-events:auto}
 .topbar.scrolled{box-shadow:0 8px 28px rgba(0,0,0,.42),0 0 15px rgba(22,137,232,.18)}
 @media(max-width:1024px){.nav{display:none}.menuToggle{display:flex}}
+
+.servicesNav{position:relative}
+.servicesNavToggle{display:inline-flex!important;align-items:center;gap:6px}
+.servicesNavToggle .chevron{font-size:10px;transition:transform .2s ease}
+.servicesDropdown{
+  position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(-6px);
+  width:255px;padding:9px;background:rgba(5,18,40,.98);
+  border:1px solid rgba(47,179,255,.28);border-radius:14px;
+  box-shadow:0 18px 40px rgba(0,0,0,.42),0 0 20px rgba(22,137,232,.12);
+  opacity:0;visibility:hidden;pointer-events:none;transition:.2s ease;
+}
+.servicesNav:hover .servicesDropdown,
+.servicesNav:focus-within .servicesDropdown{
+  opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)
+}
+.servicesDropdown a{
+  display:block!important;padding:9px 11px!important;border-radius:9px;color:#dce8f6!important;
+  font-size:12px!important;font-weight:700!important
+}
+.servicesDropdown a::after{display:none!important}
+.servicesDropdown a:hover{background:rgba(47,179,255,.11);color:#fff!important}
+.servicesDropdown .overview{border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:5px;padding-bottom:11px!important;color:#ffd34e!important}
+.mobileServices{display:flex;flex-direction:column;gap:12px}
+.mobileServicesToggle{display:flex!important;align-items:center;justify-content:space-between}
+.mobileServicesLinks{display:none;flex-direction:column;gap:11px;padding:0 0 2px 14px}
+.mobileServices.open .mobileServicesLinks{display:flex}
+.mobileServicesLinks a{font-size:15px!important;color:rgba(255,255,255,.78)!important}
+.mobileServicesLinks a.active{color:#ffd34e!important}
+@media(max-width:1024px){
+  .servicesNav{display:none}
+}
 </style>
 <style id="desktop-nav-sizing">
 @media(min-width:1025px){
@@ -77,7 +108,19 @@
   </div>
   <nav class="nav">
     <a data-nav="home" href="/brad-hobbswd/index.html">Home</a>
-    <a data-nav="services" href="/brad-hobbswd/service.html">Services</a>
+    <div class="servicesNav">
+    <a data-nav="services" class="servicesNavToggle" href="/brad-hobbswd/service.html">Services <span class="chevron">▼</span></a>
+    <div class="servicesDropdown" aria-label="Services">
+      <a class="overview" href="/brad-hobbswd/service.html">Complete Website Solutions</a>
+      <a href="/brad-hobbswd/web-design.html">Web Design</a>
+      <a href="/brad-hobbswd/website-redesign.html">Website Redesign</a>
+      <a href="/brad-hobbswd/website-management.html">Website Management</a>
+      <a href="/brad-hobbswd/website-monitoring.html">Website Monitoring</a>
+      <a href="/brad-hobbswd/e-commerce.html">E Commerce</a>
+      <a href="/brad-hobbswd/seo-digital-support.html">SEO &amp; Digital Support</a>
+      <a href="/brad-hobbswd/education-services.html">Education Services</a>
+    </div>
+  </div>
     <a data-nav="process" href="/brad-hobbswd/process.html">The Process</a>
     <a data-nav="packages" href="/brad-hobbswd/packages.html">Packages</a>
     <a data-nav="work" href="https://brad-hobbswd.github.io/clients/">My Work</a>
@@ -92,7 +135,19 @@
 
 <div id="mobileMenu" class="mobileMenu">
   <a data-nav="home" href="/brad-hobbswd/index.html">Home</a>
-  <a data-nav="services" href="/brad-hobbswd/service.html">Services</a>
+  <div class="mobileServices">
+    <a data-nav="services" class="mobileServicesToggle" href="/brad-hobbswd/service.html" onclick="event.preventDefault();this.parentElement.classList.toggle('open')">Services <span>▼</span></a>
+    <div class="mobileServicesLinks">
+      <a href="/brad-hobbswd/service.html">Complete Website Solutions</a>
+      <a href="/brad-hobbswd/web-design.html">Web Design</a>
+      <a href="/brad-hobbswd/website-redesign.html">Website Redesign</a>
+      <a href="/brad-hobbswd/website-management.html">Website Management</a>
+      <a href="/brad-hobbswd/website-monitoring.html">Website Monitoring</a>
+      <a href="/brad-hobbswd/e-commerce.html">E Commerce</a>
+      <a href="/brad-hobbswd/seo-digital-support.html">SEO &amp; Digital Support</a>
+      <a href="/brad-hobbswd/education-services.html">Education Services</a>
+    </div>
+  </div>
   <a data-nav="process" href="/brad-hobbswd/process.html">The Process</a>
   <a data-nav="packages" href="/brad-hobbswd/packages.html">Packages</a>
   <a data-nav="work" href="https://brad-hobbswd.github.io/clients/">My Work</a>
