@@ -14,11 +14,12 @@
 .servicePage{min-height:100vh;background:linear-gradient(180deg,#07152a 0%,#0a1d35 42%,#eef3f8 42%,#eef3f8 100%);color:#12233f}
 .serviceHero{width:min(1120px,92%);margin:0 auto;padding:150px 0 75px;color:#fff}
 .serviceEyebrow{color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.learningEyebrow{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
 .serviceHero h1{max-width:850px;margin:12px 0 18px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,7vw,70px);line-height:1.02}
 .serviceHero p{max-width:790px;margin:0;color:#d9e7f7;font-size:17px;line-height:1.75}
 .serviceBody{width:min(1000px,92%);margin:0 auto;padding:0 0 80px}
 .serviceGrid{display:grid;grid-template-columns:1fr 1.35fr;gap:28px;align-items:start}
-.servicePanel,.serviceContent,.learningSection{background:#fff;border:1px solid #dce5ef;border-radius:18px;box-shadow:0 12px 32px rgba(18,42,72,.1)}
+.servicePanel,.serviceContent,.learningSection,.teachingSection{background:#fff;border:1px solid #dce5ef;border-radius:18px;box-shadow:0 12px 32px rgba(18,42,72,.1)}
 .servicePanel{padding:28px;position:relative;overflow:hidden}
 .servicePanel:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,#1689e8,#f0b529)}
 .serviceNumber{display:block;color:#b27600;font-size:12px;font-weight:900;letter-spacing:.12em}
@@ -28,28 +29,38 @@
 .serviceContent h2{margin:0 0 15px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:34px}
 .serviceContent p{margin:0 0 17px;color:#52627b;font-size:15px;line-height:1.75}
 .serviceContent h3{margin:25px 0 9px;color:#15345d;font-size:18px}
-.learningSection{grid-column:1 / -1;padding:34px;margin-top:0}
-.learningIntro{max-width:720px}
-.learningSection h2{margin:0 0 10px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:32px}
-.learningIntro p{margin:0;color:#52627b;font-size:15px;line-height:1.75}
+.learningSection,.teachingSection{grid-column:1 / -1;padding:34px;margin-top:0}
+.learningIntro,.teachingIntro{max-width:760px}
+.learningSection h2,.teachingSection h2{margin:0 0 10px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:32px}
+.learningIntro p,.teachingIntro p{margin:0;color:#52627b;font-size:15px;line-height:1.75}
 .learningCards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
 .learningCard{padding:22px;border:1px solid #dce5ef;border-radius:14px;background:#f7faff}
 .learningCard span{display:block;color:#b27600;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
 .learningCard h3{margin:8px 0 10px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:21px}
 .learningCard ul{margin:0;padding-left:18px;color:#52627b;font-size:14px;line-height:1.75}
 .quickTip{margin-top:20px;padding:18px 20px;border-left:4px solid #1689e8;border-radius:10px;background:#eef6fd;color:#3d5570;font-size:14px;line-height:1.7}
+.teachingCards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+.teachingCard{padding:21px;border:1px solid #dce5ef;border-radius:14px;background:#f7faff}
+.teachingCard h3{margin:0 0 9px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:19px}
+.teachingCard p{margin:0;color:#52627b;font-size:13px;line-height:1.7}
+.littleExplorers{margin-top:24px;padding:24px;border-radius:14px;background:#eef6fd;border:1px solid #d6e7f6}
+.littleExplorers h3{margin:0 0 9px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:23px}
+.littleExplorers p{margin:0;max-width:780px;color:#52627b;font-size:14px;line-height:1.75}
 .serviceCTA{display:inline-block;margin-top:10px;margin-right:8px;padding:12px 18px;border-radius:999px;background:#15345d;color:#fff;text-decoration:none;font-weight:800;font-size:13px}
 .serviceCTA:hover{background:#1689e8;color:#fff}
+@media(max-width:900px){
+.teachingCards{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:760px){
 .servicePage{background:linear-gradient(180deg,#07152a 0%,#0a1d35 31%,#eef3f8 31%,#eef3f8 100%)}
 .serviceHero{padding:125px 0 55px}
 .serviceHero h1{font-size:clamp(38px,11vw,54px)}
 .serviceHero p{font-size:15px}
 .serviceGrid{grid-template-columns:1fr}
-.learningSection{grid-column:auto;padding:26px}
-.learningCards{grid-template-columns:1fr}
+.learningSection,.teachingSection{grid-column:auto;padding:26px}
+.learningCards,.teachingCards{grid-template-columns:1fr}
 .serviceContent{padding:26px}
-.serviceContent h2,.learningSection h2{font-size:28px}
+.serviceContent h2,.learningSection h2,.teachingSection h2{font-size:28px}
 .serviceCTA{margin-bottom:8px}
 }
 </style>
@@ -87,7 +98,7 @@
 
     <section class="learningSection">
       <div class="learningIntro">
-        <div class="serviceEyebrow">A Small Learning Library</div>
+        <div class="learningEyebrow">A Small Learning Library</div>
         <h2>Practical Material to Get You Started</h2>
         <p>This page includes a few simple learning topics you can explore right here. They are meant to provide useful starting points while the larger resource collections continue on my education sites.</p>
       </div>
@@ -130,16 +141,48 @@
       <div class="quickTip"><strong>Quick Tip:</strong> When learning something new, start with one skill at a time. Practice it, use it in a real situation, and then build on what you already understand.</div>
     </section>
 
+    <section class="teachingSection">
+      <div class="teachingIntro">
+        <div class="learningEyebrow">Teaching Materials</div>
+        <h2>Resources for Early Childhood Educators</h2>
+        <p>My Teaching Materials work is designed to give educators practical resources they can use for planning, classroom organization, observation, assessment, and daily teaching. The collection supports educators working with young children across several early learning settings.</p>
+      </div>
+
+      <div class="teachingCards">
+        <article class="teachingCard">
+          <h3>Lesson Planning</h3>
+          <p>Lesson plans, study ideas, classroom activities, and planning support that help educators prepare meaningful learning experiences.</p>
+        </article>
+
+        <article class="teachingCard">
+          <h3>Early Childhood Resources</h3>
+          <p>Resources for Infant, Toddler, Preschool, Pre K, Early Head Start, and Head Start classrooms with a focus on practical early learning.</p>
+        </article>
+
+        <article class="teachingCard">
+          <h3>Observation &amp; Assessment</h3>
+          <p>Tools and reminders for classroom observations, developmental documentation, assessment practices, and tracking children's progress.</p>
+        </article>
+
+        <article class="teachingCard">
+          <h3>Classroom Support</h3>
+          <p>Practical help with classroom organization, routines, behavior documentation, learning activities, and everyday teaching needs.</p>
+        </article>
+      </div>
+
+      <div class="littleExplorers">
+        <h3>Little Explorers Learning Hub</h3>
+        <p>Teaching Materials includes Little Explorers Learning Hub, a growing collection of curriculum studies, lesson plans, printable resources, classroom activities, observation tools, assessment resources, and other materials created with educators in mind.</p>
+        <a class="serviceCTA" href="https://brad-hobbswd.github.io/teaching-materials/" target="_blank" rel="noopener noreferrer">Explore Teaching Materials</a>
+      </div>
+    </section>
+
     <article class="serviceContent">
       <h2>Explore More Resources</h2>
 
       <h3>Technology for Life</h3>
       <p>Technology for Life is a separate educational website I created for practical technology learning. It includes resources designed to help older adults and everyday learners better understand digital tools, devices, online activities, and technology.</p>
       <a class="serviceCTA" href="https://brad-hobbswd.github.io/technology-for-life/" target="_blank" rel="noopener noreferrer">Explore Technology for Life</a>
-
-      <h3>Teaching Materials</h3>
-      <p>I also created a separate Teaching Materials site featuring Little Explorers Learning Hub. It provides curriculum studies, lesson plans, classroom activities, printable resources, observation and assessment tools, and other materials for Early Head Start, Head Start, Preschool, and Pre K educators.</p>
-      <a class="serviceCTA" href="https://brad-hobbswd.github.io/teaching-materials/" target="_blank" rel="noopener noreferrer">Explore Teaching Materials</a>
     </article>
 
   </div>
