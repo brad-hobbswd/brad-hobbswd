@@ -489,45 +489,26 @@ body{
 
 .workPreview{
   height:158px;
-  display:flex;
-  align-items:flex-end;
-  padding:13px;
-  background:
-    linear-gradient(145deg,#0a1e3a,#0b63b6 55%,#f0a91a);
+  padding:0;
   position:relative;
+  overflow:hidden;
+  background:#07182f;
 }
-
-.workPreview::before{
-  content:"";
-  position:absolute;
-  inset:16px 16px 24px;
-  background:#fff;
-  border-radius:5px;
-  box-shadow:0 9px 22px rgba(0,0,0,.2);
+.workPreview img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .3s ease;
 }
-
+.workCard:hover .workPreview img{transform:scale(1.035)}
 .workPreview::after{
   content:"";
   position:absolute;
-  left:28px;
-  right:28px;
-  top:34px;
-  height:74px;
-  border-radius:3px;
-  background:linear-gradient(135deg,#eef4fa,#dceaf7);
-  box-shadow:inset 0 0 0 1px #c6d5e4;
-}
-
-.workPreview.gold{
-  background:linear-gradient(145deg,#111d31,#173a62 52%,#d6930d);
-}
-
-.workPreview.green{
-  background:linear-gradient(145deg,#123b2d,#5a9a58 55%,#d6a52a);
-}
-
-.workPreview.pink{
-  background:linear-gradient(145deg,#3c1738,#c05b99 58%,#f3c7e1);
+  inset:0;
+  background:linear-gradient(180deg,rgba(4,20,42,.03),rgba(4,20,42,.22));
+  pointer-events:none;
 }
 
 .workCardBody{
@@ -1085,7 +1066,9 @@ body{
       <div class="workGrid">
 
         <article class="workCard">
-          <div class="workPreview pink"></div>
+          <div class="workPreview">
+            <img src="https://raw.githubusercontent.com/brad-hobbswd/beautifully-broken-conference/main/att.hKHh2cg0i1UEwI5DQsEBDbWL_cOR9M7jN2XsJ0_Yb7k.jpeg" alt="Beautifully Broken Women's Conference website">
+          </div>
           <div class="workCardBody">
             <h3>Beautifully Broken Women's Conference</h3>
             <p>Event website design focused on presentation, information, and registrations.</p>
@@ -1094,16 +1077,20 @@ body{
         </article>
 
         <article class="workCard">
-          <div class="workPreview"></div>
+          <div class="workPreview">
+            <img src="https://raw.githubusercontent.com/brad-hobbswd/mercy-message-podcast/main/C45347D9-25F7-43EF-A2B4-704D2385B318.png" alt="Mercy Message Podcast website">
+          </div>
           <div class="workCardBody">
-            <h3>One God Podcast</h3>
-            <p>Podcast website with episodes, show information, media, and a focused presentation.</p>
+            <h3>Mercy Message Podcast</h3>
+            <p>Podcast website with media, ministry content, and a focused digital presentation.</p>
             <a class="workButton" href="https://brad-hobbswd.github.io/clients/">View Project →</a>
           </div>
         </article>
 
         <article class="workCard">
-          <div class="workPreview gold"></div>
+          <div class="workPreview">
+            <img src="https://raw.githubusercontent.com/brad-hobbswd/sghMusicgroup/main/D6FE0D35-5FC7-4C31-ABE0-BCEA10E4A5CE.png" alt="SGH Music Group website">
+          </div>
           <div class="workCardBody">
             <h3>SGH Music Group</h3>
             <p>Music group website supporting artists, media, updates, and digital presentation.</p>
@@ -1112,10 +1099,12 @@ body{
         </article>
 
         <article class="workCard">
-          <div class="workPreview green"></div>
+          <div class="workPreview">
+            <img src="https://raw.githubusercontent.com/brad-hobbswd/broughtonsglassserv/main/images/0CB34EA2-2C57-44E5-AB94-33C007039683.png" alt="Broughtons Glass Service website">
+          </div>
           <div class="workCardBody">
-            <h3>GG's Pickles</h3>
-            <p>Business website designed to showcase products and support online ordering.</p>
+            <h3>Broughtons Glass Service</h3>
+            <p>Business website designed to present services clearly and create a professional online presence.</p>
             <a class="workButton" href="https://brad-hobbswd.github.io/clients/">View Project →</a>
           </div>
         </article>
