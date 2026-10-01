@@ -18,7 +18,7 @@
 .serviceHero p{max-width:790px;margin:0;color:#d9e7f7;font-size:17px;line-height:1.75}
 .serviceBody{width:min(1000px,92%);margin:0 auto;padding:0 0 80px}
 .serviceGrid{display:grid;grid-template-columns:1fr 1.35fr;gap:28px;align-items:start}
-.servicePanel,.serviceContent{background:#fff;border:1px solid #dce5ef;border-radius:18px;box-shadow:0 12px 32px rgba(18,42,72,.1)}
+.servicePanel,.serviceContent,.learningSection{background:#fff;border:1px solid #dce5ef;border-radius:18px;box-shadow:0 12px 32px rgba(18,42,72,.1)}
 .servicePanel{padding:28px;position:relative;overflow:hidden}
 .servicePanel:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,#1689e8,#f0b529)}
 .serviceNumber{display:block;color:#b27600;font-size:12px;font-weight:900;letter-spacing:.12em}
@@ -28,6 +28,16 @@
 .serviceContent h2{margin:0 0 15px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:34px}
 .serviceContent p{margin:0 0 17px;color:#52627b;font-size:15px;line-height:1.75}
 .serviceContent h3{margin:25px 0 9px;color:#15345d;font-size:18px}
+.learningSection{grid-column:1 / -1;padding:34px;margin-top:0}
+.learningIntro{max-width:720px}
+.learningSection h2{margin:0 0 10px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:32px}
+.learningIntro p{margin:0;color:#52627b;font-size:15px;line-height:1.75}
+.learningCards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.learningCard{padding:22px;border:1px solid #dce5ef;border-radius:14px;background:#f7faff}
+.learningCard span{display:block;color:#b27600;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.learningCard h3{margin:8px 0 10px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:21px}
+.learningCard ul{margin:0;padding-left:18px;color:#52627b;font-size:14px;line-height:1.75}
+.quickTip{margin-top:20px;padding:18px 20px;border-left:4px solid #1689e8;border-radius:10px;background:#eef6fd;color:#3d5570;font-size:14px;line-height:1.7}
 .serviceCTA{display:inline-block;margin-top:10px;margin-right:8px;padding:12px 18px;border-radius:999px;background:#15345d;color:#fff;text-decoration:none;font-weight:800;font-size:13px}
 .serviceCTA:hover{background:#1689e8;color:#fff}
 @media(max-width:760px){
@@ -36,18 +46,23 @@
 .serviceHero h1{font-size:clamp(38px,11vw,54px)}
 .serviceHero p{font-size:15px}
 .serviceGrid{grid-template-columns:1fr}
+.learningSection{grid-column:auto;padding:26px}
+.learningCards{grid-template-columns:1fr}
 .serviceContent{padding:26px}
-.serviceContent h2{font-size:28px}
+.serviceContent h2,.learningSection h2{font-size:28px}
 .serviceCTA{margin-bottom:8px}
 }
 </style>
+
 <section class="serviceHero">
   <div class="serviceEyebrow">07 • Education Services</div>
   <h1>Education Is Part of What I Do</h1>
   <p>As an educator, I create practical learning resources that help people build skills, understand technology, and make learning more useful in everyday life.</p>
 </section>
+
 <section class="serviceBody">
   <div class="serviceGrid">
+
     <aside class="servicePanel">
       <span class="serviceNumber">07</span>
       <h2>Education &amp; Learning</h2>
@@ -58,9 +73,65 @@
         <li>Practical learning for real life</li>
       </ul>
     </aside>
+
     <article class="serviceContent">
       <h2>More Than Web Design</h2>
       <p>Education is another part of my work. My background as an educator has shaped the way I explain technology, organize information, and create resources that are practical and easy to use.</p>
+
+      <h3>Teaching With Purpose</h3>
+      <p>Whether the learner is an older adult developing digital confidence or an educator looking for practical classroom resources, the goal is the same: make learning understandable, useful, and connected to real life.</p>
+
+      <h3>Education Through Experience</h3>
+      <p>My education work brings together teaching experience, technology, curriculum development, and practical resource creation. These projects allow me to serve learners in different stages and areas of life.</p>
+    </article>
+
+    <section class="learningSection">
+      <div class="learningIntro">
+        <div class="serviceEyebrow">A Small Learning Library</div>
+        <h2>Practical Material to Get You Started</h2>
+        <p>This page includes a few simple learning topics you can explore right here. They are meant to provide useful starting points while the larger resource collections continue on my education sites.</p>
+      </div>
+
+      <div class="learningCards">
+        <article class="learningCard">
+          <span>01 • Technology Tips</span>
+          <h3>Technology for Everyday Life</h3>
+          <ul>
+            <li>Understanding your smartphone</li>
+            <li>Creating stronger passwords</li>
+            <li>Recognizing suspicious messages</li>
+            <li>Using video calls with confidence</li>
+          </ul>
+        </article>
+
+        <article class="learningCard">
+          <span>02 • Technology Basics</span>
+          <h3>Start With the Basics</h3>
+          <ul>
+            <li>What is a website?</li>
+            <li>What is HTML?</li>
+            <li>Understanding files and folders</li>
+            <li>Learning common computer terms</li>
+          </ul>
+        </article>
+
+        <article class="learningCard">
+          <span>03 • Educator Resources</span>
+          <h3>Teaching &amp; Classroom Ideas</h3>
+          <ul>
+            <li>Simple classroom planning tips</li>
+            <li>Early childhood activity ideas</li>
+            <li>Observation reminders</li>
+            <li>Classroom organization tips</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="quickTip"><strong>Quick Tip:</strong> When learning something new, start with one skill at a time. Practice it, use it in a real situation, and then build on what you already understand.</div>
+    </section>
+
+    <article class="serviceContent">
+      <h2>Explore More Resources</h2>
 
       <h3>Technology for Life</h3>
       <p>Technology for Life is a separate educational website I created for practical technology learning. It includes resources designed to help older adults and everyday learners better understand digital tools, devices, online activities, and technology.</p>
@@ -69,13 +140,8 @@
       <h3>Teaching Materials</h3>
       <p>I also created a separate Teaching Materials site featuring Little Explorers Learning Hub. It provides curriculum studies, lesson plans, classroom activities, printable resources, observation and assessment tools, and other materials for Early Head Start, Head Start, Preschool, and Pre K educators.</p>
       <a class="serviceCTA" href="https://brad-hobbswd.github.io/teaching-materials/" target="_blank" rel="noopener noreferrer">Explore Teaching Materials</a>
-
-      <h3>Teaching With Purpose</h3>
-      <p>Whether the learner is an older adult developing digital confidence or an educator looking for practical classroom resources, the goal is the same: make learning understandable, useful, and connected to real life.</p>
-
-      <h3>Education Through Experience</h3>
-      <p>My education work brings together teaching experience, technology, curriculum development, and practical resource creation. These projects allow me to serve learners in different stages and areas of life.</p>
     </article>
+
   </div>
 </section>
 </main>
