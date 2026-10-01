@@ -9,73 +9,284 @@
 </head>
 <body>
 <div id="siteHeader"></div>
-<main class="servicePage">
+
+<main class="educationPage">
 <style>
-.servicePage{min-height:100vh;background:linear-gradient(180deg,#07152a 0%,#0a1d35 42%,#eef3f8 42%,#eef3f8 100%);color:#12233f}
-.serviceHero{width:min(1120px,92%);margin:0 auto;padding:150px 0 75px;color:#fff}
-.serviceEyebrow{color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
-.learningEyebrow{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
-.serviceHero h1{max-width:850px;margin:12px 0 18px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,7vw,70px);line-height:1.02}
-.serviceHero p{max-width:790px;margin:0;color:#d9e7f7;font-size:17px;line-height:1.75}
-.serviceBody{width:min(1000px,92%);margin:0 auto;padding:0 0 80px}
-.serviceGrid{display:grid;grid-template-columns:1fr 1.35fr;gap:28px;align-items:start}
-.servicePanel,.serviceContent,.learningSection,.teachingSection{background:#fff;border:1px solid #dce5ef;border-radius:18px;box-shadow:0 12px 32px rgba(18,42,72,.1)}
-.servicePanel{padding:28px;position:relative;overflow:hidden}
-.servicePanel:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,#1689e8,#f0b529)}
-.serviceNumber{display:block;color:#b27600;font-size:12px;font-weight:900;letter-spacing:.12em}
-.servicePanel h2{margin:10px 0 16px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:26px}
-.servicePanel ul{margin:0;padding-left:19px;color:#52627b;line-height:1.8}
-.serviceContent{padding:34px}
-.serviceContent h2{margin:0 0 15px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:34px}
-.serviceContent p{margin:0 0 17px;color:#52627b;font-size:15px;line-height:1.75}
-.serviceContent h3{margin:25px 0 9px;color:#15345d;font-size:18px}
-.learningSection,.teachingSection{grid-column:1 / -1;padding:34px;margin-top:0}
-.learningIntro,.teachingIntro{max-width:760px}
-.learningSection h2,.teachingSection h2{margin:0 0 10px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:32px}
-.learningIntro p,.teachingIntro p{margin:0;color:#52627b;font-size:15px;line-height:1.75}
-.learningCards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
-.learningCard{padding:22px;border:1px solid #dce5ef;border-radius:14px;background:#f7faff}
-.learningCard span{display:block;color:#b27600;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-.learningCard h3{margin:8px 0 10px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:21px}
-.learningCard ul{margin:0;padding-left:18px;color:#52627b;font-size:14px;line-height:1.75}
-.quickTip{margin-top:20px;padding:18px 20px;border-left:4px solid #1689e8;border-radius:10px;background:#eef6fd;color:#3d5570;font-size:14px;line-height:1.7}
-.teachingCards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
-.teachingCard{padding:21px;border:1px solid #dce5ef;border-radius:14px;background:#f7faff}
-.teachingCard h3{margin:0 0 9px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:19px}
-.teachingCard p{margin:0;color:#52627b;font-size:13px;line-height:1.7}
-.littleExplorers{margin-top:24px;padding:24px;border-radius:14px;background:#eef6fd;border:1px solid #d6e7f6}
-.littleExplorers h3{margin:0 0 9px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:23px}
-.littleExplorers p{margin:0;max-width:780px;color:#52627b;font-size:14px;line-height:1.75}
-.serviceCTA{display:inline-block;margin-top:10px;margin-right:8px;padding:12px 18px;border-radius:999px;background:#15345d;color:#fff;text-decoration:none;font-weight:800;font-size:13px}
-.serviceCTA:hover{background:#1689e8;color:#fff}
-@media(max-width:900px){
-.teachingCards{grid-template-columns:repeat(2,1fr)}
+.educationPage{
+  min-height:100vh;
+  background:#eef3f8;
+  color:#12233f;
+  overflow:hidden
 }
-@media(max-width:760px){
-.servicePage{background:linear-gradient(180deg,#07152a 0%,#0a1d35 31%,#eef3f8 31%,#eef3f8 100%)}
-.serviceHero{padding:125px 0 55px}
-.serviceHero h1{font-size:clamp(38px,11vw,54px)}
-.serviceHero p{font-size:15px}
-.serviceGrid{grid-template-columns:1fr}
-.learningSection,.teachingSection{grid-column:auto;padding:26px}
-.learningCards,.teachingCards{grid-template-columns:1fr}
-.serviceContent{padding:26px}
-.serviceContent h2,.learningSection h2,.teachingSection h2{font-size:28px}
-.serviceCTA{margin-bottom:8px}
+.educationHero{
+  background:linear-gradient(135deg,#06152c 0%,#0b2442 58%,#123b63 100%);
+  color:#fff
+}
+.educationHeroInner{
+  width:min(1100px,92%);
+  margin:0 auto;
+  padding:145px 0 78px
+}
+.educationEyebrow{
+  color:#ffd45f;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase
+}
+.educationHero h1{
+  max-width:850px;
+  margin:13px 0 18px;
+  color:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(42px,6.5vw,68px);
+  line-height:1.04
+}
+.educationHero p{
+  max-width:760px;
+  margin:0;
+  color:#dce9f7;
+  font-size:17px;
+  line-height:1.75
+}
+.educationBody{
+  width:min(1060px,92%);
+  margin:0 auto;
+  padding:42px 0 90px
+}
+.educationIntro{
+  display:grid;
+  grid-template-columns:.82fr 1.35fr;
+  gap:24px;
+  align-items:stretch;
+  margin-bottom:24px
+}
+.educationPanel,.educationContent,.librarySection,.teachingSection,.resourceSection{
+  background:#fff;
+  border:1px solid #dce5ef;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(18,42,72,.08)
+}
+.educationPanel{
+  position:relative;
+  padding:28px;
+  overflow:hidden
+}
+.educationPanel:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:4px;
+  background:linear-gradient(90deg,#1689e8,#f0b529)
+}
+.educationNumber{
+  display:block;
+  color:#b27600;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.14em
+}
+.educationPanel h2{
+  margin:10px 0 15px;
+  color:#15345d;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:27px
+}
+.educationPanel ul{
+  margin:0;
+  padding-left:19px;
+  color:#52627b;
+  line-height:1.85
+}
+.educationContent{
+  padding:31px
+}
+.educationContent h2,.sectionHeading h2{
+  margin:0 0 13px;
+  color:#15345d;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:32px;
+  line-height:1.2
+}
+.educationContent p,.sectionHeading p{
+  margin:0 0 16px;
+  color:#52627b;
+  font-size:15px;
+  line-height:1.75
+}
+.educationContent h3{
+  margin:23px 0 8px;
+  color:#15345d;
+  font-size:18px
+}
+.librarySection,.teachingSection,.resourceSection{
+  padding:32px;
+  margin-bottom:24px
+}
+.sectionHeading{
+  max-width:780px
+}
+.sectionLabel{
+  display:block;
+  margin-bottom:8px;
+  color:#b27600;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.15em;
+  text-transform:uppercase
+}
+.sectionHeading p{margin-bottom:0}
+.libraryCards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+  margin-top:25px
+}
+.libraryCard,.teachingCard{
+  border:1px solid #dce5ef;
+  border-radius:14px;
+  background:#f7faff
+}
+.libraryCard{
+  padding:21px
+}
+.cardLabel{
+  display:block;
+  color:#b27600;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase
+}
+.libraryCard h3,.teachingCard h3,.resourceCard h3{
+  margin:9px 0 10px;
+  color:#15345d;
+  font-family:Georgia,"Times New Roman",serif
+}
+.libraryCard h3{font-size:21px}
+.libraryCard ul{
+  margin:0;
+  padding-left:18px;
+  color:#52627b;
+  font-size:14px;
+  line-height:1.75
+}
+.quickTip{
+  margin-top:19px;
+  padding:17px 19px;
+  border-left:4px solid #1689e8;
+  border-radius:10px;
+  background:#eef6fd;
+  color:#3d5570;
+  font-size:14px;
+  line-height:1.7
+}
+.teachingCards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-top:25px
+}
+.teachingCard{
+  padding:20px
+}
+.teachingCard h3{
+  font-size:19px;
+  margin-top:0
+}
+.teachingCard p,.resourceCard p{
+  margin:0;
+  color:#52627b;
+  font-size:13px;
+  line-height:1.7
+}
+.littleExplorers{
+  margin-top:22px;
+  padding:23px;
+  background:#eef6fd;
+  border:1px solid #d6e7f6;
+  border-radius:14px
+}
+.littleExplorers h3{
+  margin:0 0 8px;
+  color:#15345d;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:23px
+}
+.littleExplorers p{
+  max-width:800px;
+  margin:0;
+  color:#52627b;
+  font-size:14px;
+  line-height:1.75
+}
+.resourceCards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:17px;
+  margin-top:24px
+}
+.resourceCard{
+  padding:22px;
+  border:1px solid #dce5ef;
+  border-radius:14px;
+  background:#f7faff
+}
+.resourceCard h3{font-size:22px}
+.serviceCTA{
+  display:inline-block;
+  margin-top:13px;
+  padding:11px 17px;
+  border-radius:999px;
+  background:#15345d;
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800
+}
+.serviceCTA:hover{
+  background:#1689e8;
+  color:#fff
+}
+@media(max-width:900px){
+  .educationIntro{grid-template-columns:1fr}
+  .teachingCards{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .educationHeroInner{padding:120px 0 52px}
+  .educationHero h1{font-size:clamp(37px,10vw,52px)}
+  .educationHero p{font-size:15px;line-height:1.7}
+  .educationBody{width:min(100% - 28px,1060px);padding:24px 0 65px}
+  .educationIntro{gap:16px;margin-bottom:16px}
+  .educationPanel,.educationContent,.librarySection,.teachingSection,.resourceSection{border-radius:15px}
+  .educationPanel,.educationContent,.librarySection,.teachingSection,.resourceSection{padding:23px}
+  .educationContent h2,.sectionHeading h2{font-size:27px}
+  .libraryCards,.teachingCards,.resourceCards{grid-template-columns:1fr;gap:13px;margin-top:20px}
+  .libraryCard{padding:19px}
+  .libraryCard h3{font-size:20px}
+  .teachingCard{padding:18px}
+  .resourceCard{padding:19px}
+  .littleExplorers{padding:19px}
+  .littleExplorers h3{font-size:21px}
+  .serviceCTA{width:100%;text-align:center;box-sizing:border-box}
 }
 </style>
 
-<section class="serviceHero">
-  <div class="serviceEyebrow">07 • Education Services</div>
-  <h1>Education Is Part of What I Do</h1>
-  <p>As an educator, I create practical learning resources that help people build skills, understand technology, and make learning more useful in everyday life.</p>
+<section class="educationHero">
+  <div class="educationHeroInner">
+    <div class="educationEyebrow">07 • Education Services</div>
+    <h1>Education Is Part of What I Do</h1>
+    <p>As an educator, I create practical learning resources that help people build skills, understand technology, and make learning useful in everyday life.</p>
+  </div>
 </section>
 
-<section class="serviceBody">
-  <div class="serviceGrid">
+<section class="educationBody">
 
-    <aside class="servicePanel">
-      <span class="serviceNumber">07</span>
+  <div class="educationIntro">
+    <aside class="educationPanel">
+      <span class="educationNumber">07</span>
       <h2>Education &amp; Learning</h2>
       <ul>
         <li>Educator created resources</li>
@@ -85,109 +296,124 @@
       </ul>
     </aside>
 
-    <article class="serviceContent">
+    <article class="educationContent">
       <h2>More Than Web Design</h2>
       <p>Education is another part of my work. My background as an educator has shaped the way I explain technology, organize information, and create resources that are practical and easy to use.</p>
 
       <h3>Teaching With Purpose</h3>
-      <p>Whether the learner is an older adult developing digital confidence or an educator looking for practical classroom resources, the goal is the same: make learning understandable, useful, and connected to real life.</p>
+      <p>Whether the learner is an older adult developing digital confidence or an educator looking for practical classroom resources, the goal is to make learning understandable, useful, and connected to real life.</p>
 
       <h3>Education Through Experience</h3>
       <p>My education work brings together teaching experience, technology, curriculum development, and practical resource creation. These projects allow me to serve learners in different stages and areas of life.</p>
     </article>
-
-    <section class="learningSection">
-      <div class="learningIntro">
-        <div class="learningEyebrow">A Small Learning Library</div>
-        <h2>Practical Material to Get You Started</h2>
-        <p>This page includes a few simple learning topics you can explore right here. They are meant to provide useful starting points while the larger resource collections continue on my education sites.</p>
-      </div>
-
-      <div class="learningCards">
-        <article class="learningCard">
-          <span>01 • Technology Tips</span>
-          <h3>Technology for Everyday Life</h3>
-          <ul>
-            <li>Understanding your smartphone</li>
-            <li>Creating stronger passwords</li>
-            <li>Recognizing suspicious messages</li>
-            <li>Using video calls with confidence</li>
-          </ul>
-        </article>
-
-        <article class="learningCard">
-          <span>02 • Technology Basics</span>
-          <h3>Start With the Basics</h3>
-          <ul>
-            <li>What is a website?</li>
-            <li>What is HTML?</li>
-            <li>Understanding files and folders</li>
-            <li>Learning common computer terms</li>
-          </ul>
-        </article>
-
-        <article class="learningCard">
-          <span>03 • Educator Resources</span>
-          <h3>Teaching &amp; Classroom Ideas</h3>
-          <ul>
-            <li>Simple classroom planning tips</li>
-            <li>Early childhood activity ideas</li>
-            <li>Observation reminders</li>
-            <li>Classroom organization tips</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="quickTip"><strong>Quick Tip:</strong> When learning something new, start with one skill at a time. Practice it, use it in a real situation, and then build on what you already understand.</div>
-    </section>
-
-    <section class="teachingSection">
-      <div class="teachingIntro">
-        <div class="learningEyebrow">Teaching Materials</div>
-        <h2>Resources for Early Childhood Educators</h2>
-        <p>My Teaching Materials work is designed to give educators practical resources they can use for planning, classroom organization, observation, assessment, and daily teaching. The collection supports educators working with young children across several early learning settings.</p>
-      </div>
-
-      <div class="teachingCards">
-        <article class="teachingCard">
-          <h3>Lesson Planning</h3>
-          <p>Lesson plans, study ideas, classroom activities, and planning support that help educators prepare meaningful learning experiences.</p>
-        </article>
-
-        <article class="teachingCard">
-          <h3>Early Childhood Resources</h3>
-          <p>Resources for Infant, Toddler, Preschool, Pre K, Early Head Start, and Head Start classrooms with a focus on practical early learning.</p>
-        </article>
-
-        <article class="teachingCard">
-          <h3>Observation &amp; Assessment</h3>
-          <p>Tools and reminders for classroom observations, developmental documentation, assessment practices, and tracking children's progress.</p>
-        </article>
-
-        <article class="teachingCard">
-          <h3>Classroom Support</h3>
-          <p>Practical help with classroom organization, routines, behavior documentation, learning activities, and everyday teaching needs.</p>
-        </article>
-      </div>
-
-      <div class="littleExplorers">
-        <h3>Little Explorers Learning Hub</h3>
-        <p>Teaching Materials includes Little Explorers Learning Hub, a growing collection of curriculum studies, lesson plans, printable resources, classroom activities, observation tools, assessment resources, and other materials created with educators in mind.</p>
-        <a class="serviceCTA" href="https://brad-hobbswd.github.io/teaching-materials/" target="_blank" rel="noopener noreferrer">Explore Teaching Materials</a>
-      </div>
-    </section>
-
-    <article class="serviceContent">
-      <h2>Explore More Resources</h2>
-
-      <h3>Technology for Life</h3>
-      <p>Technology for Life is a separate educational website I created for practical technology learning. It includes resources designed to help older adults and everyday learners better understand digital tools, devices, online activities, and technology.</p>
-      <a class="serviceCTA" href="https://brad-hobbswd.github.io/technology-for-life/" target="_blank" rel="noopener noreferrer">Explore Technology for Life</a>
-    </article>
-
   </div>
+
+  <section class="librarySection">
+    <div class="sectionHeading">
+      <span class="sectionLabel">A Small Learning Library</span>
+      <h2>Practical Material to Get You Started</h2>
+      <p>Explore a few simple learning topics directly on this page. These provide useful starting points while the larger resource collections continue on my education sites.</p>
+    </div>
+
+    <div class="libraryCards">
+      <article class="libraryCard">
+        <span class="cardLabel">01 • Technology Tips</span>
+        <h3>Technology for Everyday Life</h3>
+        <ul>
+          <li>Understanding your smartphone</li>
+          <li>Creating stronger passwords</li>
+          <li>Recognizing suspicious messages</li>
+          <li>Using video calls with confidence</li>
+        </ul>
+      </article>
+
+      <article class="libraryCard">
+        <span class="cardLabel">02 • Technology Basics</span>
+        <h3>Start With the Basics</h3>
+        <ul>
+          <li>What is a website?</li>
+          <li>What is HTML?</li>
+          <li>Understanding files and folders</li>
+          <li>Learning common computer terms</li>
+        </ul>
+      </article>
+
+      <article class="libraryCard">
+        <span class="cardLabel">03 • Educator Resources</span>
+        <h3>Teaching &amp; Classroom Ideas</h3>
+        <ul>
+          <li>Simple classroom planning tips</li>
+          <li>Early childhood activity ideas</li>
+          <li>Observation reminders</li>
+          <li>Classroom organization tips</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="quickTip"><strong>Quick Tip:</strong> When learning something new, start with one skill at a time. Practice it, use it in a real situation, and then build on what you already understand.</div>
+  </section>
+
+  <section class="teachingSection">
+    <div class="sectionHeading">
+      <span class="sectionLabel">Teaching Materials</span>
+      <h2>Resources for Early Childhood Educators</h2>
+      <p>My Teaching Materials work provides practical resources for planning, classroom organization, observation, assessment, and daily teaching across early learning settings.</p>
+    </div>
+
+    <div class="teachingCards">
+      <article class="teachingCard">
+        <h3>Lesson Planning</h3>
+        <p>Lesson plans, study ideas, classroom activities, and planning support for meaningful learning experiences.</p>
+      </article>
+
+      <article class="teachingCard">
+        <h3>Early Childhood Resources</h3>
+        <p>Resources for Infant, Toddler, Preschool, Pre K, Early Head Start, and Head Start classrooms.</p>
+      </article>
+
+      <article class="teachingCard">
+        <h3>Observation &amp; Assessment</h3>
+        <p>Tools and reminders for observations, developmental documentation, assessment practices, and progress tracking.</p>
+      </article>
+
+      <article class="teachingCard">
+        <h3>Classroom Support</h3>
+        <p>Practical help with classroom organization, routines, behavior documentation, and learning activities.</p>
+      </article>
+    </div>
+
+    <div class="littleExplorers">
+      <h3>Little Explorers Learning Hub</h3>
+      <p>Teaching Materials includes Little Explorers Learning Hub, a growing collection of curriculum studies, lesson plans, printable resources, classroom activities, observation tools, assessment resources, and other materials created with educators in mind.</p>
+      <a class="serviceCTA" href="https://brad-hobbswd.github.io/teaching-materials/" target="_blank" rel="noopener noreferrer">Explore Teaching Materials</a>
+    </div>
+  </section>
+
+  <section class="resourceSection">
+    <div class="sectionHeading">
+      <span class="sectionLabel">More Education Resources</span>
+      <h2>Continue Learning</h2>
+      <p>Explore the separate education sites for additional material and resources.</p>
+    </div>
+
+    <div class="resourceCards">
+      <article class="resourceCard">
+        <h3>Technology for Life</h3>
+        <p>Practical technology learning for older adults and everyday learners, including digital tools, devices, online activities, and technology basics.</p>
+        <a class="serviceCTA" href="https://brad-hobbswd.github.io/technology-for-life/" target="_blank" rel="noopener noreferrer">Explore Technology for Life</a>
+      </article>
+
+      <article class="resourceCard">
+        <h3>Teaching Materials</h3>
+        <p>Little Explorers Learning Hub and practical resources for Early Head Start, Head Start, Preschool, Pre K, and early childhood educators.</p>
+        <a class="serviceCTA" href="https://brad-hobbswd.github.io/teaching-materials/" target="_blank" rel="noopener noreferrer">Explore Teaching Materials</a>
+      </article>
+    </div>
+  </section>
+
 </section>
 </main>
+
 <div id="siteFooter"></div>
 <script src="/brad-hobbswd/layout.js"></script>
 </body>
