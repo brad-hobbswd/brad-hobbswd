@@ -15,536 +15,350 @@
 
 <style>
 :root{
-  --c-navy:#07162d;
-  --c-blue:#1689e8;
-  --c-gold:#e9a817;
-  --c-ink:#12233f;
-  --c-muted:#596a82;
-  --c-light:#f4f7fb;
-  --c-line:#dbe4ee;
+  --contact-navy:#07162d;
+  --contact-blue:#1689e8;
+  --contact-gold:#ffd34e;
+  --contact-ink:#10233f;
+  --contact-muted:#64748b;
+  --contact-line:#dce5ef;
+  --contact-bg:#eef3f8;
 }
 
 body[data-page="contact"]{
   padding-top:0!important;
-  background:var(--c-light);
-  color:var(--c-ink);
+  background:var(--contact-bg);
+  color:var(--contact-ink);
   overflow-x:hidden;
 }
+body[data-page="contact"] .wrap{width:100%;max-width:none;margin:0;padding:0}
+body[data-page="contact"] #siteHeader{height:70px;position:relative}
+body[data-page="contact"] main{width:100%;margin:0;padding:0}
 
-body[data-page="contact"] .wrap{
-  width:100%;
-  max-width:none;
+/* A deliberately different contact layout: compact intro, then one strong conversation panel */
+.contactIntroBar{
+  background:var(--contact-navy);
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.contactIntroBarInner{
+  width:min(1180px,calc(100% - 48px));
+  margin:auto;
+  padding:34px 0 32px;
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:35px;
+}
+.contactIntroBar .eyebrow{
+  color:var(--contact-gold);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  margin-bottom:9px;
+}
+.contactIntroBar h1{
   margin:0;
-  padding:0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(34px,4.5vw,58px);
+  line-height:1;
+  letter-spacing:-.025em;
+}
+.contactIntroBar h1 span{color:var(--contact-gold)}
+.contactIntroBar p{
+  max-width:500px;
+  margin:10px 0 0;
+  color:rgba(255,255,255,.68);
+  font-size:14px;
+  line-height:1.65;
+}
+.contactDirect{
+  flex:0 0 auto;
+  color:#fff;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:999px;
+  padding:12px 17px;
+  font-size:12px;
+  font-weight:900;
+  transition:.2s ease;
+}
+.contactDirect:hover{background:#fff;color:var(--contact-navy);transform:translateY(-2px)}
+
+.contactStage{
+  width:min(1180px,calc(100% - 48px));
+  margin:42px auto 72px;
+}
+.contactPanel{
+  display:grid;
+  grid-template-columns:.78fr 1.22fr;
+  min-height:620px;
+  border-radius:24px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 28px 70px rgba(13,35,62,.16);
+  border:1px solid rgba(16,35,63,.08);
 }
 
-body[data-page="contact"] #siteHeader{
-  height:70px;
-  position:relative;
-}
-
-body[data-page="contact"] main{
-  width:100%;
-  margin:0;
-  padding:0;
-}
-
-/* Compact premium introduction */
-.contactHero{
+/* Left information panel */
+.contactSide{
   position:relative;
   overflow:hidden;
+  padding:48px 42px;
   background:
-    radial-gradient(circle at 12% 20%,rgba(22,137,232,.22),transparent 32%),
-    radial-gradient(circle at 88% 5%,rgba(233,168,23,.14),transparent 28%),
+    radial-gradient(circle at 85% 15%,rgba(22,137,232,.3),transparent 30%),
+    radial-gradient(circle at 10% 90%,rgba(255,211,78,.09),transparent 30%),
     #07162d;
   color:#fff;
 }
-
-.contactHeroInner{
-  width:min(1120px,calc(100% - 48px));
-  margin:0 auto;
-  padding:54px 0 50px;
-  position:relative;
-  z-index:1;
-}
-.contactHeroInner::after{
+.contactSide::before{
   content:"";
   position:absolute;
-  right:-90px;
-  top:-80px;
-  width:280px;
-  height:280px;
-  border:1px solid rgba(255,255,255,.08);
+  width:230px;
+  height:230px;
+  right:-110px;
+  bottom:-110px;
+  border:1px solid rgba(255,255,255,.1);
   border-radius:50%;
-  box-shadow:0 0 0 34px rgba(22,137,232,.025),0 0 0 68px rgba(233,168,23,.02);
-  pointer-events:none;
 }
-.contactHero::after{
+.contactSide::after{
   content:"";
   position:absolute;
-  left:0;
-  right:0;
-  bottom:-1px;
-  height:10px;
-  background:linear-gradient(90deg,transparent,var(--c-blue),var(--c-gold),transparent);
-  opacity:.75;
+  width:150px;
+  height:150px;
+  right:-70px;
+  bottom:-70px;
+  border:1px solid rgba(255,211,78,.16);
+  border-radius:50%;
 }
-
-.contactEyebrow{
-  color:#ffd34e;
+.contactSideContent{position:relative;z-index:1}
+.contactSideNumber{
+  display:inline-grid;
+  place-items:center;
+  width:44px;
+  height:44px;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:12px;
+  color:var(--contact-gold);
   font-size:12px;
   font-weight:900;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  margin-bottom:14px;
-}
-
-.contactHero h1{
-  margin:0;
-  max-width:800px;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(40px,5.5vw,68px);
-  line-height:1.02;
-  letter-spacing:-.02em;
-}
-
-.contactHero h1 span{
-  color:#ffd34e;
-}
-
-.contactHero p{
-  max-width:700px;
-  margin:18px 0 0;
-  color:rgba(255,255,255,.78);
-  font-size:17px;
-  line-height:1.7;
-}
-
-.contactHeroActions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:28px;
-}
-
-.contactButton{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:46px;
-  padding:0 20px;
-  border-radius:999px;
-  text-decoration:none;
-  font-size:13px;
-  font-weight:900;
-  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
-}
-
-.contactButton.primary{
-  background:var(--c-blue);
-  color:#fff;
-  box-shadow:0 10px 26px rgba(22,137,232,.25);
-}
-
-.contactButton.secondary{
-  color:#fff;
-  border:1px solid rgba(255,255,255,.25);
-  background:rgba(255,255,255,.05);
-}
-
-.contactButton:hover{
-  transform:translateY(-2px);
-}
-
-.contactHeroMeta{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px 22px;
-  margin-top:30px;
-  color:rgba(255,255,255,.64);
-  font-size:11px;
-  font-weight:800;
   letter-spacing:.08em;
-  text-transform:uppercase;
 }
-
-.contactHeroMeta span{
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
+.contactSide h2{
+  margin:31px 0 0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(32px,3.4vw,49px);
+  line-height:1.06;
 }
-
-.contactHeroMeta i{
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  background:var(--c-gold);
+.contactSide h2 span{color:var(--contact-gold)}
+.contactSideLead{
+  margin:17px 0 0;
+  color:rgba(255,255,255,.68);
+  font-size:14px;
+  line-height:1.75;
 }
-
-/* Main contact area */
-.contactMain{
-  width:min(1120px,calc(100% - 48px));
-  margin:0 auto;
-  padding:58px 0 68px;
-}
-
-.contactGrid{
+.contactList{
   display:grid;
-  grid-template-columns:.78fr 1.22fr;
-  gap:28px;
+  gap:20px;
+  margin-top:39px;
+}
+.contactListItem{
+  display:grid;
+  grid-template-columns:34px 1fr;
+  gap:12px;
   align-items:start;
 }
-
-.contactIntro{
-  padding:8px 18px 0 0;
-  position:relative;
-}
-.contactIntro::before{
-  content:"";
-  display:block;
-  width:58px;
-  height:4px;
-  margin-bottom:22px;
-  border-radius:99px;
-  background:linear-gradient(90deg,var(--c-blue),var(--c-gold));
-}
-
-.contactIntroEyebrow{
-  color:#126bb6;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  margin-bottom:12px;
-}
-
-.contactIntro h2{
-  margin:0;
-  color:var(--c-ink);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(32px,4vw,48px);
-  line-height:1.08;
-}
-
-.contactIntro p{
-  margin:16px 0 0;
-  color:var(--c-muted);
-  line-height:1.75;
-  font-size:15px;
-}
-
-.contactReasons{
-  display:grid;
-  gap:12px;
-  margin-top:28px;
-}
-
-.contactReason{
-  display:flex;
-  gap:13px;
-  align-items:flex-start;
-  padding:16px 17px;
-  border:1px solid var(--c-line);
-  border-radius:13px;
-  background:#fff;
-  box-shadow:0 8px 24px rgba(18,42,72,.06);
-}
-
-.contactReasonIcon{
-  flex:0 0 34px;
-  width:34px;
-  height:34px;
-  display:grid;
-  place-items:center;
+.contactListIcon{
+  width:34px;height:34px;
+  display:grid;place-items:center;
   border-radius:9px;
-  background:#e9f4fd;
-  color:#126bb6;
-  font-size:14px;
+  background:rgba(22,137,232,.15);
+  color:#70c5ff;
+  font-size:11px;
   font-weight:900;
 }
-
-.contactReason strong{
-  display:block;
-  color:var(--c-ink);
-  font-size:13px;
-  margin-bottom:3px;
-}
-
-.contactReason span{
-  display:block;
-  color:var(--c-muted);
-  font-size:12px;
-  line-height:1.5;
-}
-
-/* Form card */
-#quoteForm.card{
-  width:100%;
-  margin:0;
-  padding:36px;
-  box-sizing:border-box;
-  border-radius:18px;
-  background:#fff;
-  border:1px solid var(--c-line);
-  box-shadow:0 24px 60px rgba(18,42,72,.13);
-  position:relative;
-  transform:translateY(-4px);
-  overflow:hidden;
-}
-
-#quoteForm.card::before{
-  content:"";
+.contactListItem strong{display:block;font-size:13px;margin-bottom:4px}
+.contactListItem span{display:block;color:rgba(255,255,255,.57);font-size:11px;line-height:1.55}
+.contactSideBottom{
   position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:4px;
-  background:linear-gradient(90deg,var(--c-blue),var(--c-gold));
-}
-
-.formTitle{
-  margin:0;
-  color:var(--c-ink);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(30px,3.5vw,42px);
-  line-height:1.1;
-}
-
-.formSubtitle{
-  margin:9px 0 0;
-  color:var(--c-muted);
-  line-height:1.6;
-  font-size:14px;
-}
-
-.formGrid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:19px;
-  margin-top:26px;
-}
-
-.formLabel{
-  display:block;
-  text-align:left;
-}
-
-.formLabelTitle{
-  margin-bottom:7px;
-  color:#164c80;
+  left:42px;
+  right:42px;
+  bottom:35px;
+  padding-top:17px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.55);
   font-size:11px;
+  line-height:1.6;
+}
+.contactSideBottom strong{color:#fff}
+
+/* Right form area */
+.contactFormArea{
+  padding:48px 48px 42px;
+  background:#fff;
+}
+.contactFormHeading{
+  display:flex;
+  align-items:start;
+  justify-content:space-between;
+  gap:20px;
+}
+.contactFormHeading h2{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:34px;
+  line-height:1.08;
+  color:var(--contact-ink);
+}
+.contactFormHeading p{
+  max-width:420px;
+  margin:9px 0 0;
+  color:var(--contact-muted);
+  font-size:13px;
+  line-height:1.6;
+}
+.formBadge{
+  flex:0 0 auto;
+  padding:7px 10px;
+  border-radius:999px;
+  background:#eef7ff;
+  color:#126bb6;
+  font-size:9px;
   font-weight:900;
   letter-spacing:.1em;
   text-transform:uppercase;
 }
 
+#quoteForm.card{
+  width:100%;
+  margin:28px 0 0;
+  padding:0;
+  box-sizing:border-box;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+.formGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px 16px;
+}
+.formLabel{display:block;text-align:left}
+.formLabelTitle{
+  margin:0 0 7px;
+  color:#294766;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
 .formControl{
   width:100%;
-  min-height:48px;
+  min-height:49px;
   box-sizing:border-box;
   padding:12px 13px;
-  border:1px solid #ccd8e5;
-  border-radius:9px;
-  background:#fff;
-  color:var(--c-ink);
+  border:1px solid #cdd8e4;
+  border-radius:10px;
+  background:#f9fbfd;
+  color:var(--contact-ink);
   font:inherit;
+  transition:.2s ease;
 }
-
-.formControl::placeholder{
-  color:#8796aa;
-}
-
+.formControl::placeholder{color:#93a0b0}
 .formControl:focus{
   outline:none;
-  border-color:var(--c-blue);
-  box-shadow:0 0 0 3px rgba(22,137,232,.12);
+  background:#fff;
+  border-color:var(--contact-blue);
+  box-shadow:0 0 0 3px rgba(22,137,232,.1);
 }
-
-textarea.formControl{
-  min-height:145px;
-  resize:vertical;
-}
-
-.fullRow{
-  grid-column:1 / -1;
-}
-
+textarea.formControl{min-height:150px;resize:vertical}
+.fullRow{grid-column:1 / -1}
 #sendBtn{
   width:100%;
-  min-height:50px;
+  min-height:52px;
   margin-top:1px;
-  border-radius:999px;
+  border-radius:11px;
   font-weight:900;
+  font-size:13px;
+  box-shadow:0 10px 24px rgba(22,137,232,.18);
 }
-
-#sendBtn:disabled{
-  cursor:wait;
-  opacity:.75;
-}
-
+#sendBtn:disabled{cursor:wait;opacity:.75}
 .emailFallback{
-  margin-top:17px;
+  margin-top:18px;
   padding-top:16px;
   border-top:1px solid #e5ebf2;
-  text-align:center;
-  font-size:13px;
-  color:var(--c-muted);
+  text-align:left;
+  font-size:12px;
+  color:var(--contact-muted);
 }
+.emailFallback a{color:#0b63b6;font-weight:800;text-decoration:none}
+.emailFallback a:hover{text-decoration:underline}
 
-.emailFallback a{
-  color:#0b63b6;
-  font-weight:800;
-  text-decoration:none;
+/* Bottom service strip */
+.contactBottom{
+  width:min(1180px,calc(100% - 48px));
+  margin:0 auto 72px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:14px;
 }
-
-.emailFallback a:hover{
-  text-decoration:underline;
+.contactBottomCard{
+  padding:21px 22px;
+  border:1px solid var(--contact-line);
+  border-radius:15px;
+  background:#fff;
+  box-shadow:0 9px 26px rgba(13,35,62,.05);
 }
-
-/* Direct email strip */
-.emailStrip{
-  width:min(1120px,calc(100% - 48px));
-  position:relative;
-  margin:0 auto 70px;
-  padding:25px 28px;
-  box-sizing:border-box;
-  border-radius:16px;
-  background:#07162d;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-  box-shadow:0 16px 38px rgba(7,22,45,.18);
-}
-
-.emailStripText small{
+.contactBottomCard small{
   display:block;
-  color:#ffd34e;
-  font-size:10px;
+  color:#126bb6;
+  font-size:9px;
   font-weight:900;
   letter-spacing:.14em;
   text-transform:uppercase;
-  margin-bottom:5px;
+  margin-bottom:6px;
 }
-
-.emailStripText strong{
+.contactBottomCard strong{
   display:block;
+  color:var(--contact-ink);
   font-family:Georgia,"Times New Roman",serif;
-  font-size:22px;
+  font-size:19px;
 }
-
-.emailStripText span{
+.contactBottomCard span{
   display:block;
-  margin-top:3px;
-  color:rgba(255,255,255,.66);
-  font-size:12px;
-}
-
-.emailStrip a{
-  flex:0 0 auto;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:44px;
-  padding:0 18px;
-  border-radius:999px;
-  background:#fff;
-  color:#07162d;
-  text-decoration:none;
-  font-size:12px;
-  font-weight:900;
-}
-
-.emailStrip a:hover{
-  background:#ffd34e;
+  margin-top:5px;
+  color:var(--contact-muted);
+  font-size:11px;
+  line-height:1.5;
 }
 
 @media(max-width:900px){
-  .contactGrid{
-    grid-template-columns:1fr;
-  }
-
-  .contactIntro{
-    padding:0;
-  }
-  .contactIntro::before{
-    margin-bottom:18px;
-  }
-
-  .contactReasons{
-    grid-template-columns:repeat(3,1fr);
-  }
+  .contactIntroBarInner{align-items:flex-start;flex-direction:column}
+  .contactPanel{grid-template-columns:1fr}
+  .contactSide{min-height:520px}
+  .contactSideBottom{position:absolute}
+  .contactFormArea{padding:39px 35px}
+  .contactBottom{grid-template-columns:1fr}
 }
-
-@media(max-width:700px){
-  body[data-page="contact"] #siteHeader{
-    height:64px;
+@media(max-width:650px){
+  body[data-page="contact"] #siteHeader{height:64px}
+  .contactIntroBarInner,.contactStage,.contactBottom{
+    width:min(100% - 30px,1180px)
   }
-
-  .contactHeroInner{
-    width:min(100% - 32px,1120px);
-    padding:43px 0 40px;
-  }
-  .contactHeroInner::after{
-    right:-170px;
-    top:-110px;
-    width:230px;
-    height:230px;
-  }
-
-  .contactHero p{
-    font-size:15px;
-  }
-
-  .contactHeroActions{
-    flex-direction:column;
-  }
-
-  .contactButton{
-    width:100%;
-  }
-
-  .contactHeroMeta{
-    gap:9px 16px;
-  }
-
-  .contactMain{
-    width:min(100% - 32px,1120px);
-    padding:46px 0 54px;
-  }
-
-  .contactReasons{
-    grid-template-columns:1fr;
-  }
-
-  #quoteForm.card{
-    padding:27px 19px;
-    border-radius:15px;
-    transform:none;
-  }
-
-  .formGrid{
-    grid-template-columns:1fr;
-    gap:17px;
-    margin-top:23px;
-  }
-
-  .fullRow{
-    grid-column:auto;
-  }
-
-  .emailStrip{
-    width:min(100% - 32px,1120px);
-    margin-bottom:48px;
-    padding:24px 20px;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .emailStrip a{
-    width:100%;
-  }
+  .contactIntroBarInner{padding:29px 0 27px}
+  .contactIntroBar h1{font-size:38px}
+  .contactDirect{width:100%;text-align:center;box-sizing:border-box}
+  .contactStage{margin:25px auto 48px}
+  .contactPanel{border-radius:18px}
+  .contactSide{padding:34px 26px;min-height:525px}
+  .contactSide h2{margin-top:25px;font-size:37px}
+  .contactSideBottom{left:26px;right:26px;bottom:26px}
+  .contactFormArea{padding:32px 21px}
+  .contactFormHeading{display:block}
+  .formBadge{display:inline-block;margin-top:15px}
+  .formGrid{grid-template-columns:1fr;gap:16px}
+  .fullRow{grid-column:auto}
+  .contactBottom{margin-bottom:48px}
 }
 </style>
 </head>
@@ -557,158 +371,141 @@ textarea.formControl{
 
 <main>
 
-<section class="contactHero">
-  <div class="contactHeroInner">
-    <div class="contactEyebrow">Contact Brad Hobbs Web Design</div>
-    <h1>Let’s Build Something <span>That Works.</span></h1>
-    <p>Have a new website in mind, need to improve an existing one, or simply have a question? Tell me what you are working on and we can start there.</p>
-
-    <div class="contactHeroActions">
-      <a class="contactButton primary" href="#quoteForm">Start a Conversation</a>
-      <a class="contactButton secondary" href="mailto:brad.hobbs13@icloud.com">Email Directly</a>
+<section class="contactIntroBar">
+  <div class="contactIntroBarInner">
+    <div>
+      <div class="eyebrow">Let’s Talk About Your Project</div>
+      <h1>Let’s Make It <span>Work.</span></h1>
+      <p>Whether you are starting something new or improving something you already have, this is where the conversation begins.</p>
     </div>
-
-    <div class="contactHeroMeta">
-      <span><i></i> Web Design</span>
-      <span><i></i> Redesign</span>
-      <span><i></i> Management</span>
-      <span><i></i> Digital Support</span>
-    </div>
+    <a class="contactDirect" href="mailto:brad.hobbs13@icloud.com">Email Me Directly</a>
   </div>
 </section>
 
-<section class="contactMain">
+<section class="contactStage">
+  <div class="contactPanel">
 
-  <div class="contactGrid">
+    <aside class="contactSide">
+      <div class="contactSideContent">
+        <div class="contactSideNumber">01</div>
+        <h2>Start With<br><span>What You Need.</span></h2>
+        <p class="contactSideLead">You do not need a perfect plan before you reach out. Give me the information you have, and we can figure out the next step from there.</p>
 
-    <div class="contactIntro">
-      <div class="contactIntroEyebrow">Tell Me About Your Project</div>
-      <h2>A Simple Place to Start.</h2>
-      <p>You do not have to have every detail figured out before you reach out. Give me the basics, tell me what you need, and we can work through the next step together.</p>
-
-      <div class="contactReasons">
-        <div class="contactReason">
-          <div class="contactReasonIcon">01</div>
-          <div>
-            <strong>Share Your Idea</strong>
-            <span>Tell me what you are building, changing, or trying to accomplish.</span>
+        <div class="contactList">
+          <div class="contactListItem">
+            <div class="contactListIcon">01</div>
+            <div>
+              <strong>Tell Me Your Goal</strong>
+              <span>Describe what you want your website or digital project to accomplish.</span>
+            </div>
           </div>
-        </div>
-
-        <div class="contactReason">
-          <div class="contactReasonIcon">02</div>
-          <div>
-            <strong>Choose Your Service</strong>
-            <span>Select the type of project that best matches what you need.</span>
+          <div class="contactListItem">
+            <div class="contactListIcon">02</div>
+            <div>
+              <strong>Tell Me What You Have</strong>
+              <span>Let me know whether this is a new project, redesign, update, or support request.</span>
+            </div>
           </div>
-        </div>
-
-        <div class="contactReason">
-          <div class="contactReasonIcon">03</div>
-          <div>
-            <strong>Start the Conversation</strong>
-            <span>I will review the information and follow up about the next step.</span>
+          <div class="contactListItem">
+            <div class="contactListIcon">03</div>
+            <div>
+              <strong>Let’s Figure Out the Next Step</strong>
+              <span>I will review your message and follow up with the information needed to move forward.</span>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="contactSideBottom">
+        <strong>Prefer direct email?</strong><br>
+        brad.hobbs13@icloud.com
+      </div>
+    </aside>
+
+    <div class="contactFormArea">
+      <div class="contactFormHeading">
+        <div>
+          <h2>Tell Me About It.</h2>
+          <p>Complete the form below. A few details are enough to get the conversation started.</p>
+        </div>
+        <div class="formBadge">Project Inquiry</div>
+      </div>
+
+      <form
+        id="quoteForm"
+        class="card contactForm"
+        method="POST"
+        target="hidden_iframe"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSdBbVTznNfzNn8KuLN6IA3fsdxgC4MPw9ryoTQK5fJ4K0bFuA/formResponse"
+        accept-charset="UTF-8"
+      >
+        <div class="formGrid">
+
+          <label class="formLabel">
+            <div class="formLabelTitle">Name</div>
+            <input name="entry.2005620554" type="text" autocomplete="name" required class="formControl" placeholder="Your name">
+          </label>
+
+          <label class="formLabel">
+            <div class="formLabelTitle">Email</div>
+            <input name="entry.1045781291" type="email" autocomplete="email" required class="formControl" placeholder="you@example.com">
+          </label>
+
+          <label class="formLabel fullRow">
+            <div class="formLabelTitle">Project Type</div>
+            <select name="entry.1065046570" class="formControl" required>
+              <option value="" disabled selected>Select a project type</option>
+              <option value="Starter Website Package">Starter Website Package</option>
+              <option value="Business Website Package">Business Website Package</option>
+              <option value="Custom Project">Custom Project</option>
+              <option value="Website Redesign">Website Redesign</option>
+              <option value="Website Management">Website Management</option>
+              <option value="E Commerce">E Commerce</option>
+              <option value="SEO & Digital Support">SEO & Digital Support</option>
+              <option value="Computer Education">Computer Education</option>
+              <option value="General Question">General Question</option>
+            </select>
+          </label>
+
+          <label class="formLabel fullRow">
+            <div class="formLabelTitle">Message</div>
+            <textarea name="entry.1166974658" rows="6" required class="formControl" placeholder="Tell me about your project or question..."></textarea>
+          </label>
+
+          <div class="fullRow">
+            <button id="sendBtn" type="submit" class="btn btnPrimary">Send Message</button>
+          </div>
+
+        </div>
+
+        <div class="emailFallback">
+          Prefer email?
+          <a href="mailto:brad.hobbs13@icloud.com">brad.hobbs13@icloud.com</a>
+        </div>
+      </form>
+
+      <iframe name="hidden_iframe" title="Form submission" style="display:none;" aria-hidden="true"></iframe>
     </div>
 
-    <form
-      id="quoteForm"
-      class="card contactForm"
-      method="POST"
-      target="hidden_iframe"
-      action="https://docs.google.com/forms/d/e/1FAIpQLSdBbVTznNfzNn8KuLN6IA3fsdxgC4MPw9ryoTQK5fJ4K0bFuA/formResponse"
-      accept-charset="UTF-8"
-    >
-
-      <div class="formTitle">Send a Message</div>
-      <p class="formSubtitle">Tell me what you need and I will get back to you as soon as possible.</p>
-
-      <div class="formGrid">
-
-        <label class="formLabel">
-          <div class="formLabelTitle">Name</div>
-          <input
-            name="entry.2005620554"
-            type="text"
-            autocomplete="name"
-            required
-            class="formControl"
-            placeholder="Your name"
-          >
-        </label>
-
-        <label class="formLabel">
-          <div class="formLabelTitle">Email</div>
-          <input
-            name="entry.1045781291"
-            type="email"
-            autocomplete="email"
-            required
-            class="formControl"
-            placeholder="you@example.com"
-          >
-        </label>
-
-        <label class="formLabel fullRow">
-          <div class="formLabelTitle">Project Type</div>
-          <select name="entry.1065046570" class="formControl" required>
-            <option value="" disabled selected>Select a project type</option>
-            <option value="Starter Website Package">Starter Website Package</option>
-            <option value="Business Website Package">Business Website Package</option>
-            <option value="Custom Project">Custom Project</option>
-            <option value="Website Redesign">Website Redesign</option>
-            <option value="Website Management">Website Management</option>
-            <option value="E Commerce">E Commerce</option>
-            <option value="SEO & Digital Support">SEO & Digital Support</option>
-            <option value="Computer Education">Computer Education</option>
-            <option value="General Question">General Question</option>
-          </select>
-        </label>
-
-        <label class="formLabel fullRow">
-          <div class="formLabelTitle">Message</div>
-          <textarea
-            name="entry.1166974658"
-            rows="6"
-            required
-            class="formControl"
-            placeholder="Tell me about your project or question..."
-          ></textarea>
-        </label>
-
-        <div class="fullRow">
-          <button id="sendBtn" type="submit" class="btn btnPrimary">Send Message</button>
-        </div>
-
-      </div>
-
-      <div class="emailFallback">
-        Prefer email?
-        <a href="mailto:brad.hobbs13@icloud.com">brad.hobbs13@icloud.com</a>
-      </div>
-
-    </form>
-
-    <iframe
-      name="hidden_iframe"
-      title="Form submission"
-      style="display:none;"
-      aria-hidden="true"
-    ></iframe>
-
   </div>
-
 </section>
 
-<section class="emailStrip">
-  <div class="emailStripText">
-    <small>Prefer Direct Email?</small>
-    <strong>brad.hobbs13@icloud.com</strong>
-    <span>You can reach out directly if that is easier.</span>
+<section class="contactBottom">
+  <div class="contactBottomCard">
+    <small>New Website</small>
+    <strong>Build From the Ground Up</strong>
+    <span>A new website planned around your goals, audience, and message.</span>
   </div>
-  <a href="mailto:brad.hobbs13@icloud.com">Email Brad</a>
+  <div class="contactBottomCard">
+    <small>Existing Website</small>
+    <strong>Refresh What You Have</strong>
+    <span>Improve structure, presentation, mobile experience, and content.</span>
+  </div>
+  <div class="contactBottomCard">
+    <small>Ongoing Support</small>
+    <strong>Keep It Current</strong>
+    <span>Management, monitoring, SEO support, and practical digital help.</span>
+  </div>
 </section>
 
 </main>
