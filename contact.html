@@ -360,6 +360,131 @@ textarea.formControl{min-height:150px;resize:vertical}
   .fullRow{grid-column:auto}
   .contactBottom{margin-bottom:48px}
 }
+
+/* Service page style contact hero */
+.contactServiceHero{
+  position:relative;
+  background:
+    radial-gradient(circle at 82% 28%,rgba(47,179,255,.18),transparent 27%),
+    radial-gradient(circle at 15% 75%,rgba(255,211,78,.08),transparent 24%),
+    linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);
+  color:#fff;
+  overflow:hidden;
+}
+.contactServiceHero:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-1px;
+  height:80px;
+  background:var(--contact-bg);
+  clip-path:polygon(0 100%,100% 0,100% 100%);
+}
+.contactServiceHeroInner{
+  position:relative;
+  z-index:1;
+  width:min(1120px,92%);
+  margin:auto;
+  padding:155px 0 125px;
+}
+.contactServiceEyebrow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#ffd45f;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.contactServiceEyebrow:before{
+  content:"";
+  width:34px;
+  height:2px;
+  background:#1689e8;
+}
+.contactServiceHero h1{
+  max-width:900px;
+  margin:18px 0 20px;
+  color:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(44px,7vw,78px);
+  line-height:1.01;
+  letter-spacing:-.025em;
+}
+.contactServiceHero h1 span{color:#ffd45f}
+.contactServiceLead{
+  max-width:790px;
+  margin:0;
+  color:#dceafa;
+  font-size:18px;
+  line-height:1.75;
+}
+.contactServiceActions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+.contactServiceButton{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:0 20px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:900;
+  transition:.2s ease;
+}
+.contactServiceButton.primary{
+  background:#1689e8;
+  color:#fff;
+  box-shadow:0 10px 25px rgba(22,137,232,.22);
+}
+.contactServiceButton.primary:hover{
+  transform:translateY(-2px);
+  background:#2aa3ff;
+}
+.contactServiceButton.secondary{
+  border:1px solid rgba(255,255,255,.25);
+  color:#fff;
+  background:rgba(255,255,255,.05);
+}
+.contactServiceButton.secondary:hover{background:rgba(255,255,255,.1)}
+.contactServiceMeta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:34px;
+  color:#a9bfd8;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.contactServiceMeta span{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+.contactServiceMeta i{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#ffd45f;
+}
+@media(max-width:620px){
+  .contactServiceHeroInner{padding:130px 0 100px}
+  .contactServiceHero h1{font-size:clamp(40px,12vw,58px)}
+  .contactServiceLead{font-size:15px}
+  .contactServiceMeta{gap:10px 15px}
+  .contactServiceButton{width:100%}
+  .contactServiceActions{flex-direction:column}
+}
+
 </style>
 </head>
 
@@ -371,14 +496,21 @@ textarea.formControl{min-height:150px;resize:vertical}
 
 <main>
 
-<section class="contactIntroBar">
-  <div class="contactIntroBarInner">
-    <div>
-      <div class="eyebrow">Let’s Talk About Your Project</div>
-      <h1>Let’s Make It <span>Work.</span></h1>
-      <p>Whether you are starting something new or improving something you already have, this is where the conversation begins.</p>
+<section class="contactServiceHero">
+  <div class="contactServiceHeroInner">
+    <div class="contactServiceEyebrow">Contact Brad Hobbs Web Design</div>
+    <h1>Let’s Talk About <span>Your Project.</span></h1>
+    <p class="contactServiceLead">Whether you are building a new website, improving an existing one, or need ongoing digital support, this is where we can start the conversation.</p>
+    <div class="contactServiceActions">
+      <a class="contactServiceButton primary" href="#quoteForm">Start a Conversation</a>
+      <a class="contactServiceButton secondary" href="mailto:brad.hobbs13@icloud.com">Email Me Directly</a>
     </div>
-    <a class="contactDirect" href="mailto:brad.hobbs13@icloud.com">Email Me Directly</a>
+    <div class="contactServiceMeta">
+      <span><i></i> Web Design</span>
+      <span><i></i> Redesign</span>
+      <span><i></i> Website Support</span>
+      <span><i></i> Digital Services</span>
+    </div>
   </div>
 </section>
 
