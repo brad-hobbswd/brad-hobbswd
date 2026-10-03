@@ -63,9 +63,31 @@ body[data-page="contact"] main{
 .contactHeroInner{
   width:min(1120px,calc(100% - 48px));
   margin:0 auto;
-  padding:58px 0 54px;
+  padding:54px 0 50px;
   position:relative;
   z-index:1;
+}
+.contactHeroInner::after{
+  content:"";
+  position:absolute;
+  right:-90px;
+  top:-80px;
+  width:280px;
+  height:280px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+  box-shadow:0 0 0 34px rgba(22,137,232,.025),0 0 0 68px rgba(233,168,23,.02);
+  pointer-events:none;
+}
+.contactHero::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-1px;
+  height:10px;
+  background:linear-gradient(90deg,transparent,var(--c-blue),var(--c-gold),transparent);
+  opacity:.75;
 }
 
 .contactEyebrow{
@@ -79,7 +101,7 @@ body[data-page="contact"] main{
 
 .contactHero h1{
   margin:0;
-  max-width:760px;
+  max-width:800px;
   font-family:Georgia,"Times New Roman",serif;
   font-size:clamp(40px,5.5vw,68px);
   line-height:1.02;
@@ -163,7 +185,7 @@ body[data-page="contact"] main{
 .contactMain{
   width:min(1120px,calc(100% - 48px));
   margin:0 auto;
-  padding:64px 0 72px;
+  padding:58px 0 68px;
 }
 
 .contactGrid{
@@ -174,7 +196,17 @@ body[data-page="contact"] main{
 }
 
 .contactIntro{
-  padding:10px 10px 0 0;
+  padding:8px 18px 0 0;
+  position:relative;
+}
+.contactIntro::before{
+  content:"";
+  display:block;
+  width:58px;
+  height:4px;
+  margin-bottom:22px;
+  border-radius:99px;
+  background:linear-gradient(90deg,var(--c-blue),var(--c-gold));
 }
 
 .contactIntroEyebrow{
@@ -219,9 +251,9 @@ body[data-page="contact"] main{
 }
 
 .contactReasonIcon{
-  flex:0 0 30px;
-  width:30px;
-  height:30px;
+  flex:0 0 34px;
+  width:34px;
+  height:34px;
   display:grid;
   place-items:center;
   border-radius:9px;
@@ -249,13 +281,14 @@ body[data-page="contact"] main{
 #quoteForm.card{
   width:100%;
   margin:0;
-  padding:34px;
+  padding:36px;
   box-sizing:border-box;
   border-radius:18px;
   background:#fff;
   border:1px solid var(--c-line);
-  box-shadow:0 20px 50px rgba(18,42,72,.11);
+  box-shadow:0 24px 60px rgba(18,42,72,.13);
   position:relative;
+  transform:translateY(-4px);
   overflow:hidden;
 }
 
@@ -371,6 +404,7 @@ textarea.formControl{
 /* Direct email strip */
 .emailStrip{
   width:min(1120px,calc(100% - 48px));
+  position:relative;
   margin:0 auto 70px;
   padding:25px 28px;
   box-sizing:border-box;
@@ -434,6 +468,9 @@ textarea.formControl{
   .contactIntro{
     padding:0;
   }
+  .contactIntro::before{
+    margin-bottom:18px;
+  }
 
   .contactReasons{
     grid-template-columns:repeat(3,1fr);
@@ -447,7 +484,13 @@ textarea.formControl{
 
   .contactHeroInner{
     width:min(100% - 32px,1120px);
-    padding:45px 0 42px;
+    padding:43px 0 40px;
+  }
+  .contactHeroInner::after{
+    right:-170px;
+    top:-110px;
+    width:230px;
+    height:230px;
   }
 
   .contactHero p{
@@ -478,6 +521,7 @@ textarea.formControl{
   #quoteForm.card{
     padding:27px 19px;
     border-radius:15px;
+    transform:none;
   }
 
   .formGrid{
