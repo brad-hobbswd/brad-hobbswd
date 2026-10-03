@@ -1,175 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms of Service | Brad Hobbs Web Design</title>
+<meta name="description" content="Terms of Service for Brad Hobbs Web Design.">
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
+</head>
+<body>
+<div id="siteHeader"></div>
 
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=20">
-
-<meta name="description" content="Terms of Service for Brad Hobbs Web Design">
-
+<main class="termsPage">
 <style>
-
-.policyWrap{
-max-width:850px;
-margin:70px auto;
-padding:0 24px;
-}
-
-.policyCard{
-padding:40px;
-border-radius:22px;
-background:rgba(255,255,255,.03);
-border:1px solid rgba(255,255,255,.08);
-box-shadow:0 10px 30px rgba(0,0,0,.35);
-}
-
-.policyCard h1{
-margin-bottom:20px;
-}
-
-.policyCard h2{
-margin-top:35px;
-margin-bottom:12px;
-}
-
-.policyCard p{
-line-height:1.8;
-color:var(--muted);
-margin-bottom:14px;
-}
-
-.policyContact{
-margin-top:35px;
-text-align:center;
-padding-top:30px;
-border-top:1px solid rgba(255,255,255,.08);
-}
-
-.policyContact .btn{
-margin-top:18px;
-}
-
-@media(max-width:768px){
-
-.policyWrap{
-margin:40px auto;
-}
-
-.policyCard{
-padding:28px;
-}
-
-}
-
+.termsPage{background:#eef3f8;color:#12233f;overflow:hidden}
+.termsHero{position:relative;background:radial-gradient(circle at 82% 28%,rgba(47,179,255,.18),transparent 27%),radial-gradient(circle at 15% 75%,rgba(255,211,78,.08),transparent 24%),linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.termsHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:80px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.termsHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:155px 0 125px}
+.termsEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.termsEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.termsHero h1{max-width:850px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,78px);line-height:1.01;letter-spacing:-.025em}
+.termsHero h1 span{color:#ffd45f}
+.termsLead{max-width:760px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.termsActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.termsButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:900;transition:.2s ease}
+.termsButton.primary{background:#1689e8;color:#fff;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.termsButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.termsButton.secondary{border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.05)}
+.termsButton.secondary:hover{background:rgba(255,255,255,.1)}
+.termsMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.termsMeta span{display:flex;align-items:center;gap:7px}.termsMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
+.termsSection{width:min(1120px,92%);margin:auto;padding:88px 0}
+.termsIntro{max-width:760px;margin-bottom:35px}
+.termsEyebrowSmall{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.termsSection h2{margin:9px 0 12px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px);line-height:1.08}
+.termsIntro p{margin:0;color:#596a82;font-size:16px;line-height:1.75}
+.termsGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.termsCard{position:relative;padding:28px;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08);overflow:hidden;transition:.22s ease}
+.termsCard:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#1689e8,#ffd45f)}
+.termsCard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(18,42,72,.13)}
+.termsIcon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#edf7ff;color:#1689e8;font-size:20px;font-weight:900}
+.termsCard h3{margin:18px 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:22px}
+.termsCard p{margin:0;color:#617189;font-size:14px;line-height:1.75}
+.termsDark{background:#07182d;color:#fff;position:relative}
+.termsDark:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:rgba(47,179,255,.28)}
+.termsDark .termsSection{padding:90px 0}
+.termsDark .termsEyebrowSmall{color:#ffd45f}.termsDark h2{color:#fff}.termsDark .termsIntro p{color:#b8cbe0}
+.termsDarkGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+.termsPanel{padding:30px;border:1px solid rgba(255,255,255,.11);border-radius:20px;background:rgba(255,255,255,.045)}
+.termsPanel h3{margin:0 0 12px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:27px}
+.termsPanel p{margin:0;color:#b8cbe0;font-size:14px;line-height:1.75}
+.termsList{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:11px}
+.termsList li{color:#bfd0e2;font-size:14px;line-height:1.6}.termsList li:before{content:"•";margin-right:9px;color:#ffd45f;font-weight:900}
+.termsFinal{background:linear-gradient(135deg,#0a1d35,#123c62);color:#fff;text-align:center}
+.termsFinal .termsSection{padding:88px 0}.termsFinal h2{color:#fff;max-width:720px;margin:10px auto 14px}.termsFinal p{max-width:650px;margin:0 auto;color:#c5d6e8;font-size:15px;line-height:1.75}.termsFinal .termsActions{justify-content:center}
+@media(max-width:900px){.termsGrid{grid-template-columns:1fr}.termsDarkGrid{grid-template-columns:1fr}}
+@media(max-width:620px){.termsHeroInner{padding:130px 0 100px}.termsHero h1{font-size:clamp(40px,12vw,58px)}.termsLead{font-size:15px}.termsMeta{gap:10px 15px}.termsSection{padding:68px 0}.termsCard,.termsPanel{padding:24px}.termsButton{width:100%}.termsActions{flex-direction:column}}
 </style>
 
-<style id="terms-final-layout">
-body.policyPage{background:#f4f7fb!important;color:#12233f!important;overflow-x:hidden!important}
-body.policyPage .policyWrap{width:min(1120px,calc(100% - 48px))!important;max-width:1120px!important;margin:0 auto!important;padding:72px 0 80px!important;box-sizing:border-box!important}
-body.policyPage .policyCard{width:min(850px,100%)!important;max-width:850px!important;margin:0 auto!important;padding:48px!important;box-sizing:border-box!important;border-radius:18px!important;background:#fff!important;border:1px solid #dbe4ee!important;box-shadow:0 18px 44px rgba(18,42,72,.09)!important}
-body.policyPage .policyCard h1{margin:0 0 22px!important;text-align:center!important;color:#12233f!important;font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(38px,5vw,54px)!important;line-height:1.08!important}
-body.policyPage .policyCard>p:first-of-type{text-align:center!important;color:#164c80!important;font-size:13px!important;font-weight:800!important;margin-bottom:32px!important}
-body.policyPage .policyCard h2{color:#12233f!important;font-family:Georgia,"Times New Roman",serif!important;line-height:1.15!important;margin-top:34px!important;margin-bottom:10px!important}
-body.policyPage .policyCard p{color:#596a82!important;line-height:1.8!important}
-body.policyPage .policyContact{margin-top:42px!important;padding-top:32px!important;border-top:1px solid #dbe4ee!important;text-align:center!important}
-@media(max-width:700px){body.policyPage .policyWrap{width:100%!important;padding:48px 16px 58px!important}body.policyPage .policyCard{width:100%!important;padding:28px 20px!important;border-radius:14px!important}body.policyPage .policyCard h1{font-size:38px!important}}
-</style></head>
-
-<body class="policyPage">
-
-<div class="wrap">
-
-<header id="siteHeader"></header>
-
-<main class="policyWrap">
-
-<div class="policyCard">
-
-<h1>Terms of Service</h1>
-
-<p>
-Last updated: May 17, 2026
-</p>
-
-<p>
-Welcome to Brad Hobbs Web Design. Accessing or using this website means agreement with these terms and conditions.
-</p>
-
-<h2>Website Content</h2>
-
-<p>
-Content throughout this website including text, branding, design elements, graphics, images, and portfolio materials belongs to Brad Hobbs Web Design unless stated otherwise.
-</p>
-
-<p>
-Content may not be copied, reproduced, distributed, or used without written permission.
-</p>
-
-<h2>Portfolio Work</h2>
-
-<p>
-Completed website projects displayed within this website are presented as examples of design and development work.
-</p>
-
-<p>
-Certain project elements may remain the property of clients or third parties.
-</p>
-
-<h2>Information Accuracy</h2>
-
-<p>
-Reasonable efforts are made to keep information current and accurate. No guarantee exists that all website content remains complete, error free, or continuously updated.
-</p>
-
-<h2>External Links</h2>
-
-<p>
-Links to third party websites may appear throughout this website for resources or reference purposes.
-</p>
-
-<p>
-Brad Hobbs Web Design does not control or accept responsibility for third party website content, services, or privacy practices.
-</p>
-
-<h2>Limitation of Liability</h2>
-
-<p>
-Brad Hobbs Web Design is not responsible for damages, losses, interruptions, or issues resulting from use of this website or reliance upon information provided.
-</p>
-
-<h2>Changes to Terms</h2>
-
-<p>
-These terms may be updated periodically. Continued use of this website following updates represents acceptance of revised terms.
-</p>
-
-<div class="policyContact">
-
-<h2>Questions?</h2>
-
-<p>
-Questions regarding these Terms of Service may be submitted through the contact page.
-</p>
-
-<a href="/brad-hobbswd/contact.html" class="btn btnPrimary">
-Contact Brad Hobbs Web Design
-</a>
-
+<section class="termsHero">
+<div class="termsHeroInner">
+<div class="termsEyebrow">Terms & Website Use</div>
+<h1>Clear Terms for Using <span>This Website.</span></h1>
+<p class="termsLead">These Terms of Service explain the basic expectations, limitations, and conditions that apply when accessing or using the Brad Hobbs Web Design website.</p>
+<div class="termsActions">
+<a class="termsButton primary" href="/brad-hobbswd/contact.html">Ask a Question</a>
+<a class="termsButton secondary" href="/brad-hobbswd/index.html">Back to Home</a>
 </div>
-
+<div class="termsMeta"><span><i></i> Website Content</span><span><i></i> Portfolio Work</span><span><i></i> External Links</span><span><i></i> Last Updated May 17, 2026</span></div>
 </div>
+</section>
 
+<section class="termsSection">
+<div class="termsIntro">
+<div class="termsEyebrowSmall">Terms of Service</div>
+<h2>Understanding How This Website May Be Used.</h2>
+<p>Welcome to Brad Hobbs Web Design. Accessing or using this website means agreement with these terms and conditions.</p>
+</div>
+<div class="termsGrid">
+<article class="termsCard"><div class="termsIcon">©</div><h3>Website Content</h3><p>Content throughout this website including text, branding, design elements, graphics, images, and portfolio materials belongs to Brad Hobbs Web Design unless stated otherwise. Content may not be copied, reproduced, distributed, or used without written permission.</p></article>
+<article class="termsCard"><div class="termsIcon">◫</div><h3>Portfolio Work</h3><p>Completed website projects displayed within this website are presented as examples of design and development work. Certain project elements may remain the property of clients or third parties.</p></article>
+<article class="termsCard"><div class="termsIcon">✓</div><h3>Information Accuracy</h3><p>Reasonable efforts are made to keep information current and accurate. No guarantee exists that all website content remains complete, error free, or continuously updated.</p></article>
+<article class="termsCard"><div class="termsIcon">↗</div><h3>External Links</h3><p>Links to third party websites may appear throughout this website for resources or reference purposes. Brad Hobbs Web Design does not control or accept responsibility for third party website content, services, or privacy practices.</p></article>
+</div>
+</section>
+
+<section class="termsDark">
+<div class="termsSection">
+<div class="termsIntro">
+<div class="termsEyebrowSmall">Limits & Changes</div>
+<h2>Important Expectations for Website Use.</h2>
+<p>The website is provided for general informational and service related purposes. Some limitations apply to the information and services presented here.</p>
+</div>
+<div class="termsDarkGrid">
+<div class="termsPanel">
+<h3>Limitation of Liability</h3>
+<p>Brad Hobbs Web Design is not responsible for damages, losses, interruptions, or issues resulting from use of this website or reliance upon information provided.</p>
+<ul class="termsList">
+<li>Website information may change</li>
+<li>External services may experience interruptions</li>
+<li>Third party websites are outside direct control</li>
+<li>Information should be considered in its current published context</li>
+</ul>
+</div>
+<div class="termsPanel">
+<h3>Changes to Terms</h3>
+<p>These terms may be updated periodically. Continued use of this website following updates represents acceptance of revised terms. Changes will be reflected on this page with an updated revision date.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="termsSection">
+<div class="termsIntro">
+<div class="termsEyebrowSmall">Using the Website</div>
+<h2>Use the Information Responsibly.</h2>
+<p>The website is intended to provide information about Brad Hobbs Web Design, its services, portfolio work, resources, and related materials. Visitors are responsible for how they use information obtained from the website and for reviewing third party services before relying on them.</p>
+</div>
+</section>
+
+<section class="termsFinal">
+<div class="termsSection">
+<div class="termsEyebrowSmall">Questions?</div>
+<h2>Need Clarification About These Terms?</h2>
+<p>Questions regarding these Terms of Service may be submitted through the contact page.</p>
+<div class="termsActions">
+<a class="termsButton primary" href="/brad-hobbswd/contact.html">Contact Brad Hobbs Web Design</a>
+<a class="termsButton secondary" href="/brad-hobbswd/privacy.html">View Privacy Policy</a>
+</div>
+</div>
+</section>
 </main>
 
 <div id="siteFooter"></div>
-
-</div>
-
 <script src="/brad-hobbswd/layout.js"></script>
-
 </body>
 </html>
