@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E Commerce | Brad Hobbs Web Design</title>
-<meta name="description" content="E commerce websites designed to present products clearly, support sales, build customer confidence, and create a practical shopping experience around your business goals.">
+<meta name="description" content="E commerce website design focused on product presentation, customer experience, sales, revenue, competitive pricing, and a practical online shopping experience.">
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
 </head>
 <body>
@@ -12,210 +12,203 @@
 
 <main class="commercePage">
 <style>
-.commercePage{min-height:100vh;background:#eef3f8;color:#12233f}
-.commerceHero{position:relative;overflow:hidden;background:linear-gradient(135deg,#06152b 0%,#0a2341 58%,#10365c 100%);color:#fff}
-.commerceHero:before,.commerceHero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
-.commerceHero:before{width:420px;height:420px;right:-150px;top:-180px;background:radial-gradient(circle,rgba(47,179,255,.24),transparent 68%)}
-.commerceHero:after{width:360px;height:360px;left:-180px;bottom:-220px;background:radial-gradient(circle,rgba(255,211,78,.13),transparent 68%)}
-.commerceHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:0 auto;padding:150px 0 85px}
-.commerceEyebrow{color:#ffd34e;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
-.commerceHero h1{max-width:880px;margin:12px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(43px,7vw,72px);line-height:1.02}
-.commerceHero p{max-width:790px;margin:0;color:#d9e7f7;font-size:17px;line-height:1.75}
+.commercePage{background:#eef3f8;color:#12233f;overflow:hidden}
+.commerceHero{position:relative;background:radial-gradient(circle at 82% 28%,rgba(47,179,255,.18),transparent 27%),radial-gradient(circle at 15% 75%,rgba(255,211,78,.08),transparent 24%),linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.commerceHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:80px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.commerceHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:155px 0 125px}
+.commerceEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.commerceEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.commerceHero h1{max-width:850px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,78px);line-height:1.01;letter-spacing:-.025em}
+.commerceHero h1 span{color:#ffd45f}
+.commerceLead{max-width:780px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
 .commerceActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.commerceBtn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:900}
-.commerceBtn.primary{background:#1689e8;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.18)}
-.commerceBtn.secondary{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff}
-.commerceMeta{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:42px;max-width:900px}
-.commerceMeta div{padding:15px 16px;border:1px solid rgba(255,255,255,.13);border-radius:14px;background:rgba(255,255,255,.055)}
-.commerceMeta strong{display:block;color:#fff;font-size:13px}
-.commerceMeta span{display:block;margin-top:4px;color:#aebfd4;font-size:11px}
-.commerceWrap{width:min(1120px,92%);margin:0 auto;padding:70px 0}
-.commerceIntro{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:start}
-.commerceCard{position:relative;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 14px 36px rgba(18,42,72,.09);padding:30px;overflow:hidden}
-.commerceCard:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#1689e8,#f0b529)}
-.commerceNumber{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.14em}
-.commerceCard h2{margin:9px 0 14px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:31px;line-height:1.15}
-.commerceCard p{margin:0;color:#52627b;font-size:15px;line-height:1.78}
-.commerceCard h3{margin:23px 0 8px;color:#15345d;font-size:18px}
-.commerceCard ul{margin:0;padding-left:20px;color:#52627b;line-height:1.8}
-.commerceSectionTitle{text-align:center;margin:5px auto 34px;max-width:760px}
-.commerceSectionTitle .label{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
-.commerceSectionTitle h2{margin:8px 0 10px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:38px}
-.commerceSectionTitle p{margin:0;color:#60708a;line-height:1.7}
-.commerceFeatures{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.commerceFeature{background:#fff;border:1px solid #dce5ef;border-radius:18px;padding:27px;box-shadow:0 10px 28px rgba(18,42,72,.07)}
-.commerceFeature .icon{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:#e8f4fd;color:#1689e8;font-weight:900}
-.commerceFeature h3{margin:17px 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:22px}
-.commerceFeature p{margin:0;color:#60708a;line-height:1.7;font-size:14px}
-.commerceDark{background:linear-gradient(135deg,#07172d,#0b2747);color:#fff}
-.commerceDark .commerceWrap{padding:72px 0}
-.commerceDark .commerceSectionTitle h2{color:#fff}
-.commerceDark .commerceSectionTitle p{color:#b9c9dc}
-.commerceProcess{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.commerceStep{padding:24px;border:1px solid rgba(255,255,255,.12);border-radius:17px;background:rgba(255,255,255,.045)}
-.commerceStep span{color:#ffd34e;font-size:11px;font-weight:900;letter-spacing:.12em}
-.commerceStep h3{margin:9px 0 8px;color:#fff;font-size:18px}
-.commerceStep p{margin:0;color:#b8c8dc;font-size:13px;line-height:1.65}
+.commerceButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:900;transition:.2s ease}
+.commerceButton.primary{background:#1689e8;color:#fff;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.commerceButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.commerceButton.secondary{border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.05)}
+.commerceButton.secondary:hover{background:rgba(255,255,255,.1)}
+.commerceMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.commerceMeta span{display:flex;align-items:center;gap:7px}.commerceMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
+
+.commerceSection{width:min(1120px,92%);margin:auto;padding:88px 0}
+.commerceIntro{max-width:760px;margin-bottom:35px}
+.commerceEyebrowSmall{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.commerceSection h2{margin:9px 0 12px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px);line-height:1.08}
+.commerceIntro p{margin:0;color:#596a82;font-size:16px;line-height:1.75}
+
 .commerceRevenue{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch}
-.commerceRevenueMain{background:#fff;border:1px solid #dce5ef;border-radius:20px;padding:32px;box-shadow:0 12px 32px rgba(18,42,72,.08)}
-.commerceRevenueMain h2{margin:0 0 14px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:34px}
-.commerceRevenueMain p{margin:0 0 15px;color:#52627b;line-height:1.75}
-.commerceRevenueMain strong{color:#15345d}
-.commerceRevenueList{display:grid;gap:13px}
-.commerceRevenueItem{padding:18px;border-radius:15px;background:#f7f9fc;border:1px solid #e2e9f1}
-.commerceRevenueItem strong{display:block;color:#15345d;font-size:14px}
-.commerceRevenueItem span{display:block;margin-top:5px;color:#64738a;font-size:13px;line-height:1.55}
-.commercePricing{margin-top:22px;padding:24px;border-radius:18px;background:linear-gradient(135deg,#fffaf0,#fff);border:1px solid #eadfbf}
-.commercePricing h3{margin:0 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:22px}
-.commercePricing p{margin:0;color:#596a82;font-size:14px;line-height:1.7}
-.commerceCTA{background:linear-gradient(135deg,#0a2341,#123d67);border-radius:24px;padding:55px 35px;text-align:center;color:#fff;box-shadow:0 18px 42px rgba(18,42,72,.2)}
-.commerceCTA h2{margin:0 0 12px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:40px}
-.commerceCTA p{max-width:690px;margin:0 auto;color:#c9d8e8;line-height:1.7}
-.commerceCTA .commerceActions{justify-content:center}
-@media(max-width:850px){
-.commerceMeta{grid-template-columns:repeat(2,1fr)}
-.commerceIntro,.commerceRevenue{grid-template-columns:1fr}
-.commerceFeatures{grid-template-columns:1fr}
-.commerceProcess{grid-template-columns:repeat(2,1fr)}
+.revenueMain{position:relative;padding:36px;border-radius:24px;background:linear-gradient(145deg,#0a1d35,#123c62);color:#fff;box-shadow:0 20px 45px rgba(7,24,45,.18);overflow:hidden}
+.revenueMain:before{content:"$";position:absolute;right:10px;top:-48px;color:rgba(255,255,255,.055);font-size:210px;font-weight:900;line-height:1}
+.revenueLabel{position:relative;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.revenueMain h3{position:relative;margin:12px 0 12px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:36px}
+.revenueMain p{position:relative;max-width:620px;margin:0;color:#c4d5e7;font-size:15px;line-height:1.75}
+.revenueSide{display:grid;gap:15px}
+.revenuePoint{padding:23px;border:1px solid #dce5ef;border-radius:18px;background:#fff;box-shadow:0 10px 26px rgba(18,42,72,.07)}
+.revenuePoint strong{display:block;color:#15345d;font-size:15px}.revenuePoint span{display:block;margin-top:6px;color:#65758b;font-size:13px;line-height:1.6}
+
+.commerceCards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.commerceCard{position:relative;padding:28px;min-height:225px;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08);overflow:hidden;transition:.22s ease}
+.commerceCard:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#1689e8,#ffd45f)}
+.commerceCard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(18,42,72,.13)}
+.commerceIcon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#edf7ff;color:#1689e8;font-size:14px;font-weight:900}
+.commerceCard h3{margin:19px 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:22px}
+.commerceCard p{margin:0;color:#617189;font-size:14px;line-height:1.7}
+
+.commerceProcessSection{background:#07182d;color:#fff;position:relative}
+.commerceProcessSection:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:rgba(47,179,255,.28)}
+.commerceProcessSection .commerceSection{padding:90px 0}
+.commerceProcessSection .commerceEyebrowSmall{color:#ffd45f}
+.commerceProcessSection h2{color:#fff}
+.commerceProcessSection .commerceIntro p{color:#b8cbe0}
+.commerceProcessGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.commerceStep{padding:25px 20px;border:1px solid rgba(255,255,255,.11);border-radius:17px;background:rgba(255,255,255,.045)}
+.commerceStepNumber{color:#4db8ff;font-size:12px;font-weight:900;letter-spacing:.1em}
+.commerceStep h3{margin:12px 0 8px;color:#fff;font-size:17px}
+.commerceStep p{margin:0;color:#a9bdd4;font-size:13px;line-height:1.65}
+
+.commerceExpect{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.expectPanel{padding:30px;border-radius:21px;border:1px solid #dce5ef;background:#fff;box-shadow:0 12px 32px rgba(18,42,72,.07)}
+.expectPanel.dark{background:#0a1d35;border-color:#0a1d35;color:#fff}
+.expectPanel h3{margin:0 0 18px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:26px}
+.expectPanel.dark h3{color:#fff}
+.expectList{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.expectList li{display:flex;gap:10px;color:#5b6c83;font-size:14px;line-height:1.6}.expectPanel.dark li{color:#bfd0e2}
+.expectList li:before{content:"✓";color:#1689e8;font-weight:900}.expectPanel.dark li:before{color:#ffd45f}
+
+.pricingBox{margin-top:20px;padding:24px;border-radius:18px;background:#fff9e9;border:1px solid #eadfbf}
+.pricingBox strong{display:block;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:22px;margin-bottom:7px}
+.pricingBox p{margin:0;color:#5b6c83;font-size:14px;line-height:1.7}
+
+.finalCTA{background:linear-gradient(135deg,#0a1d35,#123c62);color:#fff;text-align:center}
+.finalCTA .commerceSection{padding:88px 0}
+.finalCTA h2{color:#fff;max-width:760px;margin:10px auto 14px}
+.finalCTA p{max-width:680px;margin:0 auto;color:#c5d6e8;font-size:15px;line-height:1.75}
+.finalCTA .commerceActions{justify-content:center}
+
+@media(max-width:900px){
+.commerceRevenue{grid-template-columns:1fr}.commerceCards{grid-template-columns:1fr 1fr}.commerceProcessGrid{grid-template-columns:1fr 1fr}.commerceExpect{grid-template-columns:1fr}
 }
-@media(max-width:600px){
-.commerceHeroInner{padding:125px 0 58px}
-.commerceHero h1{font-size:clamp(38px,11vw,55px)}
-.commerceHero p{font-size:15px}
-.commerceMeta{grid-template-columns:1fr 1fr}
-.commerceWrap{padding:52px 0}
-.commerceCard,.commerceRevenueMain{padding:25px}
-.commerceSectionTitle h2{font-size:30px}
-.commerceProcess{grid-template-columns:1fr}
-.commerceCTA{padding:42px 23px}
-.commerceCTA h2{font-size:31px}
-.commerceActions{flex-direction:column}
-.commerceBtn{width:100%}
+@media(max-width:620px){
+.commerceHeroInner{padding:130px 0 100px}.commerceHero h1{font-size:clamp(40px,12vw,58px)}.commerceLead{font-size:15px}.commerceMeta{gap:10px 15px}
+.commerceSection{padding:68px 0}.commerceCards,.commerceProcessGrid{grid-template-columns:1fr}.commerceCard{min-height:0}.revenueMain{padding:28px}.revenueMain h3{font-size:30px}
+.commerceButton{width:100%}.commerceActions{flex-direction:column}
 }
 </style>
 
 <section class="commerceHero">
   <div class="commerceHeroInner">
     <div class="commerceEyebrow">05 • E Commerce</div>
-    <h1>Build a Store That Turns Products Into Opportunity</h1>
-    <p>An online store is more than a place to display products. It is part of the seller's revenue system. Your products need to be presented clearly, priced thoughtfully, and supported by a shopping experience that gives customers confidence to move from interest to purchase.</p>
+    <h1>Build a Store That <span>Works for Your Business.</span></h1>
+    <p class="commerceLead">An online store is more than a place to display products. It is part of the seller's revenue system. Your products need to be presented clearly, priced thoughtfully, and supported by a shopping experience that gives customers confidence to purchase.</p>
     <div class="commerceActions">
-      <a class="commerceBtn primary" href="/brad-hobbswd/contact.html">Start an E Commerce Project</a>
-      <a class="commerceBtn secondary" href="https://brad-hobbswd.github.io/clients/" target="_blank" rel="noopener noreferrer">View My Work</a>
+      <a class="commerceButton primary" href="/brad-hobbswd/contact.html">Start an E Commerce Project</a>
+      <a class="commerceButton secondary" href="https://brad-hobbswd.github.io/clients/" target="_blank" rel="noopener noreferrer">View My Work</a>
     </div>
     <div class="commerceMeta">
-      <div><strong>Product Presentation</strong><span>Make products easy to understand</span></div>
-      <div><strong>Customer Experience</strong><span>Make shopping easier to navigate</span></div>
-      <div><strong>Revenue Mindset</strong><span>Build around the purpose of selling</span></div>
-      <div><strong>Competitive Thinking</strong><span>Keep value and pricing in view</span></div>
+      <span><i></i> Product Presentation</span>
+      <span><i></i> Customer Experience</span>
+      <span><i></i> Revenue Focus</span>
+      <span><i></i> Competitive Pricing</span>
     </div>
   </div>
 </section>
 
-<section class="commerceWrap">
+<section class="commerceSection">
   <div class="commerceIntro">
-    <article class="commerceCard">
-      <span class="commerceNumber">WHY IT MATTERS</span>
-      <h2>Your Store Has a Job to Do.</h2>
-      <p>If a website generates sales, the shopping experience matters. Customers need to quickly understand what they are buying, what it costs, why it has value, and how to complete the purchase.</p>
-      <h3>Every Part Should Support the Sale</h3>
-      <ul>
-        <li>Clear product information</li>
-        <li>Strong product photography</li>
-        <li>Simple navigation</li>
-        <li>Visible pricing and options</li>
-        <li>Easy paths to checkout</li>
-        <li>Trust building information</li>
-      </ul>
-    </article>
+    <div class="commerceEyebrowSmall">Why E Commerce Matters</div>
+    <h2>Your Store Has a Job to Do.</h2>
+    <p>If your website generates sales, the website is directly connected to your business. The shopping experience should make it easier for customers to understand your products, see the value, make a decision, and complete their purchase.</p>
+  </div>
 
-    <article class="commerceCard">
-      <span class="commerceNumber">THE GOAL</span>
-      <h2>Make It Easy for the Right Customer to Say Yes.</h2>
-      <p>E commerce design should reduce unnecessary friction. The customer should not have to hunt for the product, guess what it includes, struggle to understand the price, or wonder what happens after checkout.</p>
-      <p>That means the design, product information, categories, calls to action, and checkout path all need to work together.</p>
-      <h3>Designed Around Your Business</h3>
-      <p>Whether you sell a few specialty products or manage a larger catalog, the store should reflect your brand while remaining practical for the people who use it.</p>
-    </article>
+  <div class="commerceRevenue">
+    <div class="revenueMain">
+      <div class="revenueLabel">The Revenue Connection</div>
+      <h3>Your Website Should Support the Sale.</h3>
+      <p>A good e commerce website is not simply attractive. It should give your products a clear presentation, create customer confidence, reduce unnecessary friction, and provide a practical path from product discovery to checkout.</p>
+    </div>
+    <div class="revenueSide">
+      <div class="revenuePoint"><strong>Show the Product Clearly</strong><span>Use strong images, useful descriptions, visible options, and organized categories.</span></div>
+      <div class="revenuePoint"><strong>Make Buying Simple</strong><span>Customers should be able to find products, understand pricing, add items, and move toward checkout without unnecessary confusion.</span></div>
+      <div class="revenuePoint"><strong>Build Customer Confidence</strong><span>Clear policies, shipping information, payment options, and contact information help customers know what to expect.</span></div>
+    </div>
   </div>
 </section>
 
-<section class="commerceWrap" style="padding-top:0">
-  <div class="commerceSectionTitle">
-    <div class="label">What Goes Into the Store</div>
-    <h2>More Than a Product Grid</h2>
-    <p>A strong e commerce experience connects presentation, usability, trust, and the business purpose behind the sale.</p>
+<section class="commerceSection">
+  <div class="commerceIntro">
+    <div class="commerceEyebrowSmall">What I Focus On</div>
+    <h2>More Than Putting Products Online.</h2>
+    <p>The store should be designed around the customer and the business behind the product.</p>
   </div>
-  <div class="commerceFeatures">
-    <article class="commerceFeature">
-      <div class="icon">01</div>
-      <h3>Product Presentation</h3>
-      <p>Clear images, descriptions, options, categories, and important product details help customers make informed purchasing decisions.</p>
-    </article>
-    <article class="commerceFeature">
-      <div class="icon">02</div>
-      <h3>Shopping Experience</h3>
-      <p>Navigation, search, product pages, cart flow, and checkout should create a straightforward path from discovery to purchase.</p>
-    </article>
-    <article class="commerceFeature">
-      <div class="icon">03</div>
-      <h3>Customer Confidence</h3>
-      <p>Policies, shipping information, contact details, secure payment options, and clear expectations can help customers feel comfortable buying.</p>
-    </article>
+  <div class="commerceCards">
+    <article class="commerceCard"><div class="commerceIcon">01</div><h3>Product Presentation</h3><p>Organize product images, descriptions, categories, options, and important details so customers can make informed decisions.</p></article>
+    <article class="commerceCard"><div class="commerceIcon">02</div><h3>Shopping Experience</h3><p>Create clear navigation and straightforward paths from browsing to product selection, cart, and checkout.</p></article>
+    <article class="commerceCard"><div class="commerceIcon">03</div><h3>Revenue Mindset</h3><p>Design decisions should recognize that the store is part of a real business and should support the seller's goals.</p></article>
   </div>
 </section>
 
-<section class="commerceDark">
-  <div class="commerceWrap">
-    <div class="commerceSectionTitle">
-      <div class="label">The E Commerce Process</div>
-      <h2>Build the Experience Around the Buyer</h2>
+<section class="commerceProcessSection">
+  <div class="commerceSection">
+    <div class="commerceIntro">
+      <div class="commerceEyebrowSmall">The E Commerce Process</div>
+      <h2>Build the Experience Around the Buyer.</h2>
       <p>The goal is not simply to put products online. It is to create a store that makes sense from the customer's first visit through checkout.</p>
     </div>
-    <div class="commerceProcess">
-      <article class="commerceStep"><span>01 • ORGANIZE</span><h3>Structure the Store</h3><p>Create categories, navigation, and product groupings that help customers find what they need.</p></article>
-      <article class="commerceStep"><span>02 • PRESENT</span><h3>Show the Value</h3><p>Present products with useful information, strong visuals, clear options, and a consistent brand experience.</p></article>
-      <article class="commerceStep"><span>03 • GUIDE</span><h3>Reduce Friction</h3><p>Make the path from product discovery to cart and checkout straightforward and easy to follow.</p></article>
-      <article class="commerceStep"><span>04 • REFINE</span><h3>Improve Over Time</h3><p>Use customer questions, sales information, and store performance to identify areas that can be improved.</p></article>
+    <div class="commerceProcessGrid">
+      <article class="commerceStep"><div class="commerceStepNumber">01</div><h3>Organize</h3><p>Create categories, navigation, and product groupings that help customers find what they need.</p></article>
+      <article class="commerceStep"><div class="commerceStepNumber">02</div><h3>Present</h3><p>Show products with useful information, strong visuals, clear options, and consistent branding.</p></article>
+      <article class="commerceStep"><div class="commerceStepNumber">03</div><h3>Guide</h3><p>Make the path from product discovery to cart and checkout straightforward and easy to follow.</p></article>
+      <article class="commerceStep"><div class="commerceStepNumber">04</div><h3>Refine</h3><p>Use customer questions, sales information, and store performance to identify areas for improvement.</p></article>
     </div>
   </div>
 </section>
 
-<section class="commerceWrap">
-  <div class="commerceRevenue">
-    <article class="commerceRevenueMain">
-      <span class="commerceNumber">REVENUE MATTERS</span>
-      <h2>The Store Should Support the Seller's Business.</h2>
-      <p>When an online store produces revenue, the website is directly connected to the seller's business goals. Design decisions should therefore consider more than appearance.</p>
-      <p><strong>The objective is to create a shopping experience that helps the customer understand the product and makes the purchase process clear.</strong></p>
-      <p>No website can guarantee a specific number of sales. Product demand, quality, marketing, pricing, competition, customer trust, fulfillment, and many other factors affect revenue. The website should give the seller a strong and practical foundation for selling online.</p>
-      <div class="commercePricing">
-        <h3>Reasonable and Competitive Pricing</h3>
-        <p>Pricing is part of the customer's buying decision. The store can make prices easy to see and compare, while the seller determines pricing based on product cost, desired margin, market conditions, competitors, shipping, promotions, and the value of the product. The goal is to present pricing clearly and help customers understand the value they are receiving.</p>
+<section class="commerceSection">
+  <div class="commerceExpect">
+    <div class="expectPanel">
+      <h3>Reasonable and Competitive Pricing</h3>
+      <ul class="expectList">
+        <li>Make product pricing easy for customers to see</li>
+        <li>Consider product cost and desired margin</li>
+        <li>Review comparable products and market pricing</li>
+        <li>Account for shipping, promotions, and other costs</li>
+        <li>Present the product's value clearly</li>
+      </ul>
+      <div class="pricingBox">
+        <strong>Pricing Is Part of the Buying Decision.</strong>
+        <p>I can help create a store where pricing is clear and easy to understand. The seller determines the actual price based on their business, costs, market, competition, and product value.</p>
       </div>
-    </article>
-
-    <div class="commerceRevenueList">
-      <div class="commerceRevenueItem"><strong>Clear Pricing</strong><span>Customers should not have to search for the cost or wonder which options change the price.</span></div>
-      <div class="commerceRevenueItem"><strong>Strong Value Presentation</strong><span>Product benefits and useful details should help customers understand what they are purchasing.</span></div>
-      <div class="commerceRevenueItem"><strong>Competitive Awareness</strong><span>Store owners can review comparable products and market pricing when setting their own prices.</span></div>
-      <div class="commerceRevenueItem"><strong>Simple Checkout</strong><span>A clear purchase path helps remove unnecessary steps between the customer's decision and completed order.</span></div>
+    </div>
+    <div class="expectPanel dark">
+      <h3>What You Can Expect</h3>
+      <ul class="expectList">
+        <li>A professional online shopping experience</li>
+        <li>Clear product organization</li>
+        <li>Responsive presentation across devices</li>
+        <li>Customer focused navigation</li>
+        <li>A practical foundation for online sales</li>
+      </ul>
+      <div class="pricingBox" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)">
+        <strong style="color:#fff">Sales Are Not Guaranteed.</strong>
+        <p style="color:#bfd0e2">Revenue also depends on product demand, quality, marketing, pricing, competition, customer trust, fulfillment, and other business factors. The website should provide a strong foundation for the seller's efforts.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="commerceWrap" style="padding-top:0">
-  <div class="commerceCTA">
-    <h2>Your Products Deserve a Store Built to Sell.</h2>
-    <p>Let's build an online shopping experience that represents your brand, respects your customers, and gives your products a clear path to the people who are looking for them.</p>
+<section class="finalCTA">
+  <div class="commerceSection">
+    <div class="commerceEyebrowSmall">Ready to Build Your Store?</div>
+    <h2>Give Your Products a Store Built to Sell.</h2>
+    <p>Let's create an online shopping experience that represents your brand, respects your customers, and gives your products a clear path to the people who are looking for them.</p>
     <div class="commerceActions">
-      <a class="commerceBtn primary" href="/brad-hobbswd/contact.html">Start an E Commerce Project</a>
-      <a class="commerceBtn secondary" href="/brad-hobbswd/packages.html">Explore Packages</a>
+      <a class="commerceButton primary" href="/brad-hobbswd/contact.html">Start an E Commerce Project</a>
+      <a class="commerceButton secondary" href="/brad-hobbswd/packages.html">Explore Packages</a>
     </div>
   </div>
 </section>
-</main>
 
+</main>
 <div id="siteFooter"></div>
 <script src="/brad-hobbswd/layout.js"></script>
 </body>
