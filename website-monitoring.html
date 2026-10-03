@@ -4,75 +4,187 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Website Monitoring | Brad Hobbs Web Design</title>
-<meta name="description" content="Practical monitoring and maintenance support to help identify website issues, broken experiences, and areas that need attention.">
+<meta name="description" content="Practical website monitoring to help identify broken links, forms, visible issues, and website problems before they become bigger frustrations.">
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
 </head>
 <body>
 <div id="siteHeader"></div>
-<main class="servicePage">
+
+<main class="monitoringPage">
+
 <style>
-.servicePage{min-height:100vh;background:linear-gradient(180deg,#07152a 0%,#0a1d35 42%,#eef3f8 42%,#eef3f8 100%);color:#12233f}
-.serviceHero{width:min(1120px,92%);margin:0 auto;padding:150px 0 75px;color:#fff}
-.serviceEyebrow{color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
-.serviceHero h1{max-width:820px;margin:12px 0 18px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,7vw,70px);line-height:1.02}
-.serviceHero p{max-width:760px;margin:0;color:#d9e7f7;font-size:17px;line-height:1.75}
-.serviceBody{width:min(1000px,92%);margin:0 auto;padding:0 0 80px}
-.serviceGrid{display:grid;grid-template-columns:1fr 1.35fr;gap:28px;align-items:start}
-.servicePanel,.serviceContent{background:#fff;border:1px solid #dce5ef;border-radius:18px;box-shadow:0 12px 32px rgba(18,42,72,.1)}
-.servicePanel{padding:28px;position:relative;overflow:hidden}
-.servicePanel:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,#1689e8,#f0b529)}
-.serviceNumber{display:block;color:#b27600;font-size:12px;font-weight:900;letter-spacing:.12em}
-.servicePanel h2{margin:10px 0 16px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:26px}
-.servicePanel ul{margin:0;padding-left:19px;color:#52627b;line-height:1.8}
-.serviceContent{padding:34px}
-.serviceContent h2{margin:0 0 15px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:34px}
-.serviceContent p{margin:0 0 17px;color:#52627b;font-size:15px;line-height:1.75}
-.serviceContent h3{margin:25px 0 9px;color:#15345d;font-size:18px}
-.serviceContent ul{color:#52627b;line-height:1.8;padding-left:20px}
-.serviceCTA{display:inline-block;margin-top:10px;padding:12px 18px;border-radius:999px;background:#15345d;color:#fff;text-decoration:none;font-weight:800;font-size:13px}
-.serviceCTA:hover{background:#1689e8}
-@media(max-width:760px){
-.servicePage{background:linear-gradient(180deg,#07152a 0%,#0a1d35 31%,#eef3f8 31%,#eef3f8 100%)}
-.serviceHero{padding:125px 0 55px}
-.serviceHero h1{font-size:clamp(38px,11vw,54px)}
-.serviceHero p{font-size:15px}
-.serviceGrid{grid-template-columns:1fr}
-.serviceContent{padding:26px}
-.serviceContent h2{font-size:28px}
+.monitoringPage{background:#eef3f8;color:#12233f;overflow:hidden}
+.monitoringHero{position:relative;background:radial-gradient(circle at 82% 28%,rgba(47,179,255,.18),transparent 27%),radial-gradient(circle at 15% 75%,rgba(255,211,78,.08),transparent 24%),linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.monitoringHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:80px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.monitoringHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:155px 0 125px}
+.monitoringEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.monitoringEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.monitoringHero h1{max-width:850px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,78px);line-height:1.01;letter-spacing:-.025em}
+.monitoringHero h1 span{color:#ffd45f}
+.monitoringLead{max-width:760px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.monitoringActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.monitoringButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:900;transition:.2s ease}
+.monitoringButton.primary{background:#1689e8;color:#fff;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.monitoringButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.monitoringButton.secondary{border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.05)}
+.monitoringButton.secondary:hover{background:rgba(255,255,255,.1)}
+.monitoringMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.monitoringMeta span{display:flex;align-items:center;gap:7px}.monitoringMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
+
+.monitoringSection{width:min(1120px,92%);margin:auto;padding:88px 0}
+.monitoringIntro{max-width:740px;margin-bottom:35px}
+.monitoringEyebrowSmall{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.monitoringSection h2{margin:9px 0 12px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px);line-height:1.08}
+.monitoringIntro p{margin:0;color:#596a82;font-size:16px;line-height:1.75}
+
+.awarenessGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.awarenessCard{position:relative;padding:28px;min-height:220px;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08);overflow:hidden;transition:.22s ease}
+.awarenessCard:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#1689e8,#ffd45f)}
+.awarenessCard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(18,42,72,.13)}
+.awarenessIcon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#edf7ff;color:#1689e8;font-size:20px;font-weight:900}
+.awarenessCard h3{margin:19px 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:22px}
+.awarenessCard p{margin:0;color:#617189;font-size:14px;line-height:1.7}
+
+.monitorSection{background:#07182d;color:#fff;position:relative}
+.monitorSection:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:rgba(47,179,255,.28)}
+.monitorSection .monitoringSection{padding:90px 0}
+.monitorSection .monitoringEyebrowSmall{color:#ffd45f}
+.monitorSection h2{color:#fff}
+.monitorSection .monitoringIntro p{color:#b8cbe0}
+.checkGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.checkCard{padding:25px 20px;border:1px solid rgba(255,255,255,.11);border-radius:17px;background:rgba(255,255,255,.045)}
+.checkNumber{color:#4db8ff;font-size:12px;font-weight:900;letter-spacing:.1em}
+.checkCard h3{margin:12px 0 8px;color:#fff;font-size:17px}
+.checkCard p{margin:0;color:#a9bdd4;font-size:13px;line-height:1.65}
+
+.monitorPromise{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.promisePanel{padding:32px;border-radius:21px;border:1px solid #dce5ef;background:#fff;box-shadow:0 12px 32px rgba(18,42,72,.07)}
+.promisePanel.dark{background:linear-gradient(145deg,#0a1d35,#123c62);border-color:#123c62}
+.promisePanel h3{margin:0 0 13px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:28px}
+.promisePanel.dark h3{color:#fff}
+.promisePanel p{margin:0;color:#617189;font-size:14px;line-height:1.75}.promisePanel.dark p{color:#bfd0e2}
+.promiseList{display:grid;gap:11px;margin:20px 0 0;padding:0;list-style:none}
+.promiseList li{color:#5b6c83;font-size:14px;line-height:1.6}.promiseList li:before{content:"✓";margin-right:9px;color:#1689e8;font-weight:900}
+.promisePanel.dark .promiseList li{color:#bfd0e2}.promisePanel.dark .promiseList li:before{color:#ffd45f}
+
+.managementNote{background:#f7f9fc;border-top:1px solid #dfe7ef;border-bottom:1px solid #dfe7ef}
+.managementNoteBox{display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center;padding:30px;border-radius:21px;background:#fff;border:1px solid #dce5ef;box-shadow:0 12px 32px rgba(18,42,72,.07)}
+.managementNoteBox h3{margin:0 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:26px}
+.managementNoteBox p{margin:0;color:#617189;font-size:14px;line-height:1.7}
+.managementNoteBox a{white-space:nowrap}
+
+.finalCTA{background:linear-gradient(135deg,#0a1d35,#123c62);color:#fff;text-align:center}
+.finalCTA .monitoringSection{padding:88px 0}
+.finalCTA h2{color:#fff;max-width:720px;margin:10px auto 14px}
+.finalCTA p{max-width:650px;margin:0 auto;color:#c5d6e8;font-size:15px;line-height:1.75}
+.finalCTA .monitoringActions{justify-content:center}
+
+@media(max-width:900px){
+.awarenessGrid{grid-template-columns:1fr 1fr}.checkGrid{grid-template-columns:1fr 1fr}.monitorPromise{grid-template-columns:1fr}.managementNoteBox{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+.monitoringHeroInner{padding:130px 0 100px}.monitoringHero h1{font-size:clamp(40px,12vw,58px)}.monitoringLead{font-size:15px}.monitoringMeta{gap:10px 15px}
+.monitoringSection{padding:68px 0}.awarenessGrid,.checkGrid{grid-template-columns:1fr}.awarenessCard{min-height:0}.managementNoteBox{padding:24px}
+.monitoringButton{width:100%}.monitoringActions{flex-direction:column}
 }
 </style>
-<section class="serviceHero">
-  <div class="serviceEyebrow">04 • Website Monitoring</div>
-  <h1>Keep an Eye on What You Have Built</h1>
-  <p>Support the ongoing health of your website by checking for issues that can affect the visitor experience.</p>
-</section>
-<section class="serviceBody">
-  <div class="serviceGrid">
-    <aside class="servicePanel">
-      <span class="serviceNumber">04</span>
-      <h2>Website Monitoring</h2>
-      <ul>
-        <li>Professional, practical support</li>
-        <li>Responsive website experience</li>
-        <li>Clear organization and presentation</li>
-        <li>Built around your goals</li>
-      </ul>
-    </aside>
-    <article class="serviceContent">
-      <h2>Keep an Eye on What You Have Built</h2>
-      <p>Support the ongoing health of your website by checking for issues that can affect the visitor experience. The focus is practical: create something that looks professional, communicates clearly, and serves a real purpose.</p>
-      <h3>Website Checks</h3>
-      <p>Review key pages, links, forms, and visible website functions for problems.</p>
-      <h3>Issue Awareness</h3>
-      <p>Identify areas that may need attention before they become bigger frustrations for visitors.</p>
-      <h3>Maintenance Coordination</h3>
-      <p>Use findings to guide updates, corrections, and follow up work.</p>
-      <h3>Built for the Next Step</h3>
-      <p>Monitoring is about staying aware of your website instead of waiting until something goes wrong.</p>
-      <a class="serviceCTA" href="/brad-hobbswd/contact.html">Start a Project</a>
-    </article>
+
+<section class="monitoringHero">
+  <div class="monitoringHeroInner">
+    <div class="monitoringEyebrow">04 • Website Monitoring</div>
+    <h1>Keep an Eye on What You <span>Have Built.</span></h1>
+    <p class="monitoringLead">A website can look perfect today and develop a problem tomorrow. Monitoring helps you stay aware of issues that can affect links, forms, pages, and the visitor experience.</p>
+    <div class="monitoringActions">
+      <a class="monitoringButton primary" href="/brad-hobbswd/contact.html">Ask About Monitoring</a>
+      <a class="monitoringButton secondary" href="https://brad-hobbswd.github.io/clients/" target="_blank" rel="noopener noreferrer">View My Work</a>
+    </div>
+    <div class="monitoringMeta">
+      <span><i></i> Website Checks</span>
+      <span><i></i> Issue Awareness</span>
+      <span><i></i> Follow Up</span>
+      <span><i></i> Practical Support</span>
+    </div>
   </div>
 </section>
+
+<section class="monitoringSection">
+  <div class="monitoringIntro">
+    <div class="monitoringEyebrowSmall">Why Monitoring Matters</div>
+    <h2>Do Not Wait Until Someone Tells You Something Is Broken.</h2>
+    <p>Visitors may leave when a page does not load correctly, a link stops working, or a form no longer behaves as expected. Monitoring provides another layer of awareness.</p>
+  </div>
+  <div class="awarenessGrid">
+    <article class="awarenessCard"><div class="awarenessIcon">✓</div><h3>Stay Aware</h3><p>Keep an eye on important parts of your website so problems can be identified and addressed.</p></article>
+    <article class="awarenessCard"><div class="awarenessIcon">⌁</div><h3>Catch Issues</h3><p>Look for visible problems with pages, links, forms, navigation, and other important website functions.</p></article>
+    <article class="awarenessCard"><div class="awarenessIcon">↗</div><h3>Protect the Experience</h3><p>Help keep the visitor experience professional, functional, and aligned with what your website is meant to do.</p></article>
+  </div>
+</section>
+
+<section class="monitorSection">
+  <div class="monitoringSection">
+    <div class="monitoringIntro">
+      <div class="monitoringEyebrowSmall">What I Check</div>
+      <h2>Focused Checks for the Parts People Use.</h2>
+      <p>Monitoring is centered on practical website functions and visible experiences that can affect your visitors.</p>
+    </div>
+    <div class="checkGrid">
+      <article class="checkCard"><div class="checkNumber">01</div><h3>Pages</h3><p>Check important pages and look for visible loading or presentation problems.</p></article>
+      <article class="checkCard"><div class="checkNumber">02</div><h3>Links</h3><p>Look for broken or incorrect links that can interrupt a visitor's path.</p></article>
+      <article class="checkCard"><div class="checkNumber">03</div><h3>Forms</h3><p>Review key forms and contact paths for visible issues or unexpected behavior.</p></article>
+      <article class="checkCard"><div class="checkNumber">04</div><h3>Experience</h3><p>Check the overall visitor experience for areas that may need attention.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="monitoringSection">
+  <div class="monitorPromise">
+    <div class="promisePanel">
+      <h3>When an Issue Is Found</h3>
+      <p>Monitoring is about awareness. If an issue is identified, the next step is to determine what needs to be corrected and how that work should be handled.</p>
+      <ul class="promiseList">
+        <li>Identify the affected website area</li>
+        <li>Review what appears to be happening</li>
+        <li>Communicate the issue clearly</li>
+        <li>Coordinate the appropriate follow up</li>
+      </ul>
+    </div>
+    <div class="promisePanel dark">
+      <h3>Monitoring + Management</h3>
+      <p>Monitoring and management work together. Monitoring helps identify what needs attention, while website management handles requested content and website changes.</p>
+      <ul class="promiseList">
+        <li>Monitoring keeps you aware</li>
+        <li>Management handles updates</li>
+        <li>Issues can be addressed with a clear process</li>
+        <li>Standard management updates are completed within 24 hours after required information is received</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="managementNote">
+  <div class="monitoringSection">
+    <div class="managementNoteBox">
+      <div>
+        <h3>Need an Update After a Monitoring Check?</h3>
+        <p>If the website needs a content or page update, the Website Management service provides ongoing support. Standard update requests are completed within 24 hours after the required information is received.</p>
+      </div>
+      <a class="monitoringButton primary" href="/brad-hobbswd/website-management.html">Website Management</a>
+    </div>
+  </div>
+</section>
+
+<section class="finalCTA">
+  <div class="monitoringSection">
+    <div class="monitoringEyebrowSmall">Stay Aware</div>
+    <h2>Your Website Is Worth Keeping an Eye On.</h2>
+    <p>Monitoring gives you another layer of awareness so you can identify website issues and determine the next step before a small problem becomes a bigger frustration.</p>
+    <div class="monitoringActions">
+      <a class="monitoringButton primary" href="/brad-hobbswd/contact.html">Ask About Monitoring</a>
+      <a class="monitoringButton secondary" href="https://brad-hobbswd.github.io/clients/" target="_blank" rel="noopener noreferrer">View My Work</a>
+    </div>
+  </div>
+</section>
+
 </main>
 <div id="siteFooter"></div>
 <script src="/brad-hobbswd/layout.js"></script>
