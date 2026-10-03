@@ -4,507 +4,237 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Education Services | Brad Hobbs Web Design</title>
-<meta name="description" content="Brad Hobbs is an educator who creates practical technology education and teaching resources for older adults, educators, and learners.">
+<meta name="description" content="Education services from Brad Hobbs, combining a degree in Computer Information Technology with experience as an educator and childcare director. Technology classes, older adult learning, staff training, and early childhood resources.">
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
 </head>
 <body>
 <div id="siteHeader"></div>
 
 <main class="educationPage">
+
 <style>
-.educationPage{
-  min-height:100vh;
-  background:#eef3f8;
-  color:#12233f;
-  overflow:hidden
-}
-.educationHero{
-  background:linear-gradient(135deg,#06152c 0%,#0b2442 58%,#123b63 100%);
-  color:#fff
-}
-.educationHeroInner{
-  width:min(1100px,92%);
-  margin:0 auto;
-  padding:145px 0 78px
-}
-.educationEyebrow{
-  color:#ffd45f;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.16em;
-  text-transform:uppercase
-}
-.educationHero h1{
-  max-width:850px;
-  margin:13px 0 18px;
-  color:#fff;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(42px,6.5vw,68px);
-  line-height:1.04
-}
-.educationHero p{
-  max-width:760px;
-  margin:0;
-  color:#dce9f7;
-  font-size:17px;
-  line-height:1.75
-}
-.educationBody{
-  width:min(1060px,92%);
-  margin:0 auto;
-  padding:42px 0 90px
-}
-.educationIntro{
-  display:grid;
-  grid-template-columns:.82fr 1.35fr;
-  gap:24px;
-  align-items:stretch;
-  margin-bottom:24px
-}
-.educationPanel,.educationContent,.librarySection,.teachingSection,.resourceSection{
-  background:#fff;
-  border:1px solid #dce5ef;
-  border-radius:18px;
-  box-shadow:0 12px 30px rgba(18,42,72,.08)
-}
-.educationPanel{
-  position:relative;
-  padding:28px;
-  overflow:hidden
-}
-.educationPanel:before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:4px;
-  background:linear-gradient(90deg,#1689e8,#f0b529)
-}
-.educationNumber{
-  display:block;
-  color:#b27600;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.14em
-}
-.educationPanel h2{
-  margin:10px 0 15px;
-  color:#15345d;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:27px
-}
-.educationPanel ul{
-  margin:0;
-  padding-left:19px;
-  color:#52627b;
-  line-height:1.85
-}
-.educationContent{
-  padding:31px
-}
-.educationContent h2,.sectionHeading h2{
-  margin:0 0 13px;
-  color:#15345d;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:32px;
-  line-height:1.2
-}
-.educationContent p,.sectionHeading p{
-  margin:0 0 16px;
-  color:#52627b;
-  font-size:15px;
-  line-height:1.75
-}
-.educationContent h3{
-  margin:23px 0 8px;
-  color:#15345d;
-  font-size:18px
-}
-.librarySection,.teachingSection,.resourceSection{
-  padding:32px;
-  margin-bottom:24px
-}
-.sectionHeading{
-  max-width:780px
-}
-.sectionLabel{
-  display:block;
-  margin-bottom:8px;
-  color:#b27600;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:.15em;
-  text-transform:uppercase
-}
-.sectionHeading p{margin-bottom:0}
-.libraryCards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:17px;
-  margin-top:25px
-}
-.libraryCard,.teachingCard{
-  border:1px solid #dce5ef;
-  border-radius:14px;
-  background:#f7faff
-}
-.libraryCard{
-  padding:21px
-}
-.cardLabel{
-  display:block;
-  color:#b27600;
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:.12em;
-  text-transform:uppercase
-}
-.libraryCard h3,.teachingCard h3,.resourceCard h3{
-  margin:9px 0 10px;
-  color:#15345d;
-  font-family:Georgia,"Times New Roman",serif
-}
-.libraryCard h3{font-size:21px}
-.libraryCard ul{
-  margin:0;
-  padding-left:18px;
-  color:#52627b;
-  font-size:14px;
-  line-height:1.75
-}
-.quickTip{
-  margin-top:19px;
-  padding:17px 19px;
-  border-left:4px solid #1689e8;
-  border-radius:10px;
-  background:#eef6fd;
-  color:#3d5570;
-  font-size:14px;
-  line-height:1.7
-}
-.teachingCards{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-  margin-top:25px
-}
-.teachingCard{
-  padding:20px
-}
-.teachingCard h3{
-  font-size:19px;
-  margin-top:0
-}
-.teachingCard p,.resourceCard p{
-  margin:0;
-  color:#52627b;
-  font-size:13px;
-  line-height:1.7
-}
-.littleExplorers{
-  margin-top:22px;
-  padding:23px;
-  background:#eef6fd;
-  border:1px solid #d6e7f6;
-  border-radius:14px
-}
-.littleExplorers h3{
-  margin:0 0 8px;
-  color:#15345d;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:23px
-}
-.littleExplorers p{
-  max-width:800px;
-  margin:0;
-  color:#52627b;
-  font-size:14px;
-  line-height:1.75
-}
-.resourceCards{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:17px;
-  margin-top:24px
-}
-.resourceCard{
-  padding:22px;
-  border:1px solid #dce5ef;
-  border-radius:14px;
-  background:#f7faff
-}
-.resourceCard h3{font-size:22px}
-.serviceCTA{
-  display:inline-block;
-  margin-top:13px;
-  padding:11px 17px;
-  border-radius:999px;
-  background:#15345d;
-  color:#fff;
-  text-decoration:none;
-  font-size:13px;
-  font-weight:800
-}
-.serviceCTA:hover{
-  background:#1689e8;
-  color:#fff
-}
+.educationPage{background:#eef3f8;color:#12233f;overflow:hidden}
+.educationHero{position:relative;background:radial-gradient(circle at 82% 28%,rgba(47,179,255,.18),transparent 27%),radial-gradient(circle at 15% 75%,rgba(255,211,78,.08),transparent 24%),linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.educationHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:80px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.educationHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:155px 0 125px}
+.educationEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.educationEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.educationHero h1{max-width:900px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,78px);line-height:1.01;letter-spacing:-.025em}
+.educationHero h1 span{color:#ffd45f}
+.educationLead{max-width:790px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.educationActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.educationButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:900;transition:.2s ease}
+.educationButton.primary{background:#1689e8;color:#fff;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.educationButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.educationButton.secondary{border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.05)}
+.educationButton.secondary:hover{background:rgba(255,255,255,.1)}
+.educationMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.educationMeta span{display:flex;align-items:center;gap:7px}.educationMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
+
+.educationSection{width:min(1120px,92%);margin:auto;padding:88px 0}
+.educationIntro{max-width:780px;margin-bottom:35px}
+.educationEyebrowSmall{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.educationSection h2{margin:9px 0 12px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px);line-height:1.08}
+.educationIntro p{margin:0;color:#596a82;font-size:16px;line-height:1.75}
+
+.educationFoundation{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch}
+.foundationMain{position:relative;padding:36px;border-radius:24px;background:linear-gradient(145deg,#0a1d35,#123c62);color:#fff;box-shadow:0 20px 45px rgba(7,24,45,.18);overflow:hidden}
+.foundationMain:before{content:"IT";position:absolute;right:-5px;top:-48px;color:rgba(255,255,255,.055);font-size:190px;font-weight:900;line-height:1}
+.foundationLabel{position:relative;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.foundationMain h3{position:relative;margin:12px 0;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:36px}
+.foundationMain p{position:relative;max-width:620px;margin:0;color:#c4d5e7;font-size:15px;line-height:1.75}
+.foundationSide{display:grid;gap:15px}
+.foundationPoint{padding:23px;border:1px solid #dce5ef;border-radius:18px;background:#fff;box-shadow:0 10px 26px rgba(18,42,72,.07)}
+.foundationPoint strong{display:block;color:#15345d;font-size:15px}.foundationPoint span{display:block;margin-top:6px;color:#65758b;font-size:13px;line-height:1.6}
+
+.educationCards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.educationCard{position:relative;padding:28px;min-height:220px;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08);overflow:hidden;transition:.22s ease}
+.educationCard:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#1689e8,#ffd45f)}
+.educationCard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(18,42,72,.13)}
+.educationIcon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#edf7ff;color:#1689e8;font-size:20px;font-weight:900}
+.educationCard h3{margin:19px 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:22px}
+.educationCard p{margin:0;color:#617189;font-size:14px;line-height:1.7}
+
+.educationDark{background:#07182d;color:#fff;position:relative}
+.educationDark:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:rgba(47,179,255,.28)}
+.educationDark .educationSection{padding:90px 0}
+.educationDark .educationEyebrowSmall{color:#ffd45f}
+.educationDark h2{color:#fff}
+.educationDark .educationIntro p{color:#b8cbe0}
+.learningGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.learningCard{padding:25px 20px;border:1px solid rgba(255,255,255,.11);border-radius:17px;background:rgba(255,255,255,.045)}
+.learningNumber{color:#4db8ff;font-size:12px;font-weight:900;letter-spacing:.1em}
+.learningCard h3{margin:12px 0 8px;color:#fff;font-size:17px}
+.learningCard p{margin:0;color:#a9bdd4;font-size:13px;line-height:1.65}
+.learningCard ul{margin:10px 0 0;padding-left:17px;color:#a9bdd4;font-size:13px;line-height:1.7}
+
+.educationSplit{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.educationPanel{padding:30px;border-radius:21px;border:1px solid #dce5ef;background:#fff;box-shadow:0 12px 32px rgba(18,42,72,.07)}
+.educationPanel.dark{background:#0a1d35;border-color:#0a1d35;color:#fff}
+.educationPanel h3{margin:0 0 18px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:26px}
+.educationPanel.dark h3{color:#fff}
+.educationList{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.educationList li{display:flex;gap:10px;color:#5b6c83;font-size:14px;line-height:1.6}
+.educationPanel.dark li{color:#bfd0e2}
+.educationList li:before{content:"✓";color:#1689e8;font-weight:900}
+.educationPanel.dark li:before{color:#ffd45f}
+
+.educationCTA{background:linear-gradient(135deg,#0a1d35,#123c62);color:#fff;text-align:center}
+.educationCTA .educationSection{padding:88px 0}
+.educationCTA h2{color:#fff;max-width:780px;margin:10px auto 14px}
+.educationCTA p{max-width:700px;margin:0 auto;color:#c5d6e8;font-size:15px;line-height:1.75}
+.educationCTA .educationActions{justify-content:center}
+
 @media(max-width:900px){
-  .educationIntro{grid-template-columns:1fr}
-  .teachingCards{grid-template-columns:repeat(2,1fr)}
+.educationFoundation{grid-template-columns:1fr}
+.educationCards{grid-template-columns:1fr 1fr}
+.learningGrid{grid-template-columns:1fr 1fr}
+.educationSplit{grid-template-columns:1fr}
 }
-@media(max-width:700px){
-  .educationHeroInner{padding:120px 0 52px}
-  .educationHero h1{font-size:clamp(37px,10vw,52px)}
-  .educationHero p{font-size:15px;line-height:1.7}
-  .educationBody{width:min(100% - 28px,1060px);padding:24px 0 65px}
-  .educationIntro{gap:16px;margin-bottom:16px}
-  .educationPanel,.educationContent,.librarySection,.teachingSection,.resourceSection{border-radius:15px}
-  .educationPanel,.educationContent,.librarySection,.teachingSection,.resourceSection{padding:23px}
-  .educationContent h2,.sectionHeading h2{font-size:27px}
-  .libraryCards,.teachingCards,.resourceCards{grid-template-columns:1fr;gap:13px;margin-top:20px}
-  .libraryCard{padding:19px}
-  .libraryCard h3{font-size:20px}
-  .teachingCard{padding:18px}
-  .resourceCard{padding:19px}
-  .littleExplorers{padding:19px}
-  .littleExplorers h3{font-size:21px}
-  .serviceCTA{width:100%;text-align:center;box-sizing:border-box}
+@media(max-width:620px){
+.educationHeroInner{padding:130px 0 100px}
+.educationHero h1{font-size:clamp(40px,12vw,58px)}
+.educationLead{font-size:15px}
+.educationMeta{gap:10px 15px}
+.educationSection{padding:68px 0}
+.educationCards,.learningGrid{grid-template-columns:1fr}
+.educationCard{min-height:0}
+.foundationMain{padding:28px}.foundationMain h3{font-size:30px}
+.educationButton{width:100%}.educationActions{flex-direction:column}
 }
 </style>
 
 <section class="educationHero">
   <div class="educationHeroInner">
     <div class="educationEyebrow">07 • Education Services</div>
-    <h1>Education Is Part of What I Do</h1>
-    <p>With a degree in Computer Information Technology, combined with my experience as an educator and childcare director, I bring technology knowledge, classroom experience, leadership, and continued care experience into practical training for teachers, staff, older adults, learners, and early childhood programs.</p>
+    <h1>Education Is <span>Part of What I Do.</span></h1>
+    <p class="educationLead">With a degree in Computer Information Technology, combined with my experience as an educator and childcare director, I bring technology knowledge, classroom experience, leadership, and continued care experience into practical training for teachers, staff, older adults, learners, and early childhood programs.</p>
+    <div class="educationActions">
+      <a class="educationButton primary" href="https://brad-hobbswd.github.io/technology-for-life/" target="_blank" rel="noopener noreferrer">Explore Technology for Life</a>
+      <a class="educationButton secondary" href="https://brad-hobbswd.github.io/teaching-materials/" target="_blank" rel="noopener noreferrer">Explore Teaching Materials</a>
+    </div>
+    <div class="educationMeta">
+      <span><i></i> Computer Information Technology</span>
+      <span><i></i> Older Adult Learning</span>
+      <span><i></i> Early Childhood Education</span>
+      <span><i></i> Staff Training</span>
+    </div>
   </div>
 </section>
 
-<section class="educationBody">
-
+<section class="educationSection">
   <div class="educationIntro">
-    <aside class="educationPanel">
-      <span class="educationNumber">07</span>
-      <h2>Education &amp; Learning</h2>
-      <ul>
-        <li>Educator created resources</li>
-        <li>Technology education for older adults</li>
-        <li>Patient, step by step technology instruction</li>
-        <li>Early childhood teaching materials</li>
-        <li>New staff training and continued care support</li>
-        <li>Behavior and disability informed teaching</li>
-        <li>Practical learning for real life</li>
-      </ul>
-    </aside>
-
-    <article class="educationContent">
-      <h2>More Than Web Design</h2>
-      <p>Education is another part of my work. My background as an educator has shaped the way I explain technology, organize information, and create resources that are practical and easy to use.</p>
-
-      <h3>Teaching With Purpose</h3>
-      <p>Whether the learner is an older adult developing digital confidence or an educator looking for practical classroom resources, the goal is to make learning understandable, useful, and connected to real life.</p>
-
-      <h3>Technology Education for Older Adults</h3>
-      <p>My degree in Computer Information Technology also allows me to offer technology classes for older adults who may need additional time, repetition, and hands on guidance while learning new technology. Our world and society have changed rapidly, and everyday life now depends on smartphones, computers, online services, digital communication, and other technology. My goal is not to rush the learner. I teach at a pace that allows people to ask questions, practice new skills, build confidence, and understand how technology fits into their everyday lives.</p>
-      <p>Technology should be approachable at every age. I focus on clear explanations, patient instruction, practical examples, and the opportunity to learn without feeling embarrassed for needing extra time.</p>
-
-      <h3>Education Through Experience</h3>
-      <p>My education work brings together teaching experience, technology, curriculum development, early childhood practice, and practical resource creation. These projects allow me to serve learners in different stages and areas of life.</p>
-
-      <h3>Leadership, Training &amp; Continued Care</h3>
-      <p>As a childcare director, I also support staff through onboarding, continued care, classroom guidance, and professional development. I use the experience I have gained working with children, including children with challenging behaviors and disabilities, to help new staff understand that every child deserves patience, structure, dignity, consistency, and individualized support.</p>
-    </article>
+    <div class="educationEyebrowSmall">Education Through Experience</div>
+    <h2>More Than Web Design.</h2>
+    <p>Education is another part of my work. I combine technology education, classroom experience, early childhood practice, leadership, and practical resource creation to help people learn skills they can actually use.</p>
   </div>
 
-  <section class="librarySection">
-    <div class="sectionHeading">
-      <span class="sectionLabel">Technology for Life</span>
-      <h2>Learning Technology at Your Own Pace</h2>
-      <p>Technology education can be especially helpful for older adults who did not grow up with the devices and digital systems that are now part of everyday life. Classes can focus on practical skills that make modern technology easier to understand and use.</p>
+  <div class="educationFoundation">
+    <div class="foundationMain">
+      <div class="foundationLabel">Technology Education</div>
+      <h3>Learning Technology Should Not Feel Like a Race.</h3>
+      <p>My degree in Computer Information Technology allows me to offer technology classes for older adults who may need additional time, repetition, and hands on guidance. Our world and society have changed rapidly, and smartphones, computers, online services, digital communication, and other technology are now part of everyday life. My approach is patient, practical, and focused on helping each learner understand technology at a pace that works for them.</p>
     </div>
-
-    <div class="libraryCards">
-      <article class="libraryCard">
-        <span class="cardLabel">01 • Devices</span>
-        <h3>Understanding Your Devices</h3>
-        <ul>
-          <li>Smartphones and tablets</li>
-          <li>Basic computer skills</li>
-          <li>Settings and common features</li>
-          <li>Connecting devices to everyday life</li>
-        </ul>
-      </article>
-
-      <article class="libraryCard">
-        <span class="cardLabel">02 • Everyday Technology</span>
-        <h3>Using Technology With Confidence</h3>
-        <ul>
-          <li>Email and online communication</li>
-          <li>Video calls and social connection</li>
-          <li>Online services and accounts</li>
-          <li>Finding information online</li>
-        </ul>
-      </article>
-
-      <article class="libraryCard">
-        <span class="cardLabel">03 • Safety</span>
-        <h3>Staying Safe Online</h3>
-        <ul>
-          <li>Recognizing suspicious messages</li>
-          <li>Creating stronger passwords</li>
-          <li>Understanding privacy settings</li>
-          <li>Identifying common online scams</li>
-        </ul>
-      </article>
+    <div class="foundationSide">
+      <div class="foundationPoint"><strong>Learn at Your Own Pace</strong><span>Extra time and repetition can be part of the learning process. The goal is understanding, not rushing through a lesson.</span></div>
+      <div class="foundationPoint"><strong>Practical Technology</strong><span>Classes can focus on devices, email, video calls, online services, passwords, privacy, and everyday digital tasks.</span></div>
+      <div class="foundationPoint"><strong>Build Confidence</strong><span>Clear explanations and hands on practice can help learners become more comfortable using the technology around them.</span></div>
     </div>
-
-    <div class="quickTip"><strong>Learning should not be rushed:</strong> New technology can take time to understand. Classes can be paced around the learner, with opportunities to repeat steps, ask questions, practice, and return to skills that need more attention.</div>
-  </section>
-
-  <section class="librarySection">
-    <div class="sectionHeading">
-      <span class="sectionLabel">A Small Learning Library</span>
-      <h2>Practical Material to Get You Started</h2>
-      <p>Explore a few simple learning topics directly on this page. These provide useful starting points while the larger resource collections continue on my education sites.</p>
-    </div>
-
-    <div class="libraryCards">
-      <article class="libraryCard">
-        <span class="cardLabel">01 • Technology Tips</span>
-        <h3>Technology for Everyday Life</h3>
-        <ul>
-          <li>Understanding your smartphone</li>
-          <li>Creating stronger passwords</li>
-          <li>Recognizing suspicious messages</li>
-          <li>Using video calls with confidence</li>
-        </ul>
-      </article>
-
-      <article class="libraryCard">
-        <span class="cardLabel">02 • Technology Basics</span>
-        <h3>Start With the Basics</h3>
-        <ul>
-          <li>What is a website?</li>
-          <li>What is HTML?</li>
-          <li>Understanding files and folders</li>
-          <li>Learning common computer terms</li>
-        </ul>
-      </article>
-
-      <article class="libraryCard">
-        <span class="cardLabel">03 • Educator Resources</span>
-        <h3>Teaching &amp; Classroom Ideas</h3>
-        <ul>
-          <li>Simple classroom planning tips</li>
-          <li>Early childhood activity ideas</li>
-          <li>Observation reminders</li>
-          <li>Classroom organization tips</li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="quickTip"><strong>Quick Tip:</strong> When learning something new, start with one skill at a time. Practice it, use it in a real situation, and then build on what you already understand.</div>
-  </section>
-
-  <section class="teachingSection">
-    <div class="sectionHeading">
-      <span class="sectionLabel">Early Childhood Leadership &amp; Staff Training</span>
-      <h2>Training Built From Real Classroom Experience</h2>
-      <p>My education services also extend to childcare staff and early childhood programs. I can create practical training and support for new employees as they learn classroom expectations, routines, documentation, child guidance, and the responsibilities that come with caring for young children.</p>
-    </div>
-
-    <div class="teachingCards">
-      <article class="teachingCard">
-        <span class="cardLabel">01 • New Staff</span>
-        <h3>Onboarding &amp; Orientation</h3>
-        <p>Practical guidance for new staff as they learn classroom routines, responsibilities, expectations, communication, and the daily work of caring for children.</p>
-      </article>
-      <article class="teachingCard">
-        <span class="cardLabel">02 • Behavior</span>
-        <h3>Behavior Support</h3>
-        <p>Training informed by real classroom experience, with an emphasis on understanding behavior, building relationships, maintaining routines, and responding consistently.</p>
-      </article>
-      <article class="teachingCard">
-        <span class="cardLabel">03 • Inclusion</span>
-        <h3>Children With Disabilities</h3>
-        <p>Practical support for creating inclusive environments, adapting activities, observing individual needs, and working respectfully with children with disabilities.</p>
-      </article>
-      <article class="teachingCard">
-        <span class="cardLabel">04 • Continued Care</span>
-        <h3>Ongoing Staff Development</h3>
-        <p>Continued training and coaching can help staff grow after orientation, strengthen classroom practice, and apply what they learn to everyday situations.</p>
-      </article>
-    </div>
-
-    <div class="littleExplorers">
-      <h3>From the Classroom to Staff Training</h3>
-      <p>I believe training should connect to what actually happens in a classroom. My goal is to give new and developing staff practical information they can understand, use, and carry into their work with children.</p>
-    </div>
-  </section>
-
-  <section class="teachingSection">
-    <div class="sectionHeading">
-      <span class="sectionLabel">Teaching Materials</span>
-      <h2>Resources for Early Childhood Educators</h2>
-      <p>My Teaching Materials work provides practical resources for planning, classroom organization, observation, assessment, and daily teaching across early learning settings.</p>
-    </div>
-
-    <div class="teachingCards">
-      <article class="teachingCard">
-        <h3>Lesson Planning</h3>
-        <p>Lesson plans, study ideas, classroom activities, and planning support for meaningful learning experiences.</p>
-      </article>
-
-      <article class="teachingCard">
-        <h3>Early Childhood Resources</h3>
-        <p>Resources for Infant, Toddler, Preschool, Pre K, Early Head Start, and Head Start classrooms.</p>
-      </article>
-
-      <article class="teachingCard">
-        <h3>Observation &amp; Assessment</h3>
-        <p>Tools and reminders for observations, developmental documentation, assessment practices, and progress tracking.</p>
-      </article>
-
-      <article class="teachingCard">
-        <h3>Classroom Support</h3>
-        <p>Practical help with classroom organization, routines, behavior documentation, and learning activities.</p>
-      </article>
-    </div>
-
-    <div class="littleExplorers">
-      <h3>Little Explorers Learning Hub</h3>
-      <p>Teaching Materials includes Little Explorers Learning Hub, a growing collection of curriculum studies, lesson plans, printable resources, classroom activities, observation tools, assessment resources, and other materials created with educators in mind.</p>
-      <a class="serviceCTA" href="https://brad-hobbswd.github.io/teaching-materials/" target="_blank" rel="noopener noreferrer">Explore Teaching Materials</a>
-    </div>
-  </section>
-
-  <section class="resourceSection">
-    <div class="sectionHeading">
-      <span class="sectionLabel">More Education Resources</span>
-      <h2>Continue Learning</h2>
-      <p>Explore the separate education sites for additional material and resources.</p>
-    </div>
-
-    <div class="resourceCards">
-      <article class="resourceCard">
-        <h3>Technology for Life</h3>
-        <p>Practical technology learning for older adults and everyday learners, including digital tools, devices, online activities, and technology basics.</p>
-        <a class="serviceCTA" href="https://brad-hobbswd.github.io/technology-for-life/" target="_blank" rel="noopener noreferrer">Explore Technology for Life</a>
-      </article>
-
-      <article class="resourceCard">
-        <h3>Teaching Materials</h3>
-        <p>Little Explorers Learning Hub and practical resources for Early Head Start, Head Start, Preschool, Pre K, and early childhood educators.</p>
-        <a class="serviceCTA" href="https://brad-hobbswd.github.io/teaching-materials/" target="_blank" rel="noopener noreferrer">Explore Teaching Materials</a>
-      </article>
-    </div>
-  </section>
-
+  </div>
 </section>
-</main>
 
+<section class="educationSection">
+  <div class="educationIntro">
+    <div class="educationEyebrowSmall">Who I Serve Through Education</div>
+    <h2>Different Learners. Practical Support.</h2>
+    <p>My education work reaches beyond one classroom. The same principle carries through each area: explain clearly, provide useful practice, and connect learning to real life.</p>
+  </div>
+  <div class="educationCards">
+    <article class="educationCard"><div class="educationIcon">⌘</div><h3>Older Adults</h3><p>Patient technology instruction for learners who may need more time to understand new devices, digital services, and everyday technology.</p></article>
+    <article class="educationCard"><div class="educationIcon">✦</div><h3>Educators</h3><p>Teaching resources, lesson planning ideas, classroom support, observation resources, and practical materials for early childhood educators.</p></article>
+    <article class="educationCard"><div class="educationIcon">▣</div><h3>Childcare Staff</h3><p>Onboarding, orientation, continued staff development, classroom guidance, behavior support, and practical training informed by real experience.</p></article>
+  </div>
+</section>
+
+<section class="educationDark">
+  <div class="educationSection">
+    <div class="educationIntro">
+      <div class="educationEyebrowSmall">Technology for Life</div>
+      <h2>Technology Classes Built Around the Learner.</h2>
+      <p>Technology should be approachable at every age. I focus on clear explanations, patient instruction, practical examples, and opportunities to practice without feeling embarrassed for needing extra time.</p>
+    </div>
+    <div class="learningGrid">
+      <article class="learningCard"><div class="learningNumber">01</div><h3>Devices</h3><p>Understand the devices that are now part of everyday life.</p><ul><li>Smartphones and tablets</li><li>Basic computer skills</li><li>Settings and common features</li></ul></article>
+      <article class="learningCard"><div class="learningNumber">02</div><h3>Everyday Technology</h3><p>Build confidence with common digital activities.</p><ul><li>Email and online communication</li><li>Video calls</li><li>Online services and accounts</li></ul></article>
+      <article class="learningCard"><div class="learningNumber">03</div><h3>Online Safety</h3><p>Learn practical ways to recognize common digital risks.</p><ul><li>Suspicious messages</li><li>Stronger passwords</li><li>Privacy settings and scams</li></ul></article>
+      <article class="learningCard"><div class="learningNumber">04</div><h3>Practice</h3><p>Learning includes time to repeat steps and ask questions.</p><ul><li>One skill at a time</li><li>Hands on practice</li><li>Review when needed</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="educationSection">
+  <div class="educationIntro">
+    <div class="educationEyebrowSmall">Early Childhood Leadership &amp; Staff Training</div>
+    <h2>Training Built From Real Classroom Experience.</h2>
+    <p>As a childcare director, I support staff through onboarding, continued care, classroom guidance, and professional development. My experience working with children, including children with challenging behaviors and disabilities, shapes the practical training I provide.</p>
+  </div>
+  <div class="educationCards">
+    <article class="educationCard"><div class="educationIcon">01</div><h3>Onboarding &amp; Orientation</h3><p>Practical guidance for new staff as they learn classroom routines, responsibilities, expectations, communication, and the daily work of caring for children.</p></article>
+    <article class="educationCard"><div class="educationIcon">02</div><h3>Behavior Support</h3><p>Training informed by real classroom experience, with an emphasis on understanding behavior, building relationships, maintaining routines, and responding consistently.</p></article>
+    <article class="educationCard"><div class="educationIcon">03</div><h3>Children With Disabilities</h3><p>Practical support for inclusive environments, adapting activities, observing individual needs, and working respectfully with children with disabilities.</p></article>
+  </div>
+  <div style="margin-top:18px" class="educationCards">
+    <article class="educationCard"><div class="educationIcon">04</div><h3>Continued Staff Development</h3><p>Continued training and coaching can help staff grow after orientation, strengthen classroom practice, and apply what they learn to everyday situations.</p></article>
+    <article class="educationCard"><div class="educationIcon">05</div><h3>Classroom Guidance</h3><p>Support with classroom expectations, routines, documentation, child guidance, and the responsibilities that come with caring for young children.</p></article>
+    <article class="educationCard"><div class="educationIcon">06</div><h3>Teaching With Purpose</h3><p>Training that connects to what actually happens in a classroom and gives staff information they can understand, use, and carry into their work.</p></article>
+  </div>
+</section>
+
+<section class="educationSection">
+  <div class="educationIntro">
+    <div class="educationEyebrowSmall">Teaching Materials</div>
+    <h2>Resources for Early Childhood Educators.</h2>
+    <p>My Teaching Materials work provides practical resources for planning, classroom organization, observation, assessment, and daily teaching across early learning settings.</p>
+  </div>
+  <div class="educationSplit">
+    <div class="educationPanel">
+      <h3>Little Explorers Learning Hub</h3>
+      <ul class="educationList">
+        <li>Lesson plans and curriculum studies</li>
+        <li>Infant, Toddler, Preschool, and Pre K resources</li>
+        <li>Early Head Start and Head Start materials</li>
+        <li>Classroom activities and organization</li>
+        <li>Observation and assessment resources</li>
+      </ul>
+      <a class="educationButton primary" href="https://brad-hobbswd.github.io/teaching-materials/" target="_blank" rel="noopener noreferrer" style="margin-top:22px">Explore Teaching Materials</a>
+    </div>
+    <div class="educationPanel dark">
+      <h3>Technology Meets Education</h3>
+      <ul class="educationList">
+        <li>Computer Information Technology knowledge</li>
+        <li>Practical technology instruction</li>
+        <li>Patient learning for older adults</li>
+        <li>Digital confidence for everyday life</li>
+        <li>Technology resources for educators</li>
+      </ul>
+      <a class="educationButton secondary" href="https://brad-hobbswd.github.io/technology-for-life/" target="_blank" rel="noopener noreferrer" style="margin-top:22px">Explore Technology for Life</a>
+    </div>
+  </div>
+</section>
+
+<section class="educationCTA">
+  <div class="educationSection">
+    <div class="educationEyebrowSmall">Education Services</div>
+    <h2>Learning Does Not Have to Look the Same for Everyone.</h2>
+    <p>Whether I am teaching technology to an older adult, supporting a new childcare employee, creating resources for an educator, or helping build practical learning materials, my goal is the same: make learning understandable, useful, patient, and connected to real life.</p>
+    <div class="educationActions">
+      <a class="educationButton primary" href="https://brad-hobbswd.github.io/technology-for-life/" target="_blank" rel="noopener noreferrer">Technology for Life</a>
+      <a class="educationButton secondary" href="https://brad-hobbswd.github.io/teaching-materials/" target="_blank" rel="noopener noreferrer">Teaching Materials</a>
+    </div>
+  </div>
+</section>
+
+</main>
 <div id="siteFooter"></div>
 <script src="/brad-hobbswd/layout.js"></script>
 </body>
