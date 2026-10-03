@@ -94,6 +94,22 @@
 .seoSection{padding:68px 0}.seoCards{grid-template-columns:1fr}.seoCard{min-height:0}.searchMain{padding:28px}.searchMain h3{font-size:30px}
 .seoButton{width:100%}.seoActions{flex-direction:column}
 }
+
+.domainToolsSection{background:#f7f9fc;border-top:1px solid #dfe7f0}
+.domainToolsGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+.domainSearchBox{padding:30px;border-radius:22px;background:linear-gradient(145deg,#0a1d35,#123c62);color:#fff;box-shadow:0 16px 38px rgba(7,24,45,.14)}
+.domainSearchBox h3{margin:10px 0 8px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:30px}
+.domainSearchBox p{margin:0 0 20px;color:#c4d5e7;font-size:14px;line-height:1.7}
+.domainSearchLink{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 19px;border-radius:999px;background:#ffd45f;color:#15345d;font-size:13px;font-weight:900;text-decoration:none}
+.domainToolsList{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.domainTool{padding:22px;border:1px solid #dce5ef;border-radius:17px;background:#fff;box-shadow:0 9px 24px rgba(18,42,72,.06)}
+.domainTool strong{display:block;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:18px}
+.domainTool span{display:block;margin-top:6px;color:#65758b;font-size:13px;line-height:1.6}
+.domainTool a{display:inline-block;margin-top:9px;color:#1689e8;font-size:12px;font-weight:900;text-decoration:none}
+.domainTool a:hover{text-decoration:underline}
+@media(max-width:900px){.domainToolsGrid{grid-template-columns:1fr}}
+@media(max-width:620px){.domainToolsList{grid-template-columns:1fr}}
+
 </style>
 
 <section class="seoHero">
@@ -178,6 +194,31 @@
         <h3>Indexing & URL Checks</h3>
         <p>Review whether important pages can be crawled and indexed, identify exclusions or technical barriers, and make appropriate corrections.</p>
       </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="domainToolsSection">
+  <div class="seoSection">
+    <div class="seoIntro">
+      <div class="seoEyebrowSmall">Domain & Website Tools</div>
+      <h2>Start With the Domain. Then Check the Foundation.</h2>
+      <p>Before building or improving a website, it helps to know whether the domain is available, who controls an existing domain, and whether the website's DNS and security settings are working as expected.</p>
+    </div>
+    <div class="domainToolsGrid">
+      <div class="domainSearchBox">
+        <div class="searchLabel">Domain Search</div>
+        <h3>Find a Domain for Your Next Idea.</h3>
+        <p>Search a business name, brand name, or domain and continue to Cloudflare's domain search to review available domain options.</p>
+        <a class="domainSearchLink" href="https://domains.cloudflare.com/" target="_blank" rel="noopener noreferrer">Search Available Domains ↗</a>
+      </div>
+      <div class="domainToolsList">
+        <div class="domainTool"><strong>Domain Ownership</strong><span>Look up registration information for an existing domain through ICANN's public lookup service.</span><a href="https://lookup.icann.org/" target="_blank" rel="noopener noreferrer">Open ICANN Lookup ↗</a></div>
+        <div class="domainTool"><strong>DNS Checker</strong><span>Check DNS records and propagation when a domain is connected, moved, or updated.</span><a href="https://dnschecker.org/" target="_blank" rel="noopener noreferrer">Open DNS Checker ↗</a></div>
+        <div class="domainTool"><strong>SSL & HTTPS</strong><span>Confirm that a website is using a valid HTTPS connection and identify common certificate issues.</span><a href="https://www.ssllabs.com/ssltest/" target="_blank" rel="noopener noreferrer">Run SSL Test ↗</a></div>
+        <div class="domainTool"><strong>Website Diagnostics</strong><span>Use webmaster and search tools to inspect crawling, indexing, sitemap, and technical SEO information.</span><a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer">Open Search Console ↗</a></div>
+      </div>
     </div>
   </div>
 </section>
