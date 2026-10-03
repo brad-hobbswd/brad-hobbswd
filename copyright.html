@@ -1,51 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Copyright | Brad Hobbs Web Design</title>
 <meta name="description" content="Copyright and intellectual property information for Brad Hobbs Web Design.">
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=20">
-<style>
-body.copyrightPage{background:#f4f7fb!important;color:#12233f!important;overflow-x:hidden!important}
-.copyrightWrap{width:min(1120px,calc(100% - 48px));max-width:1120px;margin:0 auto;padding:72px 0 80px;box-sizing:border-box}
-.copyrightCard{width:min(850px,100%);max-width:850px;margin:0 auto;padding:48px;box-sizing:border-box;border-radius:18px;background:#fff;border:1px solid #dbe4ee;box-shadow:0 18px 44px rgba(18,42,72,.09)}
-.copyrightCard h1{margin:0 0 22px;text-align:center;color:#12233f;font-family:Georgia,"Times New Roman",serif;font-size:clamp(38px,5vw,54px);line-height:1.08}
-.copyrightDate{text-align:center;color:#164c80;font-size:13px;font-weight:800;margin-bottom:32px}
-.copyrightCard h2{color:#12233f;font-family:Georgia,"Times New Roman",serif;line-height:1.15;margin:34px 0 10px}
-.copyrightCard p{color:#596a82;line-height:1.8;margin:0 0 14px}
-.copyrightContact{margin-top:42px;padding-top:32px;border-top:1px solid #dbe4ee;text-align:center}
-.copyrightContact .btn{margin-top:18px}
-@media(max-width:700px){.copyrightWrap{width:100%;padding:48px 16px 58px}.copyrightCard{width:100%;padding:28px 20px;border-radius:14px}.copyrightCard h1{font-size:38px}}
-</style>
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
 </head>
-<body class="copyrightPage">
-<div class="wrap">
-<header id="siteHeader"></header>
-<main class="copyrightWrap">
-<div class="copyrightCard">
-<h1>Copyright</h1>
-<p class="copyrightDate">Last updated: May 17, 2026</p>
+<body>
+<div id="siteHeader"></div>
+
+<main class="copyrightPage">
+<style>
+.copyrightPage{background:#eef3f8;color:#12233f;overflow:hidden}
+.copyrightHero{position:relative;background:radial-gradient(circle at 82% 28%,rgba(47,179,255,.18),transparent 27%),radial-gradient(circle at 15% 75%,rgba(255,211,78,.08),transparent 24%),linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.copyrightHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:80px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.copyrightHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:155px 0 125px}
+.copyrightEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.copyrightEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.copyrightHero h1{max-width:850px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,78px);line-height:1.01;letter-spacing:-.025em}
+.copyrightHero h1 span{color:#ffd45f}
+.copyrightLead{max-width:760px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.copyrightActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.copyrightButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:900;transition:.2s ease}
+.copyrightButton.primary{background:#1689e8;color:#fff;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.copyrightButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.copyrightButton.secondary{border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.05)}
+.copyrightButton.secondary:hover{background:rgba(255,255,255,.1)}
+.copyrightMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.copyrightMeta span{display:flex;align-items:center;gap:7px}.copyrightMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
+.copyrightSection{width:min(1120px,92%);margin:auto;padding:88px 0}
+.copyrightIntro{max-width:760px;margin-bottom:35px}
+.copyrightEyebrowSmall{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.copyrightSection h2{margin:9px 0 12px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px);line-height:1.08}
+.copyrightIntro p{margin:0;color:#596a82;font-size:16px;line-height:1.75}
+.copyrightGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.copyrightCard{position:relative;padding:28px;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08);overflow:hidden;transition:.22s ease}
+.copyrightCard:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#1689e8,#ffd45f)}
+.copyrightCard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(18,42,72,.13)}
+.copyrightIcon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#edf7ff;color:#1689e8;font-size:20px;font-weight:900}
+.copyrightCard h3{margin:18px 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:22px}
+.copyrightCard p{margin:0;color:#617189;font-size:14px;line-height:1.75}
+.copyrightDate{display:inline-block;margin-top:18px;color:#b27600;font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.copyrightDark{background:#07182d;color:#fff;position:relative}
+.copyrightDark:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:rgba(47,179,255,.28)}
+.copyrightDark .copyrightSection{padding:90px 0}
+.copyrightDark .copyrightEyebrowSmall{color:#ffd45f}
+.copyrightDark h2{color:#fff}
+.copyrightDark .copyrightIntro p{color:#b8cbe0}
+.copyrightDarkGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+.copyrightPanel{padding:30px;border:1px solid rgba(255,255,255,.11);border-radius:20px;background:rgba(255,255,255,.045)}
+.copyrightPanel h3{margin:0 0 12px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:27px}
+.copyrightPanel p{margin:0;color:#b8cbe0;font-size:14px;line-height:1.75}
+.copyrightList{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:11px}
+.copyrightList li{color:#bfd0e2;font-size:14px;line-height:1.6}
+.copyrightList li:before{content:"•";margin-right:9px;color:#ffd45f;font-weight:900}
+.copyrightFinal{background:linear-gradient(135deg,#0a1d35,#123c62);color:#fff;text-align:center}
+.copyrightFinal .copyrightSection{padding:88px 0}
+.copyrightFinal h2{color:#fff;max-width:720px;margin:10px auto 14px}
+.copyrightFinal p{max-width:650px;margin:0 auto;color:#c5d6e8;font-size:15px;line-height:1.75}
+.copyrightFinal .copyrightActions{justify-content:center}
+@media(max-width:900px){.copyrightGrid{grid-template-columns:1fr}.copyrightDarkGrid{grid-template-columns:1fr}}
+@media(max-width:620px){.copyrightHeroInner{padding:130px 0 100px}.copyrightHero h1{font-size:clamp(40px,12vw,58px)}.copyrightLead{font-size:15px}.copyrightMeta{gap:10px 15px}.copyrightSection{padding:68px 0}.copyrightCard{padding:24px}.copyrightButton{width:100%}.copyrightActions{flex-direction:column}}
+</style>
+
+<section class="copyrightHero">
+<div class="copyrightHeroInner">
+<div class="copyrightEyebrow">Copyright & Intellectual Property</div>
+<h1>Protecting the Work Behind <span>the Website.</span></h1>
+<p class="copyrightLead">This page explains how original content, branding, design, code, portfolio materials, and other intellectual property connected with Brad Hobbs Web Design may be used.</p>
+<div class="copyrightActions">
+<a class="copyrightButton primary" href="/brad-hobbswd/contact.html">Ask About Permission</a>
+<a class="copyrightButton secondary" href="/brad-hobbswd/index.html">Back to Home</a>
+</div>
+<div class="copyrightMeta"><span><i></i> Original Content</span><span><i></i> Branding</span><span><i></i> Design & Code</span><span><i></i> Last Updated May 17, 2026</span></div>
+</div>
+</section>
+
+<section class="copyrightSection">
+<div class="copyrightIntro">
+<div class="copyrightEyebrowSmall">Copyright Information</div>
+<h2>Original Work Deserves Clear Boundaries.</h2>
 <p>Copyright protects original creative work presented on this website. The content, branding, written materials, graphics, original designs, code, and other materials created for Brad Hobbs Web Design are protected to the extent provided by applicable law.</p>
-<h2>Website Content</h2>
-<p>Unless otherwise identified, original website content created by Brad Hobbs Web Design may not be copied, reproduced, republished, distributed, modified, or used for commercial purposes without written permission.</p>
-<h2>Branding and Design</h2>
-<p>The Brad Hobbs Web Design name, logo, visual identity, original graphics, layouts, and design elements may not be reproduced or presented as the work of another person or business without permission.</p>
-<h2>Portfolio Projects</h2>
-<p>Portfolio examples may contain materials belonging to clients, organizations, or other rights holders. Ownership of client supplied materials remains with the applicable owner. Portfolio presentation does not transfer ownership of those materials.</p>
-<h2>Third Party Materials</h2>
-<p>Third party logos, trademarks, images, services, and other materials remain the property of their respective owners and are used only where permitted or as identified.</p>
-<h2>Permission Requests</h2>
-<p>Requests to reproduce, reuse, license, or otherwise use original content from this website should be submitted through the contact page before the material is used.</p>
-<div class="copyrightContact">
-<h2>Need Permission?</h2>
-<p>Contact Brad Hobbs Web Design regarding permitted use of original website content or design materials.</p>
-<a href="/brad-hobbswd/contact.html" class="btn btnPrimary">Contact Brad Hobbs Web Design</a>
+</div>
+<div class="copyrightGrid">
+<article class="copyrightCard"><div class="copyrightIcon">©</div><h3>Website Content</h3><p>Unless otherwise identified, original website content created by Brad Hobbs Web Design may not be copied, reproduced, republished, distributed, modified, or used for commercial purposes without written permission.</p></article>
+<article class="copyrightCard"><div class="copyrightIcon">✦</div><h3>Branding and Design</h3><p>The Brad Hobbs Web Design name, logo, visual identity, original graphics, layouts, and design elements may not be reproduced or presented as the work of another person or business without permission.</p></article>
+<article class="copyrightCard"><div class="copyrightIcon">◫</div><h3>Portfolio Projects</h3><p>Portfolio examples may contain materials belonging to clients, organizations, or other rights holders. Ownership of client supplied materials remains with the applicable owner. Portfolio presentation does not transfer ownership of those materials.</p></article>
+<article class="copyrightCard"><div class="copyrightIcon">↗</div><h3>Third Party Materials</h3><p>Third party logos, trademarks, images, services, and other materials remain the property of their respective owners and are used only where permitted or as identified.</p></article>
+</div>
+</section>
+
+<section class="copyrightDark">
+<div class="copyrightSection">
+<div class="copyrightIntro">
+<div class="copyrightEyebrowSmall">Use & Permission</div>
+<h2>When You Need to Reuse Something.</h2>
+<p>If you would like to reproduce, reuse, license, or otherwise use original content from this website, contact Brad Hobbs Web Design before using the material.</p>
+</div>
+<div class="copyrightDarkGrid">
+<div class="copyrightPanel">
+<h3>Permission Requests</h3>
+<p>Requests should identify the material you would like to use and explain how and where it will be used. Written permission should be obtained before reuse.</p>
+<ul class="copyrightList">
+<li>Identify the specific content or design element</li>
+<li>Explain the intended use</li>
+<li>Provide the website, publication, or project where it will appear</li>
+<li>Wait for written permission before using protected material</li>
+</ul>
+</div>
+<div class="copyrightPanel">
+<h3>Client Materials</h3>
+<p>Client supplied materials remain subject to the rights and permissions of their respective owners. A portfolio example does not transfer ownership of client content, logos, photographs, trademarks, or other third party materials.</p>
 </div>
 </div>
+</div>
+</section>
+
+<section class="copyrightFinal">
+<div class="copyrightSection">
+<div class="copyrightEyebrowSmall">Questions About Use?</div>
+<h2>Need Permission for Something?</h2>
+<p>Contact Brad Hobbs Web Design to discuss permitted use of original website content, design materials, branding, or other work presented on this website.</p>
+<div class="copyrightActions">
+<a class="copyrightButton primary" href="/brad-hobbswd/contact.html">Contact Brad Hobbs Web Design</a>
+<a class="copyrightButton secondary" href="/brad-hobbswd/index.html">Return Home</a>
+</div>
+</div>
+</section>
 </main>
+
 <div id="siteFooter"></div>
-</div>
 <script src="/brad-hobbswd/layout.js"></script>
 </body>
 </html>
