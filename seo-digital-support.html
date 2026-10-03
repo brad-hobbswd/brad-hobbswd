@@ -4,75 +4,228 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SEO & Digital Support | Brad Hobbs Web Design</title>
-<meta name="description" content="Improve the foundation around your website with search visibility, content organization, digital guidance, and practical support.">
+<meta name="description" content="SEO and digital support focused on search visibility, Google Search Console, Bing Webmaster Tools, indexing, sitemaps, website structure, and practical search optimization.">
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
 </head>
 <body>
 <div id="siteHeader"></div>
-<main class="servicePage">
+
+<main class="seoPage">
 <style>
-.servicePage{min-height:100vh;background:linear-gradient(180deg,#07152a 0%,#0a1d35 42%,#eef3f8 42%,#eef3f8 100%);color:#12233f}
-.serviceHero{width:min(1120px,92%);margin:0 auto;padding:150px 0 75px;color:#fff}
-.serviceEyebrow{color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
-.serviceHero h1{max-width:820px;margin:12px 0 18px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,7vw,70px);line-height:1.02}
-.serviceHero p{max-width:760px;margin:0;color:#d9e7f7;font-size:17px;line-height:1.75}
-.serviceBody{width:min(1000px,92%);margin:0 auto;padding:0 0 80px}
-.serviceGrid{display:grid;grid-template-columns:1fr 1.35fr;gap:28px;align-items:start}
-.servicePanel,.serviceContent{background:#fff;border:1px solid #dce5ef;border-radius:18px;box-shadow:0 12px 32px rgba(18,42,72,.1)}
-.servicePanel{padding:28px;position:relative;overflow:hidden}
-.servicePanel:before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,#1689e8,#f0b529)}
-.serviceNumber{display:block;color:#b27600;font-size:12px;font-weight:900;letter-spacing:.12em}
-.servicePanel h2{margin:10px 0 16px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:26px}
-.servicePanel ul{margin:0;padding-left:19px;color:#52627b;line-height:1.8}
-.serviceContent{padding:34px}
-.serviceContent h2{margin:0 0 15px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:34px}
-.serviceContent p{margin:0 0 17px;color:#52627b;font-size:15px;line-height:1.75}
-.serviceContent h3{margin:25px 0 9px;color:#15345d;font-size:18px}
-.serviceContent ul{color:#52627b;line-height:1.8;padding-left:20px}
-.serviceCTA{display:inline-block;margin-top:10px;padding:12px 18px;border-radius:999px;background:#15345d;color:#fff;text-decoration:none;font-weight:800;font-size:13px}
-.serviceCTA:hover{background:#1689e8}
-@media(max-width:760px){
-.servicePage{background:linear-gradient(180deg,#07152a 0%,#0a1d35 31%,#eef3f8 31%,#eef3f8 100%)}
-.serviceHero{padding:125px 0 55px}
-.serviceHero h1{font-size:clamp(38px,11vw,54px)}
-.serviceHero p{font-size:15px}
-.serviceGrid{grid-template-columns:1fr}
-.serviceContent{padding:26px}
-.serviceContent h2{font-size:28px}
+.seoPage{background:#eef3f8;color:#12233f;overflow:hidden}
+.seoHero{position:relative;background:radial-gradient(circle at 82% 28%,rgba(47,179,255,.18),transparent 27%),radial-gradient(circle at 15% 75%,rgba(255,211,78,.08),transparent 24%),linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.seoHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:80px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.seoHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:155px 0 125px}
+.seoEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.seoEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.seoHero h1{max-width:900px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,78px);line-height:1.01;letter-spacing:-.025em}
+.seoHero h1 span{color:#ffd45f}
+.seoLead{max-width:790px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.seoActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.seoButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:900;transition:.2s ease}
+.seoButton.primary{background:#1689e8;color:#fff;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.seoButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.seoButton.secondary{border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.05)}
+.seoButton.secondary:hover{background:rgba(255,255,255,.1)}
+.seoMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.seoMeta span{display:flex;align-items:center;gap:7px}.seoMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
+
+.seoSection{width:min(1120px,92%);margin:auto;padding:88px 0}
+.seoIntro{max-width:770px;margin-bottom:35px}
+.seoEyebrowSmall{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.seoSection h2{margin:9px 0 12px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px);line-height:1.08}
+.seoIntro p{margin:0;color:#596a82;font-size:16px;line-height:1.75}
+
+.seoSearch{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch}
+.searchMain{position:relative;padding:36px;border-radius:24px;background:linear-gradient(145deg,#0a1d35,#123c62);color:#fff;box-shadow:0 20px 45px rgba(7,24,45,.18);overflow:hidden}
+.searchMain:before{content:"SEO";position:absolute;right:-10px;top:-42px;color:rgba(255,255,255,.045);font-size:125px;font-weight:900;line-height:1}
+.searchLabel{position:relative;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.searchMain h3{position:relative;margin:12px 0 12px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:36px}
+.searchMain p{position:relative;max-width:620px;margin:0;color:#c4d5e7;font-size:15px;line-height:1.75}
+.searchSide{display:grid;gap:15px}
+.searchPoint{padding:23px;border:1px solid #dce5ef;border-radius:18px;background:#fff;box-shadow:0 10px 26px rgba(18,42,72,.07)}
+.searchPoint strong{display:block;color:#15345d;font-size:15px}.searchPoint span{display:block;margin-top:6px;color:#65758b;font-size:13px;line-height:1.6}
+
+.seoCards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.seoCard{position:relative;padding:28px;min-height:225px;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08);overflow:hidden;transition:.22s ease}
+.seoCard:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#1689e8,#ffd45f)}
+.seoCard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(18,42,72,.13)}
+.seoIcon{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:#edf7ff;color:#1689e8;font-size:13px;font-weight:900}
+.seoCard h3{margin:19px 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:22px}
+.seoCard p{margin:0;color:#617189;font-size:14px;line-height:1.7}
+
+.seoToolsSection{background:#07182d;color:#fff;position:relative}
+.seoToolsSection:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:rgba(47,179,255,.28)}
+.seoToolsSection .seoSection{padding:90px 0}
+.seoToolsSection .seoEyebrowSmall{color:#ffd45f}
+.seoToolsSection h2{color:#fff}
+.seoToolsSection .seoIntro p{color:#b8cbe0}
+.seoToolsGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.seoTool{padding:26px;border:1px solid rgba(255,255,255,.11);border-radius:18px;background:rgba(255,255,255,.045)}
+.seoToolNumber{color:#4db8ff;font-size:12px;font-weight:900;letter-spacing:.1em}
+.seoTool h3{margin:11px 0 8px;color:#fff;font-size:19px}
+.seoTool p{margin:0;color:#a9bdd4;font-size:13px;line-height:1.7}
+.seoTool a{display:inline-block;margin-top:12px;color:#ffd45f;font-size:12px;font-weight:800;text-decoration:none}
+
+.seoExpect{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.expectPanel{padding:30px;border-radius:21px;border:1px solid #dce5ef;background:#fff;box-shadow:0 12px 32px rgba(18,42,72,.07)}
+.expectPanel.dark{background:#0a1d35;border-color:#0a1d35;color:#fff}
+.expectPanel h3{margin:0 0 18px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:26px}
+.expectPanel.dark h3{color:#fff}
+.expectList{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.expectList li{display:flex;gap:10px;color:#5b6c83;font-size:14px;line-height:1.6}.expectPanel.dark li{color:#bfd0e2}
+.expectList li:before{content:"✓";color:#1689e8;font-weight:900}.expectPanel.dark li:before{color:#ffd45f}
+
+.seoNotice{margin-top:20px;padding:23px;border-radius:18px;background:#fff9e9;border:1px solid #eadfbf}
+.seoNotice strong{display:block;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:21px;margin-bottom:7px}
+.seoNotice p{margin:0;color:#5b6c83;font-size:14px;line-height:1.7}
+
+.finalCTA{background:linear-gradient(135deg,#0a1d35,#123c62);color:#fff;text-align:center}
+.finalCTA .seoSection{padding:88px 0}
+.finalCTA h2{color:#fff;max-width:760px;margin:10px auto 14px}
+.finalCTA p{max-width:680px;margin:0 auto;color:#c5d6e8;font-size:15px;line-height:1.75}
+.finalCTA .seoActions{justify-content:center}
+
+@media(max-width:900px){
+.seoSearch{grid-template-columns:1fr}.seoCards{grid-template-columns:1fr 1fr}.seoToolsGrid{grid-template-columns:1fr}.seoExpect{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+.seoHeroInner{padding:130px 0 100px}.seoHero h1{font-size:clamp(40px,12vw,58px)}.seoLead{font-size:15px}.seoMeta{gap:10px 15px}
+.seoSection{padding:68px 0}.seoCards{grid-template-columns:1fr}.seoCard{min-height:0}.searchMain{padding:28px}.searchMain h3{font-size:30px}
+.seoButton{width:100%}.seoActions{flex-direction:column}
 }
 </style>
-<section class="serviceHero">
-  <div class="serviceEyebrow">06 • SEO & Digital Support</div>
-  <h1>Help People Find and Use Your Website</h1>
-  <p>Strengthen the digital foundation around your website with practical SEO structure, content organization, and technical support.</p>
-</section>
-<section class="serviceBody">
-  <div class="serviceGrid">
-    <aside class="servicePanel">
-      <span class="serviceNumber">06</span>
-      <h2>SEO & Digital Support</h2>
-      <ul>
-        <li>Professional, practical support</li>
-        <li>Responsive website experience</li>
-        <li>Clear organization and presentation</li>
-        <li>Built around your goals</li>
-      </ul>
-    </aside>
-    <article class="serviceContent">
-      <h2>Help People Find and Use Your Website</h2>
-      <p>Strengthen the digital foundation around your website with practical SEO structure, content organization, and technical support. The focus is practical: create something that looks professional, communicates clearly, and serves a real purpose.</p>
-      <h3>Search Foundation</h3>
-      <p>Improve page structure, titles, descriptions, headings, and other fundamentals that help search engines understand your site.</p>
-      <h3>Content Organization</h3>
-      <p>Make important information clearer and easier for both visitors and search engines to navigate.</p>
-      <h3>Digital Support</h3>
-      <p>Get practical guidance for website tools, links, domains, hosting, and other digital needs.</p>
-      <h3>Built for the Next Step</h3>
-      <p>SEO is not just about search engines. It is also about making your website clear, useful, and accessible to the people looking for you.</p>
-      <a class="serviceCTA" href="/brad-hobbswd/contact.html">Start a Project</a>
-    </article>
+
+<section class="seoHero">
+  <div class="seoHeroInner">
+    <div class="seoEyebrow">06 • SEO & Digital Support</div>
+    <h1>Help Your Website <span>Get Found.</span></h1>
+    <p class="seoLead">A beautiful website only helps when people can find it. I help strengthen the search foundation around your website through practical SEO, indexing support, Search Console tools, webmaster tools, and ongoing digital guidance.</p>
+    <div class="seoActions">
+      <a class="seoButton primary" href="/brad-hobbswd/contact.html">Start an SEO Project</a>
+      <a class="seoButton secondary" href="https://brad-hobbswd.github.io/clients/" target="_blank" rel="noopener noreferrer">View My Work</a>
+    </div>
+    <div class="seoMeta">
+      <span><i></i> Search Visibility</span>
+      <span><i></i> Google Search Console</span>
+      <span><i></i> Bing Webmaster Tools</span>
+      <span><i></i> Technical SEO</span>
+    </div>
   </div>
 </section>
+
+<section class="seoSection">
+  <div class="seoIntro">
+    <div class="seoEyebrowSmall">Why SEO Matters</div>
+    <h2>Your Website Should Be Findable.</h2>
+    <p>Search engines need to discover, crawl, understand, and index your pages before those pages can appear in search results. SEO support helps build the technical and content foundation that makes that process easier.</p>
+  </div>
+
+  <div class="seoSearch">
+    <div class="searchMain">
+      <div class="searchLabel">The Search Connection</div>
+      <h3>Build the Foundation Before You Expect the Traffic.</h3>
+      <p>Search visibility is not simply about adding keywords. It involves page structure, useful content, crawlability, indexing, internal links, sitemaps, metadata, and the overall quality of the experience.</p>
+    </div>
+    <div class="searchSide">
+      <div class="searchPoint"><strong>Be Discoverable</strong><span>Help search engines discover important pages through logical structure, links, and XML sitemaps.</span></div>
+      <div class="searchPoint"><strong>Be Understandable</strong><span>Use meaningful titles, descriptions, headings, content, and page structure so the purpose of each page is clear.</span></div>
+      <div class="searchPoint"><strong>Be Accessible</strong><span>Address technical barriers that can interfere with crawling, indexing, or the visitor experience.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="seoSection">
+  <div class="seoIntro">
+    <div class="seoEyebrowSmall">What I Focus On</div>
+    <h2>Search Support That Goes Beyond Keywords.</h2>
+    <p>SEO is a combination of technical foundation, useful content, clear organization, and ongoing attention to how search engines see your website.</p>
+  </div>
+  <div class="seoCards">
+    <article class="seoCard"><div class="seoIcon">01</div><h3>Technical SEO</h3><p>Review page structure, metadata, links, crawlability, mobile presentation, redirects, robots instructions, and other technical foundations.</p></article>
+    <article class="seoCard"><div class="seoIcon">02</div><h3>Content Structure</h3><p>Organize page titles, headings, descriptions, content, internal links, and calls to action so visitors and search engines can understand the site.</p></article>
+    <article class="seoCard"><div class="seoIcon">03</div><h3>Search Visibility</h3><p>Use search tools and reporting to identify indexing issues, search opportunities, and areas where the website can be improved.</p></article>
+  </div>
+</section>
+
+<section class="seoToolsSection">
+  <div class="seoSection">
+    <div class="seoIntro">
+      <div class="seoEyebrowSmall">Search Engine Tools</div>
+      <h2>Connect the Website to the Tools That Help You Understand Search.</h2>
+      <p>Google Search Console and Bing Webmaster Tools provide site owners with information about crawling, indexing, search performance, and technical issues. I can help with the setup and practical use of these tools.</p>
+    </div>
+    <div class="seoToolsGrid">
+      <article class="seoTool">
+        <div class="seoToolNumber">01 • GOOGLE</div>
+        <h3>Google Search Console</h3>
+        <p>Use Search Console to monitor search performance, inspect URLs, review indexing information, submit sitemaps, and identify issues affecting how Google accesses your site.</p>
+        <a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer">Open Google Search Console ↗</a>
+      </article>
+      <article class="seoTool">
+        <div class="seoToolNumber">02 • BING</div>
+        <h3>Bing Webmaster Tools</h3>
+        <p>Use Bing Webmaster Tools for sitemap submission, URL inspection, site exploration, SEO reports, site scans, and other tools that help improve your website's visibility on Bing.</p>
+        <a href="https://www.bing.com/webmasters/" target="_blank" rel="noopener noreferrer">Open Bing Webmaster Tools ↗</a>
+      </article>
+      <article class="seoTool">
+        <div class="seoToolNumber">03 • SITEMAPS</div>
+        <h3>XML Sitemaps</h3>
+        <p>Maintain an accurate sitemap that helps search engines discover important URLs. Sitemaps can be submitted through webmaster tools and referenced through robots.txt.</p>
+      </article>
+      <article class="seoTool">
+        <div class="seoToolNumber">04 • INDEXING</div>
+        <h3>Indexing & URL Checks</h3>
+        <p>Review whether important pages can be crawled and indexed, identify exclusions or technical barriers, and make appropriate corrections.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="seoSection">
+  <div class="seoExpect">
+    <div class="expectPanel">
+      <h3>What I Can Help With</h3>
+      <ul class="expectList">
+        <li>Google Search Console setup and guidance</li>
+        <li>Bing Webmaster Tools setup and guidance</li>
+        <li>XML sitemap preparation and submission</li>
+        <li>Page titles and meta descriptions</li>
+        <li>Heading and content structure</li>
+        <li>Internal links and navigation</li>
+        <li>Robots.txt and crawl considerations</li>
+        <li>Basic technical SEO review</li>
+      </ul>
+    </div>
+    <div class="expectPanel dark">
+      <h3>What You Can Expect</h3>
+      <ul class="expectList">
+        <li>A stronger search foundation</li>
+        <li>Clearer information for search engines</li>
+        <li>Better awareness of indexing issues</li>
+        <li>Practical guidance instead of SEO jargon</li>
+        <li>Ongoing support as the website changes</li>
+      </ul>
+      <div class="seoNotice">
+        <strong>No Guaranteed Rankings.</strong>
+        <p>Search engines control their own crawling, indexing, and ranking systems. SEO work can improve a site's technical and content foundation, but no legitimate service can guarantee a specific Google or Bing ranking or a specific amount of traffic.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="finalCTA">
+  <div class="seoSection">
+    <div class="seoEyebrowSmall">Ready to Be Found?</div>
+    <h2>Build a Website People Can Actually Find.</h2>
+    <p>Let's strengthen the search foundation around your website so your pages are organized, understandable, and connected to the tools that help you monitor search visibility.</p>
+    <div class="seoActions">
+      <a class="seoButton primary" href="/brad-hobbswd/contact.html">Start an SEO Project</a>
+      <a class="seoButton secondary" href="/brad-hobbswd/packages.html">Explore Packages</a>
+    </div>
+  </div>
+</section>
+
 </main>
 <div id="siteFooter"></div>
 <script src="/brad-hobbswd/layout.js"></script>
