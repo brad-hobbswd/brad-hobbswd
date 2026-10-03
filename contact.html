@@ -49,267 +49,457 @@ body[data-page="contact"] main{
   padding:0;
 }
 
-body[data-page="contact"] .bannerSection{
-  margin:0;
-  background:#061327;
-  line-height:0;
-}
-
-body[data-page="contact"] .bannerCard{
-  display:block;
-  width:100%;
-  margin:0;
-  border:0;
-  border-radius:0;
+/* Compact premium introduction */
+.contactHero{
+  position:relative;
   overflow:hidden;
-  background:#061327;
-  box-shadow:none;
+  background:
+    radial-gradient(circle at 12% 20%,rgba(22,137,232,.22),transparent 32%),
+    radial-gradient(circle at 88% 5%,rgba(233,168,23,.14),transparent 28%),
+    #07162d;
+  color:#fff;
 }
 
-body[data-page="contact"] .bannerCard img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-body[data-page="contact"] .bannerSection:nth-of-type(2) .bannerCard{
-  cursor:pointer;
-}
-
-body[data-page="contact"] .bannerSection:nth-of-type(2) .bannerCard:hover{
-  filter:brightness(1.04);
-}
-
-body[data-page="contact"] .sectionDivider{
-  width:min(900px,88%);
-  height:1px;
+.contactHeroInner{
+  width:min(1120px,calc(100% - 48px));
   margin:0 auto;
-  background:linear-gradient(90deg,transparent,var(--c-blue),var(--c-gold),transparent);
+  padding:58px 0 54px;
+  position:relative;
+  z-index:1;
 }
 
-body[data-page="contact"] .serviceText{
-  width:100%;
-  box-sizing:border-box;
-  padding:68px 24px 64px;
-  background:#fff;
-  text-align:center;
+.contactEyebrow{
+  color:#ffd34e;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:14px;
 }
 
-body[data-page="contact"] .serviceText h2{
-  width:min(850px,100%);
-  margin:0 auto;
-  color:var(--c-ink);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(34px,4.5vw,52px);
-  line-height:1.1;
-}
-
-body[data-page="contact"] .serviceText p{
-  width:min(700px,100%);
-  margin:15px auto 0;
-  color:var(--c-muted);
-  line-height:1.7;
-  font-size:16px;
-}
-
-body[data-page="contact"] .contactWrap{
-  width:100%;
-  box-sizing:border-box;
-  padding:70px 24px 76px;
-  background:var(--c-light);
-  display:flex;
-  justify-content:center;
-}
-
-body[data-page="contact"] #quoteForm.card{
-  width:min(760px,100%);
-  margin:0 auto;
-  padding:36px;
-  box-sizing:border-box;
-  border-radius:16px;
-  background:#fff;
-  border:1px solid var(--c-line);
-  box-shadow:0 18px 42px rgba(18,42,72,.10);
-}
-
-body[data-page="contact"] .formTitle{
+.contactHero h1{
   margin:0;
-  color:var(--c-ink);
+  max-width:760px;
   font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(32px,4vw,46px);
-  line-height:1.1;
-  text-align:center;
+  font-size:clamp(40px,5.5vw,68px);
+  line-height:1.02;
+  letter-spacing:-.02em;
 }
 
-body[data-page="contact"] .formSubtitle{
-  margin:10px auto 0;
-  max-width:600px;
-  color:var(--c-muted);
-  text-align:center;
-  line-height:1.6;
+.contactHero h1 span{
+  color:#ffd34e;
 }
 
-body[data-page="contact"] .formGrid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+.contactHero p{
+  max-width:700px;
+  margin:18px 0 0;
+  color:rgba(255,255,255,.78);
+  font-size:17px;
+  line-height:1.7;
+}
+
+.contactHeroActions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
   margin-top:28px;
 }
 
-body[data-page="contact"] .formLabel{
+.contactButton{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:0 20px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:900;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+
+.contactButton.primary{
+  background:var(--c-blue);
+  color:#fff;
+  box-shadow:0 10px 26px rgba(22,137,232,.25);
+}
+
+.contactButton.secondary{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.05);
+}
+
+.contactButton:hover{
+  transform:translateY(-2px);
+}
+
+.contactHeroMeta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 22px;
+  margin-top:30px;
+  color:rgba(255,255,255,.64);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.contactHeroMeta span{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+}
+
+.contactHeroMeta i{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--c-gold);
+}
+
+/* Main contact area */
+.contactMain{
+  width:min(1120px,calc(100% - 48px));
+  margin:0 auto;
+  padding:64px 0 72px;
+}
+
+.contactGrid{
+  display:grid;
+  grid-template-columns:.78fr 1.22fr;
+  gap:28px;
+  align-items:start;
+}
+
+.contactIntro{
+  padding:10px 10px 0 0;
+}
+
+.contactIntroEyebrow{
+  color:#126bb6;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.contactIntro h2{
+  margin:0;
+  color:var(--c-ink);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(32px,4vw,48px);
+  line-height:1.08;
+}
+
+.contactIntro p{
+  margin:16px 0 0;
+  color:var(--c-muted);
+  line-height:1.75;
+  font-size:15px;
+}
+
+.contactReasons{
+  display:grid;
+  gap:12px;
+  margin-top:28px;
+}
+
+.contactReason{
+  display:flex;
+  gap:13px;
+  align-items:flex-start;
+  padding:16px 17px;
+  border:1px solid var(--c-line);
+  border-radius:13px;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(18,42,72,.06);
+}
+
+.contactReasonIcon{
+  flex:0 0 30px;
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  border-radius:9px;
+  background:#e9f4fd;
+  color:#126bb6;
+  font-size:14px;
+  font-weight:900;
+}
+
+.contactReason strong{
+  display:block;
+  color:var(--c-ink);
+  font-size:13px;
+  margin-bottom:3px;
+}
+
+.contactReason span{
+  display:block;
+  color:var(--c-muted);
+  font-size:12px;
+  line-height:1.5;
+}
+
+/* Form card */
+#quoteForm.card{
+  width:100%;
+  margin:0;
+  padding:34px;
+  box-sizing:border-box;
+  border-radius:18px;
+  background:#fff;
+  border:1px solid var(--c-line);
+  box-shadow:0 20px 50px rgba(18,42,72,.11);
+  position:relative;
+  overflow:hidden;
+}
+
+#quoteForm.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:4px;
+  background:linear-gradient(90deg,var(--c-blue),var(--c-gold));
+}
+
+.formTitle{
+  margin:0;
+  color:var(--c-ink);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(30px,3.5vw,42px);
+  line-height:1.1;
+}
+
+.formSubtitle{
+  margin:9px 0 0;
+  color:var(--c-muted);
+  line-height:1.6;
+  font-size:14px;
+}
+
+.formGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:19px;
+  margin-top:26px;
+}
+
+.formLabel{
   display:block;
   text-align:left;
 }
 
-body[data-page="contact"] .formLabelTitle{
-  margin-bottom:8px;
+.formLabelTitle{
+  margin-bottom:7px;
   color:#164c80;
-  font-size:12px;
+  font-size:11px;
   font-weight:900;
   letter-spacing:.1em;
   text-transform:uppercase;
 }
 
-body[data-page="contact"] .formControl{
+.formControl{
   width:100%;
   min-height:48px;
   box-sizing:border-box;
-  padding:13px 14px;
+  padding:12px 13px;
   border:1px solid #ccd8e5;
-  border-radius:8px;
+  border-radius:9px;
   background:#fff;
   color:var(--c-ink);
   font:inherit;
 }
 
-body[data-page="contact"] .formControl::placeholder{
+.formControl::placeholder{
   color:#8796aa;
 }
 
-body[data-page="contact"] .formControl:focus{
+.formControl:focus{
   outline:none;
   border-color:var(--c-blue);
   box-shadow:0 0 0 3px rgba(22,137,232,.12);
 }
 
-body[data-page="contact"] textarea.formControl{
-  min-height:150px;
+textarea.formControl{
+  min-height:145px;
   resize:vertical;
 }
 
-body[data-page="contact"] .fullRow{
+.fullRow{
   grid-column:1 / -1;
 }
 
-body[data-page="contact"] #sendBtn{
+#sendBtn{
   width:100%;
   min-height:50px;
-  margin-top:2px;
-  border-radius:7px;
+  margin-top:1px;
+  border-radius:999px;
   font-weight:900;
 }
 
-body[data-page="contact"] #sendBtn:disabled{
+#sendBtn:disabled{
   cursor:wait;
   opacity:.75;
 }
 
-body[data-page="contact"] .emailFallback{
-  margin-top:18px;
+.emailFallback{
+  margin-top:17px;
+  padding-top:16px;
+  border-top:1px solid #e5ebf2;
   text-align:center;
-  font-size:14px;
+  font-size:13px;
   color:var(--c-muted);
 }
 
-body[data-page="contact"] .emailFallback a{
+.emailFallback a{
   color:#0b63b6;
   font-weight:800;
+  text-decoration:none;
 }
 
-body[data-page="contact"] .bannerSection:nth-of-type(2){
-  width:min(1180px,calc(100% - 64px));
-  max-width:1180px;
-  margin:28px auto 0;
+.emailFallback a:hover{
+  text-decoration:underline;
 }
 
-body[data-page="contact"] .bannerSection:nth-of-type(2) .bannerCard{
+/* Direct email strip */
+.emailStrip{
+  width:min(1120px,calc(100% - 48px));
+  margin:0 auto 70px;
+  padding:25px 28px;
+  box-sizing:border-box;
   border-radius:16px;
-  box-shadow:0 18px 42px rgba(18,42,72,.12);
+  background:#07162d;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  box-shadow:0 16px 38px rgba(7,22,45,.18);
 }
 
-body[data-page="contact"] .footerDivider{
-  display:none!important;
+.emailStripText small{
+  display:block;
+  color:#ffd34e;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:5px;
 }
 
-@media(min-width:1025px){
-  body[data-page="contact"] .bannerSection:first-of-type{
-    width:min(1180px,calc(100% - 64px));
-    max-width:1180px;
-    margin:28px auto 0;
-    box-sizing:border-box;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 10px 28px rgba(18,42,72,.08),0 2px 8px rgba(18,42,72,.05);
-  }
-
-  body[data-page="contact"] .bannerSection:first-of-type img{
-    width:100%;
-    max-width:none;
-    height:auto;
-    display:block;
-  }
+.emailStripText strong{
+  display:block;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:22px;
 }
 
-@media(max-width:1024px){
-  body[data-page="contact"] #siteHeader{
-    height:64px;
+.emailStripText span{
+  display:block;
+  margin-top:3px;
+  color:rgba(255,255,255,.66);
+  font-size:12px;
+}
+
+.emailStrip a{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:0 18px;
+  border-radius:999px;
+  background:#fff;
+  color:#07162d;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:900;
+}
+
+.emailStrip a:hover{
+  background:#ffd34e;
+}
+
+@media(max-width:900px){
+  .contactGrid{
+    grid-template-columns:1fr;
   }
 
-  body[data-page="contact"] .bannerSection:first-of-type{
-    width:100%;
-    margin:0;
+  .contactIntro{
+    padding:0;
   }
 
-  body[data-page="contact"] .bannerSection:first-of-type img{
-    width:100%;
-    height:auto;
-    display:block;
-  }
-
-  body[data-page="contact"] .bannerSection:nth-of-type(2){
-    width:100%;
-    margin:0;
-  }
-
-  body[data-page="contact"] .bannerSection:nth-of-type(2) .bannerCard{
-    border-radius:0;
-    box-shadow:none;
+  .contactReasons{
+    grid-template-columns:repeat(3,1fr);
   }
 }
 
 @media(max-width:700px){
-  body[data-page="contact"] .serviceText{
-    padding:52px 20px;
+  body[data-page="contact"] #siteHeader{
+    height:64px;
   }
 
-  body[data-page="contact"] .contactWrap{
-    padding:52px 16px 58px;
+  .contactHeroInner{
+    width:min(100% - 32px,1120px);
+    padding:45px 0 42px;
   }
 
-  body[data-page="contact"] #quoteForm.card{
+  .contactHero p{
+    font-size:15px;
+  }
+
+  .contactHeroActions{
+    flex-direction:column;
+  }
+
+  .contactButton{
     width:100%;
-    padding:24px 18px;
-    border-radius:14px;
   }
 
-  body[data-page="contact"] .formGrid{
+  .contactHeroMeta{
+    gap:9px 16px;
+  }
+
+  .contactMain{
+    width:min(100% - 32px,1120px);
+    padding:46px 0 54px;
+  }
+
+  .contactReasons{
     grid-template-columns:1fr;
-    gap:18px;
-    margin-top:24px;
   }
 
-  body[data-page="contact"] .fullRow{
+  #quoteForm.card{
+    padding:27px 19px;
+    border-radius:15px;
+  }
+
+  .formGrid{
+    grid-template-columns:1fr;
+    gap:17px;
+    margin-top:23px;
+  }
+
+  .fullRow{
     grid-column:auto;
+  }
+
+  .emailStrip{
+    width:min(100% - 32px,1120px);
+    margin-bottom:48px;
+    padding:24px 20px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .emailStrip a{
+    width:100%;
   }
 }
 </style>
@@ -323,122 +513,162 @@ body[data-page="contact"] .footerDivider{
 
 <main>
 
-<section class="bannerSection">
-  <div class="bannerCard">
-    <img src="images/27229CBD-3947-480E-AB39-1D9CC6B3202E.png" alt="Contact Brad Hobbs Web Design">
-  </div>
-</section>
+<section class="contactHero">
+  <div class="contactHeroInner">
+    <div class="contactEyebrow">Contact Brad Hobbs Web Design</div>
+    <h1>Let’s Build Something <span>That Works.</span></h1>
+    <p>Have a new website in mind, need to improve an existing one, or simply have a question? Tell me what you are working on and we can start there.</p>
 
-<div class="sectionDivider"></div>
-
-<section class="bannerSection">
-  <a href="mailto:brad.hobbs13@icloud.com" class="bannerCard" aria-label="Email Brad Hobbs directly">
-    <img src="images/40411AF9-F914-4D71-AA94-30A89AC34E14.png" alt="Email Brad Hobbs">
-  </a>
-</section>
-
-<div class="sectionDivider"></div>
-
-<section class="serviceText">
-  <h2>Direct Contact with Clarity</h2>
-  <p>Use the form below to tell me about your project, or click the email banner above to contact me directly.</p>
-  <p>Messages are reviewed and answered within 24 hours.</p>
-</section>
-
-<div class="sectionDivider"></div>
-
-<section class="contactWrap">
-
-<form
-  id="quoteForm"
-  class="card contactForm"
-  method="POST"
-  target="hidden_iframe"
-  action="https://docs.google.com/forms/d/e/1FAIpQLSdBbVTznNfzNn8KuLN6IA3fsdxgC4MPw9ryoTQK5fJ4K0bFuA/formResponse"
-  accept-charset="UTF-8"
->
-
-  <div class="formTitle">Send a Message</div>
-  <p class="formSubtitle">Tell me what you need and I will get back to you as soon as possible.</p>
-
-  <div class="formGrid">
-
-    <label class="formLabel">
-      <div class="formLabelTitle">Name</div>
-      <input
-        name="entry.2005620554"
-        type="text"
-        autocomplete="name"
-        required
-        class="formControl"
-        placeholder="Your name"
-      >
-    </label>
-
-    <label class="formLabel">
-      <div class="formLabelTitle">Email</div>
-      <input
-        name="entry.1045781291"
-        type="email"
-        autocomplete="email"
-        required
-        class="formControl"
-        placeholder="you@example.com"
-      >
-    </label>
-
-    <label class="formLabel fullRow">
-      <div class="formLabelTitle">Project Type</div>
-      <select name="entry.1065046570" class="formControl" required>
-        <option value="" disabled selected>Select a project type</option>
-        <option value="Starter Website Package">Starter Website Package</option>
-        <option value="Business Website Package">Business Website Package</option>
-        <option value="Custom Project">Custom Project</option>
-        <option value="Website Redesign">Website Redesign</option>
-        <option value="Website Management">Website Management</option>
-        <option value="E Commerce">E Commerce</option>
-        <option value="SEO & Digital Support">SEO & Digital Support</option>
-        <option value="Computer Education">Computer Education</option>
-        <option value="General Question">General Question</option>
-      </select>
-    </label>
-
-    <label class="formLabel fullRow">
-      <div class="formLabelTitle">Message</div>
-      <textarea
-        name="entry.1166974658"
-        rows="6"
-        required
-        class="formControl"
-        placeholder="Tell me about your project or question..."
-      ></textarea>
-    </label>
-
-    <div class="fullRow">
-      <button id="sendBtn" type="submit" class="btn btnPrimary">Send Message</button>
+    <div class="contactHeroActions">
+      <a class="contactButton primary" href="#quoteForm">Start a Conversation</a>
+      <a class="contactButton secondary" href="mailto:brad.hobbs13@icloud.com">Email Directly</a>
     </div>
 
+    <div class="contactHeroMeta">
+      <span><i></i> Web Design</span>
+      <span><i></i> Redesign</span>
+      <span><i></i> Management</span>
+      <span><i></i> Digital Support</span>
+    </div>
+  </div>
+</section>
+
+<section class="contactMain">
+
+  <div class="contactGrid">
+
+    <div class="contactIntro">
+      <div class="contactIntroEyebrow">Tell Me About Your Project</div>
+      <h2>A Simple Place to Start.</h2>
+      <p>You do not have to have every detail figured out before you reach out. Give me the basics, tell me what you need, and we can work through the next step together.</p>
+
+      <div class="contactReasons">
+        <div class="contactReason">
+          <div class="contactReasonIcon">01</div>
+          <div>
+            <strong>Share Your Idea</strong>
+            <span>Tell me what you are building, changing, or trying to accomplish.</span>
+          </div>
+        </div>
+
+        <div class="contactReason">
+          <div class="contactReasonIcon">02</div>
+          <div>
+            <strong>Choose Your Service</strong>
+            <span>Select the type of project that best matches what you need.</span>
+          </div>
+        </div>
+
+        <div class="contactReason">
+          <div class="contactReasonIcon">03</div>
+          <div>
+            <strong>Start the Conversation</strong>
+            <span>I will review the information and follow up about the next step.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form
+      id="quoteForm"
+      class="card contactForm"
+      method="POST"
+      target="hidden_iframe"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdBbVTznNfzNn8KuLN6IA3fsdxgC4MPw9ryoTQK5fJ4K0bFuA/formResponse"
+      accept-charset="UTF-8"
+    >
+
+      <div class="formTitle">Send a Message</div>
+      <p class="formSubtitle">Tell me what you need and I will get back to you as soon as possible.</p>
+
+      <div class="formGrid">
+
+        <label class="formLabel">
+          <div class="formLabelTitle">Name</div>
+          <input
+            name="entry.2005620554"
+            type="text"
+            autocomplete="name"
+            required
+            class="formControl"
+            placeholder="Your name"
+          >
+        </label>
+
+        <label class="formLabel">
+          <div class="formLabelTitle">Email</div>
+          <input
+            name="entry.1045781291"
+            type="email"
+            autocomplete="email"
+            required
+            class="formControl"
+            placeholder="you@example.com"
+          >
+        </label>
+
+        <label class="formLabel fullRow">
+          <div class="formLabelTitle">Project Type</div>
+          <select name="entry.1065046570" class="formControl" required>
+            <option value="" disabled selected>Select a project type</option>
+            <option value="Starter Website Package">Starter Website Package</option>
+            <option value="Business Website Package">Business Website Package</option>
+            <option value="Custom Project">Custom Project</option>
+            <option value="Website Redesign">Website Redesign</option>
+            <option value="Website Management">Website Management</option>
+            <option value="E Commerce">E Commerce</option>
+            <option value="SEO & Digital Support">SEO & Digital Support</option>
+            <option value="Computer Education">Computer Education</option>
+            <option value="General Question">General Question</option>
+          </select>
+        </label>
+
+        <label class="formLabel fullRow">
+          <div class="formLabelTitle">Message</div>
+          <textarea
+            name="entry.1166974658"
+            rows="6"
+            required
+            class="formControl"
+            placeholder="Tell me about your project or question..."
+          ></textarea>
+        </label>
+
+        <div class="fullRow">
+          <button id="sendBtn" type="submit" class="btn btnPrimary">Send Message</button>
+        </div>
+
+      </div>
+
+      <div class="emailFallback">
+        Prefer email?
+        <a href="mailto:brad.hobbs13@icloud.com">brad.hobbs13@icloud.com</a>
+      </div>
+
+    </form>
+
+    <iframe
+      name="hidden_iframe"
+      title="Form submission"
+      style="display:none;"
+      aria-hidden="true"
+    ></iframe>
+
   </div>
 
-  <div class="emailFallback">
-    Prefer email?
-    <a href="mailto:brad.hobbs13@icloud.com">brad.hobbs13@icloud.com</a>
+</section>
+
+<section class="emailStrip">
+  <div class="emailStripText">
+    <small>Prefer Direct Email?</small>
+    <strong>brad.hobbs13@icloud.com</strong>
+    <span>You can reach out directly if that is easier.</span>
   </div>
-
-</form>
-
-<iframe
-  name="hidden_iframe"
-  title="Form submission"
-  style="display:none;"
-  aria-hidden="true"
-></iframe>
-
+  <a href="mailto:brad.hobbs13@icloud.com">Email Brad</a>
 </section>
 
 </main>
 
-<div class="sectionDivider footerDivider"></div>
 <div id="siteFooter"></div>
 
 </div>
