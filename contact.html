@@ -13,29 +13,7 @@
 
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
 
-<style>
-:root{
-  --contact-navy:#07162d;
-  --contact-blue:#1689e8;
-  --contact-gold:#ffd34e;
-  --contact-ink:#10233f;
-  --contact-muted:#64748b;
-  --contact-line:#dce5ef;
-  --contact-bg:#eef3f8;
-}
-
-body[data-page="contact"]{
-  padding-top:0!important;
-  background:var(--contact-bg);
-  color:var(--contact-ink);
-  overflow-x:hidden;
-}
-body[data-page="contact"] .wrap{width:100%;max-width:none;margin:0;padding:0}
-body[data-page="contact"] #siteHeader{height:70px;position:relative}
-body[data-page="contact"] main{width:100%;margin:0;padding:0}
-
-/* A deliberately different contact layout: compact intro, then one strong conversation panel */
-.contactIntroBar{
+ar{
   background:var(--contact-navy);
   color:#fff;
   border-bottom:1px solid rgba(255,255,255,.08);
@@ -360,7 +338,214 @@ textarea.formControl{min-height:150px;resize:vertical}
   .fullRow{grid-column:auto}
   .contactBottom{margin-bottom:48px}
 }
+
+/* Service page style hero */
+.contactServiceHero{position:relative;background:radial-gradient(circle at 82% 28%,rgba(47,179,255,.18),transparent 27%),radial-gradient(circle at 15% 75%,rgba(255,211,78,.08),transparent 24%),linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff;overflow:hidden}
+.contactServiceHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:80px;background:var(--contact-bg);clip-path:polygon(0 100%,100% 0,100% 100%)}
+.contactServiceHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:150px 0 120px}
+.contactServiceEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.contactServiceEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.contactServiceHero h1{max-width:900px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,78px);line-height:1.01;letter-spacing:-.025em}
+.contactServiceHero h1 span{color:#ffd45f}
+.contactServiceLead{max-width:790px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.contactServiceActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.contactServiceButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:900;transition:.2s ease}
+.contactServiceButton.primary{background:#1689e8;color:#fff;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.contactServiceButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.contactServiceButton.secondary{border:1px solid rgba(255,255,255,.25);color:#fff;background:rgba(255,255,255,.05)}
+.contactServiceButton.secondary:hover{background:rgba(255,255,255,.1)}
+.contactServiceMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.contactServiceMeta span{display:flex;align-items:center;gap:7px}.contactServiceMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
+@media(max-width:620px){.contactServiceHeroInner{padding:130px 0 100px}.contactServiceHero h1{font-size:clamp(40px,12vw,58px)}.contactServiceLead{font-size:15px}.contactServiceMeta{gap:10px 15px}.contactServiceButton{width:100%}.contactServiceActions{flex-direction:column}}
 </style>
+</head>
+
+<body data-page="contact">
+
+<div class="wrap">
+
+<header id="siteHeader"></header>
+
+<main><section class="contactServiceHero">
+  <div class="contactServiceHeroInner">
+    <div class="contactServiceEyebrow">Contact Brad Hobbs Web Design</div>
+    <h1>Let’s Talk About <span>Your Project.</span></h1>
+    <p class="contactServiceLead">Whether you are building a new website, improving an existing one, or need ongoing digital support, this is where we can start the conversation.</p>
+    <div class="contactServiceActions">
+      <a class="contactServiceButton primary" href="#quoteForm">Start a Conversation</a>
+      <a class="contactServiceButton secondary" href="mailto:brad.hobbs13@icloud.com">Email Me Directly</a>
+    </div>
+    <div class="contactServiceMeta">
+      <span><i></i> Web Design</span>
+      <span><i></i> Redesign</span>
+      <span><i></i> Website Support</span>
+      <span><i></i> Digital Services</span>
+    </div>
+  </div>
+</section>
+
+<section class="contactStage">
+  <div class="contactPanel">
+
+    <aside class="contactSide">
+      <div class="contactSideContent">
+        <div class="contactSideNumber">01</div>
+        <h2>Start With<br><span>What You Need.</span></h2>
+        <p class="contactSideLead">You do not need a perfect plan before you reach out. Give me the information you have, and we can figure out the next step from there.</p>
+
+        <div class="contactList">
+          <div class="contactListItem">
+            <div class="contactListIcon">01</div>
+            <div>
+              <strong>Tell Me Your Goal</strong>
+              <span>Describe what you want your website or digital project to accomplish.</span>
+            </div>
+          </div>
+          <div class="contactListItem">
+            <div class="contactListIcon">02</div>
+            <div>
+              <strong>Tell Me What You Have</strong>
+              <span>Let me know whether this is a new project, redesign, update, or support request.</span>
+            </div>
+          </div>
+          <div class="contactListItem">
+            <div class="contactListIcon">03</div>
+            <div>
+              <strong>Let’s Figure Out the Next Step</strong>
+              <span>I will review your message and follow up with the information needed to move forward.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contactSideBottom">
+        <strong>Prefer direct email?</strong><br>
+        brad.hobbs13@icloud.com
+      </div>
+    </aside>
+
+    <div class="contactFormArea">
+      <div class="contactFormHeading">
+        <div>
+          <h2>Tell Me About It.</h2>
+          <p>Complete the form below. A few details are enough to get the conversation started.</p>
+        </div>
+        <div class="formBadge">Project Inquiry</div>
+      </div>
+
+      <form
+        id="quoteForm"
+        class="card contactForm"
+        method="POST"
+        target="hidden_iframe"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSdBbVTznNfzNn8KuLN6IA3fsdxgC4MPw9ryoTQK5fJ4K0bFuA/formResponse"
+        accept-charset="UTF-8"
+      >
+        <div class="formGrid">
+
+          <label class="formLabel">
+            <div class="formLabelTitle">Name</div>
+            <input name="entry.2005620554" type="text" autocomplete="name" required class="formControl" placeholder="Your name">
+          </label>
+
+          <label class="formLabel">
+            <div class="formLabelTitle">Email</div>
+            <input name="entry.1045781291" type="email" autocomplete="email" required class="formControl" placeholder="you@example.com">
+          </label>
+
+          <label class="formLabel fullRow">
+            <div class="formLabelTitle">Project Type</div>
+            <select name="entry.1065046570" class="formControl" required>
+              <option value="" disabled selected>Select a project type</option>
+              <option value="Starter Website Package">Starter Website Package</option>
+              <option value="Business Website Package">Business Website Package</option>
+              <option value="Custom Project">Custom Project</option>
+              <option value="Website Redesign">Website Redesign</option>
+              <option value="Website Management">Website Management</option>
+              <option value="E Commerce">E Commerce</option>
+              <option value="SEO & Digital Support">SEO & Digital Support</option>
+              <option value="Computer Education">Computer Education</option>
+              <option value="General Question">General Question</option>
+            </select>
+          </label>
+
+          <label class="formLabel fullRow">
+            <div class="formLabelTitle">Message</div>
+            <textarea name="entry.1166974658" rows="6" required class="formControl" placeholder="Tell me about your project or question..."></textarea>
+          </label>
+
+          <div class="fullRow">
+            <button id="sendBtn" type="submit" class="btn btnPrimary">Send Message</button>
+          </div>
+
+        </div>
+
+        <div class="emailFallback">
+          Prefer email?
+          <a href="mailto:brad.hobbs13@icloud.com">brad.hobbs13@icloud.com</a>
+        </div>
+      </form>
+
+      <iframe name="hidden_iframe" title="Form submission" style="display:none;" aria-hidden="true"></iframe>
+    </div>
+
+  </div>
+</section>
+
+<section class="contactBottom">
+  <div class="contactBottomCard">
+    <small>New Website</small>
+    <strong>Build From the Ground Up</strong>
+    <span>A new website planned around your goals, audience, and message.</span>
+  </div>
+  <div class="contactBottomCard">
+    <small>Existing Website</small>
+    <strong>Refresh What You Have</strong>
+    <span>Improve structure, presentation, mobile experience, and content.</span>
+  </div>
+  <div class="contactBottomCard">
+    <small>Ongoing Support</small>
+    <strong>Keep It Current</strong>
+    <span>Management, monitoring, SEO support, and practical digital help.</span>
+  </div>
+</section>
+
+</main>
+
+<div id="siteFooter"></div>
+
+</div>
+
+<script src="/brad-hobbswd/layout.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const form = document.getElementById("quoteForm");
+  const iframe = document.querySelector('iframe[name="hidden_iframe"]');
+  const button = document.getElementById("sendBtn");
+
+  if(!form || !iframe || !button) return;
+
+  let submitted = false;
+
+  form.addEventListener("submit", function(){
+    submitted = true;
+    button.disabled = true;
+    button.textContent = "Sending...";
+  });
+
+  iframe.addEventListener("load", function(){
+    if(!submitted) return;
+
+    window.location.href = "/brad-hobbswd/thanks.html";
+  });
+
+});
+</script>
+
+</body>
+</html>
 </head>
 
 <body data-page="contact">
