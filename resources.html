@@ -1,651 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Resources | Brad Hobbs Web Design</title>
-<meta name="description" content="Website hosting, domain tools, DNS checking, and practical resources to support your online presence.">
-
+<meta name="description" content="Practical website resources for domains, DNS, hosting, deployment, and building a reliable online presence.">
 <link rel="icon" href="/brad-hobbswd/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
-
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
-
 <style>
-:root{
-  --r-navy:#07162d;
-  --r-navy2:#0b2344;
-  --r-blue:#1689e8;
-  --r-gold:#e9a817;
-  --r-ink:#12233f;
-  --r-muted:#596a82;
-  --r-light:#f4f7fb;
-  --r-line:#dbe4ee;
-}
+.resourcesPage{background:#eef3f8;color:#12233f;overflow:hidden}
+.resourcesHero{position:relative;background:
+radial-gradient(circle at 82% 24%,rgba(47,179,255,.20),transparent 28%),
+radial-gradient(circle at 15% 75%,rgba(255,211,78,.09),transparent 25%),
+linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.resourcesHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:78px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.resourcesHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:150px 0 120px}
+.resourcesEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.resourcesEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.resourcesHero h1{max-width:880px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,76px);line-height:1.01;letter-spacing:-.025em}
+.resourcesHero h1 span{color:#ffd45f}
+.resourcesLead{max-width:760px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.resourcesActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.resourcesButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 21px;border-radius:999px;text-decoration:none!important;font-size:13px;font-weight:900;transition:.2s ease}
+.resourcesButton.primary{background:#1689e8;color:#fff!important;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.resourcesButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.resourcesButton.secondary{border:1px solid rgba(255,255,255,.25);color:#fff!important;background:rgba(255,255,255,.05)}
+.resourcesButton.secondary:hover{background:rgba(255,255,255,.1)}
+.resourcesMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.resourcesMeta span{display:flex;align-items:center;gap:7px}.resourcesMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
 
-body.resourcesPage{
-  padding-top:0!important;
-  background:var(--r-light)!important;
-  color:var(--r-ink);
-  overflow-x:hidden;
-}
+.resourcesSection{width:min(1120px,92%);margin:auto;padding:86px 0}
+.resourcesIntro{max-width:760px;margin-bottom:34px}
+.resourcesLabel{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.resourcesIntro h2{margin:9px 0 12px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px);line-height:1.08}
+.resourcesIntro p{margin:0;color:#596a82;font-size:16px;line-height:1.75}
 
-body.resourcesPage .wrap{
-  width:100%;
-  max-width:none;
-  margin:0;
-  padding:0;
-}
+.toolGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.toolCard{padding:28px;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08)}
+.toolCard:before{content:"";display:block;width:100%;height:4px;margin:-28px 0 25px;background:linear-gradient(90deg,#1689e8,#ffd45f);border-radius:20px 20px 0 0}
+.toolIcon{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:#edf7ff;color:#1689e8;font-weight:900;font-size:18px}
+.toolCard h3{margin:17px 0 8px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:24px}
+.toolCard p{margin:0;color:#617189;font-size:14px;line-height:1.7}
+.toolForm{display:flex;gap:10px;margin-top:20px}
+.toolForm input{min-width:0;flex:1;min-height:46px;padding:0 14px;border:1px solid #dce5ef;border-radius:10px;color:#12233f;font:inherit;background:#fff;box-sizing:border-box}
+.toolForm input:focus{outline:none;border-color:#1689e8;box-shadow:0 0 0 3px rgba(22,137,232,.12)}
+.toolForm button{min-height:46px;padding:0 16px;border:0;border-radius:10px;background:#07182d;color:#fff;font-weight:900;cursor:pointer}
 
-body.resourcesPage #siteHeader{
-  height:70px;
-  position:relative;
-}
+.hostingSection{background:#fff;border-top:1px solid #dce5ef;border-bottom:1px solid #dce5ef}
+.hostingGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hostingCard{position:relative;display:flex;min-height:205px;padding:24px;background:#fff;border:1px solid #dce5ef;border-radius:18px;box-shadow:0 10px 28px rgba(18,42,72,.07);transition:.22s ease;overflow:hidden}
+.hostingCard:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#1689e8,#ffd45f)}
+.hostingCard:hover{transform:translateY(-4px);box-shadow:0 17px 35px rgba(18,42,72,.12)}
+.hostingCard.featured{border-color:rgba(233,168,23,.65)}
+.hostingInner{display:flex;gap:15px;align-items:flex-start}
+.hostingLogo{width:56px;height:56px;flex:0 0 56px;object-fit:contain}
+.hostingCard.featured .hostingLogo{width:66px;height:66px;flex-basis:66px}
+.hostingCard h3{margin:0;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:20px}
+.hostingMeta{margin:6px 0;color:#164c80;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.featuredBadge{display:inline-block;margin:2px 0 7px;padding:4px 7px;border-radius:999px;background:#ffd45f;color:#17243a;font-size:9px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+.hostingCard p{margin:9px 0 14px;color:#617189;font-size:13px;line-height:1.55}
+.hostingLink{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 13px;border-radius:9px;background:#edf7ff;color:#075b9d!important;text-decoration:none!important;font-size:11px;font-weight:900}
 
-body.resourcesPage main{
-  width:100%;
-  margin:0;
-  padding:0;
-}
+.resourceBand{background:#07182d;color:#fff}
+.resourceBand .resourcesSection{padding:80px 0}
+.resourceBand .resourcesLabel{color:#ffd45f}
+.resourceBand h2{margin:9px 0 13px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px)}
+.resourceBand p{max-width:780px;margin:0;color:#b8cbe0;font-size:16px;line-height:1.75}
+.resourcePoints{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.resourcePoint{padding:22px;border:1px solid rgba(255,255,255,.11);border-radius:16px;background:rgba(255,255,255,.045)}
+.resourcePoint strong{display:block;color:#fff;font-size:15px}
+.resourcePoint span{display:block;margin-top:7px;color:#a9bdd4;font-size:13px;line-height:1.6}
 
-body.resourcesPage .bannerSection{
-  width:min(1180px,calc(100% - 64px));
-  max-width:1180px;
-  margin:28px auto 0;
-  background:#061327;
-  line-height:0;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 18px 42px rgba(18,42,72,.12);
-}
+.resourcesCta{background:radial-gradient(850px 300px at 50% 0%,rgba(47,179,255,.27),transparent 65%),linear-gradient(135deg,#061329,#071d3b 52%,#041022);color:#fff;text-align:center}
+.resourcesCtaInner{width:min(900px,92%);margin:auto;padding:74px 0}
+.resourcesCta h2{margin:0;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,5vw,52px)}
+.resourcesCta p{max-width:700px;margin:15px auto 0;color:#d7e4f2;font-size:16px;line-height:1.7}
+.resourcesCta .resourcesActions{justify-content:center}
 
-body.resourcesPage .bannerCard{
-  display:block;
-  width:100%;
-  margin:0;
-  border:0;
-  background:#061327;
-}
-
-body.resourcesPage .bannerImg{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-body.resourcesPage .sectionDivider{
-  width:min(900px,88%);
-  height:1px;
-  margin:28px auto 0;
-  background:linear-gradient(90deg,transparent,var(--r-blue),var(--r-gold),transparent);
-}
-
-.hostingIntro{
-  width:100%;
-  box-sizing:border-box;
-  margin:0;
-  padding:70px 24px 64px;
-  background:#fff;
-  text-align:center;
-}
-
-.hostingIntro h2,
-.domain-search h2,
-.dns-check h2,
-.resourcesHosting>h2,
-.cta h2{
-  font-family:Georgia,"Times New Roman",serif;
-}
-
-.hostingIntro h2{
-  width:min(850px,100%);
-  margin:0 auto;
-  color:var(--r-ink);
-  font-size:clamp(34px,4.5vw,52px);
-  line-height:1.08;
-}
-
-.hostingIntro p{
-  width:min(760px,100%);
-  margin:16px auto 0;
-  color:var(--r-muted);
-  font-size:16px;
-  line-height:1.75;
-}
-
-.toolSection{
-  width:min(1120px,calc(100% - 48px));
-  box-sizing:border-box;
-  margin:0 auto;
-  padding:58px 30px;
-  background:#fff;
-  text-align:center;
-}
-
-.toolSection h2{
-  margin:0;
-  color:var(--r-ink);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(29px,3.5vw,42px);
-}
-
-.toolSection p{
-  color:var(--r-muted);
-  line-height:1.6;
-}
-
-.toolForm{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
-  max-width:650px;
-  margin:22px auto 0;
-}
-
-.toolForm input{
-  box-sizing:border-box;
-  flex:1;
-  width:auto;
-  min-height:46px;
-  margin:0;
-  padding:13px 15px;
-  border:1px solid var(--r-line);
-  border-radius:8px;
-  background:#fff;
-  color:var(--r-ink);
-  font:inherit;
-}
-
-.toolForm input:focus{
-  outline:none;
-  border-color:var(--r-blue);
-  box-shadow:0 0 0 3px rgba(22,137,232,.12);
-}
-
-.toolForm button{
-  min-height:46px;
-  padding:0 17px;
-  border:0;
-  border-radius:7px;
-  background:var(--r-gold);
-  color:#17243a;
-  font-weight:900;
-  cursor:pointer;
-}
-
-.resourcesHosting{
-  width:min(1160px,calc(100% - 48px));
-  max-width:1160px;
-  margin:0 auto;
-  padding:70px 0 76px;
-  box-sizing:border-box;
-}
-
-.resourcesHosting>h2{
-  margin:0;
-  text-align:center;
-  color:var(--r-ink);
-  font-size:clamp(32px,4vw,46px);
-  line-height:1.1;
-}
-
-.resourcesHosting>p{
-  width:min(760px,100%);
-  max-width:760px;
-  margin:14px auto 36px;
-  text-align:center;
-  color:var(--r-muted);
-  line-height:1.7;
-}
-
-.resourcesHosting .grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:22px;
-  width:100%;
-}
-
-.resourcesHosting .card{
-  min-width:0;
-  min-height:220px;
-  padding:24px;
-  box-sizing:border-box;
-  background:#fff;
-  border:1px solid var(--r-line);
-  border-radius:14px;
-  box-shadow:0 14px 34px rgba(18,42,72,.08);
-  transition:transform .22s ease,box-shadow .22s ease;
-}
-
-.resourcesHosting .card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 22px 44px rgba(18,42,72,.14);
-}
-
-.cardInner{
-  display:flex;
-  gap:16px;
-  align-items:flex-start;
-}
-
-.cardInner>div{
-  min-width:0;
-}
-
-.logoImg{
-  width:54px;
-  height:54px;
-  flex:0 0 54px;
-  object-fit:contain;
-}
-
-.featuredCard{
-  border-color:rgba(233,168,23,.7)!important;
-}
-
-.featuredCard .logoImg{
-  width:72px;
-  height:72px;
-  flex-basis:72px;
-}
-
-.cardTitle{
-  margin:0;
-  color:var(--r-ink);
-  font-size:18px;
-  line-height:1.2;
-}
-
-.meta{
-  margin:6px 0 4px;
-  color:#164c80;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-}
-
-.badge{
-  display:inline-block;
-  margin:2px 0 2px;
-  padding:4px 7px;
-  border-radius:5px;
-  background:var(--r-gold);
-  color:#17243a;
-  font-size:11px;
-  font-weight:900;
-}
-
-.desc{
-  margin:10px 0 0;
-  color:var(--r-muted);
-  font-size:14px;
-  line-height:1.55;
-}
-
-.actions{
-  margin-top:14px;
-}
-
-.resourcesHosting .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:42px;
-  padding:0 13px;
-  border-radius:7px;
-  font-size:12px;
-  font-weight:900;
-  text-decoration:none;
-}
-
-.cta{
-  width:100%;
-  box-sizing:border-box;
-  margin:0;
-  padding:70px 20px;
-  background:radial-gradient(700px 260px at 50% 0%,rgba(22,137,232,.27),transparent 68%),linear-gradient(135deg,#061329,#071d3b 52%,#041022);
-  text-align:center;
-}
-
-.cta h2{
-  margin:0;
-  color:#fff;
-  font-size:clamp(33px,4.5vw,50px);
-}
-
-.cta p{
-  max-width:700px;
-  margin:15px auto 22px;
-  color:#d7e4f2;
-  line-height:1.7;
-}
-
-.cta .btnPrimary{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:48px;
-  padding:0 22px;
-  border-radius:7px;
-  font-weight:900;
-}
-
-body.resourcesPage .footerDivider{
-  display:none!important;
-}
-
-@media(max-width:950px) and (min-width:701px){
-  .resourcesHosting .grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-}
-
-@media(max-width:700px){
-  body.resourcesPage #siteHeader{
-    height:64px;
-  }
-
-  body.resourcesPage .bannerSection{
-    width:100%;
-    margin:0;
-    border-radius:0;
-    box-shadow:none;
-  }
-
-  .hostingIntro{
-    padding:52px 20px;
-  }
-
-  .hostingIntro h2{
-    font-size:38px;
-  }
-
-  .hostingIntro p{
-    font-size:15px;
-  }
-
-  .toolSection{
-    width:calc(100% - 32px);
-    padding:45px 16px;
-  }
-
-  .toolForm{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  .toolForm input,
-  .toolForm button{
-    width:100%;
-  }
-
-  .resourcesHosting{
-    width:calc(100% - 32px);
-    padding:52px 0;
-  }
-
-  .resourcesHosting .grid{
-    grid-template-columns:1fr;
-    gap:16px;
-  }
-
-  .resourcesHosting .card{
-    min-height:0;
-  }
-
-  .cta{
-    padding:56px 20px;
-  }
-
-  .cta h2{
-    font-size:36px;
-    line-height:1.12;
-  }
-}
+@media(max-width:950px){.hostingGrid{grid-template-columns:1fr 1fr}.resourcePoints{grid-template-columns:1fr}.toolGrid{grid-template-columns:1fr}}
+@media(max-width:650px){.resourcesHeroInner{padding:120px 0 105px}.resourcesHero h1{font-size:42px}.resourcesLead{font-size:16px}.resourcesSection{padding:62px 0}.hostingGrid{grid-template-columns:1fr}.toolForm{flex-direction:column}.toolForm input,.toolForm button{width:100%}.hostingCard{min-height:0}.resourcesCtaInner{padding:56px 0}.resourcesCta h2{font-size:36px;line-height:1.12}}
 </style>
 </head>
-
-<body class="resourcesPage" data-page="resources">
-
-<div class="wrap">
-
-<header id="siteHeader"></header>
+<body class="resourcesPage">
+<div id="siteHeader"></div>
 
 <main>
-
-<section class="bannerSection">
-  <div class="bannerCard">
-    <img class="bannerImg" src="images/6B216624-9A4B-4730-90A0-A9A69CD2F7F4.png" alt="Website Hosting and Domain Resources">
+<section class="resourcesHero">
+  <div class="resourcesHeroInner">
+    <div class="resourcesEyebrow">Resources & Tools</div>
+    <h1>Practical Tools for <span>Your Website.</span></h1>
+    <p class="resourcesLead">The right website starts with more than good design. Domains, hosting, DNS, deployment, and technical tools all play a part in keeping your online presence available and dependable.</p>
+    <div class="resourcesActions">
+      <a class="resourcesButton primary" href="/brad-hobbswd/packages.html">EXPLORE WEBSITE SERVICES →</a>
+      <a class="resourcesButton secondary" href="/brad-hobbswd/seo-digital-support.html">SEO & DIGITAL SUPPORT</a>
+    </div>
+    <div class="resourcesMeta">
+      <span><i></i>Domains</span><span><i></i>Hosting</span><span><i></i>DNS</span><span><i></i>Deployment</span>
+    </div>
   </div>
 </section>
 
-<div class="sectionDivider"></div>
-
-<section class="hostingIntro">
-  <h2>Recommended Website Hosting</h2>
-  <p>Reliable website hosting provides the foundation that keeps a site visible, secure, and performing smoothly for visitors around the world.</p>
-  <p>These resources can help individuals, ministries, and businesses choose dependable and easy to use platforms.</p>
-</section>
-
-<div class="sectionDivider"></div>
-
-<section class="toolSection">
-  <h2>Search Domain Ownership</h2>
-  <p>Check a domain's registration and ownership information.</p>
-
-  <form class="toolForm" id="domainSearchForm">
-    <input type="text" id="domainInput" placeholder="example.com" autocomplete="url" required>
-    <button type="submit">Search Domain</button>
-  </form>
-</section>
-
-<section class="toolSection">
-  <h2>DNS Propagation Checker</h2>
-  <p>Check how DNS records are resolving across locations.</p>
-
-  <form class="toolForm" id="dnsCheckForm">
-    <input type="text" id="dnsInput" placeholder="example.com" autocomplete="url" required>
-    <button type="submit">Check DNS Propagation</button>
-  </form>
-</section>
-
-<div class="sectionDivider"></div>
-
-<section class="resourcesHosting">
-
-  <h2>Hosting Platforms</h2>
-  <p>Explore hosting and domain platforms that may fit different website needs and budgets.</p>
-
-  <div class="grid">
-
-    <article class="card featuredCard">
-      <div class="cardInner">
-        <a class="logoLink" href="https://www.whois.com" target="_blank" rel="noopener noreferrer">
-          <img class="logoImg" src="/brad-hobbswd/images/whois-com-logo.png" alt="Whois.com logo">
-        </a>
-        <div>
-          <h2 class="cardTitle">Whois.com</h2>
-          <div class="meta">Domain Tools</div>
-          <div class="badge">Featured Resource</div>
-          <p class="desc">Domain search, registration information, ownership lookup, and hosting resources.</p>
-          <div class="actions">
-            <a class="btn btnPrimary" href="https://www.whois.com" target="_blank" rel="noopener noreferrer">Visit Website</a>
-          </div>
-        </div>
+<section>
+  <div class="resourcesSection">
+    <div class="resourcesIntro">
+      <div class="resourcesLabel">01 • Domain & DNS Tools</div>
+      <h2>Check the Technical Details Behind Your Website.</h2>
+      <p>These tools give you a practical way to check domain registration information and see how DNS records are resolving across locations.</p>
+    </div>
+    <div class="toolGrid">
+      <div class="toolCard">
+        <div class="toolIcon">⌕</div>
+        <h3>Search Domain Ownership</h3>
+        <p>Enter a domain name to open its Whois registration and ownership information.</p>
+        <form class="toolForm" id="domainSearchForm">
+          <input type="text" id="domainInput" placeholder="example.com" autocomplete="url" required>
+          <button type="submit">SEARCH</button>
+        </form>
       </div>
-    </article>
-
-    <article class="card">
-      <div class="cardInner">
-        <a class="logoLink" href="https://www.hostinger.com" target="_blank" rel="noopener noreferrer">
-          <img class="logoImg" src="https://cdn.simpleicons.org/hostinger/673de6" alt="Hostinger logo">
-        </a>
-        <div>
-          <h2 class="cardTitle">Hostinger</h2>
-          <div class="meta">Low Cost Hosting</div>
-          <p class="desc">Affordable hosting with website building and performance tools.</p>
-          <div class="actions"><a class="btn btnPrimary" href="https://www.hostinger.com" target="_blank" rel="noopener noreferrer">Visit Website</a></div>
-        </div>
+      <div class="toolCard">
+        <div class="toolIcon">⌁</div>
+        <h3>DNS Propagation Checker</h3>
+        <p>Check how DNS records are resolving across locations and troubleshoot common propagation questions.</p>
+        <form class="toolForm" id="dnsCheckForm">
+          <input type="text" id="dnsInput" placeholder="example.com" autocomplete="url" required>
+          <button type="submit">CHECK DNS</button>
+        </form>
       </div>
-    </article>
-
-    <article class="card">
-      <div class="cardInner">
-        <a class="logoLink" href="https://www.namecheap.com" target="_blank" rel="noopener noreferrer">
-          <img class="logoImg" src="https://cdn.simpleicons.org/namecheap/ff6a00" alt="Namecheap logo">
-        </a>
-        <div>
-          <h2 class="cardTitle">Namecheap</h2>
-          <div class="meta">Domain and Hosting</div>
-          <p class="desc">Domain registration and hosting services.</p>
-          <div class="actions"><a class="btn btnPrimary" href="https://www.namecheap.com" target="_blank" rel="noopener noreferrer">Visit Website</a></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="cardInner">
-        <a class="logoLink" href="https://www.ionos.com" target="_blank" rel="noopener noreferrer">
-          <img class="logoImg" src="https://cdn.simpleicons.org/ionos/003d8f" alt="IONOS logo">
-        </a>
-        <div>
-          <h2 class="cardTitle">IONOS</h2>
-          <div class="meta">Low Cost Hosting</div>
-          <p class="desc">Hosting, domains, and website services.</p>
-          <div class="actions"><a class="btn btnPrimary" href="https://www.ionos.com" target="_blank" rel="noopener noreferrer">Visit Website</a></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="cardInner">
-        <a class="logoLink" href="https://www.bluehost.com" target="_blank" rel="noopener noreferrer">
-          <img class="logoImg" src="/brad-hobbswd/images/bluehost-logo.png" alt="Bluehost logo">
-        </a>
-        <div>
-          <h2 class="cardTitle">Bluehost</h2>
-          <div class="meta">Website Hosting</div>
-          <p class="desc">Beginner friendly hosting and WordPress tools.</p>
-          <div class="actions"><a class="btn btnPrimary" href="https://www.bluehost.com" target="_blank" rel="noopener noreferrer">Visit Website</a></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="cardInner">
-        <a class="logoLink" href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">
-          <img class="logoImg" src="https://cdn.simpleicons.org/netlify/00c7b7" alt="Netlify logo">
-        </a>
-        <div>
-          <h2 class="cardTitle">Netlify</h2>
-          <div class="meta">Static Hosting</div>
-          <p class="desc">Fast hosting and deployment for modern static websites.</p>
-          <div class="actions"><a class="btn btnPrimary" href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">Visit Website</a></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="cardInner">
-        <a class="logoLink" href="https://pages.github.com" target="_blank" rel="noopener noreferrer">
-          <img class="logoImg" src="https://cdn.simpleicons.org/github/000000" alt="GitHub logo">
-        </a>
-        <div>
-          <h2 class="cardTitle">GitHub Pages</h2>
-          <div class="meta">Static Hosting</div>
-          <p class="desc">Simple hosting for static websites connected to GitHub repositories.</p>
-          <div class="actions"><a class="btn btnPrimary" href="https://pages.github.com" target="_blank" rel="noopener noreferrer">Visit Website</a></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="cardInner">
-        <a class="logoLink" href="https://vercel.com" target="_blank" rel="noopener noreferrer">
-          <img class="logoImg" src="https://cdn.simpleicons.org/vercel/000000" alt="Vercel logo">
-        </a>
-        <div>
-          <h2 class="cardTitle">Vercel</h2>
-          <div class="meta">Web Hosting</div>
-          <p class="desc">High performance hosting and deployment for web projects.</p>
-          <div class="actions"><a class="btn btnPrimary" href="https://vercel.com" target="_blank" rel="noopener noreferrer">Visit Website</a></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="cardInner">
-        <a class="logoLink" href="https://pages.cloudflare.com" target="_blank" rel="noopener noreferrer">
-          <img class="logoImg" src="https://cdn.simpleicons.org/cloudflare/f38020" alt="Cloudflare logo">
-        </a>
-        <div>
-          <h2 class="cardTitle">Cloudflare Pages</h2>
-          <div class="meta">Static Hosting</div>
-          <p class="desc">Global CDN powered hosting and deployment.</p>
-          <div class="actions"><a class="btn btnPrimary" href="https://pages.cloudflare.com" target="_blank" rel="noopener noreferrer">Visit Website</a></div>
-        </div>
-      </div>
-    </article>
-
+    </div>
   </div>
 </section>
 
-<div class="sectionDivider"></div>
-
-<section class="cta">
-  <h2>Need Help Building a Website?</h2>
-  <p>Professional website design, hosting setup, and deployment services are available.</p>
-  <a href="/brad-hobbswd/packages.html" class="btn btnPrimary">View Website Services</a>
+<section class="hostingSection">
+  <div class="resourcesSection">
+    <div class="resourcesIntro">
+      <div class="resourcesLabel">02 • Hosting Platforms</div>
+      <h2>Explore Hosting Options.</h2>
+      <p>Different websites have different technical and budget needs. These platforms can help you compare common hosting and deployment options.</p>
+    </div>
+    <div class="hostingGrid">
+      <article class="hostingCard featured">
+        <div class="hostingInner">
+          <img class="hostingLogo" src="/brad-hobbswd/images/whois-com-logo.png" alt="Whois.com logo">
+          <div><h3>Whois.com</h3><div class="hostingMeta">Domain Tools</div><span class="featuredBadge">Featured Resource</span><p>Domain search, registration information, ownership lookup, and hosting resources.</p><a class="hostingLink" href="https://www.whois.com" target="_blank" rel="noopener noreferrer">VISIT WEBSITE ↗</a></div>
+        </div>
+      </article>
+      <article class="hostingCard"><div class="hostingInner"><img class="hostingLogo" src="https://cdn.simpleicons.org/hostinger/673de6" alt="Hostinger logo"><div><h3>Hostinger</h3><div class="hostingMeta">Low Cost Hosting</div><p>Affordable hosting with website building and performance tools.</p><a class="hostingLink" href="https://www.hostinger.com" target="_blank" rel="noopener noreferrer">VISIT WEBSITE ↗</a></div></div></article>
+      <article class="hostingCard"><div class="hostingInner"><img class="hostingLogo" src="https://cdn.simpleicons.org/namecheap/ff6a00" alt="Namecheap logo"><div><h3>Namecheap</h3><div class="hostingMeta">Domain & Hosting</div><p>Domain registration and hosting services.</p><a class="hostingLink" href="https://www.namecheap.com" target="_blank" rel="noopener noreferrer">VISIT WEBSITE ↗</a></div></div></article>
+      <article class="hostingCard"><div class="hostingInner"><img class="hostingLogo" src="https://cdn.simpleicons.org/ionos/003d8f" alt="IONOS logo"><div><h3>IONOS</h3><div class="hostingMeta">Hosting</div><p>Hosting, domains, and website services.</p><a class="hostingLink" href="https://www.ionos.com" target="_blank" rel="noopener noreferrer">VISIT WEBSITE ↗</a></div></div></article>
+      <article class="hostingCard"><div class="hostingInner"><img class="hostingLogo" src="/brad-hobbswd/images/bluehost-logo.png" alt="Bluehost logo"><div><h3>Bluehost</h3><div class="hostingMeta">Website Hosting</div><p>Beginner friendly hosting and WordPress tools.</p><a class="hostingLink" href="https://www.bluehost.com" target="_blank" rel="noopener noreferrer">VISIT WEBSITE ↗</a></div></div></article>
+      <article class="hostingCard"><div class="hostingInner"><img class="hostingLogo" src="https://cdn.simpleicons.org/netlify/00c7b7" alt="Netlify logo"><div><h3>Netlify</h3><div class="hostingMeta">Static Hosting</div><p>Fast hosting and deployment for modern static websites.</p><a class="hostingLink" href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">VISIT WEBSITE ↗</a></div></div></article>
+      <article class="hostingCard"><div class="hostingInner"><img class="hostingLogo" src="https://cdn.simpleicons.org/github/000000" alt="GitHub logo"><div><h3>GitHub Pages</h3><div class="hostingMeta">Static Hosting</div><p>Simple hosting for static websites connected to GitHub repositories.</p><a class="hostingLink" href="https://pages.github.com" target="_blank" rel="noopener noreferrer">VISIT WEBSITE ↗</a></div></div></article>
+      <article class="hostingCard"><div class="hostingInner"><img class="hostingLogo" src="https://cdn.simpleicons.org/vercel/000000" alt="Vercel logo"><div><h3>Vercel</h3><div class="hostingMeta">Web Hosting</div><p>High performance hosting and deployment for web projects.</p><a class="hostingLink" href="https://vercel.com" target="_blank" rel="noopener noreferrer">VISIT WEBSITE ↗</a></div></div></article>
+      <article class="hostingCard"><div class="hostingInner"><img class="hostingLogo" src="https://cdn.simpleicons.org/cloudflare/f38020" alt="Cloudflare logo"><div><h3>Cloudflare Pages</h3><div class="hostingMeta">Static Hosting</div><p>Global CDN powered hosting and deployment.</p><a class="hostingLink" href="https://pages.cloudflare.com" target="_blank" rel="noopener noreferrer">VISIT WEBSITE ↗</a></div></div></article>
+    </div>
+  </div>
 </section>
 
+<section class="resourceBand">
+  <div class="resourcesSection">
+    <div class="resourcesLabel">03 • Building a Reliable Online Presence</div>
+    <h2>The Website Is More Than the Design.</h2>
+    <p>A strong online presence depends on the pieces behind the visible pages. A domain identifies your site, hosting delivers it, DNS directs visitors, and deployment tools help move updates from development to the live website.</p>
+    <div class="resourcePoints">
+      <div class="resourcePoint"><strong>Domain</strong><span>Your website's address and digital identity.</span></div>
+      <div class="resourcePoint"><strong>Hosting</strong><span>The infrastructure that makes your website available online.</span></div>
+      <div class="resourcePoint"><strong>DNS</strong><span>The system that directs your domain to the right destination.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="resourcesCta">
+  <div class="resourcesCtaInner">
+    <h2>Need Help With the Technical Side?</h2>
+    <p>If you are not sure which hosting option, domain setup, DNS configuration, or website service you need, we can work through the details together.</p>
+    <div class="resourcesActions">
+      <a class="resourcesButton primary" href="/brad-hobbswd/contact.html">CONTACT BRAD →</a>
+      <a class="resourcesButton secondary" href="/brad-hobbswd/seo-digital-support.html">SEO & DIGITAL SUPPORT</a>
+    </div>
+  </div>
+</section>
 </main>
 
 <div id="siteFooter"></div>
-
-</div>
-
 <script src="/brad-hobbswd/layout.js"></script>
-
 <script>
 (function(){
   function cleanDomain(value){
-    return value
-      .trim()
-      .replace(/^https?:\/\//i,"")
-      .replace(/^www\./i,"")
-      .split("/")[0]
-      .split("?")[0]
-      .split("#")[0];
+    return value.trim().replace(/^https?:\/\//i,"").replace(/^www\./i,"").split("/")[0].split("?")[0].split("#")[0];
   }
-
   const domainForm=document.getElementById("domainSearchForm");
   const domainInput=document.getElementById("domainInput");
   const dnsForm=document.getElementById("dnsCheckForm");
   const dnsInput=document.getElementById("dnsInput");
-
-  if(domainForm){
-    domainForm.addEventListener("submit",function(e){
-      e.preventDefault();
-      const domain=cleanDomain(domainInput.value);
-      if(!domain) return;
-      window.open("https://www.whois.com/whois/"+encodeURIComponent(domain),"_blank","noopener,noreferrer");
-    });
-  }
-
-  if(dnsForm){
-    dnsForm.addEventListener("submit",function(e){
-      e.preventDefault();
-      const domain=cleanDomain(dnsInput.value);
-      if(!domain) return;
-      window.open("https://dnschecker.org/#A/"+encodeURIComponent(domain),"_blank","noopener,noreferrer");
-    });
-  }
+  if(domainForm) domainForm.addEventListener("submit",function(e){
+    e.preventDefault();
+    const domain=cleanDomain(domainInput.value);
+    if(domain) window.open("https://www.whois.com/whois/"+encodeURIComponent(domain),"_blank","noopener,noreferrer");
+  });
+  if(dnsForm) dnsForm.addEventListener("submit",function(e){
+    e.preventDefault();
+    const domain=cleanDomain(dnsInput.value);
+    if(domain) window.open("https://dnschecker.org/#A/"+encodeURIComponent(domain),"_blank","noopener,noreferrer");
+  });
 })();
 </script>
-
 </body>
 </html>
