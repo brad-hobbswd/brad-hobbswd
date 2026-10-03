@@ -1,646 +1,177 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services | Brad Hobbs Web Design</title>
-<meta name="description" content="Explore web design, website redesign, management, monitoring, SEO structure, business support, and digital services from Brad Hobbs Web Design.">
-
+<meta name="description" content="Explore complete website solutions including web design, redesign, website management, monitoring, e commerce, SEO and digital support, and education services from Brad Hobbs Web Design.">
 <link rel="icon" href="/brad-hobbswd/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=20">
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
 
 <style>
-:root{
-  --service-navy:#07162d;
-  --service-blue:#0b63b6;
-  --service-bright:#1689e8;
-  --service-gold:#e9a817;
-  --service-ink:#12233f;
-  --service-muted:#52627b;
-  --service-light:#f5f8fc;
-  --service-line:#dce5ef;
-}
+.servicesPage{background:#eef3f8;color:#12233f;overflow:hidden}
+.servicesHero{position:relative;background:
+radial-gradient(circle at 82% 24%,rgba(47,179,255,.20),transparent 28%),
+radial-gradient(circle at 15% 75%,rgba(255,211,78,.09),transparent 25%),
+linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.servicesHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:78px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.servicesHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:150px 0 120px}
+.servicesEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.servicesEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.servicesHero h1{max-width:900px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,76px);line-height:1.01;letter-spacing:-.025em}
+.servicesHero h1 span{color:#ffd45f}
+.servicesLead{max-width:760px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.servicesActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.servicesButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 21px;border-radius:999px;text-decoration:none!important;font-size:13px;font-weight:900;transition:.2s ease}
+.servicesButton.primary{background:#1689e8;color:#fff!important;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.servicesButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.servicesButton.secondary{border:1px solid rgba(255,255,255,.25);color:#fff!important;background:rgba(255,255,255,.05)}
+.servicesButton.secondary:hover{background:rgba(255,255,255,.1)}
+.servicesMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:34px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.servicesMeta span{display:flex;align-items:center;gap:7px}.servicesMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
 
-body[data-page="services"]{
-  background:#eef3f8;
-  color:var(--service-ink);
-  padding-top:0 !important;
-}
+.servicesSection{width:min(1120px,92%);margin:auto;padding:86px 0}
+.sectionIntro{max-width:760px;margin-bottom:34px}
+.sectionLabel{color:#b27600;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.sectionIntro h2{margin:9px 0 12px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px);line-height:1.08}
+.sectionIntro p{margin:0;color:#596a82;font-size:16px;line-height:1.75}
 
-body[data-page="services"] .wrap{
-  width:100%;
-  max-width:none;
-  margin:0;
-  padding:0;
-}
+.serviceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.serviceCard{position:relative;display:flex;flex-direction:column;min-height:245px;padding:27px;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08);text-decoration:none!important;overflow:hidden;transition:.22s ease}
+.serviceCard:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,#1689e8,#ffd45f)}
+.serviceCard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(18,42,72,.13);border-color:#b8d4eb}
+.serviceNumber{color:#1689e8;font-size:11px;font-weight:900;letter-spacing:.12em}
+.serviceIcon{width:44px;height:44px;display:grid;place-items:center;margin-top:16px;border-radius:13px;background:#edf7ff;color:#1689e8;font-size:19px;font-weight:900}
+.serviceCard h3{margin:18px 0 9px;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:24px;line-height:1.1}
+.serviceCard p{margin:0;color:#617189;font-size:14px;line-height:1.7}
+.serviceCard .learn{margin-top:auto;padding-top:20px;color:#b27600;font-size:11px;font-weight:900;letter-spacing:.08em}
 
-body[data-page="services"] #siteHeader{
-  height:70px;
-  position:relative;
-}
+.serviceStatement{background:#07182d;color:#fff;position:relative}
+.serviceStatement:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:rgba(47,179,255,.28)}
+.statementGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+.serviceStatement .servicesSection{padding:88px 0}
+.serviceStatement .sectionLabel{color:#ffd45f}
+.serviceStatement h2{margin:9px 0 14px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,50px);line-height:1.08}
+.serviceStatement p{margin:0;color:#b8cbe0;font-size:16px;line-height:1.75}
+.statementCards{display:grid;gap:12px}
+.statementCard{padding:21px;border:1px solid rgba(255,255,255,.11);border-radius:16px;background:rgba(255,255,255,.045)}
+.statementCard strong{display:block;color:#fff;font-size:15px}
+.statementCard span{display:block;margin-top:7px;color:#a9bdd4;font-size:13px;line-height:1.6}
 
-body[data-page="services"] main{
-  width:100%;
-  padding:0 0 0;
-  margin:0;
-}
+.expectGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.expectCard{padding:25px;background:#fff;border:1px solid #dce5ef;border-radius:17px;box-shadow:0 10px 28px rgba(18,42,72,.07)}
+.expectCard strong{display:block;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:20px}
+.expectCard p{margin:9px 0 0;color:#617189;font-size:14px;line-height:1.65}
 
-.servicesHero{
-  background:#fff;
-  width:min(1180px,calc(100% - 64px));
-  margin:28px auto 0;
-}
+.servicesCta{background:
+radial-gradient(850px 320px at 50% 0%,rgba(47,179,255,.25),transparent 65%),
+linear-gradient(135deg,#061329 0%,#071d3b 48%,#041022 100%);color:#fff}
+.servicesCta .servicesSection{text-align:center;padding:72px 0}
+.servicesCta h2{margin:0;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(33px,5vw,50px);line-height:1.08}
+.servicesCta p{max-width:700px;margin:14px auto 0;color:#dce7f4;font-size:16px;line-height:1.7}
+.servicesCta .servicesActions{justify-content:center}
 
-.servicesHeroImage{
-  width:100%;
-  line-height:0;
-  overflow:hidden;
-  background:#061327;
-  border-radius:16px;
+@media(max-width:850px){
+  .serviceGrid{grid-template-columns:1fr 1fr}
+  .expectGrid{grid-template-columns:1fr}
+  .statementGrid{grid-template-columns:1fr}
 }
-
-.servicesHeroImage img{
-  display:block;
-  width:100%;
-  height:auto;
-  max-width:none;
-}
-
-.servicesIntro,
-.serviceBlock,
-.servicesCta{
-  width:100%;
-  background:#fff;
-}
-
-.servicesIntro.alt,
-.serviceBlock.alt{
-  background:var(--service-light);
-}
-
-.servicesInner{
-  width:min(1180px,92%);
-  margin:0 auto;
-  padding:62px 0;
-}
-
-.servicesIntroGrid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:42px;
-  align-items:center;
-}
-
-.servicesEyebrow{
-  display:flex;
-  align-items:center;
-  gap:11px;
-  margin:0 0 12px;
-  color:#123d70;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.13em;
-  text-transform:uppercase;
-}
-
-.servicesEyebrow::before{
-  content:"";
-  width:40px;
-  height:2px;
-  background:var(--service-gold);
-}
-
-.servicesHeading{
-  margin:0;
-  color:var(--service-ink);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(34px,4.4vw,56px);
-  line-height:1.04;
-  letter-spacing:-.035em;
-}
-
-.servicesHeading span{
-  color:var(--service-gold);
-}
-
-.servicesLead{
-  margin:18px 0 0;
-  max-width:700px;
-  color:var(--service-muted);
-  font-size:17px;
-  line-height:1.72;
-}
-
-.servicesButtons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:13px;
-  margin-top:26px;
-}
-
-.servicesButton{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:46px;
-  padding:0 21px;
-  border-radius:7px;
-  background:var(--service-gold);
-  color:#111d31 !important;
-  font-weight:900;
-  text-decoration:none !important;
-  box-shadow:0 7px 18px rgba(20,40,70,.12);
-}
-
-.servicesButton.secondary{
-  background:#fff;
-  color:#114a86 !important;
-  border:1px solid #2d72bb;
-  box-shadow:none;
-}
-
-.servicesIntroCard{
-  background:#fff;
-  border:1px solid var(--service-line);
-  border-radius:12px;
-  padding:12px;
-  box-shadow:0 15px 35px rgba(18,42,72,.10);
-}
-
-.servicesIntroCard img{
-  width:100%;
-  display:block;
-  border-radius:7px;
-}
-
-.sectionHeading{
-  text-align:center;
-  max-width:760px;
-  margin:0 auto 34px;
-}
-
-.sectionHeading .servicesEyebrow{
-  justify-content:center;
-}
-
-.sectionHeading .servicesEyebrow::before{
-  display:none;
-}
-
-.sectionHeading h2{
-  margin:0;
-  color:var(--service-ink);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(30px,4vw,46px);
-  line-height:1.08;
-}
-
-.sectionHeading p{
-  margin:14px auto 0;
-  color:var(--service-muted);
-  font-size:16px;
-  line-height:1.7;
-}
-
-.serviceCards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.serviceCardNew{
-  background:#fff;
-  border:1px solid var(--service-line);
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 9px 25px rgba(18,42,72,.08);
-}
-
-.serviceCardNew img{
-  width:100%;
-  height:auto;
-  display:block;
-  object-fit:contain;
-  object-position:center;
-  background:#07162d;
-}
-
-.serviceCardContent{
-  padding:22px;
-}
-
-.serviceCardContent h3{
-  margin:0;
-  color:#15345d;
-  font-size:21px;
-  line-height:1.2;
-}
-
-.serviceCardContent p{
-  margin:11px 0 16px;
-  color:#596a82;
-  font-size:14px;
-  line-height:1.6;
-}
-
-.servicePointsNew{
-  display:grid;
-  gap:9px;
-}
-
-.servicePointsNew div{
-  color:#43546d;
-  font-size:13px;
-  line-height:1.4;
-}
-
-.servicePointsNew div::before{
-  content:"✓";
-  color:#d39a0d;
-  margin-right:8px;
-  font-weight:900;
-}
-
-.businessCard{
-  display:grid;
-  grid-template-columns:.95fr 1.05fr;
-  gap:35px;
-  align-items:center;
-}
-
-.businessImage{
-  background:#fff;
-  border:1px solid var(--service-line);
-  border-radius:12px;
-  padding:12px;
-  box-shadow:0 14px 32px rgba(18,42,72,.10);
-}
-
-.businessImage img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:7px;
-  object-fit:contain;
-}
-
-.businessCopy h2{
-  margin:0;
-  color:var(--service-ink);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(29px,3.6vw,43px);
-  line-height:1.08;
-}
-
-.businessCopy p{
-  margin:16px 0 0;
-  color:var(--service-muted);
-  font-size:16px;
-  line-height:1.7;
-}
-
-.businessPoints{
-  display:grid;
-  gap:10px;
-  margin-top:19px;
-}
-
-.businessPoints div{
-  color:#43546d;
-  font-size:14px;
-}
-
-.businessPoints div::before{
-  content:"✓";
-  color:#d39a0d;
-  font-weight:900;
-  margin-right:9px;
-}
-
-.servicesCta{
-  position:relative;
-  background:
-    radial-gradient(900px 320px at 50% 0%,rgba(22,137,232,.30),transparent 65%),
-    radial-gradient(700px 300px at 20% 100%,rgba(233,168,23,.10),transparent 70%),
-    linear-gradient(135deg,#061329 0%,#071d3b 48%,#041022 100%);
-  color:#fff;
-}
-
-.servicesCta .servicesInner{
-  text-align:center;
-  padding:58px 0;
-}
-
-.servicesCta h2{
-  margin:0;
-  color:#fff;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(31px,4vw,48px);
-  line-height:1.08;
-}
-
-.servicesCta p{
-  max-width:700px;
-  margin:14px auto 0;
-  color:#dce7f4;
-  font-size:16px;
-  line-height:1.7;
-}
-
-.servicesCta .servicesButtons{
-  justify-content:center;
-}
-
-@media(max-width:900px){
-  .serviceCards{grid-template-columns:1fr 1fr;}
-  .servicesIntroGrid,.businessCard{grid-template-columns:1fr;}
-  .servicesIntroCard{max-width:700px;margin:0 auto;}
-}
-
 @media(max-width:600px){
-  body[data-page="services"] #siteHeader{height:64px;}
-  .servicesInner{width:92%;padding:46px 0;}
-  .serviceCards{grid-template-columns:1fr;}
-  .servicesHeading{font-size:39px;}
-  .servicesLead{font-size:15px;}
-  .servicesIntroCard{padding:8px;}
-  .serviceCardContent{padding:19px;}
+  .servicesHeroInner{padding:120px 0 105px}
+  .servicesHero h1{font-size:43px}
+  .servicesLead{font-size:16px}
+  .serviceGrid{grid-template-columns:1fr}
+  .servicesSection{padding:64px 0}
+  .serviceCard{min-height:0}
 }
-</style>
-<style id="desktop-banner-sizing">
-@media(min-width:901px){
- body[data-page="services"] .serviceHero,
- body[data-page="services"] .serviceHeroImage,
- body[data-page="services"] .serviceBanner,
- body[data-page="services"] .bannerSection{width:min(1180px,calc(100% - 48px));margin-left:auto!important;margin-right:auto!important}
- body[data-page="services"] .serviceHero img,
- body[data-page="services"] .serviceHeroImage img{width:100%;height:auto;display:block}
-}
-@media(max-width:900px){
- body[data-page="services"] .serviceHero,
- body[data-page="services"] .serviceHeroImage,
- body[data-page="services"] .bannerSection{width:100%;margin-left:0!important;margin-right:0!important}
-}
-</style><style id="final-first-banner-sizing">
-@media(min-width:1025px){
- body[data-page="services"] .servicesHero{
-   width:min(1180px,calc(100% - 64px))!important;
-   margin:28px auto 0!important;
- }
- body[data-page="services"] .servicesHero img{
-   width:100%!important;
-   height:auto!important;
-   display:block!important;
- }
-}
-@media(max-width:1024px){
- body[data-page="services"] .servicesHero{
-   width:100%!important;
-   margin:0!important;
- }
- body[data-page="services"] .servicesHeroImage{
-   border-radius:0!important;
- }
-}
-</style><style id="desktop-first-banner-hard-fix">
-@media (min-width:1025px){
- body .servicesHero{
-   width:min(1180px,calc(100% - 64px)) !important;
-   max-width:1180px !important;
-   margin:28px auto 0 !important;
-   box-sizing:border-box !important;
- }
- body .servicesHero img{
-   width:100% !important;
-   max-width:none !important;
-   height:auto !important;
-   display:block !important;
- }
-}
-@media (max-width:1024px){
- body .servicesHero{
-   width:100% !important;
-   max-width:none !important;
-   margin:0 !important;
- }
- body .servicesHero img{
-   width:100% !important;
-   height:auto !important;
-   display:block !important;
- }
-}
-</style>
-<style id="seven-services-detail">
-.serviceOverviewGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;align-items:stretch}
-.serviceOverviewCard{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0;padding:22px 12px 20px;background:#fff;border:1px solid #dce5ef;border-radius:11px;box-shadow:0 9px 25px rgba(18,42,72,.07);text-decoration:none!important;color:#12233f!important;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
-.serviceOverviewCard:hover{transform:translateY(-3px);border-color:#1689e8;box-shadow:0 14px 30px rgba(18,42,72,.11)}
-.serviceIcon{width:48px;height:48px;border:2px solid #0b63b6;border-radius:50%;display:grid;place-items:center;color:#0b63b6;font-size:18px;font-weight:900;margin-bottom:12px;background:#fbf8e8}
-.serviceOverviewCard h3{margin:0;color:#09244b;font-size:15px;line-height:1.25}.serviceOverviewCard p{margin:11px 0 18px;color:#52627b;font-size:12px;line-height:1.5}.serviceOverviewCard b{margin-top:auto;color:#b97800;font-size:11px;letter-spacing:.05em}
-.serviceDetail{background:#fff}.serviceDetail.alt{background:#f5f8fc}.serviceDetailGrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.serviceDetailGrid.reverse>div:first-child{order:2}.serviceDetailGrid.reverse>div:last-child{order:1}
-.serviceDetailImage{background:#fff;border:1px solid #dce5ef;border-radius:12px;padding:12px;box-shadow:0 14px 32px rgba(18,42,72,.09)}.serviceDetailImage img{width:100%;height:auto;display:block;border-radius:7px}
-.serviceDetailCopy h2{margin:0;color:#12233f;font-family:Georgia,"Times New Roman",serif;font-size:clamp(29px,3.5vw,44px);line-height:1.08}.serviceDetailCopy p{margin:15px 0 0;color:#52627b;font-size:16px;line-height:1.72}.serviceDetailCopy ul,.serviceDetailPanel ul{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:9px}.serviceDetailCopy li,.serviceDetailPanel li{color:#43546d;font-size:14px;line-height:1.45}.serviceDetailCopy li::before,.serviceDetailPanel li::before{content:"✓";color:#d39a0d;font-weight:900;margin-right:9px}
-.serviceDetailPanel{background:#fff;border:1px solid #dce5ef;border-radius:14px;padding:30px;box-shadow:0 14px 32px rgba(18,42,72,.08)}.serviceDetailPanel .detailNumber{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#07162d;color:#ffd34e;font-weight:900;margin-bottom:18px}.serviceDetailPanel h3{margin:0;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:28px}.serviceDetailPanel p{margin:13px 0 0;color:#52627b;font-size:15px;line-height:1.7}
-@media(max-width:1100px){.serviceOverviewGrid{grid-template-columns:repeat(4,1fr)}}
-@media(max-width:800px){.serviceOverviewGrid{grid-template-columns:repeat(2,1fr)}.serviceDetailGrid{grid-template-columns:1fr;gap:30px}.serviceDetailGrid.reverse>div:first-child,.serviceDetailGrid.reverse>div:last-child{order:initial}}
-@media(max-width:500px){.serviceOverviewGrid{grid-template-columns:1fr}.serviceOverviewCard{padding:22px 20px}.serviceDetailCopy p{font-size:15px}.serviceDetailPanel{padding:23px}}
-</style>
-
-<style id="intro-message-finish">
-.servicesIntroMessage{padding:34px!important;display:flex;flex-direction:column;justify-content:center;min-height:250px;background:linear-gradient(145deg,#07162d 0%,#0b2d55 100%)!important;border-color:#173f6c!important;color:#fff}.introMessageIcon{width:52px;height:52px;border:2px solid #ffd34e;border-radius:50%;display:grid;place-items:center;color:#ffd34e;font-size:21px;margin-bottom:18px}.servicesIntroMessage h2{margin:0;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:29px;line-height:1.15}.servicesIntroMessage p{margin:13px 0 0;color:#dce7f4;font-size:15px;line-height:1.7}.introMessageLine{width:52px;height:2px;background:#ffd34e;margin:20px 0 13px}.servicesIntroMessage strong{color:#ffd34e;font-size:12px;letter-spacing:.06em;text-transform:uppercase}@media(max-width:600px){.servicesIntroMessage{padding:26px!important;min-height:0}}
-</style>
-
-<style id="education-services-finish">
-.educationIntro{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}.educationIntroCopy h2{margin:0;color:#12233f;font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,3.7vw,46px);line-height:1.08}.educationIntroCopy p{margin:15px 0 0;color:#52627b;font-size:16px;line-height:1.72}.educationIntroCopy strong{color:#173e6c}.educationButtons{display:flex;flex-wrap:wrap;margin-top:25px}.educationIntro .serviceDetailPanel{height:fit-content}.educationIntro .serviceDetailPanel h3{margin-bottom:2px}.educationIntro .serviceDetailPanel ul{margin-top:12px}.educationIntro .serviceDetailPanel li{padding-bottom:3px}.educationIntro .serviceDetailPanel li::before{color:#1689e8}@media(max-width:800px){.educationIntro{grid-template-columns:1fr;gap:28px}}
 </style>
 </head>
 
-<body data-page="services">
+<body>
+<div id="siteHeader"></div>
 
-<div class="wrap">
+<main class="servicesPage">
 
-<header id="siteHeader"></header>
-
-<main>
-
-  <section class="servicesHero">
-    <div class="servicesHeroImage">
-      <img src="images/61EAEF59-D39E-4CC7-A0A8-6DA7B79E729A.jpeg"
-           alt="Brad Hobbs Web Design services">
+<section class="servicesHero">
+  <div class="servicesHeroInner">
+    <div class="servicesEyebrow">Complete Website Solutions</div>
+    <h1>Everything Your Website Needs for <span>What Comes Next.</span></h1>
+    <p class="servicesLead">From building a new website to improving an existing one, managing changes, monitoring your site, supporting online sales, improving search visibility, or teaching practical technology skills, these services are designed to give you a clear path forward.</p>
+    <div class="servicesActions">
+      <a class="servicesButton primary" href="/brad-hobbswd/packages.html">EXPLORE PACKAGES →</a>
+      <a class="servicesButton secondary" href="/brad-hobbswd/contact.html">TALK ABOUT YOUR PROJECT</a>
     </div>
-  </section>
-
-  <section class="servicesIntro">
-    <div class="servicesInner servicesIntroGrid">
-      <div>
-        <div class="servicesEyebrow">My Services</div>
-        <h1 class="servicesHeading">Services Built With <span>Clarity and Purpose.</span></h1>
-        <p class="servicesLead">
-          Every service is designed to bring structure, direction, and confidence to your business.
-          You are not left guessing what comes next. Each step is intentional and built to support real growth.
-        </p>
-        <div class="servicesButtons">
-          <a class="servicesButton" href="/brad-hobbswd/packages.html">START A PROJECT →</a>
-          <a class="servicesButton secondary" href="/brad-hobbswd/process.html">VIEW THE PROCESS</a>
-        </div>
-      </div>
-
-      <div class="servicesIntroCard servicesIntroMessage">
-        <div class="introMessageIcon">✦</div>
-        <h2>One Clear Digital Direction</h2>
-        <p>Whether you are starting from the beginning, updating an existing website, adding online sales, improving visibility, or learning new digital skills, each service is designed to give you a practical path forward.</p>
-        <div class="introMessageLine"></div>
-        <strong>Websites With Purpose. Support With Clarity.</strong>
-      </div>
+    <div class="servicesMeta">
+      <span><i></i>Web Design</span>
+      <span><i></i>Redesign</span>
+      <span><i></i>Management</span>
+      <span><i></i>Digital Support</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="serviceBlock alt">
-    <div class="servicesInner">
-      <div class="sectionHeading">
-        <div class="servicesEyebrow">Complete Website Solutions</div>
-        <h2>Services That Help You Build, Improve, and Grow</h2>
-        <p>Each service below is explained in practical terms so you can see what it includes, why it matters, and how it can support your business or organization.</p>
-      </div>
+<section class="servicesSection">
+  <div class="sectionIntro">
+    <div class="sectionLabel">01 • What I Offer</div>
+    <h2>Seven Services. One Clear Direction.</h2>
+    <p>Each service has a specific purpose, but they can work together as your website and digital needs change. Select a service to explore the dedicated page.</p>
+  </div>
 
-      <div class="serviceOverviewGrid">
-        <a href="#web-design" class="serviceOverviewCard"><span class="serviceIcon">▣</span><h3>Web Design</h3><p>Custom websites built around your goals and your business.</p><b>LEARN MORE →</b></a>
-        <a href="#redesign" class="serviceOverviewCard"><span class="serviceIcon">↻</span><h3>Website Redesign</h3><p>A complete transformation of an existing website.</p><b>LEARN MORE →</b></a>
-        <a href="#management" class="serviceOverviewCard"><span class="serviceIcon">⚙</span><h3>Website Management</h3><p>Ongoing updates, content changes, maintenance, and improvements.</p><b>LEARN MORE →</b></a>
-        <a href="#monitoring" class="serviceOverviewCard"><span class="serviceIcon">⌕</span><h3>Website Monitoring</h3><p>Keeping an eye on your website so issues can be addressed quickly.</p><b>LEARN MORE →</b></a>
-        <a href="#ecommerce" class="serviceOverviewCard"><span class="serviceIcon">▱</span><h3>E Commerce</h3><p>Online stores designed to showcase products and support ordering.</p><b>LEARN MORE →</b></a>
-        <a href="#seo" class="serviceOverviewCard"><span class="serviceIcon">▥</span><h3>SEO &amp; Digital Support</h3><p>Website structure, search visibility, technical support, and ongoing digital help.</p><b>LEARN MORE →</b></a>
-        <a href="#education" class="serviceOverviewCard"><span class="serviceIcon">◆</span><h3>Education Services</h3><p>Computer, web design, coding, and practical digital skills training.</p><b>LEARN MORE →</b></a>
-      </div>
+  <div class="serviceGrid">
+    <a class="serviceCard" href="/brad-hobbswd/web-design.html"><span class="serviceNumber">01</span><span class="serviceIcon">▣</span><h3>Web Design</h3><p>Custom websites built around your goals, audience, brand, and the experience you want visitors to have.</p><span class="learn">EXPLORE WEB DESIGN →</span></a>
+    <a class="serviceCard" href="/brad-hobbswd/website-redesign.html"><span class="serviceNumber">02</span><span class="serviceIcon">↻</span><h3>Website Redesign</h3><p>Refresh the look, structure, navigation, mobile experience, and presentation of an existing website.</p><span class="learn">EXPLORE REDESIGN →</span></a>
+    <a class="serviceCard" href="/brad-hobbswd/website-management.html"><span class="serviceNumber">03</span><span class="serviceIcon">⚙</span><h3>Website Management</h3><p>Keep your website current with content updates, page changes, maintenance, and ongoing improvements.</p><span class="learn">EXPLORE MANAGEMENT →</span></a>
+    <a class="serviceCard" href="/brad-hobbswd/website-monitoring.html"><span class="serviceNumber">04</span><span class="serviceIcon">⌕</span><h3>Website Monitoring</h3><p>Keep an eye on your website so noticeable issues, disruptions, and important functions do not go unnoticed.</p><span class="learn">EXPLORE MONITORING →</span></a>
+    <a class="serviceCard" href="/brad-hobbswd/e-commerce.html"><span class="serviceNumber">05</span><span class="serviceIcon">▱</span><h3>E Commerce</h3><p>Build a professional online shopping experience that presents products clearly and supports your business goals.</p><span class="learn">EXPLORE E COMMERCE →</span></a>
+    <a class="serviceCard" href="/brad-hobbswd/seo-digital-support.html"><span class="serviceNumber">06</span><span class="serviceIcon">⌁</span><h3>SEO &amp; Digital Support</h3><p>Strengthen website structure, search visibility, technical foundations, and practical digital workflows.</p><span class="learn">EXPLORE SEO &amp; SUPPORT →</span></a>
+    <a class="serviceCard" href="/brad-hobbswd/education-services.html"><span class="serviceNumber">07</span><span class="serviceIcon">◆</span><h3>Education Services</h3><p>Practical technology, web design, coding, and early childhood leadership support built around real learning needs.</p><span class="learn">EXPLORE EDUCATION →</span></a>
+  </div>
+</section>
+
+<section class="serviceStatement">
+  <div class="servicesSection statementGrid">
+    <div>
+      <div class="sectionLabel">02 • More Than a Website</div>
+      <h2>Build It. Improve It. Keep It Moving.</h2>
+      <p>Your website does not stop being useful when it launches. Your business changes, your audience changes, and your digital needs change. The services can support different stages of that journey, from the first build through ongoing care and improvement.</p>
     </div>
-  </section>
-
-  <section class="serviceDetail" id="web-design">
-    <div class="servicesInner serviceDetailGrid">
-      <div class="serviceDetailImage"><img src="images/45A124B9-1AFC-448F-AEE9-861E774E3F23.png" alt="Professional website design"></div>
-      <div class="serviceDetailCopy">
-        <div class="servicesEyebrow">01 • Web Design</div>
-        <h2>Websites Built Around Your Vision</h2>
-        <p>Web design is more than choosing colors and putting information on a page. Your website should communicate who you are, what you offer, and what visitors should do next.</p>
-        <p>I build custom websites with a clear structure, professional presentation, responsive layouts, and an experience designed around your goals.</p>
-        <ul><li>Custom website planning and design</li><li>Responsive layouts for desktop, tablet, and mobile</li><li>Clear navigation and organized content</li><li>Calls to action that guide visitors</li><li>Professional presentation aligned with your brand</li></ul>
-      </div>
+    <div class="statementCards">
+      <div class="statementCard"><strong>Start With a Strong Foundation</strong><span>Plan and build a website that gives your business a professional place to be represented online.</span></div>
+      <div class="statementCard"><strong>Keep It Current</strong><span>Management and monitoring help you stay aware of changes and keep important information up to date.</span></div>
+      <div class="statementCard"><strong>Keep Learning</strong><span>Education services extend beyond the website with practical technology and digital skills training.</span></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="serviceDetail alt" id="redesign">
-    <div class="servicesInner serviceDetailGrid reverse">
-      <div class="serviceDetailPanel"><span class="detailNumber">02</span><h3>Website Redesign</h3><p>A redesign can refresh the look, structure, and experience of an existing website while keeping the parts that still serve your business.</p><ul><li>Existing website review</li><li>Modern layout and presentation</li><li>Improved navigation and organization</li><li>Responsive mobile improvements</li><li>Clearer calls to action</li></ul></div>
-      <div class="serviceDetailCopy">
-        <div class="servicesEyebrow">02 • Website Redesign</div>
-        <h2>Give Your Existing Website a Fresh Direction</h2>
-        <p>If your current website feels outdated, difficult to navigate, inconsistent, or no longer represents your business, a redesign can give it a completely different experience without losing the purpose behind it.</p>
-        <p>The goal is to improve clarity, presentation, usability, and structure so your website feels current and works better for the people using it.</p>
-        <ul><li>Review of the existing website</li><li>Modern visual and layout improvements</li><li>Improved navigation and content organization</li><li>Mobile and responsive improvements</li><li>Refined calls to action and user experience</li></ul>
-      </div>
-    </div>
-  </section>
+<section class="servicesSection">
+  <div class="sectionIntro">
+    <div class="sectionLabel">03 • What You Can Expect</div>
+    <h2>Clear Services. Practical Support.</h2>
+    <p>The goal is to make the process understandable from the beginning and keep the work focused on what your website actually needs.</p>
+  </div>
+  <div class="expectGrid">
+    <div class="expectCard"><strong>Clear Direction</strong><p>You should understand what is being built, changed, managed, or supported and why it matters.</p></div>
+    <div class="expectCard"><strong>Professional Presentation</strong><p>Your website should reflect the quality, identity, and purpose of the business or organization behind it.</p></div>
+    <div class="expectCard"><strong>Support Beyond Launch</strong><p>When your needs continue after launch, management, monitoring, SEO, digital support, and education can help you keep moving.</p></div>
+  </div>
+</section>
 
-  <section class="serviceDetail" id="management">
-    <div class="servicesInner serviceDetailGrid">
-      <div class="serviceDetailPanel"><span class="detailNumber">03</span><h3>Website Management</h3><p>Your website should not become something you have to worry about every time a change is needed. Website management provides ongoing help with the day to day upkeep of your digital presence.</p><ul><li>Text and content updates</li><li>Image and page changes</li><li>New pages and sections</li><li>Routine maintenance</li><li>Continued improvements as your needs change</li></ul></div>
-      <div class="serviceDetailCopy">
-        <div class="servicesEyebrow">03 • Website Management</div>
-        <h2>Keep Your Website Current</h2>
-        <p>Businesses change. Services change. Hours change. Promotions change. Your website should be able to change with you.</p>
-        <p>Management support helps keep your website accurate, useful, organized, and aligned with what is happening in your business.</p>
-      </div>
+<section class="servicesCta">
+  <div class="servicesSection">
+    <h2>Ready to Find the Right Starting Point?</h2>
+    <p>Explore the packages, review the process, or start a conversation about what your website needs next.</p>
+    <div class="servicesActions">
+      <a class="servicesButton primary" href="/brad-hobbswd/packages.html">VIEW PACKAGES →</a>
+      <a class="servicesButton secondary" href="/brad-hobbswd/contact.html">CONTACT BRAD</a>
     </div>
-  </section>
-
-  <section class="serviceDetail alt" id="monitoring">
-    <div class="servicesInner serviceDetailGrid reverse">
-      <div class="serviceDetailPanel"><span class="detailNumber">04</span><h3>Website Monitoring</h3><p>Monitoring is focused on keeping watch over the condition and accessibility of your website so problems can be identified and addressed as quickly as possible.</p><ul><li>Website availability checks</li><li>Basic issue identification</li><li>Monitoring of important website functions</li><li>Attention to noticeable errors or disruptions</li><li>Communication when an issue needs attention</li></ul></div>
-      <div class="serviceDetailCopy">
-        <div class="servicesEyebrow">04 • Website Monitoring</div>
-        <h2>Keep an Eye on What You Have Built</h2>
-        <p>A website can look perfect when it launches and still experience problems later. Monitoring adds another layer of awareness after launch.</p>
-        <p>It works alongside management so your website is not simply launched and forgotten.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="serviceDetail" id="ecommerce">
-    <div class="servicesInner serviceDetailGrid">
-      <div class="serviceDetailPanel"><span class="detailNumber">05</span><h3>E Commerce</h3><p>Turn your website into a place where customers can explore products and move toward an online purchase.</p><ul><li>Product focused page layouts</li><li>Online store structure</li><li>Product presentation and organization</li><li>Customer friendly navigation</li><li>Support for connecting your chosen commerce platform</li></ul></div>
-      <div class="serviceDetailCopy">
-        <div class="servicesEyebrow">05 • E Commerce</div>
-        <h2>Create a Store That Makes Sense</h2>
-        <p>An online store needs more than products on a screen. Customers need to understand what you sell, find what they want, and know how to move through the purchasing process.</p>
-        <p>E commerce design focuses on a clean shopping experience that presents your products professionally and supports your business goals.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="serviceDetail alt" id="seo">
-    <div class="servicesInner serviceDetailGrid reverse">
-      <div class="serviceDetailImage"><img src="images/AC31881C-E476-4DA1-B64F-5D446DCE18F0.png" alt="SEO and digital support"></div>
-      <div class="serviceDetailCopy">
-        <div class="servicesEyebrow">06 • SEO &amp; Digital Support</div>
-        <h2>Help People Find and Use Your Website</h2>
-        <p>A professional website also needs a strong foundation. SEO and digital support focuses on organization, structure, technical details, and practical improvements that help your website communicate clearly with both visitors and search engines.</p>
-        <ul><li>Search friendly page structure</li><li>Titles, descriptions, headings, and content organization</li><li>Technical and website structure support</li><li>Digital troubleshooting and guidance</li><li>Ongoing improvements as your website grows</li></ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="serviceDetail" id="education">
-    <div class="servicesInner">
-      <div class="educationIntro">
-        <div class="educationIntroCopy">
-          <div class="servicesEyebrow">07 • Education Services</div>
-          <h2>Technology Education for Real Life and Real Skills</h2>
-          <p>Education is an important part of what I offer. Technology changes quickly, but people should have an opportunity to learn at a pace that makes sense for them.</p>
-          <p>Through <strong>Technology for Life</strong>, I provide a welcoming place for adults to build practical computer skills, confidence, and independence. The program is designed around hands on learning, questions, repetition, and practical everyday use.</p>
-          <p>Education services can also extend beyond basic computer skills. I can teach <strong>web design classes</strong> and <strong>coding classes</strong> for learners who want to understand how websites are created, how web pages are structured, and how code can be used to build digital projects.</p>
-          <div class="educationButtons">
-            <a class="servicesButton" href="https://brad-hobbswd.github.io/technology-for-life/" target="_blank" rel="noopener">VISIT TECHNOLOGY FOR LIFE →</a>
-          </div>
-        </div>
-        <div class="serviceDetailPanel">
-          <span class="detailNumber">07</span>
-          <h3>What I Can Teach</h3>
-          <ul>
-            <li>Basic computer skills for everyday life</li>
-            <li>Windows laptop and Chromebook fundamentals</li>
-            <li>Email, files, folders, and internet basics</li>
-            <li>Practical digital skills and online confidence</li>
-            <li>Web design fundamentals</li>
-            <li>HTML and CSS foundations</li>
-            <li>Coding fundamentals and problem solving</li>
-            <li>Website building and digital projects</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="servicesCta">
-    <div class="servicesInner">
-      <h2>Ready to Build Something That Works?</h2>
-      <p>
-        Your business deserves clarity, structure, and a digital presence that reflects excellence.
-        Let's create something that truly represents you well.
-      </p>
-      <div class="servicesButtons">
-        <a class="servicesButton" href="/brad-hobbswd/packages.html">START A PROJECT →</a>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
 <div id="siteFooter"></div>
-
-</div>
-
 <script src="/brad-hobbswd/layout.js"></script>
 </body>
 </html>
