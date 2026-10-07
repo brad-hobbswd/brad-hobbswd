@@ -1,94 +1,169 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thank You | Brad Hobbs</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Thank You | Brad Hobbs Web Design</title>
+<meta name="description" content="Thank you for visiting Brad Hobbs Web Design.">
+
 <link rel="icon" href="/brad-hobbswd/favicon.ico">
-
 <link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
-
 <link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
-
 <link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
-  <!-- Auto redirect -->
-  <meta http-equiv="refresh" content="5;url=/brad-hobbswd/" />
 
-  
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
 
-      background: radial-gradient(circle at top, #0b1a3a, #020611);
-      font-family: system-ui, sans-serif;
-    }
+<style>
+.thanksMain{
+  min-height:calc(100vh - 70px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:54px 24px 70px;
+}
 
-    .card {
-      width: min(92%, 900px);
-      border-radius: 20px;
-      overflow: hidden;
-      position: relative;
+.thanksCard{
+  width:min(900px,100%);
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:
+    radial-gradient(700px 260px at 50% 0%,rgba(47,179,255,.18),transparent 70%),
+    linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+  box-shadow:0 20px 55px rgba(0,0,0,.42);
+  text-align:center;
+}
 
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 25px 70px rgba(0,0,0,0.7);
+.thanksImage{
+  width:100%;
+  background:#06162d;
+}
 
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.thanksImage img{
+  width:100%;
+  height:auto;
+  display:block;
+}
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 35px 90px rgba(0,0,0,0.9);
-    }
+.thanksContent{
+  padding:38px 30px 42px;
+}
 
-    .card a {
-      display: block;
-      line-height: 0; /* removes small image gap */
-    }
+.thanksEyebrow{
+  margin:0 0 10px;
+  color:var(--accent2);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
 
-    .card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 20px;
-    }
+.thanksContent h1{
+  margin:0;
+  color:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(32px,5vw,52px);
+  line-height:1.08;
+}
 
-    /* subtle glow edge */
-    .card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 20px;
-      pointer-events: none;
-      box-shadow: 0 0 40px rgba(80,150,255,0.15);
-    }
-  </style>
+.thanksContent p{
+  max-width:650px;
+  margin:16px auto 0;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
+}
+
+.thanksActions{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:27px;
+}
+
+.thanksActions .btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:0 20px;
+  text-decoration:none;
+}
+
+@media(max-width:600px){
+  .thanksMain{
+    min-height:calc(100vh - 64px);
+    padding:30px 15px 45px;
+  }
+
+  .thanksCard{
+    border-radius:18px;
+  }
+
+  .thanksContent{
+    padding:30px 20px 34px;
+  }
+
+  .thanksContent p{
+    font-size:15px;
+  }
+
+  .thanksActions{
+    flex-direction:column;
+  }
+
+  .thanksActions .btn{
+    width:100%;
+  }
+}
+</style>
 </head>
 
-<body>
+<body data-page="thanks">
 
-  <div class="card">
-    <a href="/brad-hobbswd/">
-      <img src="images/1D331F01-1958-4597-B880-70521DBF6288.png" alt="Thank You">
-    </a>
-  </div>
+<div class="wrap">
 
-  <!-- Smooth redirect (optional upgrade) -->
-  <script>
-    setTimeout(() => {
-      document.body.style.opacity = "0";
-      document.body.style.transition = "opacity 0.6s ease";
+<header id="siteHeader"></header>
 
-      setTimeout(() => {
-        window.location.href = "/brad-hobbswd/";
-      }, 600);
-    }, 4000);
-  </script>
+<main class="thanksMain">
+  <section class="thanksCard" aria-labelledby="thanksTitle">
 
+    <div class="thanksImage">
+      <img
+        src="/brad-hobbswd/images/1D331F01-1958-4597-B880-70521DBF6288.png"
+        alt="Thank you from Brad Hobbs Web Design">
+    </div>
+
+    <div class="thanksContent">
+      <div class="thanksEyebrow">Brad Hobbs Web Design</div>
+
+      <h1 id="thanksTitle">Thank You</h1>
+
+      <p>
+        Thank you for visiting Brad Hobbs Web Design. Your interest, support,
+        and time are genuinely appreciated.
+      </p>
+
+      <p>
+        When you're ready, continue exploring the site or return to the
+        homepage.
+      </p>
+
+      <div class="thanksActions">
+        <a href="/brad-hobbswd/" class="btn btnPrimary">Return Home</a>
+        <a href="/brad-hobbswd/service.html" class="btn">Explore Services</a>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<div id="siteFooter"></div>
+
+</div>
+
+<script src="/brad-hobbswd/layout.js"></script>
 </body>
 </html>
