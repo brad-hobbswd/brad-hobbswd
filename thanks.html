@@ -3,167 +3,84 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>Thank You | Brad Hobbs Web Design</title>
 <meta name="description" content="Thank you for visiting Brad Hobbs Web Design.">
-
 <link rel="icon" href="/brad-hobbswd/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
-
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
-
 <style>
-.thanksMain{
-  min-height:calc(100vh - 70px);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:54px 24px 70px;
-}
-
-.thanksCard{
-  width:min(900px,100%);
-  overflow:hidden;
-  border:1px solid var(--line);
-  border-radius:22px;
-  background:
-    radial-gradient(700px 260px at 50% 0%,rgba(47,179,255,.18),transparent 70%),
-    linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
-  box-shadow:0 20px 55px rgba(0,0,0,.42);
-  text-align:center;
-}
-
-.thanksImage{
-  width:100%;
-  background:#06162d;
-}
-
-.thanksImage img{
-  width:100%;
-  height:auto;
-  display:block;
-}
-
-.thanksContent{
-  padding:38px 30px 42px;
-}
-
-.thanksEyebrow{
-  margin:0 0 10px;
-  color:var(--accent2);
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-}
-
-.thanksContent h1{
-  margin:0;
-  color:#fff;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(32px,5vw,52px);
-  line-height:1.08;
-}
-
-.thanksContent p{
-  max-width:650px;
-  margin:16px auto 0;
-  color:var(--muted);
-  font-size:16px;
-  line-height:1.7;
-}
-
-.thanksActions{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:27px;
-}
-
-.thanksActions .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:46px;
-  padding:0 20px;
-  text-decoration:none;
-}
-
+.thanksPage{background:#eef3f8;color:#12233f;overflow:hidden}
+.thanksHero{position:relative;background:
+radial-gradient(circle at 82% 24%,rgba(47,179,255,.20),transparent 28%),
+radial-gradient(circle at 15% 75%,rgba(255,211,78,.09),transparent 25%),
+linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.thanksHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:78px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.thanksHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:145px 0 118px}
+.thanksEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.thanksEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.thanksHero h1{max-width:850px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,76px);line-height:1.01;letter-spacing:-.025em}
+.thanksHero h1 span{color:#ffd45f}
+.thanksLead{max-width:740px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.thanksMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:30px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.thanksMeta span{display:flex;align-items:center;gap:7px}.thanksMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
+.thanksSection{width:min(900px,92%);margin:auto;padding:70px 0 84px}
+.thanksCard{overflow:hidden;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08)}
+.thanksImage{background:#06162d}.thanksImage img{display:block;width:100%;height:auto}
+.thanksContent{padding:34px 36px 38px;text-align:center}
+.thanksContent h2{margin:0;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,5vw,44px);line-height:1.08}
+.thanksContent p{max-width:650px;margin:14px auto 0;color:#617189;font-size:16px;line-height:1.7}
+.thanksActions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:27px}
+.thanksButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 21px;border-radius:999px;text-decoration:none!important;font-size:13px;font-weight:900;transition:.2s ease}
+.thanksButton.primary{background:#1689e8;color:#fff!important;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.thanksButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.thanksButton.secondary{border:1px solid #b9cddd;color:#164c80!important;background:#fff}
+.thanksButton.secondary:hover{background:#edf7ff}
+.thanksClosing{background:radial-gradient(850px 300px at 50% 0%,rgba(47,179,255,.25),transparent 65%),linear-gradient(135deg,#061329,#071d3b 52%,#041022);color:#fff;text-align:center}
+.thanksClosingInner{width:min(850px,92%);margin:auto;padding:62px 0}
+.thanksClosing h2{margin:0;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px)}
+.thanksClosing p{max-width:680px;margin:13px auto 0;color:#d7e4f2;font-size:15px;line-height:1.7}
 @media(max-width:600px){
-  .thanksMain{
-    min-height:calc(100vh - 64px);
-    padding:30px 15px 45px;
-  }
-
-  .thanksCard{
-    border-radius:18px;
-  }
-
-  .thanksContent{
-    padding:30px 20px 34px;
-  }
-
-  .thanksContent p{
-    font-size:15px;
-  }
-
-  .thanksActions{
-    flex-direction:column;
-  }
-
-  .thanksActions .btn{
-    width:100%;
-  }
+ .thanksHeroInner{padding:120px 0 105px}.thanksHero h1{font-size:43px}.thanksLead{font-size:16px}
+ .thanksSection{padding:55px 0 65px}.thanksContent{padding:28px 20px 32px}
+ .thanksActions{flex-direction:column}.thanksButton{width:100%}
 }
 </style>
 </head>
-
-<body data-page="thanks">
-
-<div class="wrap">
-
-<header id="siteHeader"></header>
-
-<main class="thanksMain">
-  <section class="thanksCard" aria-labelledby="thanksTitle">
-
-    <div class="thanksImage">
-      <img
-        src="/brad-hobbswd/images/1D331F01-1958-4597-B880-70521DBF6288.png"
-        alt="Thank you from Brad Hobbs Web Design">
-    </div>
-
-    <div class="thanksContent">
-      <div class="thanksEyebrow">Brad Hobbs Web Design</div>
-
-      <h1 id="thanksTitle">Thank You</h1>
-
-      <p>
-        Thank you for visiting Brad Hobbs Web Design. Your interest, support,
-        and time are genuinely appreciated.
-      </p>
-
-      <p>
-        When you're ready, continue exploring the site or return to the
-        homepage.
-      </p>
-
-      <div class="thanksActions">
-        <a href="/brad-hobbswd/" class="btn btnPrimary">Return Home</a>
-        <a href="/brad-hobbswd/service.html" class="btn">Explore Services</a>
-      </div>
-    </div>
-
-  </section>
-</main>
-
-<div id="siteFooter"></div>
-
+<body class="thanksPage">
+<div id="siteHeader"></div>
+<main>
+<section class="thanksHero">
+<div class="thanksHeroInner">
+<div class="thanksEyebrow">Brad Hobbs Web Design</div>
+<h1>Thank You for <span>Being Here.</span></h1>
+<p class="thanksLead">Your time, interest, and support are genuinely appreciated. Thank you for visiting Brad Hobbs Web Design and taking the time to explore what I offer.</p>
+<div class="thanksMeta"><span><i></i>Purpose</span><span><i></i>Integrity</span><span><i></i>Excellence</span></div>
 </div>
-
+</section>
+<section class="thanksSection">
+<div class="thanksCard">
+<div class="thanksImage"><img src="/brad-hobbswd/images/1D331F01-1958-4597-B880-70521DBF6288.png" alt="Thank you from Brad Hobbs Web Design"></div>
+<div class="thanksContent">
+<h2>We Appreciate Your Visit.</h2>
+<p>Whether you are looking for a new website, a redesign, ongoing website support, or practical digital help, I would be glad to help you find the right direction.</p>
+<div class="thanksActions">
+<a class="thanksButton primary" href="/brad-hobbswd/">RETURN HOME →</a>
+<a class="thanksButton secondary" href="/brad-hobbswd/service.html">EXPLORE SERVICES</a>
+</div>
+</div>
+</div>
+</section>
+<section class="thanksClosing">
+<div class="thanksClosingInner">
+<h2>Ready for What Comes Next?</h2>
+<p>When you're ready to build, improve, or support your online presence, Brad Hobbs Web Design is here to help.</p>
+<div class="thanksActions"><a class="thanksButton primary" href="/brad-hobbswd/contact.html">START A CONVERSATION →</a></div>
+</div>
+</section>
+</main>
+<div id="siteFooter"></div>
 <script src="/brad-hobbswd/layout.js"></script>
 </body>
 </html>
