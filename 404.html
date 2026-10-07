@@ -1,157 +1,172 @@
 <!doctype html>
 <html lang="en">
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>404 | Brad Hobbs Web Design</title>
+<meta name="description" content="The page you are looking for could not be found on Brad Hobbs Web Design.">
 
-<link rel="stylesheet" href="/brad-hobbswd/style.css?v=3">
+<link rel="icon" href="/brad-hobbswd/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
 
-<meta name="description" content="Page not found">
+<link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
 
 <style>
-
-.errorWrap{
-min-height:75vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:40px 24px;
+.errorMain{
+  min-height:calc(100vh - 70px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:54px 24px 70px;
 }
 
 .errorCard{
-max-width:800px;
-width:100%;
-text-align:center;
-padding:50px 35px;
-
-border-radius:22px;
-
-background:
-linear-gradient(
-145deg,
-rgba(47,179,255,.08),
-rgba(255,255,255,.03)
-);
-
-border:1px solid rgba(47,179,255,.15);
-
-box-shadow:
-0 15px 45px rgba(0,0,0,.45),
-0 0 25px rgba(47,179,255,.10);
-
-position:relative;
-overflow:hidden;
+  position:relative;
+  width:min(850px,100%);
+  padding:54px 40px 48px;
+  overflow:hidden;
+  text-align:center;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:
+    radial-gradient(650px 250px at 50% 0%,rgba(47,179,255,.18),transparent 70%),
+    linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+  box-shadow:0 20px 55px rgba(0,0,0,.42);
 }
 
-.errorCard:before{
-content:"<div> </div>";
-position:absolute;
-top:20px;
-left:20px;
-opacity:.06;
-font-size:2rem;
-font-family:monospace;
+.errorCard::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent);
 }
 
 .errorCode{
-font-size:6rem;
-font-weight:800;
-margin-bottom:10px;
+  margin:0;
+  color:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(72px,13vw,132px);
+  font-weight:800;
+  line-height:.9;
+  letter-spacing:-.06em;
 }
 
 .errorTag{
-font-family:monospace;
-opacity:.65;
-margin-bottom:25px;
+  margin:18px 0 22px;
+  color:var(--accent2);
+  font-family:monospace;
+  font-size:12px;
+  letter-spacing:.08em;
+  opacity:.8;
+}
+
+.errorCard h1{
+  margin:0;
+  color:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(27px,4vw,42px);
+  line-height:1.15;
 }
 
 .errorCard p{
-line-height:1.8;
-color:var(--muted);
-max-width:650px;
-margin:0 auto 16px;
+  max-width:650px;
+  margin:16px auto 0;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
 }
 
-.buttonArea{
-margin-top:35px;
+.errorActions{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+
+.errorActions .btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:0 20px;
+  text-decoration:none;
 }
 
 .devNote{
-margin-top:25px;
-font-family:monospace;
-opacity:.55;
-font-size:.9rem;
+  margin:28px 0 0;
+  color:rgba(184,199,230,.5);
+  font-family:monospace;
+  font-size:11px;
 }
 
-@media(max-width:768px){
+@media(max-width:600px){
+  .errorMain{
+    min-height:calc(100vh - 64px);
+    padding:30px 15px 45px;
+  }
 
-.errorCode{
-font-size:4.5rem;
+  .errorCard{
+    padding:42px 20px 38px;
+    border-radius:18px;
+  }
+
+  .errorCard p{
+    font-size:15px;
+  }
+
+  .errorActions{
+    flex-direction:column;
+  }
+
+  .errorActions .btn{
+    width:100%;
+  }
 }
-
-.errorCard{
-padding:35px 24px;
-}
-
-}
-
 </style>
-
 </head>
 
-<body>
+<body data-page="404">
 
 <div class="wrap">
 
 <header id="siteHeader"></header>
 
-<main class="errorWrap">
+<main class="errorMain">
+  <section class="errorCard" aria-labelledby="errorTitle">
 
-<div class="errorCard">
+    <div class="errorCode">404</div>
 
-<div class="errorCode">
-404
-</div>
+    <div class="errorTag">PAGE NOT FOUND</div>
 
-<div class="errorTag">
-PageNotFound.js
-</div>
+    <h1 id="errorTitle">Looks like this page took a wrong turn.</h1>
 
-<h1>
-Oops. This page slipped out of the design layout.
-</h1>
+    <p>
+      The page you're looking for isn't available at this address. It may have
+      moved, been renamed, or the link may need a little attention.
+    </p>
 
-<p>
-A wandering div, missing route, curious button, or escaped line of code may have taken this page somewhere unexpected.
-</p>
+    <p>
+      Don't worry. The rest of Brad Hobbs Web Design is still here and ready
+      to explore.
+    </p>
 
-<p>
-Brad Hobbs Web Design searched the files, inspected the elements, refreshed the browser, and checked the console. No luck.
-</p>
+    <div class="errorActions">
+      <a href="/brad-hobbswd/" class="btn btnPrimary">Return Home</a>
+      <a href="/brad-hobbswd/service.html" class="btn">Explore Services</a>
+    </div>
 
-<p>
-Home remains stable, responsive, and fully deployed.
-</p>
+    <div class="devNote">
+      404 · Route unavailable
+    </div>
 
-<div class="buttonArea">
-
-<a href="/brad-hobbswd/index.html" class="btn btnPrimary">
-Return Home
-</a>
-
-</div>
-
-<div class="devNote">
-
-// Developer note: page currently unavailable
-
-</div>
-
-</div>
-
+  </section>
 </main>
 
 <div id="siteFooter"></div>
@@ -159,6 +174,5 @@ Return Home
 </div>
 
 <script src="/brad-hobbswd/layout.js"></script>
-
 </body>
 </html>
