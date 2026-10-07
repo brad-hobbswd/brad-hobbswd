@@ -3,176 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>404 | Brad Hobbs Web Design</title>
 <meta name="description" content="The page you are looking for could not be found on Brad Hobbs Web Design.">
-
 <link rel="icon" href="/brad-hobbswd/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/brad-hobbswd/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/brad-hobbswd/images/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/brad-hobbswd/images/favicon-180.png">
-
 <link rel="stylesheet" href="/brad-hobbswd/style.css?v=21">
-
 <style>
-.errorMain{
-  min-height:calc(100vh - 70px);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:54px 24px 70px;
-}
-
-.errorCard{
-  position:relative;
-  width:min(850px,100%);
-  padding:54px 40px 48px;
-  overflow:hidden;
-  text-align:center;
-  border:1px solid var(--line);
-  border-radius:22px;
-  background:
-    radial-gradient(650px 250px at 50% 0%,rgba(47,179,255,.18),transparent 70%),
-    linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
-  box-shadow:0 20px 55px rgba(0,0,0,.42);
-}
-
-.errorCard::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:3px;
-  background:linear-gradient(90deg,transparent,var(--accent),var(--accent2),transparent);
-}
-
-.errorCode{
-  margin:0;
-  color:#fff;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(72px,13vw,132px);
-  font-weight:800;
-  line-height:.9;
-  letter-spacing:-.06em;
-}
-
-.errorTag{
-  margin:18px 0 22px;
-  color:var(--accent2);
-  font-family:monospace;
-  font-size:12px;
-  letter-spacing:.08em;
-  opacity:.8;
-}
-
-.errorCard h1{
-  margin:0;
-  color:#fff;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(27px,4vw,42px);
-  line-height:1.15;
-}
-
-.errorCard p{
-  max-width:650px;
-  margin:16px auto 0;
-  color:var(--muted);
-  font-size:16px;
-  line-height:1.7;
-}
-
-.errorActions{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:30px;
-}
-
-.errorActions .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:46px;
-  padding:0 20px;
-  text-decoration:none;
-}
-
-.devNote{
-  margin:28px 0 0;
-  color:rgba(184,199,230,.5);
-  font-family:monospace;
-  font-size:11px;
-}
-
+.errorPage{background:#eef3f8;color:#12233f;overflow:hidden}
+.errorHero{position:relative;background:
+radial-gradient(circle at 82% 24%,rgba(47,179,255,.20),transparent 28%),
+radial-gradient(circle at 15% 75%,rgba(255,211,78,.09),transparent 25%),
+linear-gradient(135deg,#061326 0%,#0a1d35 58%,#0c2949 100%);color:#fff}
+.errorHero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:78px;background:#eef3f8;clip-path:polygon(0 100%,100% 0,100% 100%)}
+.errorHeroInner{position:relative;z-index:1;width:min(1120px,92%);margin:auto;padding:145px 0 118px}
+.errorEyebrow{display:flex;align-items:center;gap:10px;color:#ffd45f;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.errorEyebrow:before{content:"";width:34px;height:2px;background:#1689e8}
+.errorHero h1{max-width:900px;margin:18px 0 20px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,7vw,76px);line-height:1.01;letter-spacing:-.025em}
+.errorHero h1 span{color:#ffd45f}
+.errorLead{max-width:740px;margin:0;color:#dceafa;font-size:18px;line-height:1.75}
+.errorMeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:30px;color:#a9bfd8;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.errorMeta span{display:flex;align-items:center;gap:7px}.errorMeta i{width:6px;height:6px;border-radius:50%;background:#ffd45f}
+.errorSection{width:min(900px,92%);margin:auto;padding:70px 0 84px}
+.errorCard{padding:42px 38px;text-align:center;background:#fff;border:1px solid #dce5ef;border-radius:20px;box-shadow:0 12px 32px rgba(18,42,72,.08)}
+.errorCode{color:#1689e8;font-family:Georgia,"Times New Roman",serif;font-size:clamp(76px,13vw,132px);font-weight:800;line-height:.9;letter-spacing:-.06em}
+.errorTag{margin:17px 0 20px;color:#b27600;font-family:monospace;font-size:11px;font-weight:900;letter-spacing:.1em}
+.errorCard h2{margin:0;color:#15345d;font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,5vw,45px);line-height:1.08}
+.errorCard p{max-width:650px;margin:15px auto 0;color:#617189;font-size:16px;line-height:1.7}
+.errorActions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:28px}
+.errorButton{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 21px;border-radius:999px;text-decoration:none!important;font-size:13px;font-weight:900;transition:.2s ease}
+.errorButton.primary{background:#1689e8;color:#fff!important;box-shadow:0 10px 25px rgba(22,137,232,.22)}
+.errorButton.primary:hover{transform:translateY(-2px);background:#2aa3ff}
+.errorButton.secondary{border:1px solid #b9cddd;color:#164c80!important;background:#fff}
+.errorButton.secondary:hover{background:#edf7ff}
+.errorNote{margin:25px 0 0;color:#8aa0b8;font-family:monospace;font-size:10px}
+.errorClosing{background:radial-gradient(850px 300px at 50% 0%,rgba(47,179,255,.25),transparent 65%),linear-gradient(135deg,#061329,#071d3b 52%,#041022);color:#fff;text-align:center}
+.errorClosingInner{width:min(850px,92%);margin:auto;padding:62px 0}
+.errorClosing h2{margin:0;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,5vw,48px)}
+.errorClosing p{max-width:680px;margin:13px auto 0;color:#d7e4f2;font-size:15px;line-height:1.7}
 @media(max-width:600px){
-  .errorMain{
-    min-height:calc(100vh - 64px);
-    padding:30px 15px 45px;
-  }
-
-  .errorCard{
-    padding:42px 20px 38px;
-    border-radius:18px;
-  }
-
-  .errorCard p{
-    font-size:15px;
-  }
-
-  .errorActions{
-    flex-direction:column;
-  }
-
-  .errorActions .btn{
-    width:100%;
-  }
+ .errorHeroInner{padding:120px 0 105px}.errorHero h1{font-size:43px}.errorLead{font-size:16px}
+ .errorSection{padding:55px 0 65px}.errorCard{padding:34px 20px}
+ .errorActions{flex-direction:column}.errorButton{width:100%}
 }
 </style>
 </head>
-
-<body data-page="404">
-
-<div class="wrap">
-
-<header id="siteHeader"></header>
-
-<main class="errorMain">
-  <section class="errorCard" aria-labelledby="errorTitle">
-
-    <div class="errorCode">404</div>
-
-    <div class="errorTag">PAGE NOT FOUND</div>
-
-    <h1 id="errorTitle">Looks like this page took a wrong turn.</h1>
-
-    <p>
-      The page you're looking for isn't available at this address. It may have
-      moved, been renamed, or the link may need a little attention.
-    </p>
-
-    <p>
-      Don't worry. The rest of Brad Hobbs Web Design is still here and ready
-      to explore.
-    </p>
-
-    <div class="errorActions">
-      <a href="/brad-hobbswd/" class="btn btnPrimary">Return Home</a>
-      <a href="/brad-hobbswd/service.html" class="btn">Explore Services</a>
-    </div>
-
-    <div class="devNote">
-      404 · Route unavailable
-    </div>
-
-  </section>
-</main>
-
-<div id="siteFooter"></div>
-
+<body class="errorPage">
+<div id="siteHeader"></div>
+<main>
+<section class="errorHero">
+<div class="errorHeroInner">
+<div class="errorEyebrow">Brad Hobbs Web Design</div>
+<h1>This Page Took a <span>Wrong Turn.</span></h1>
+<p class="errorLead">The page you're looking for isn't available at this address. It may have moved, been renamed, or the link may need a little attention.</p>
+<div class="errorMeta"><span><i></i>404</span><span><i></i>Page Not Found</span><span><i></i>Let's Get You Back</span></div>
 </div>
-
+</section>
+<section class="errorSection">
+<div class="errorCard">
+<div class="errorCode">404</div>
+<div class="errorTag">PAGE NOT FOUND</div>
+<h2>Looks like this page slipped out of the design.</h2>
+<p>Don't worry. The rest of Brad Hobbs Web Design is still here, responsive, and ready to explore.</p>
+<div class="errorActions">
+<a class="errorButton primary" href="/brad-hobbswd/">RETURN HOME →</a>
+<a class="errorButton secondary" href="/brad-hobbswd/service.html">EXPLORE SERVICES</a>
+</div>
+<div class="errorNote">404 · Route unavailable</div>
+</div>
+</section>
+<section class="errorClosing">
+<div class="errorClosingInner">
+<h2>Let's Find Your Way Back.</h2>
+<p>Start at the homepage or explore the services to find the right direction for your next project.</p>
+<div class="errorActions"><a class="errorButton primary" href="/brad-hobbswd/contact.html">CONTACT BRAD →</a></div>
+</div>
+</section>
+</main>
+<div id="siteFooter"></div>
 <script src="/brad-hobbswd/layout.js"></script>
 </body>
 </html>
