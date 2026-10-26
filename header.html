@@ -30,6 +30,18 @@
   transform:scaleX(0);transform-origin:center;background:#f0b529;transition:.2s ease;
 }
 .nav a:hover,.nav a.active{color:#fff}
+.nav a:focus-visible,.mobileMenu a:focus-visible{
+  outline:2px solid #f0b529;
+  outline-offset:5px;
+  border-radius:2px;
+}
+.nav a[data-nav="updates"]::after{
+  height:1px;
+}
+.nav a[data-nav="updates"]:hover::after,
+.nav a[data-nav="updates"].active::after{
+  height:2px;
+}
 .nav a:hover::after,.nav a.active::after{transform:scaleX(1)}
 .menuToggle{
   display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px;
@@ -106,7 +118,7 @@
     <img src="/brad-hobbswd/images/072FB4DA-2143-4158-B2DD-752E67E6F43D.png" alt="Brad Hobbs Web Design">
     <div class="brandText"><strong>Brad Hobbs</strong><span>Web Design</span></div>
   </div>
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <a data-nav="home" href="/brad-hobbswd/index.html">Home</a>
     <div class="servicesNav">
     <a data-nav="services" class="servicesNavToggle" href="/brad-hobbswd/service.html">Services <span class="chevron">▼</span></a>
