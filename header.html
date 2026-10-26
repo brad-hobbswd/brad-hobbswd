@@ -35,12 +35,21 @@
   outline-offset:5px;
   border-radius:2px;
 }
+.nav a[data-nav="updates"]{
+  font-weight:800;
+}
 .nav a[data-nav="updates"]::after{
   height:1px;
+  transform:scaleX(.48);
+}
+.nav a[data-nav="updates"]:hover,
+.nav a[data-nav="updates"].active{
+  color:#fff;
 }
 .nav a[data-nav="updates"]:hover::after,
 .nav a[data-nav="updates"].active::after{
   height:2px;
+  transform:scaleX(1);
 }
 .nav a:hover::after,.nav a.active::after{transform:scaleX(1)}
 .menuToggle{
